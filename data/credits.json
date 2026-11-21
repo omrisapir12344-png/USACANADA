@@ -1014,6 +1014,114 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Takakkaw_Falls,_west_view_20240825_3.jpg"
       }
+    ],
+    "ferry-building": [
+      {
+        "file": "assets/img/ferry-building/1.webp",
+        "title": "File:Ferry Building Marketplace, San Francisco.jpg",
+        "author": "(User:Wgreaves)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ferry_Building_Marketplace,_San_Francisco.jpg"
+      },
+      {
+        "file": "assets/img/ferry-building/2.webp",
+        "title": "File:Chanterelle mushrooms for sale at Ferry Building Marketplace.jpg",
+        "author": "Grendelkhan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chanterelle_mushrooms_for_sale_at_Ferry_Building_Marketplace.jpg"
+      }
+    ],
+    "sausalito": [
+      {
+        "file": "assets/img/sausalito/1.webp",
+        "title": "File:Storefronts on Bridgeway, Sausalito-L1003865.jpg",
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Storefronts_on_Bridgeway,_Sausalito-L1003865.jpg"
+      },
+      {
+        "file": "assets/img/sausalito/2.webp",
+        "title": "File:Sausalito.jpg",
+        "author": "en:User:Squirrel 22",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Sausalito.jpg"
+      }
+    ],
+    "lombard": [
+      {
+        "file": "assets/img/lombard/1.webp",
+        "title": "File:Crooked Section of Lombard Street.jpg",
+        "author": "Cornflower123",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Crooked_Section_of_Lombard_Street.jpg"
+      },
+      {
+        "file": "assets/img/lombard/2.webp",
+        "title": "File:Crooked section of Lombard Street, San Francisco (December 2011)(6787701700).jpg",
+        "author": "Ana Raquel S. Hernandes from Sao Paulo, Brazil",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Crooked_section_of_Lombard_Street,_San_Francisco_(December_2011)(6787701700).jpg"
+      }
+    ],
+    "chinatown": [
+      {
+        "file": "assets/img/chinatown/1.webp",
+        "title": "File:Kisen Co. on Grant Ave., Chinatown, San Francisco.png",
+        "author": "Unknown authorUnknown author",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Kisen_Co._on_Grant_Ave.,_Chinatown,_San_Francisco.png"
+      },
+      {
+        "file": "assets/img/chinatown/2.webp",
+        "title": "File:Chinatown a Transamerica Pyramid na Grant Ave - San Francisco - panoramio.jpg",
+        "author": "Pavel Špindler",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chinatown_a_Transamerica_Pyramid_na_Grant_Ave_-_San_Francisco_-_panoramio.jpg"
+      }
+    ],
+    "coit-tower": [
+      {
+        "file": "assets/img/coit-tower/1.webp",
+        "title": "File:Věž Coit Tower na Telegraph Hill, San Francisco - panoramio.jpg",
+        "author": "Pavel Špindler",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:V%C4%9B%C5%BE_Coit_Tower_na_Telegraph_Hill,_San_Francisco_-_panoramio.jpg"
+      },
+      {
+        "file": "assets/img/coit-tower/2.webp",
+        "title": "File:Coit Tower aerial.jpg",
+        "author": "Kyle Harmon from Oakland, CA, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Coit_Tower_aerial.jpg"
+      }
+    ],
+    "painted-ladies": [
+      {
+        "file": "assets/img/painted-ladies/1.webp",
+        "title": "File:Painted Ladies San Francisco January 2013 panorama 2.jpg",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Painted_Ladies_San_Francisco_January_2013_panorama_2.jpg"
+      },
+      {
+        "file": "assets/img/painted-ladies/2.webp",
+        "title": "File:Painted Ladies, Alamo Square.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Painted_Ladies,_Alamo_Square.jpg"
+      }
     ]
   }
 }

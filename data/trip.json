@@ -44,10 +44,10 @@
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "golden-gate",
-      "arrive": "נוחתים ב־SFO ב־19/8 ב־13:29 (LY4556 מ־LAX). משם ברכבת BART לעיר.",
-      "lodging": "Axiom Hotel, כיכר יוניון. 4 לילות, הוזמן.",
+      "arrive": "נוחתים ב־SFO ב־19/8 ב־13:29 (LY4556 מ־LAX). משם ב־BART לתחנת Embarcadero, ליד המלון.",
+      "lodging": "Club Quarters Embarcadero, הרובע הפיננסי. 4 לילות, הוזמן.",
       "lodgingStatus": "booked",
-      "summary": "ארבעה לילות בעיר. האטרקציות הן הצעות ועדיין לא חלק מהתוכנית.",
+      "summary": "ארבעה לילות. גשר הזהב הוא חובה. שאר המקומות הם הצעה לתוכנית של שלושה ימים.",
       "clothing": {
         "summary": "באוגוסט יכול להיות קריר, עם ערפל ורוח, במיוחד בערב וליד המים. שכבות: חולצה קצרה, סווטשירט ומעיל רוח.",
         "bring": [
@@ -58,8 +58,8 @@
         ]
       },
       "beforeYouGo": [
-        "ESTA לשני הנוסעים",
-        "ביטול חינם במלון עד 16.8"
+        "אלקטרז: להזמין מראש (נגמר בקיץ)",
+        "ESTA לשני הנוסעים"
       ],
       "transfer": "טיסה SFO→SEA ורכב שכור"
     },
@@ -74,7 +74,7 @@
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "rainier-paradise",
       "arrive": "טיסה מסן פרנסיסקו לסיאטל (SEA) ב־23/8 ואיסוף רכב שכור. מהשדה ל־Packwood כ־2.5–3 שעות נסיעה, ולכן צריך טיסה שמגיעה מוקדם מספיק לצ׳ק־אין עד 21:00. הטיסה והרכב טרם הוזמנו.",
-      "lodging": "Packwood Lodge & Cabins, בקתה זוגית. 3 לילות, הוזמן. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק: כשעה ו־10 דקות ל־Paradise וכשעה ו־20 דקות ל־Sunrise. צ׳ק־אין עד 21:00.",
+      "lodging": "Crest Trail Lodge. 3 לילות, הוזמן. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק: כשעה ו־10 דקות ל־Paradise וכשעה ו־20 דקות ל־Sunrise. צ׳ק־אין עד 22:00.",
       "lodgingStatus": "booked",
       "summary": "שלושה לילות ליד הפארק הלאומי. האטרקציות הן הצעות.",
       "clothing": {
@@ -198,7 +198,7 @@
       "arrive": "החזרת הרכב ב־YYC, טיסה ל־LAX ב־10/9 (טרם הוזמנה) ואיסוף רכב שכור בשדה.",
       "lodging": "Park Plaza Lodge, Third Street (ליד Farmers Market ו־The Grove). 4 לילות, הוזמן.",
       "lodgingStatus": "booked",
-      "summary": "ארבעה לילות לפני הטיסה הביתה (LY6, 14/9, 13:30). האטרקציות הן הצעות.",
+      "summary": "ארבעה לילות. יום בהוליווד: שדרת הכוכבים, תצפית על השלט ומצפה Griffith. יוניברסל כאופציה ליום נוסף.",
       "clothing": {
         "summary": "חם ויבש. בגדים קלים, כובע ומשקפי שמש.",
         "bring": [
@@ -231,19 +231,19 @@
       "see": "נחיתה ומעבר לעיר ב־BART."
     },
     {
-      "id": "axiom",
-      "name": "Axiom Hotel",
-      "nameEn": "Axiom Hotel, 28 Cyril Magnin St, San Francisco",
+      "id": "club-quarters",
+      "name": "Club Quarters Embarcadero",
+      "nameEn": "Club Quarters Hotel Embarcadero, 424 Clay St, San Francisco",
       "region": "sf",
-      "lat": 37.7853,
-      "lng": -122.4086,
+      "lat": 37.7953,
+      "lng": -122.4005,
       "days": [
         "2027-08-19"
       ],
       "kind": "lodging",
-      "summary": "המלון בסן פרנסיסקו, ליד Union Square ותחנת Powell St.",
+      "summary": "המלון בסן פרנסיסקו, ברובע הפיננסי ליד ה־Embarcadero ו־Ferry Building. מהשדה מגיעים ב־BART לתחנת Embarcadero.",
       "visit": "לינה",
-      "see": "המלון בכיכר יוניון."
+      "see": "מלון ליד ה־Embarcadero."
     },
     {
       "id": "golden-gate",
@@ -252,11 +252,11 @@
       "region": "sf",
       "lat": 37.8199,
       "lng": -122.4783,
-      "days": [],
+      "days": [
+        "2027-08-21"
+      ],
       "kind": "attraction",
-      "summary": "הגשר המפורסם. אפשר ללכת עליו או לצפות בו מתצפיות בשני צדי המפרץ.",
-      "suggestion": true,
-      "optional": true,
+      "summary": "חובה בטיול. החוויה הכי טובה: הליכה על הגשר, או חצייה ברגל או באופניים והמשך לסוסליטו.",
       "imageMatch": [
         "golden gate"
       ],
@@ -328,13 +328,164 @@
       }
     },
     {
+      "id": "ferry-building",
+      "name": "Ferry Building",
+      "nameEn": "Ferry Building Marketplace, San Francisco",
+      "region": "sf",
+      "lat": 37.7955,
+      "lng": -122.3937,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "45–60 דק׳",
+      "see": "שוק אוכל במבנה המעבורות ההיסטורי, ליד המלון.",
+      "summary": "דקות הליכה מהמלון. מכאן יוצאות המעבורות לסוסליטו.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-20"
+      ],
+      "imageMatch": [
+        "ferry building"
+      ]
+    },
+    {
+      "id": "sausalito",
+      "name": "סוסליטו",
+      "nameEn": "Sausalito, CA",
+      "region": "sf",
+      "lat": 37.8591,
+      "lng": -122.4853,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "2–3 שעות",
+      "see": "עיירת חוף צבעונית מעבר לגשר. חוזרים במעבורת ל־Ferry Building.",
+      "summary": "הדרך הקלאסית: חוצים את גשר הזהב ברגל או באופניים שכורים, ממשיכים לסוסליטו וחוזרים במעבורת. לבדוק לוחות זמנים של המעבורת.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-21"
+      ],
+      "imageMatch": [
+        "sausalito"
+      ]
+    },
+    {
+      "id": "lombard",
+      "name": "רחוב Lombard",
+      "nameEn": "Lombard Street (crooked section), San Francisco",
+      "region": "sf",
+      "lat": 37.8021,
+      "lng": -122.4187,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "20–30 דק׳",
+      "see": "הקטע המתפתל המפורסם. יפה מלמטה ומלמעלה.",
+      "summary": "קרוב לקו ה־Cable Car של Powell–Hyde.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-20"
+      ],
+      "imageMatch": [
+        "lombard"
+      ]
+    },
+    {
+      "id": "chinatown",
+      "name": "צ׳יינה טאון",
+      "nameEn": "Chinatown, San Francisco (Grant Ave)",
+      "region": "sf",
+      "lat": 37.7941,
+      "lng": -122.4078,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "1–1.5 שעות",
+      "see": "הצ׳יינה טאון הוותיק בצפון אמריקה, שער Dragon Gate ורחוב Grant.",
+      "summary": "בהליכה מהמלון.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-22"
+      ],
+      "imageMatch": [
+        "chinatown",
+        "san francisco"
+      ]
+    },
+    {
+      "id": "coit-tower",
+      "name": "Coit Tower",
+      "nameEn": "Coit Tower, Telegraph Hill, San Francisco",
+      "region": "sf",
+      "lat": 37.8024,
+      "lng": -122.4058,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "45–60 דק׳",
+      "see": "מגדל על Telegraph Hill עם תצפית על המפרץ וציורי קיר.",
+      "summary": "עלייה רגלית תלולה מ־North Beach. כניסה למגדל בתשלום, לבדוק באתר.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-22"
+      ],
+      "imageMatch": [
+        "coit"
+      ]
+    },
+    {
+      "id": "painted-ladies",
+      "name": "Painted Ladies",
+      "nameEn": "Painted Ladies, Alamo Square, San Francisco",
+      "region": "sf",
+      "lat": 37.7763,
+      "lng": -122.4328,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "30 דק׳",
+      "see": "שורת הבתים הוויקטוריאניים מול קו הרקיע של העיר.",
+      "summary": "הנוף מהגבעה ב־Alamo Square Park.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-22"
+      ],
+      "imageMatch": [
+        "painted ladies"
+      ]
+    },
+    {
+      "id": "twin-peaks",
+      "name": "Twin Peaks",
+      "nameEn": "Twin Peaks viewpoint, San Francisco",
+      "region": "sf",
+      "lat": 37.7544,
+      "lng": -122.4477,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "30 דק׳",
+      "see": "תצפית על כל העיר והמפרץ.",
+      "summary": "כדאי בשעות אחר הצהריים. עלול להיות ערפילי וקר מאוד ברוח.",
+      "suggestion": true,
+      "optional": true,
+      "days": [
+        "2027-08-22"
+      ],
+      "imageMatch": [
+        "twin peaks",
+        "san francisco"
+      ]
+    },
+    {
       "id": "alcatraz",
       "name": "אלקטרז",
       "nameEn": "Alcatraz Island",
       "region": "sf",
       "lat": 37.8267,
       "lng": -122.423,
-      "days": [],
+      "days": [
+        "2027-08-20"
+      ],
       "kind": "attraction",
       "summary": "האי וכלא אלקטרז. מגיעים רק במעבורת, וכדאי להזמין מראש.",
       "suggestion": true,
@@ -412,7 +563,9 @@
       "region": "sf",
       "lat": 37.8087,
       "lng": -122.4098,
-      "days": [],
+      "days": [
+        "2027-08-20"
+      ],
       "kind": "attraction",
       "summary": "רציפים, אריות ים ואוכל ים.",
       "suggestion": true,
@@ -488,7 +641,9 @@
       "region": "sf",
       "lat": 37.7849,
       "lng": -122.4075,
-      "days": [],
+      "days": [
+        "2027-08-20"
+      ],
       "kind": "attraction",
       "summary": "הקרוניות ההיסטוריות. תחנת הקצה בפינת Powell ו־Market, ליד אזור הלינה המוצע.",
       "suggestion": true,
@@ -529,7 +684,7 @@
         ],
         "expect": {
           "crowds": "תור ארוך בתחנת Powell & Market בקיץ, לפעמים שעה ויותר.",
-          "parking": "לא צריך רכב. התחנה במרחק הליכה קצר מ־Axiom Hotel.",
+          "parking": "לא צריך רכב. מהמלון כ־15 דקות הליכה לתחנת הקצה ב־Powell & Market, או לקו California Street שקרוב יותר.",
           "toilets": "אין בכבל קאר. להשתמש לפני, בתחנת BART/Muni Powell או במלון.",
           "signal": "קליטה טובה.",
           "safety": "לעמוד על המדרגה החיצונית רק עם אחיזה חזקה. להקשיב למפעיל.",
@@ -556,7 +711,9 @@
       "region": "sf",
       "lat": 37.7802,
       "lng": -122.5113,
-      "days": [],
+      "days": [
+        "2027-08-22"
+      ],
       "kind": "trail",
       "approx": true,
       "summary": "שביל חוף עם תצפית על גשר הזהב.",
@@ -645,12 +802,12 @@
       "see": "נחיתה ואיסוף או החזרת רכב."
     },
     {
-      "id": "packwood",
-      "name": "Packwood Lodge & Cabins",
-      "nameEn": "Packwood Lodge & Cabins, 13807 US Hwy 12, Packwood, WA",
+      "id": "crest-trail",
+      "name": "Crest Trail Lodge",
+      "nameEn": "Crest Trail Lodge, 12729 US Hwy 12, Packwood, WA",
       "region": "rainier",
-      "lat": 46.6076,
-      "lng": -121.672,
+      "lat": 46.6086,
+      "lng": -121.6783,
       "approx": true,
       "days": [
         "2027-08-23"
@@ -658,7 +815,7 @@
       "kind": "lodging",
       "summary": "הלינה ליד הר ריינייר, בעיירה Packwood שמדרום לפארק.",
       "visit": "לינה",
-      "see": "בקתה זוגית עם ג׳קוזי."
+      "see": "מלון דרכים ב־Packwood."
     },
     {
       "id": "hyatt-olive8",
@@ -3691,17 +3848,191 @@
       ]
     },
     {
+      "id": "walk-of-fame",
+      "name": "שדרת הכוכבים",
+      "nameEn": "Hollywood Walk of Fame & TCL Chinese Theatre",
+      "region": "la",
+      "lat": 34.1016,
+      "lng": -118.3267,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "1.5–2 שעות",
+      "see": "הכוכבים על המדרכה בשדרות Hollywood, ותיאטרון TCL Chinese עם טביעות הידיים.",
+      "summary": "כ־6 ק״מ מהמלון. חניה בחניונים בתשלום ליד Hollywood & Highland.",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה בשדרת הכוכבים",
+            "required": true,
+            "note": "הקטע המרכזי סביב Hollywood & Highland."
+          },
+          {
+            "name": "תיאטרון TCL Chinese",
+            "required": true,
+            "note": "טביעות ידיים ורגליים של כוכבים בחזית."
+          },
+          {
+            "name": "Dolby Theatre ו־Ovation Hollywood",
+            "required": false,
+            "note": "המתחם של טקס האוסקר, עם תצפית לשלט מהקומות העליונות."
+          }
+        ],
+        "duration": {
+          "min": "כשעה",
+          "recommended": "1.5–2 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קלים ונעליים נוחות.",
+          "כובע וקרם הגנה."
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד, במיוחד אחר הצהריים.",
+          "parking": "חניונים בתשלום ליד Hollywood & Highland.",
+          "toilets": "במתחם Ovation Hollywood ובבתי קפה.",
+          "signal": "טובה.",
+          "safety": "מקום תיירותי וצפוף. לשמור על התיק והטלפון. יש אנשים בתחפושות שמבקשים כסף על תמונה.",
+          "tips": "מגיעים בבוקר, לפני ההמונים."
+        },
+        "bestTime": "בוקר.",
+        "important": [],
+        "weatherAlt": "בחום כבד: מקצרים ועוברים למצפה Griffith בשעות הערב.",
+        "links": []
+      },
+      "days": [
+        "2027-09-11"
+      ],
+      "imageMatch": [
+        "walk of fame"
+      ]
+    },
+    {
+      "id": "hollywood-sign-view",
+      "name": "תצפית על שלט הוליווד",
+      "nameEn": "Lake Hollywood Park (Hollywood Sign view)",
+      "region": "la",
+      "lat": 34.1281,
+      "lng": -118.3255,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "30–45 דק׳",
+      "see": "אחת התצפיות הקרובות לשלט, מפארק שכונתי קטן.",
+      "summary": "לשלט עצמו אי אפשר להגיע. התצפיות הטובות: Lake Hollywood Park ומצפה Griffith.",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית ותמונה עם השלט",
+            "required": true,
+            "note": "מ־Lake Hollywood Park השלט נראה קרוב וגדול."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "30–45 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קלים, כובע ומים."
+        ],
+        "expect": {
+          "crowds": "תיירים רבים בשעות היום.",
+          "parking": "חניה ברחוב בשכונה. לשים לב לשלטי חניה ולאיסורים.",
+          "toilets": "לא בטוח שיש. לבדוק במקום.",
+          "signal": "טובה.",
+          "safety": "להישאר בשטח הפארק ובשבילים המותרים. ההגעה לשלט עצמו אסורה.",
+          "tips": "לשלב עם מצפה Griffith באותו אחר צהריים. משם רואים את השלט ואת העיר."
+        },
+        "bestTime": "אחר הצהריים, כשהשמש מאירה את השלט.",
+        "important": [
+          "אסור להגיע לשלט עצמו. צופים מנקודות התצפית."
+        ],
+        "weatherAlt": "באובך: מצפה Griffith בערב.",
+        "links": []
+      },
+      "days": [
+        "2027-09-11"
+      ],
+      "imageMatch": [
+        "hollywood sign"
+      ]
+    },
+    {
+      "id": "universal",
+      "name": "יוניברסל סטודיוס הוליווד",
+      "nameEn": "Universal Studios Hollywood",
+      "region": "la",
+      "lat": 34.1381,
+      "lng": -118.3534,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "יום מלא",
+      "see": "פארק שעשועים וסיור באולפני הסרטים.",
+      "summary": "אופציה ליום נפרד, אם יהיה לכם כוח. לבדוק מחירים ושעות באתר.",
+      "optional": true,
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Studio Tour",
+            "required": true,
+            "note": "סיור ברכבת בין תפאורות אמיתיות של סרטים."
+          },
+          {
+            "name": "המתקנים העיקריים",
+            "required": false,
+            "note": "עולם הארי פוטר, Super Nintendo World ועוד. לבדוק מה פתוח."
+          }
+        ],
+        "duration": {
+          "min": "חצי יום",
+          "recommended": "יום מלא",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קלים, נעליים נוחות מאוד.",
+          "כובע, קרם הגנה ובקבוק מים."
+        ],
+        "expect": {
+          "crowds": "עמוס, במיוחד בסופי שבוע. התורים למתקנים יכולים להיות ארוכים.",
+          "parking": "חניונים של הפארק בתשלום. כ־10 ק״מ מהמלון.",
+          "toilets": "בכל הפארק.",
+          "signal": "טובה.",
+          "safety": "חם בשעות הצהריים. לשתות הרבה.",
+          "tips": "להגיע בפתיחה. כרטיס מסוג Express חוסך תורים, ובתשלום נוסף."
+        },
+        "bestTime": "מהפתיחה בבוקר.",
+        "important": [
+          "לקנות כרטיסים מראש באתר הרשמי. מחירים ושעות פתיחה משתנים לפי תאריך."
+        ],
+        "weatherAlt": "רוב הפארק פתוח גם בחום. לתכנן הפסקות במזגן.",
+        "links": [
+          {
+            "label": "Universal Studios Hollywood – האתר הרשמי",
+            "url": "https://www.universalstudioshollywood.com"
+          }
+        ]
+      },
+      "days": [
+        "2027-09-12"
+      ],
+      "imageMatch": [
+        "universal studios hollywood"
+      ]
+    },
+    {
       "id": "griffith",
       "name": "מצפה Griffith",
       "nameEn": "Griffith Observatory",
       "region": "la",
       "lat": 34.1184,
       "lng": -118.3004,
-      "days": [],
+      "days": [
+        "2027-09-11"
+      ],
       "kind": "attraction",
       "summary": "מצפה כוכבים עם תצפית על העיר ועל שלט הוליווד.",
-      "suggestion": true,
-      "optional": true,
       "imageQuery": "Griffith Observatory",
       "imageMatch": [
         "griffith"
@@ -3934,10 +4265,10 @@
       "points": [
         "lax",
         "sfo",
-        "axiom"
+        "club-quarters"
       ],
       "lodging": "sf",
-      "summary": "LY5 נוחתת ב־LAX ב־06:00, ובצהריים LY4556 ל־SFO. צריך לעבור בין טרמינלים ב־LAX.",
+      "summary": "LY5 נוחתת ב־LAX ב־06:00, ובצהריים LY4556 ל־SFO. צריך לעבור בין טרמינלים ב־LAX. מ־SFO ב־BART לתחנת Embarcadero.",
       "estTime": "יום טיסות",
       "bring": [
         "דרכונים ואישורי ESTA",
@@ -3947,30 +4278,49 @@
     },
     {
       "date": "2027-08-20",
-      "type": "free",
+      "type": "explore",
       "region": "sf",
-      "title": "סן פרנסיסקו – יום פתוח",
-      "points": [],
+      "title": "ה־Embarcadero, הרציפים ואלקטרז",
+      "points": [
+        "ferry-building",
+        "fishermans-wharf",
+        "alcatraz",
+        "cable-car",
+        "lombard"
+      ],
       "lodging": "sf",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
+      "summary": "הצעה: בוקר ב־Ferry Building ליד המלון, הליכה לאורך ה־Embarcadero ל־Pier 39 ול־Fisherman's Wharf, אלקטרז (אם הוזמן), ונסיעה ב־Cable Car עם עצירה ב־Lombard.",
+      "estTime": "יום מלא ברגל ובתחבורה ציבורית (הערכה)"
     },
     {
       "date": "2027-08-21",
-      "type": "free",
+      "type": "explore",
       "region": "sf",
-      "title": "סן פרנסיסקו – יום פתוח",
-      "points": [],
+      "title": "גשר הזהב וסוסליטו",
+      "points": [
+        "golden-gate",
+        "sausalito"
+      ],
       "lodging": "sf",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
+      "summary": "היום של הגשר: מגיעים ל־Crissy Field או לתצפית ליד הגשר, חוצים אותו ברגל או באופניים שכורים, ממשיכים לסוסליטו וחוזרים במעבורת ל־Ferry Building, ליד המלון.",
+      "estTime": "5–7 שעות (הערכה)",
+      "weatherAlt": "הגשר מכוסה לעיתים בערפל, בעיקר בבוקר. אם לא רואים כלום, מחליפים עם 22.8 ומנסים שוב."
     },
     {
       "date": "2027-08-22",
-      "type": "free",
+      "type": "explore",
       "region": "sf",
-      "title": "סן פרנסיסקו – יום פתוח",
-      "points": [],
+      "title": "צ׳יינה טאון, תצפיות ושכונות",
+      "points": [
+        "chinatown",
+        "coit-tower",
+        "painted-ladies",
+        "twin-peaks",
+        "lands-end"
+      ],
       "lodging": "sf",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
+      "summary": "הצעה: צ׳יינה טאון ו־Coit Tower בבוקר, Painted Ladies אחר הצהריים, ושקיעה ב־Twin Peaks או ב־Lands End עם נוף לגשר.",
+      "estTime": "יום מלא (הערכה)"
     },
     {
       "date": "2027-08-23",
@@ -3980,16 +4330,16 @@
       "points": [
         "sfo",
         "sea-airport",
-        "packwood"
+        "crest-trail"
       ],
       "lodging": "rainier",
       "summary": "טיסה SFO→SEA ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
       "estTime": "יום מעבר",
       "drive": [
         "sea-airport",
-        "packwood"
+        "crest-trail"
       ],
-      "notes": "צ׳ק־אין ב־Packwood בין 16:00 ל־21:00. לבחור טיסה שמשאירה מספיק זמן לנסיעה."
+      "notes": "צ׳ק־אין ב־Crest Trail Lodge עד 22:00. מהשדה כ־2.5 שעות נסיעה, לבחור טיסה בהתאם."
     },
     {
       "date": "2027-08-24",
@@ -4004,12 +4354,12 @@
       "estTime": "5–7 שעות (הערכה)",
       "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת.",
       "drive": [
-        "packwood",
+        "crest-trail",
         "rainier-paradise",
         "reflection-lakes",
-        "packwood"
+        "crest-trail"
       ],
-      "notes": "Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית."
+      "notes": "Crest Trail Lodge ב־Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית."
     },
     {
       "date": "2027-08-25",
@@ -4023,9 +4373,9 @@
       "estTime": "5–7 שעות (הערכה)",
       "weatherAlt": "אפשר להחליף בין הימים לפי התחזית.",
       "drive": [
-        "packwood",
+        "crest-trail",
         "rainier-sunrise",
-        "packwood"
+        "crest-trail"
       ],
       "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק."
     },
@@ -4042,7 +4392,7 @@
       "lodging": "seattle",
       "summary": "נסיעה מ־Packwood לסיאטל, החזרת הרכב ולילה ב־Hyatt at Olive 8.",
       "drive": [
-        "packwood",
+        "crest-trail",
         "hyatt-olive8"
       ]
     },
@@ -4309,21 +4659,41 @@
     },
     {
       "date": "2027-09-11",
-      "type": "free",
+      "type": "explore",
       "region": "la",
-      "title": "לוס אנג׳לס – יום פתוח",
-      "points": [],
+      "title": "יום בהוליווד",
+      "points": [
+        "walk-of-fame",
+        "hollywood-sign-view",
+        "griffith"
+      ],
       "lodging": "la",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
+      "summary": "בבוקר שדרת הכוכבים ותיאטרון TCL Chinese, אחר הצהריים תצפית על שלט הוליווד מ־Lake Hollywood Park, ושקיעה במצפה Griffith עם נוף לעיר ולשלט.",
+      "drive": [
+        "park-plaza",
+        "walk-of-fame",
+        "hollywood-sign-view",
+        "griffith",
+        "park-plaza"
+      ],
+      "estTime": "6–8 שעות (הערכה)",
+      "weatherAlt": "בחום כבד: בוקר בהוליווד, הפסקה במלון, ומצפה Griffith בערב."
     },
     {
       "date": "2027-09-12",
       "type": "free",
       "region": "la",
-      "title": "לוס אנג׳לס – יום פתוח",
-      "points": [],
+      "title": "יוניברסל סטודיוס, אם יהיה כוח",
+      "points": [
+        "universal"
+      ],
       "lodging": "la",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
+      "summary": "אופציה: יום מלא ביוניברסל סטודיוס. אם אין כוח, יום מנוחה או סנטה מוניקה.",
+      "drive": [
+        "park-plaza",
+        "universal",
+        "park-plaza"
+      ]
     },
     {
       "date": "2027-09-13",
@@ -4332,7 +4702,7 @@
       "title": "לוס אנג׳לס – יום פתוח",
       "points": [],
       "lodging": "la",
-      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
+      "summary": "יום פתוח. הצעות: סנטה מוניקה, מרכז Getty."
     },
     {
       "date": "2027-09-14",
@@ -4565,44 +4935,44 @@
     {
       "id": "sf",
       "city": "סן פרנסיסקו",
-      "name": "Axiom Hotel",
+      "name": "Club Quarters Hotel Embarcadero",
       "checkIn": "2027-08-19",
       "checkOut": "2027-08-23",
       "price": {
-        "amount": 814.42,
+        "amount": 653.55,
         "currency": "USD"
       },
       "deposit": {
-        "amount": 300,
+        "amount": 100,
         "currency": "USD",
         "note": "פיקדון נזקים בצ׳ק־אין, מוחזר תוך כ־7 ימים"
       },
-      "cancelBy": "ביטול חינם עד 16.8.2027 23:59 (שעון מקומי). אחר כך: 188.05$",
+      "cancelBy": "ביטול חינם עד 17.8.2027 23:59 (שעון מקומי). אחר כך: 182.01$",
       "url": null,
       "status": "booked",
-      "notes": "28 Cyril Magnin St, כיכר יוניון. ארוחת בוקר לא כלולה (25$ לאדם ללילה). המחיר כולל מסים ודמי אתר נופש.",
-      "point": "axiom",
-      "room": "חדר קווין פטיט",
-      "checkTimes": "צ׳ק־אין 15:00 · צ׳ק־אאוט עד 12:00",
-      "payment": "Booking.com יחייבו אוטומטית. שולם עד עכשיו: 0$"
+      "notes": "424 Clay St, הרובע הפיננסי. מהשדה ב־BART לתחנת Embarcadero. ארוחות לא כלולות. חניה בחניון מקורה סמוך.",
+      "point": "club-quarters",
+      "room": "חדר קווין קטן",
+      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
+      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
     },
     {
       "id": "rainier",
       "city": "הר ריינייר",
-      "name": "Packwood Lodge & Cabins",
+      "name": "Crest Trail Lodge",
       "checkIn": "2027-08-23",
       "checkOut": "2027-08-26",
       "price": {
-        "amount": 833.44,
+        "amount": 523.75,
         "currency": "USD"
       },
       "status": "booked",
-      "notes": "13807 US Hwy 12, Packwood. הבסיס הנוח ביותר לשני הימים בפארק. ארוחות לא כלולות. אין תשלום במזומן.",
-      "cancelBy": "ביטול חינם עד 19.8.2027 23:59 (שעון מקומי). אחר כך: 759.05$",
-      "point": "packwood",
-      "room": "Couples Cabin with Jetted Tub",
-      "checkTimes": "צ׳ק־אין 16:00–21:00 · צ׳ק־אאוט עד 11:00",
-      "payment": "לפי אישור ההזמנה, התשלום הסופי מתבצע מול מקום האירוח."
+      "notes": "12729 US Hwy 12, Packwood. הבסיס הנוח ביותר לשני הימים בפארק. ארוחות לא כלולות.",
+      "cancelBy": "ביטול חינם עד 20.8.2027 23:59 (שעון מקומי). אחר כך: 523.75$ (כל הסכום)",
+      "point": "crest-trail",
+      "room": "חדר דלוקס, מיטת קווין",
+      "checkTimes": "צ׳ק־אין 15:00–22:00 · צ׳ק־אאוט עד 11:00",
+      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
     },
     {
       "id": "seattle",
@@ -5206,6 +5576,18 @@
       "cost": null,
       "status": "option",
       "notes": "הצעה. הכניסה חינם אבל צריך להזמין מראש כרטיס לשעה מסוימת. סגור בימי שני. החניה בתשלום (נכון ל־2026)."
+    },
+    {
+      "id": "a-universal",
+      "name": "יוניברסל סטודיוס הוליווד",
+      "region": "la",
+      "point": "universal",
+      "date": "2027-09-12",
+      "booking": "recommended",
+      "url": "https://www.universalstudioshollywood.com",
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה, אם יהיה לכם כוח. לקנות כרטיסים מראש באתר הרשמי."
     }
   ],
   "budget": {
@@ -5278,14 +5660,14 @@
         "budget": null,
         "items": [
           {
-            "label": "Axiom Hotel, סן פרנסיסקו (4 לילות)",
-            "amount": 814.42,
+            "label": "Club Quarters Embarcadero, סן פרנסיסקו (4 לילות)",
+            "amount": 653.55,
             "currency": "USD",
             "status": "booked"
           },
           {
-            "label": "Packwood Lodge & Cabins (3 לילות)",
-            "amount": 833.44,
+            "label": "Crest Trail Lodge, Packwood (3 לילות)",
+            "amount": 523.75,
             "currency": "USD",
             "status": "booked"
           },
