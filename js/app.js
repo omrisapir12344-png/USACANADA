@@ -445,6 +445,7 @@
           ${li('#/more/packing', 'jacket', 'רשימת אריזה', 'לפי האקלים בכל אזור')}
           ${li('#/more/expenses', 'wallet', 'הוצאות בזמן הטיול', 'רישום מול התקציב, עם המרה לשקלים')}
           ${li('#/more/emergency', 'warn', 'מידע לחירום', '911, נציגויות ישראל, בית חולים קרוב')}
+          ${li('#/more/sync', 'link', 'סנכרון עם בן/בת הזוג', 'שליחת עדכונים בוואטסאפ ומיזוג בטלפון השני')}
           <button class="li" id="icsBtn" style="width:100%;text-align:right;font:inherit"><span class="ic">${I('cal')}</span><div class="g"><b>הוספת המועדים ליומן</b><div class="s">שאטל, תשלומים, ביטולים וטיסות, עם תזכורות</div></div>${I('download', 'i chev')}</button>
         </div>
         <div class="list">
@@ -833,6 +834,88 @@
   };
 
 
+  /* ---------- sync between devices (no server, no keys): share a link that merges on the other phone ---------- */
+  const SYNC_MAPS = ['tg.done', 'tg.visited', 'tg.notes', 'tg.pack'];
+  const SYNC_OBJ = ['tg.insurance', 'tg.rates'];
+  const b64u = (bytes) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  const unb64u = (s) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+  async function pack(obj) {
+    const raw = new TextEncoder().encode(JSON.stringify(obj));
+    if (typeof CompressionStream === 'undefined') return 'r' + b64u(raw);
+    const gz = new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer());
+    let s = ''; for (let i = 0; i < gz.length; i += 8192) s += String.fromCharCode(...gz.subarray(i, i + 8192));
+    return 'g' + btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+  async function unpack(code) {
+    const bytes = unb64u(code.slice(1));
+    const txt = code[0] === 'g' ? await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text() : new TextDecoder().decode(bytes);
+    return JSON.parse(txt);
+  }
+  function syncSnapshot() {
+    const data = {}; SYNC_MAPS.concat(SYNC_OBJ, ['tg.expenses']).forEach(k => { data[k] = LS.get(k, null); });
+    return { v: 1, t: Date.now(), name: LS.get('tg.deviceName', ''), data, ts: LS.get('tg.ts', {}), del: LS.get('tg.expDel', []) };
+  }
+  function mergeSync(inc) {
+    const ts = LS.get('tg.ts', {}), its = inc.ts || {}; let changed = 0;
+    SYNC_MAPS.forEach(k => {
+      const mine = LS.get(k, {}) || {}, theirs = inc.data[k] || {};
+      Object.keys(theirs).forEach(id => { const key = k + ':' + id; if ((its[key] || 0) > (ts[key] || 0) || (!(key in ts) && !(id in mine))) { if (mine[id] !== theirs[id]) changed++; mine[id] = theirs[id]; ts[key] = its[key] || inc.t; } });
+      localStorage.setItem(k, JSON.stringify(mine));
+    });
+    SYNC_OBJ.forEach(k => { if (inc.data[k] && (its[k] || 0) > (ts[k] || 0)) { localStorage.setItem(k, JSON.stringify(inc.data[k])); ts[k] = its[k]; changed++; } });
+    const del = new Set([...(LS.get('tg.expDel', []) || []), ...(inc.del || [])]);
+    const byId = {}; [...(LS.get('tg.expenses', []) || []), ...(inc.data['tg.expenses'] || [])].forEach(e => { if (!del.has(e.id)) { if (!byId[e.id]) changed += (LS.get('tg.expenses', []) || []).some(x => x.id === e.id) ? 0 : 1; byId[e.id] = e; } });
+    localStorage.setItem('tg.expenses', JSON.stringify(Object.values(byId).sort((a, b) => a.id < b.id ? -1 : 1)));
+    localStorage.setItem('tg.expDel', JSON.stringify([...del]));
+    localStorage.setItem('tg.ts', JSON.stringify(ts));
+    return changed;
+  }
+  // stamp every change so merges keep the newest value
+  const _set = LS.set;
+  LS.set = (k, v) => {
+    try {
+      const ts = LS.get('tg.ts', {}), now = Date.now();
+      if (SYNC_MAPS.includes(k)) { const old = LS.get(k, {}) || {}; new Set([...Object.keys(old), ...Object.keys(v || {})]).forEach(id => { if (old[id] !== (v || {})[id]) ts[k + ':' + id] = now; }); localStorage.setItem('tg.ts', JSON.stringify(ts)); }
+      else if (SYNC_OBJ.includes(k)) { ts[k] = now; localStorage.setItem('tg.ts', JSON.stringify(ts)); }
+      else if (k === 'tg.expenses') { const ids = new Set((v || []).map(e => e.id)); const gone = (LS.get('tg.expenses', []) || []).filter(e => !ids.has(e.id)).map(e => e.id); if (gone.length) localStorage.setItem('tg.expDel', JSON.stringify([...(LS.get('tg.expDel', []) || []), ...gone])); }
+    } catch { /* ignore */ }
+    _set(k, v);
+  };
+
+  V.more_sync = () => `${pagehead('ביחד', 'סנכרון עם בן/בת הזוג', '#/more')}<div class="body" style="padding-top:8px">
+    <div class="sect"><h4>${I('link')}איך זה עובד</h4><ul>
+      <li>לוחצים ״שליחת העדכונים שלי״ ושולחים את הקישור בוואטסאפ.</li>
+      <li>בצד השני פותחים את הקישור, והאתר ממזג את העדכונים. אם שניכם שיניתם את אותו דבר, נשמר השינוי האחרון.</li>
+      <li>אחר כך שולחים חזרה באותה דרך, כדי ששני הטלפונים יהיו זהים.</li></ul>
+      <p class="small muted" style="margin-top:8px">מה עובר: משימות שבוצעו, ״ביקרנו״, הערות, רשימת אריזה, הוצאות, שערי המרה ופרטי הביטוח. תמונות לא עוברות כי הן גדולות מדי לקישור.</p></div>
+    <div class="sect form"><label class="fld"><span>השם שלי (יופיע אצל השני)</span><input id="s-name" value="${esc(LS.get('tg.deviceName', ''))}" placeholder="למשל: עמרי"></label>
+      <button class="btn dark" id="s-share">${I('link')}שליחת העדכונים שלי</button>
+      <button class="btn" id="s-copy">העתקת הקישור</button>
+      <p class="small" id="s-status"></p></div>
+    <div class="sect warn"><h4>${I('warn')}למה לא סנכרון אוטומטי?</h4><p>סנכרון אוטומטי בזמן אמת דורש שרת עם מפתח גישה, ולפי המדיניות אסור לשמור מפתחות באתר. הקישור עובד גם בלי אינטרנט קבוע, והמידע עובר רק דרך הוואטסאפ שלכם.</p></div></div>`;
+  V.more_sync.after = () => {
+    const make = async () => { LS.set('tg.deviceName', $('#s-name').value.trim()); const code = await pack(syncSnapshot()); return `${location.origin}${location.pathname}#/sync/${code}`; };
+    $('#s-share').addEventListener('click', async () => {
+      const url = await make();
+      if (navigator.share) { try { await navigator.share({ title: 'עדכונים לטיול', text: 'עדכונים מהמדריך שלנו. לפתוח כדי למזג:', url }); return; } catch { /* cancelled */ } }
+      try { await navigator.clipboard.writeText(url); $('#s-status').textContent = 'הקישור הועתק. אפשר להדביק בוואטסאפ.'; } catch { $('#s-status').textContent = url; }
+    });
+    $('#s-copy').addEventListener('click', async () => { const url = await make(); try { await navigator.clipboard.writeText(url); $('#s-status').textContent = `הקישור הועתק (${url.length} תווים).`; } catch { $('#s-status').textContent = url; } });
+  };
+  V.sync = (code) => {
+    queueMicrotask(async () => {
+      try {
+        const inc = await unpack(code);
+        if (inc.v !== 1) throw new Error('גרסה לא מוכרת');
+        const n = mergeSync(inc);
+        history.replaceState(null, '', location.pathname + '#/journey');
+        route(); toast(n ? `מוזגו ${n} עדכונים${inc.name ? ' מ־' + inc.name : ''}` : 'הכול כבר מעודכן');
+      } catch (e) { view.innerHTML = `${pagehead('סנכרון', 'הקישור לא תקין')}<div class="body"><p class="lead">לא הצלחתי לקרוא את העדכונים. בקשו קישור חדש.</p></div>`; }
+    });
+    return `${pagehead('סנכרון', 'ממזג עדכונים…')}`;
+  };
+
+
   /* ---------- router ---------- */
   function route() {
     const [, name = 'journey', a] = (location.hash || '#/journey').split('/');
@@ -842,7 +925,7 @@
     view.innerHTML = (EDIT() ? `<div class="editbar"><span>מצב עריכה · השינויים נשמרים רק במכשיר הזה</span><a href="#/more/offline">ייצוא וסיום</a></div>` : '') + v(a, b);
     const after = name === 'more' && a ? V['more_' + a]?.after : v.after;
     if (after) after(a, b);
-    const tab = { region: 'journey', point: 'journey', day: 'today', edit: 'more' }[name] || (V[name] ? name : 'journey');
+    const tab = { region: 'journey', point: 'journey', day: 'today', edit: 'more', sync: 'journey' }[name] || (V[name] ? name : 'journey');
     document.querySelectorAll('#tabs a').forEach(t => { const on = t.dataset.tab === tab; t.classList.toggle('on', on); if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current'); });
     window.scrollTo(0, 0);
   }
