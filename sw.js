@@ -1,5 +1,5 @@
 /* Service worker – יומן מסע 2027 */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL = `shell-${VERSION}`;
 const DATA = 'data';
 const TILES = 'osm-tiles';
@@ -12,9 +12,9 @@ const SHELL_FILES = [
   'vendor/leaflet/images/marker-icon.png', 'vendor/leaflet/images/marker-icon-2x.png', 'vendor/leaflet/images/marker-shadow.png',
   'vendor/leaflet/images/layers.png', 'vendor/leaflet/images/layers-2x.png',
   'assets/icons/icon.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
-  'vendor/fonts/heebo-hebrew.woff2', 'vendor/fonts/heebo-latin.woff2'
+  ...[400, 500, 600, 700].flatMap(w => [`vendor/fonts/plex-hebrew-${w}.woff2`, `vendor/fonts/plex-latin-${w}.woff2`])
 ];
-const DATA_FILES = ['data/trip.json', 'data/credits.json'];
+const DATA_FILES = ['data/trip.json', 'data/credits.json', 'data/routes.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {

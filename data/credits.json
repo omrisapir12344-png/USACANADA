@@ -627,20 +627,20 @@
     ],
     "emerald-lake": [
       {
-        "file": "assets/img/emerald-lake/1.webp",
-        "title": "File:Emerald Lake Yoho Winter BC.jpg",
-        "author": "JLRPHOTO",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Emerald_Lake_Yoho_Winter_BC.jpg"
-      },
-      {
         "file": "assets/img/emerald-lake/2.webp",
         "title": "File:Emerald lake Yoho national park.jpg",
         "author": "Soumya.deo",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Emerald_lake_Yoho_national_park.jpg"
+      },
+      {
+        "file": "assets/img/emerald-lake/1.webp",
+        "title": "File:Emerald Lake Yoho Winter BC.jpg",
+        "author": "JLRPHOTO",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Emerald_Lake_Yoho_Winter_BC.jpg"
       },
       {
         "file": "assets/img/emerald-lake/3.webp",
@@ -675,6 +675,46 @@
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Natural_Bridge_(37482586131).jpg"
+      }
+    ],
+    "moraine-lake": [
+      {
+        "file": "assets/img/moraine-lake/1.webp",
+        "title": "File:Moraine Lake 17092005.jpg",
+        "author": "Gorgo",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Moraine_Lake_17092005.jpg"
+      }
+    ],
+    "peyto-lake": [
+      {
+        "file": "assets/img/peyto-lake/1.webp",
+        "title": "File:Peyto Lake-Banff NP-Canada.jpg",
+        "author": "Tobias Alt, Tobi 87",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Peyto_Lake-Banff_NP-Canada.jpg"
+      }
+    ],
+    "lake-louise": [
+      {
+        "file": "assets/img/lake-louise/1.webp",
+        "title": "File:Lake Louise and Chateau, as seen from Fairmont Lookout 20240822 1.jpg",
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Lake_Louise_and_Chateau,_as_seen_from_Fairmont_Lookout_20240822_1.jpg"
+      }
+    ],
+    "griffith": [
+      {
+        "file": "assets/img/griffith/1.webp",
+        "title": "File:Griffith Observatory 2012 01.jpg",
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
-  "name": "מדריך המסע שלנו",
-  "short_name": "יומן מסע",
+  "name": "טיול מסע ארה״ב וקנדה 2027",
+  "short_name": "ארה״ב וקנדה 2027",
   "description": "מדריך טיולים אישי – ארה״ב, קרוז אלסקה והרוקיז",
   "lang": "he",
   "dir": "rtl",
@@ -8,7 +8,7 @@
   "scope": "./",
   "display": "standalone",
   "background_color": "#f1f5f9",
-  "theme_color": "#0f1f3d",
+  "theme_color": "#13233d",
   "icons": [
     { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "מדריך המסע שלנו",
-    "subtitle": "מסן פרנסיסקו להר ריינייר, קרוז לאלסקה, הרוקיז הקנדיים ולוס אנג׳לס.",
+    "title": "טיול מסע ארה״ב וקנדה 2027",
+    "subtitle": "סן פרנסיסקו, הר ריינייר, שבעה לילות באלסקה, הרוקיז הקנדיים ולוס אנג׳לס.",
     "start": "2027-08-19",
     "end": "2027-09-15",
     "version": 2,
@@ -60,7 +60,8 @@
       "beforeYouGo": [
         "מלון בסן פרנסיסקו",
         "ESTA לשני הנוסעים"
-      ]
+      ],
+      "transfer": "טיסה SFO→SEA ורכב שכור"
     },
     {
       "id": "rainier",
@@ -91,7 +92,8 @@
         "רכב שכור בסיאטל",
         "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה ב־2027",
         "לינה ליד הפארק"
-      ]
+      ],
+      "transfer": "165 ק״מ לסיאטל ברכב"
     },
     {
       "id": "seattle",
@@ -115,7 +117,8 @@
       },
       "beforeYouGo": [
         "מלון בסיאטל ל־26/8"
-      ]
+      ],
+      "transfer": "עלייה לאונייה ב־27/8"
     },
     {
       "id": "cruise",
@@ -143,7 +146,8 @@
       "beforeYouGo": [
         "יתרת תשלום עד 18/6/2027",
         "לאמת שעות עגינה ושעת חזרה לאונייה"
-      ]
+      ],
+      "transfer": "טיסה SEA→YYC ורכב שכור"
     },
     {
       "id": "rockies",
@@ -176,7 +180,8 @@
         "רכב בקלגרי",
         "כרטיס כניסה לפארקים",
         "שאטל לאגמים – 15/4 ב־17:00"
-      ]
+      ],
+      "transfer": "טיסה YYC→LAX ורכב שכור"
     },
     {
       "id": "la",
@@ -1316,7 +1321,12 @@
       ],
       "lodging": "rainier",
       "summary": "טיסה SFO→SEA ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
-      "estTime": "יום מעבר"
+      "estTime": "יום מעבר",
+      "drive": [
+        "sea-airport",
+        "rainier-paradise"
+      ],
+      "driveNote": "עד אזור Paradise. הלינה טרם נקבעה."
     },
     {
       "date": "2027-08-24",
@@ -1329,7 +1339,11 @@
       ],
       "lodging": "rainier",
       "estTime": "5–7 שעות (הערכה)",
-      "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת."
+      "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת.",
+      "drive": [
+        "rainier-paradise",
+        "reflection-lakes"
+      ]
     },
     {
       "date": "2027-08-25",
@@ -1353,7 +1367,12 @@
         "space-needle"
       ],
       "lodging": "seattle",
-      "summary": "החזרת הרכב השכור בסיאטל ולילה בעיר."
+      "summary": "החזרת הרכב השכור בסיאטל ולילה בעיר.",
+      "drive": [
+        "rainier-paradise",
+        "pike-place"
+      ],
+      "driveNote": "מאזור Paradise לסיאטל."
     },
     {
       "date": "2027-08-27",
@@ -1441,7 +1460,11 @@
       ],
       "lodging": "canmore",
       "summary": "האונייה מגיעה ב־06:00, וזו לא שעת הירידה. הטיסה לקלגרי צריכה להיות מהצהריים והלאה. הטיסה והרכב טרם הוזמנו.",
-      "estTime": "יום מעבר"
+      "estTime": "יום מעבר",
+      "drive": [
+        "yyc",
+        "canmore"
+      ]
     },
     {
       "date": "2027-09-04",
@@ -1457,7 +1480,14 @@
       ],
       "lodging": "canmore",
       "estTime": "כ־6–8 שעות (הערכה)",
-      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות או לטייל ברחוב הראשי."
+      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות או לטייל ברחוב הראשי.",
+      "drive": [
+        "canmore",
+        "banff-town",
+        "bow-falls",
+        "lake-minnewanka",
+        "canmore"
+      ]
     },
     {
       "date": "2027-09-05",
@@ -1472,7 +1502,14 @@
       "lodging": "canmore",
       "estTime": "כ־8–9 שעות כולל נסיעה (הערכה)",
       "weatherAlt": "בגשם כבד: Lower Falls בלבד, ואחריו Emerald Lake לתצפית קצרה.",
-      "notes": "לבדוק לפני הטיול את הגישה לכביש 1A דרך Castle Junction. ייתכן שיש הגבלת רכב ממזרח."
+      "notes": "לבדוק לפני הטיול את הגישה לכביש 1A דרך Castle Junction. ייתכן שיש הגבלת רכב ממזרח.",
+      "drive": [
+        "canmore",
+        "johnston-canyon",
+        "emerald-lake",
+        "natural-bridge",
+        "canmore"
+      ]
     },
     {
       "date": "2027-09-06",
@@ -1489,7 +1526,16 @@
       ],
       "lodging": "jasper",
       "estTime": "יום מלא (הערכה)",
-      "weatherAlt": "בעננות נמוכה: מתמקדים ב־Mistaya ובקרחון Athabasca שקרובים לכביש ומוותרים על Peyto."
+      "weatherAlt": "בעננות נמוכה: מתמקדים ב־Mistaya ובקרחון Athabasca שקרובים לכביש ומוותרים על Peyto.",
+      "drive": [
+        "canmore",
+        "bow-lake",
+        "peyto-lake",
+        "mistaya-canyon",
+        "big-bend",
+        "columbia-icefield",
+        "jasper-town"
+      ]
     },
     {
       "date": "2027-09-07",
@@ -1501,7 +1547,13 @@
         "maligne-lake"
       ],
       "lodging": "jasper",
-      "summary": "השיט באגם Maligne לא הוזמן."
+      "summary": "השיט באגם Maligne לא הוזמן.",
+      "drive": [
+        "jasper-town",
+        "medicine-lake",
+        "maligne-lake",
+        "jasper-town"
+      ]
     },
     {
       "date": "2027-09-08",
@@ -1517,7 +1569,15 @@
         "field"
       ],
       "lodging": "field",
-      "estTime": "יום מלא (הערכה)"
+      "estTime": "יום מלא (הערכה)",
+      "drive": [
+        "jasper-town",
+        "athabasca-falls",
+        "goats-glaciers",
+        "sunwapta-falls",
+        "tangle-creek",
+        "field"
+      ]
     },
     {
       "date": "2027-09-09",
@@ -1531,7 +1591,20 @@
       "lodging": "field",
       "summary": "שאטל של Parks Canada. ההזמנות נפתחות ב־15/4/2027 ב־17:00 שעון ישראל.",
       "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "ראו חלופה בדף של אגם Moraine."
+      "weatherAlt": "ראו חלופה בדף של אגם Moraine.",
+      "drive": [
+        "field",
+        "lake-louise",
+        "moraine-lake",
+        "field"
+      ],
+      "shuttle": [
+        [
+          "lake-louise",
+          "moraine-lake"
+        ]
+      ],
+      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב."
     },
     {
       "date": "2027-09-10",
@@ -1543,7 +1616,11 @@
         "lax"
       ],
       "lodging": "la",
-      "summary": "הטיסה מתוכננת ולא הוזמנה. איסוף רכב שכור ב־LAX."
+      "summary": "הטיסה מתוכננת ולא הוזמנה. איסוף רכב שכור ב־LAX.",
+      "drive": [
+        "field",
+        "yyc"
+      ]
     },
     {
       "date": "2027-09-11",
