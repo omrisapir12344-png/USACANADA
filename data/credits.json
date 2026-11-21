@@ -1204,6 +1204,34 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Banff_Upper_Hot_Springs.JPG"
       }
+    ],
+    "hollywood-sign-view": [
+      {
+        "file": "assets/img/hollywood-sign-view/1.webp",
+        "title": "File:Hollywood Sign from Park on Canyon Lake Drive - panoramio.jpg",
+        "author": "Russell Lovrin",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign_from_Park_on_Canyon_Lake_Drive_-_panoramio.jpg"
+      }
+    ],
+    "universal": [
+      {
+        "file": "assets/img/universal/1.webp",
+        "title": "File:Universal Studios Hollywood 2012 58.jpg",
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_2012_58.jpg"
+      },
+      {
+        "file": "assets/img/universal/2.webp",
+        "title": "File:Universal Studios Hollywood 2012 44.jpg",
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_2012_44.jpg"
+      }
     ]
   }
 }
