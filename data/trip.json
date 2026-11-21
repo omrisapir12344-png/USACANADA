@@ -1,13 +1,15 @@
 {
   "meta": {
-    "title": "יומן מסע 2027",
-    "subtitle": "ארה״ב · קרוז אלסקה · הרוקיז הקנדיים",
+    "title": "מדריך המסע שלנו",
+    "subtitle": "מסן פרנסיסקו להר ריינייר, קרוז לאלסקה, הרוקיז הקנדיים ולוס אנג׳לס.",
     "start": "2027-08-19",
     "end": "2027-09-15",
-    "version": 1,
+    "version": 2,
     "updated": "2026-11-21",
     "travelers": 2,
-    "note": "אין בקובץ מספרי הזמנה, פרטי דרכון, שמות נוסעים או אמצעי תשלום – בכוונה."
+    "note": "אין בקובץ מספרי הזמנה, פרטי דרכון, שמות נוסעים או אמצעי תשלום – בכוונה.",
+    "googleMyMapsEmbed": null,
+    "heroImage": "moraine-lake"
   },
   "statuses": {
     "booked": {
@@ -33,130 +35,163 @@
   },
   "regions": [
     {
-      "id": "california",
-      "name": "קליפורניה",
-      "color": "#e07a3f",
+      "id": "sf",
+      "name": "סן פרנסיסקו",
+      "nameEn": "San Francisco",
+      "from": "2027-08-19",
+      "to": "2027-08-23",
+      "color": "#e0703a",
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
+      "image": "golden-gate",
+      "arrive": "נוחתים ב־SFO ב־19/8 ב־13:29 (LY4556 מ־LAX). משם ברכבת BART לעיר.",
+      "lodging": "הצעה: ליד Powell St BART. Hotel Abri ו־Chancellor להשוואה בלבד. טרם הוזמן.",
+      "lodgingStatus": "toclose",
+      "summary": "ארבעה לילות בעיר. האטרקציות הן הצעות ועדיין לא חלק מהתוכנית.",
       "clothing": {
-        "summary": "סן פרנסיסקו באוגוסט יכולה להיות קרירה, עם ערפל ורוח, במיוחד בערב ובקרבת המים. כדאי להתלבש בשכבות: חולצה קצרה, סווטשירט ומעיל רוח קל.",
+        "summary": "באוגוסט יכול להיות קריר, עם ערפל ורוח, במיוחד בערב וליד המים. שכבות: חולצה קצרה, סווטשירט ומעיל רוח.",
         "bring": [
           "מעיל רוח",
+          "שכבה חמה לערב",
+          "נעליים נוחות (עליות)",
           "קרם הגנה"
         ]
-      }
+      },
+      "beforeYouGo": [
+        "מלון בסן פרנסיסקו",
+        "ESTA לשני הנוסעים"
+      ]
+    },
+    {
+      "id": "rainier",
+      "name": "הר ריינייר",
+      "nameEn": "Mount Rainier",
+      "from": "2027-08-23",
+      "to": "2027-08-26",
+      "color": "#5b8f3a",
+      "tz": "America/Los_Angeles",
+      "tzLabel": "שעון האוקיינוס השקט",
+      "image": "rainier-paradise",
+      "arrive": "טיסה מסן פרנסיסקו לסיאטל (SEA) ב־23/8, ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
+      "lodging": "טרם נקבע. לבחור לינה קרובה לכניסה לפארק.",
+      "lodgingStatus": "toclose",
+      "summary": "שלושה לילות ליד הפארק הלאומי. האטרקציות הן הצעות.",
+      "clothing": {
+        "summary": "בגובה יכול להיות קר בבוקר ובערב, גם באוגוסט, ומזג האוויר משתנה מהר. שכבות, מעיל גשם ונעלי הליכה.",
+        "bring": [
+          "שכבות חמות",
+          "מעיל גשם",
+          "נעלי הליכה",
+          "מים וחטיפים",
+          "דלק מלא"
+        ]
+      },
+      "beforeYouGo": [
+        "טיסה SFO→SEA",
+        "רכב שכור בסיאטל",
+        "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה ב־2027",
+        "לינה ליד הפארק"
+      ]
     },
     {
       "id": "seattle",
       "name": "סיאטל",
-      "color": "#4a7fb5",
+      "nameEn": "Seattle",
+      "from": "2027-08-26",
+      "to": "2027-08-27",
+      "color": "#3f73b5",
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
+      "image": "seattle",
+      "arrive": "נסיעה מריינייר לסיאטל והחזרת הרכב ב־26/8.",
+      "lodging": "טרם נקבע. מלון בסיאטל ללילה שלפני העלייה לאונייה.",
+      "lodgingStatus": "toclose",
+      "summary": "לילה אחד בעיר לפני הקרוז.",
       "clothing": {
-        "summary": "מזג אוויר מתון עם אפשרות לגשם. שכבה ארוכה ומעיל גשם קל.",
+        "summary": "מתון, עם אפשרות לגשם. שכבה ארוכה ומעיל גשם קל.",
         "bring": [
           "מעיל גשם קל"
         ]
-      }
+      },
+      "beforeYouGo": [
+        "מלון בסיאטל ל־26/8"
+      ]
     },
     {
-      "id": "alaska",
+      "id": "cruise",
       "name": "קרוז אלסקה",
-      "color": "#2a9d8f",
+      "nameEn": "Alaska cruise · Celebrity Edge",
+      "from": "2027-08-27",
+      "to": "2027-09-03",
+      "color": "#1f9e8f",
       "tz": "America/Juneau",
-      "tzLabel": "שעון אלסקה",
+      "tzLabel": "שעון אלסקה בנמלי אלסקה · שעון האוקיינוס השקט בסיאטל ובוויקטוריה",
+      "image": "dawes-glacier",
+      "arrive": "עלייה לאונייה בסיאטל ב־27/8 ב־16:00.",
+      "lodging": "על האונייה, 7 לילות.",
+      "lodgingStatus": "booked",
+      "summary": "קטצ׳יקן, קרחון Dawes וג׳ונו, סקאגוויי, Inside Passage וויקטוריה. האונייה מגיעה לסיאטל ב־3/9 ב־06:00, וזו לא שעת הירידה.",
       "clothing": {
-        "summary": "קריר ולעיתים קרובות גשום בנמלים ובשיט מול הקרחונים. שכבות, מעיל עמיד למים, כובע צמר וכפפות לסיפון.",
+        "summary": "קריר ולעיתים קרובות גשום בנמלים ובשיט מול הקרחונים. שכבות, מעיל עמיד למים, כובע וכפפות לסיפון.",
         "bring": [
           "מעיל עמיד למים",
-          "כובע וכפפות",
-          "משקפת"
+          "כובע צמר וכפפות",
+          "משקפת",
+          "תיק יום לנמלים"
         ]
-      }
+      },
+      "beforeYouGo": [
+        "יתרת תשלום עד 18/6/2027",
+        "לאמת שעות עגינה ושעת חזרה לאונייה"
+      ]
     },
     {
-      "id": "victoria",
-      "name": "ויקטוריה",
-      "color": "#6c8ebf",
-      "tz": "America/Vancouver",
-      "tzLabel": "שעון האוקיינוס השקט",
-      "clothing": {
-        "summary": "מתון, עם אפשרות לרוח מהים. שכבה ארוכה.",
-        "bring": [
-          "שכבה חמה"
-        ]
-      }
-    },
-    {
-      "id": "banff",
-      "name": "באנף וקנמור",
+      "id": "rockies",
+      "name": "הרוקיז הקנדיים",
+      "nameEn": "Canadian Rockies",
+      "from": "2027-09-03",
+      "to": "2027-09-10",
       "color": "#7b5ea7",
       "tz": "America/Edmonton",
-      "tzLabel": "שעון ההרים",
+      "tzLabel": "שעון ההרים (Field – לאמת)",
+      "image": "peyto-lake",
+      "arrive": "טיסה SEA→YYC ב־3/9 מהצהריים והלאה, ואיסוף רכב בקלגרי. הטיסה והרכב טרם הוזמנו.",
+      "lodging": "קנמור 3 לילות · ג׳ספר 2 · Field 2. כל השלושה נבדקו ועדיין לא שוריינו.",
+      "lodgingStatus": "option",
+      "summary": "באנף, יוהו, Icefields Parkway וג׳ספר.",
       "clothing": {
-        "summary": "בספטמבר הבקרים קרים, לעיתים סביב האפס, והצהריים נעימים. שכבות: תרמית, פליז ומעיל רוח/גשם, ונעלי הליכה.",
+        "summary": "בספטמבר הבקרים קרים, לעיתים סביב האפס, והצהריים נעימים. ליד הקרחונים קר ויש רוח. שכבות: תרמית, פליז ומעיל רוח או גשם, ונעלי הליכה.",
         "bring": [
           "שכבות חמות",
           "מעיל גשם",
+          "כובע וכפפות",
           "נעלי הליכה",
           "bear spray",
-          "מים וחטיפים"
+          "משקפי שמש"
         ]
-      }
+      },
+      "beforeYouGo": [
+        "eTA לקנדה",
+        "טיסה SEA→YYC",
+        "רכב בקלגרי",
+        "כרטיס כניסה לפארקים",
+        "שאטל לאגמים – 15/4 ב־17:00"
+      ]
     },
     {
-      "id": "yoho",
-      "name": "יוהו ו־Field",
-      "color": "#b5487a",
-      "tz": "America/Edmonton",
-      "tzLabel": "שעון ההרים (Field – לאמת)",
-      "clothing": {
-        "summary": "כמו באנף: קר בבוקר ובגובה. שכבות, מעיל גשם ונעלי הליכה.",
-        "bring": [
-          "שכבות חמות",
-          "מעיל גשם",
-          "נעלי הליכה",
-          "bear spray"
-        ]
-      }
-    },
-    {
-      "id": "icefields",
-      "name": "Icefields Parkway",
-      "color": "#3a9bc1",
-      "tz": "America/Edmonton",
-      "tzLabel": "שעון ההרים",
-      "clothing": {
-        "summary": "ליד הקרחונים קר ויש רוח גם ביום שמשי. מעיל חם, כובע וכפפות, ומשקפי שמש בגלל ההחזר מהקרח.",
-        "bring": [
-          "מעיל חם",
-          "כובע וכפפות",
-          "משקפי שמש",
-          "דלק מלא – מעט תחנות בדרך"
-        ]
-      }
-    },
-    {
-      "id": "jasper",
-      "name": "ג׳ספר",
-      "color": "#4f8f3a",
-      "tz": "America/Edmonton",
-      "tzLabel": "שעון ההרים",
-      "clothing": {
-        "summary": "בקרים קרים וימים נעימים. שכבות ומעיל גשם.",
-        "bring": [
-          "שכבות חמות",
-          "מעיל גשם",
-          "bear spray"
-        ]
-      }
-    },
-    {
-      "id": "losangeles",
+      "id": "la",
       "name": "לוס אנג׳לס",
+      "nameEn": "Los Angeles",
+      "from": "2027-09-10",
+      "to": "2027-09-14",
       "color": "#d4a017",
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
+      "image": "griffith",
+      "arrive": "החזרת הרכב ב־YYC וטיסה ל־LAX ב־10/9. הטיסה טרם הוזמנה.",
+      "lodging": "טרם נקבע. ארבעה לילות.",
+      "lodgingStatus": "toclose",
+      "summary": "ארבעה לילות לפני הטיסה הביתה (LY6, 14/9, 13:30). האטרקציות הן הצעות.",
       "clothing": {
         "summary": "חם ויבש. בגדים קלים, כובע ומשקפי שמש.",
         "bring": [
@@ -164,80 +199,259 @@
           "קרם הגנה",
           "בקבוק מים"
         ]
-      }
+      },
+      "beforeYouGo": [
+        "טיסה YYC→LAX",
+        "מלון בלוס אנג׳לס"
+      ]
     }
   ],
   "points": [
     {
       "id": "sfo",
-      "name": "נמל התעופה סן פרנסיסקו",
-      "nameEn": "San Francisco International Airport (SFO)",
-      "region": "california",
+      "name": "נמל התעופה SFO",
+      "nameEn": "San Francisco International Airport",
+      "region": "sf",
       "lat": 37.6213,
       "lng": -122.379,
       "days": [
-        "2027-08-19"
+        "2027-08-19",
+        "2027-08-23"
       ],
       "kind": "transport"
     },
     {
-      "id": "powell-bart",
-      "name": "אזור Powell St BART",
-      "nameEn": "Powell St BART, San Francisco",
-      "region": "california",
-      "lat": 37.7844,
-      "lng": -122.4079,
-      "days": [
-        "2027-08-19"
-      ],
-      "kind": "lodging-area",
-      "summary": "אזור הלינה המוצע בסן פרנסיסקו. יש רכבת BART ישירה מהשדה. הלינה טרם נקבעה."
+      "id": "golden-gate",
+      "name": "גשר הזהב",
+      "nameEn": "Golden Gate Bridge",
+      "region": "sf",
+      "lat": 37.8199,
+      "lng": -122.4783,
+      "days": [],
+      "kind": "attraction",
+      "summary": "הגשר המפורסם. אפשר ללכת עליו או לצפות בו מתצפיות בשני צדי המפרץ.",
+      "suggestion": true,
+      "optional": true,
+      "imageMatch": [
+        "golden gate"
+      ]
     },
     {
-      "id": "seattle",
-      "name": "סיאטל",
-      "nameEn": "Seattle, WA",
+      "id": "alcatraz",
+      "name": "אלקטרז",
+      "nameEn": "Alcatraz Island",
+      "region": "sf",
+      "lat": 37.8267,
+      "lng": -122.423,
+      "days": [],
+      "kind": "attraction",
+      "summary": "האי וכלא אלקטרז. מגיעים רק במעבורת, וכדאי להזמין מראש.",
+      "suggestion": true,
+      "optional": true,
+      "imageMatch": [
+        "alcatraz"
+      ]
+    },
+    {
+      "id": "fishermans-wharf",
+      "name": "Fisherman's Wharf ו־Pier 39",
+      "nameEn": "Fisherman's Wharf & Pier 39",
+      "region": "sf",
+      "lat": 37.8087,
+      "lng": -122.4098,
+      "days": [],
+      "kind": "attraction",
+      "summary": "רציפים, אריות ים ואוכל ים.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Pier 39 San Francisco",
+      "imageMatch": [
+        "pier 39"
+      ]
+    },
+    {
+      "id": "cable-car",
+      "name": "רכבל הכבלים (Cable Car)",
+      "nameEn": "Powell–Hyde Cable Car",
+      "region": "sf",
+      "lat": 37.7849,
+      "lng": -122.4075,
+      "days": [],
+      "kind": "attraction",
+      "summary": "הקרוניות ההיסטוריות. תחנת הקצה בפינת Powell ו־Market, ליד אזור הלינה המוצע.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "San Francisco cable car Powell Hyde",
+      "imageMatch": [
+        "cable car"
+      ]
+    },
+    {
+      "id": "lands-end",
+      "name": "Lands End",
+      "nameEn": "Lands End Trail",
+      "region": "sf",
+      "lat": 37.7802,
+      "lng": -122.5113,
+      "days": [],
+      "kind": "trail",
+      "approx": true,
+      "summary": "שביל חוף עם תצפית על גשר הזהב.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Lands End San Francisco trail",
+      "imageMatch": [
+        "lands end"
+      ]
+    },
+    {
+      "id": "sea-airport",
+      "name": "נמל התעופה סיאטל SEA",
+      "nameEn": "Seattle–Tacoma International Airport",
       "region": "seattle",
-      "lat": 47.6062,
-      "lng": -122.3321,
+      "lat": 47.4502,
+      "lng": -122.3088,
+      "days": [
+        "2027-08-23",
+        "2027-09-03"
+      ],
+      "kind": "transport"
+    },
+    {
+      "id": "rainier-paradise",
+      "name": "Paradise",
+      "nameEn": "Paradise, Mount Rainier",
+      "region": "rainier",
+      "lat": 46.7859,
+      "lng": -121.7353,
+      "days": [
+        "2027-08-24"
+      ],
+      "kind": "attraction",
+      "summary": "אזור המבקרים הפופולרי בפארק: כרי פרחים, תצפית על ההר ושבילים כמו Skyline Trail.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Paradise Mount Rainier meadow",
+      "imageMatch": [
+        "paradise"
+      ]
+    },
+    {
+      "id": "reflection-lakes",
+      "name": "Reflection Lakes",
+      "nameEn": "Reflection Lakes",
+      "region": "rainier",
+      "lat": 46.7685,
+      "lng": -121.731,
+      "days": [
+        "2027-08-24"
+      ],
+      "kind": "viewpoint",
+      "approx": true,
+      "summary": "אגמים קטנים שבהם ההר משתקף ביום נאה. ממש ליד הכביש.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Reflection Lakes Mount Rainier",
+      "imageMatch": [
+        "reflection"
+      ]
+    },
+    {
+      "id": "rainier-sunrise",
+      "name": "Sunrise",
+      "nameEn": "Sunrise, Mount Rainier",
+      "region": "rainier",
+      "lat": 46.9145,
+      "lng": -121.6427,
+      "days": [
+        "2027-08-25"
+      ],
+      "kind": "attraction",
+      "approx": true,
+      "summary": "הנקודה הגבוהה ביותר שאפשר להגיע אליה ברכב בפארק, עם תצפית על הצד המזרחי של ההר.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Sunrise Mount Rainier",
+      "imageMatch": [
+        "sunrise",
+        "rainier"
+      ]
+    },
+    {
+      "id": "pike-place",
+      "name": "Pike Place Market",
+      "nameEn": "Pike Place Market",
+      "region": "seattle",
+      "lat": 47.6097,
+      "lng": -122.3422,
       "days": [
         "2027-08-26"
       ],
-      "kind": "city",
-      "summary": "לינה מומלצת ב־26/8, לפני העלייה לאונייה. המלון וההגעה לעיר טרם נסגרו."
+      "kind": "attraction",
+      "summary": "השוק ההיסטורי של סיאטל.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Pike Place Market sign",
+      "imageMatch": [
+        "pike place"
+      ]
+    },
+    {
+      "id": "space-needle",
+      "name": "Space Needle",
+      "nameEn": "Space Needle",
+      "region": "seattle",
+      "lat": 47.6205,
+      "lng": -122.3493,
+      "days": [
+        "2027-08-26"
+      ],
+      "kind": "attraction",
+      "summary": "מגדל התצפית. כניסה בתשלום.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Space Needle Seattle",
+      "imageMatch": [
+        "space needle"
+      ]
     },
     {
       "id": "seattle-port",
-      "name": "נמל סיאטל – עלייה וירידה מהקרוז",
+      "name": "נמל סיאטל – קרוז",
       "nameEn": "Port of Seattle cruise terminal",
       "region": "seattle",
       "lat": 47.6062,
       "lng": -122.3421,
-      "approx": true,
       "days": [
         "2027-08-27",
         "2027-09-03"
       ],
       "kind": "transport",
-      "summary": "הרציף המדויק של Celebrity Edge טרם אומת. הקואורדינטות משוערות."
+      "approx": true,
+      "summary": "הרציף המדויק של Celebrity Edge טרם אומת."
     },
     {
       "id": "ketchikan",
       "name": "קטצ׳יקן",
       "nameEn": "Ketchikan, Alaska",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 55.3422,
       "lng": -131.6461,
       "days": [
         "2027-08-29"
       ],
-      "kind": "port"
+      "kind": "port",
+      "tz": "America/Juneau",
+      "imageQuery": "Ketchikan Creek Street",
+      "imageMatch": [
+        "ketchikan"
+      ]
     },
     {
       "id": "dawes-glacier",
       "name": "Endicott Arm וקרחון Dawes",
       "nameEn": "Endicott Arm & Dawes Glacier",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 57.5,
       "lng": -132.8,
       "approx": true,
@@ -245,25 +459,35 @@
         "2027-08-30"
       ],
       "kind": "scenic-cruising",
-      "summary": "שיט נופי מהאונייה, בלי ירידה לחוף."
+      "summary": "שיט נופי מהאונייה, בלי ירידה לחוף.",
+      "tz": "America/Juneau",
+      "imageQuery": "Dawes Glacier Endicott Arm",
+      "imageMatch": [
+        "dawes"
+      ]
     },
     {
       "id": "juneau",
       "name": "ג׳ונו",
       "nameEn": "Juneau, Alaska",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 58.3019,
       "lng": -134.4197,
       "days": [
         "2027-08-30"
       ],
-      "kind": "port"
+      "kind": "port",
+      "tz": "America/Juneau",
+      "imageQuery": "Juneau Alaska waterfront",
+      "imageMatch": [
+        "juneau"
+      ]
     },
     {
       "id": "mendenhall",
       "name": "קרחון Mendenhall ו־Nugget Falls",
       "nameEn": "Mendenhall Glacier & Nugget Falls",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 58.4166,
       "lng": -134.5456,
       "approx": true,
@@ -272,25 +496,34 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "אופציה, לא הוזמן."
+      "summary": "אופציה, לא הוזמן.",
+      "tz": "America/Juneau",
+      "imageMatch": [
+        "mendenhall"
+      ]
     },
     {
       "id": "skagway",
       "name": "סקאגוויי",
       "nameEn": "Skagway, Alaska",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 59.4583,
       "lng": -135.3139,
       "days": [
         "2027-08-31"
       ],
-      "kind": "port"
+      "kind": "port",
+      "tz": "America/Juneau",
+      "imageQuery": "Skagway Broadway historic",
+      "imageMatch": [
+        "skagway"
+      ]
     },
     {
       "id": "white-pass",
       "name": "רכבת White Pass",
       "nameEn": "White Pass & Yukon Route",
-      "region": "alaska",
+      "region": "cruise",
       "lat": 59.456,
       "lng": -135.312,
       "approx": true,
@@ -299,38 +532,48 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "אופציה, לא הוזמן."
+      "summary": "אופציה, לא הוזמן.",
+      "tz": "America/Juneau",
+      "imageQuery": "White Pass and Yukon Route train",
+      "imageMatch": [
+        "white pass"
+      ]
     },
     {
       "id": "victoria",
       "name": "ויקטוריה",
       "nameEn": "Victoria, British Columbia",
-      "region": "victoria",
+      "region": "cruise",
       "lat": 48.4284,
       "lng": -123.3656,
       "days": [
         "2027-09-02"
       ],
-      "kind": "port"
+      "kind": "port",
+      "imageQuery": "Victoria BC Inner Harbour Parliament",
+      "imageMatch": [
+        "victoria"
+      ]
     },
     {
       "id": "yyc",
       "name": "נמל התעופה קלגרי",
       "nameEn": "Calgary International Airport (YYC)",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.1215,
       "lng": -114.0076,
       "days": [
         "2027-09-03",
         "2027-09-10"
       ],
-      "kind": "transport"
+      "kind": "transport",
+      "sub": "באנף"
     },
     {
       "id": "canmore",
       "name": "קנמור",
       "nameEn": "Canmore, Alberta",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.0884,
       "lng": -115.3479,
       "days": [
@@ -338,50 +581,68 @@
         "2027-09-04",
         "2027-09-05"
       ],
-      "kind": "lodging-area"
+      "kind": "lodging-area",
+      "sub": "באנף",
+      "imageQuery": "Canmore Three Sisters",
+      "imageMatch": [
+        "canmore"
+      ]
     },
     {
       "id": "banff-town",
       "name": "העיירה באנף",
       "nameEn": "Banff, Alberta",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.1784,
       "lng": -115.5708,
       "days": [
         "2027-09-04"
       ],
-      "kind": "city"
+      "kind": "city",
+      "sub": "באנף",
+      "imageQuery": "Banff Avenue Cascade Mountain",
+      "imageMatch": [
+        "banff"
+      ]
     },
     {
       "id": "bow-falls",
       "name": "מפלי Bow",
       "nameEn": "Bow Falls",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.17,
       "lng": -115.5617,
       "days": [
         "2027-09-04"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "באנף",
+      "imageMatch": [
+        "bow falls"
+      ]
     },
     {
       "id": "lake-minnewanka",
       "name": "אגם Minnewanka",
       "nameEn": "Lake Minnewanka",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.2468,
       "lng": -115.4952,
       "approx": true,
       "days": [
         "2027-09-04"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "באנף",
+      "imageMatch": [
+        "minnewanka"
+      ]
     },
     {
       "id": "banff-gondola",
       "name": "רכבל באנף",
       "nameEn": "Banff Gondola",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.144,
       "lng": -115.573,
       "approx": true,
@@ -390,13 +651,17 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "רק אם הראות טובה."
+      "summary": "רק אם הראות טובה.",
+      "sub": "באנף",
+      "imageMatch": [
+        "gondola"
+      ]
     },
     {
       "id": "vermilion-lakes",
       "name": "אגמי Vermilion",
       "nameEn": "Vermilion Lakes",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.184,
       "lng": -115.61,
       "approx": true,
@@ -404,103 +669,138 @@
         "2027-09-04"
       ],
       "kind": "attraction",
-      "optional": true
+      "optional": true,
+      "sub": "באנף",
+      "imageMatch": [
+        "vermilion"
+      ]
     },
     {
       "id": "johnston-canyon",
       "name": "Johnston Canyon",
       "nameEn": "Johnston Canyon",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.2456,
       "lng": -115.8398,
       "days": [
         "2027-09-05"
       ],
       "kind": "trail",
-      "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן."
+      "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן.",
+      "sub": "באנף",
+      "imageQuery": "Johnston Canyon Lower Falls",
+      "imageMatch": [
+        "johnston"
+      ]
     },
     {
       "id": "emerald-lake",
       "name": "אגם Emerald",
       "nameEn": "Emerald Lake, Yoho",
-      "region": "yoho",
+      "region": "rockies",
       "lat": 51.4433,
       "lng": -116.534,
       "days": [
         "2027-09-05"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "יוהו",
+      "imageMatch": [
+        "emerald lake"
+      ]
     },
     {
       "id": "natural-bridge",
       "name": "Natural Bridge",
       "nameEn": "Natural Bridge, Yoho",
-      "region": "yoho",
+      "region": "rockies",
       "lat": 51.4011,
       "lng": -116.5114,
       "approx": true,
       "days": [
         "2027-09-05"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "יוהו",
+      "imageQuery": "Natural Bridge Kicking Horse River",
+      "imageMatch": [
+        "natural bridge"
+      ]
     },
     {
       "id": "bow-lake",
       "name": "אגם Bow",
       "nameEn": "Bow Lake",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 51.6743,
       "lng": -116.4558,
       "approx": true,
       "days": [
         "2027-09-06"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "bow lake"
+      ]
     },
     {
       "id": "peyto-lake",
       "name": "אגם Peyto",
       "nameEn": "Peyto Lake viewpoint",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 51.7262,
       "lng": -116.5103,
       "approx": true,
       "days": [
         "2027-09-06"
       ],
-      "kind": "viewpoint"
+      "kind": "viewpoint",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "peyto"
+      ]
     },
     {
       "id": "mistaya-canyon",
       "name": "Mistaya Canyon",
       "nameEn": "Mistaya Canyon",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 51.96,
       "lng": -116.721,
       "approx": true,
       "days": [
         "2027-09-06"
       ],
-      "kind": "trail"
+      "kind": "trail",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "mistaya"
+      ]
     },
     {
       "id": "big-bend",
       "name": "Big Bend",
       "nameEn": "Big Bend viewpoint, Icefields Parkway",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.05,
       "lng": -116.95,
       "approx": true,
       "days": [
         "2027-09-06"
       ],
-      "kind": "viewpoint"
+      "kind": "viewpoint",
+      "sub": "Icefields Parkway",
+      "imageQuery": "Big Bend Icefields Parkway",
+      "imageMatch": [
+        "big bend"
+      ]
     },
     {
       "id": "columbia-icefield",
       "name": "Columbia Icefield וקרחון Athabasca",
       "nameEn": "Columbia Icefield & Athabasca Glacier",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.22,
       "lng": -117.224,
       "approx": true,
@@ -508,26 +808,36 @@
         "2027-09-06"
       ],
       "kind": "attraction",
-      "summary": "תצפית מהשביל המסומן. Ice Explorer ו־Skywalk בתשלום הם אופציה."
+      "summary": "תצפית מהשביל המסומן. Ice Explorer ו־Skywalk בתשלום הם אופציה.",
+      "sub": "Icefields Parkway",
+      "imageQuery": "Athabasca Glacier Columbia Icefield",
+      "imageMatch": [
+        "athabasca glacier"
+      ]
     },
     {
       "id": "jasper-town",
       "name": "העיירה ג׳ספר",
       "nameEn": "Jasper, Alberta",
-      "region": "jasper",
+      "region": "rockies",
       "lat": 52.8737,
       "lng": -118.0814,
       "days": [
         "2027-09-06",
         "2027-09-07"
       ],
-      "kind": "lodging-area"
+      "kind": "lodging-area",
+      "sub": "ג׳ספר",
+      "imageQuery": "Jasper Alberta town",
+      "imageMatch": [
+        "jasper"
+      ]
     },
     {
       "id": "medicine-lake",
       "name": "אגם Medicine",
       "nameEn": "Medicine Lake",
-      "region": "jasper",
+      "region": "rockies",
       "lat": 52.86,
       "lng": -117.78,
       "approx": true,
@@ -535,13 +845,18 @@
         "2027-09-07"
       ],
       "kind": "attraction",
-      "optional": true
+      "optional": true,
+      "sub": "ג׳ספר",
+      "imageQuery": "Medicine Lake Jasper",
+      "imageMatch": [
+        "medicine lake"
+      ]
     },
     {
       "id": "maligne-lake",
       "name": "אגם Maligne",
       "nameEn": "Maligne Lake",
-      "region": "jasper",
+      "region": "rockies",
       "lat": 52.726,
       "lng": -117.638,
       "approx": true,
@@ -550,64 +865,85 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "השיט באגם לא הוזמן."
+      "summary": "השיט באגם לא הוזמן.",
+      "sub": "ג׳ספר",
+      "imageMatch": [
+        "maligne"
+      ]
     },
     {
       "id": "athabasca-falls",
       "name": "מפלי Athabasca",
       "nameEn": "Athabasca Falls",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.6643,
       "lng": -117.8838,
       "days": [
         "2027-09-08"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "athabasca falls"
+      ]
     },
     {
       "id": "goats-glaciers",
       "name": "Goats and Glaciers",
       "nameEn": "Goats and Glaciers viewpoint",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.6,
       "lng": -117.81,
       "approx": true,
       "days": [
         "2027-09-08"
       ],
-      "kind": "viewpoint"
+      "kind": "viewpoint",
+      "sub": "Icefields Parkway",
+      "imageQuery": "Goats and Glaciers Athabasca River",
+      "imageMatch": [
+        "athabasca"
+      ]
     },
     {
       "id": "sunwapta-falls",
       "name": "מפלי Sunwapta",
       "nameEn": "Sunwapta Falls",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.532,
       "lng": -117.645,
       "approx": true,
       "days": [
         "2027-09-08"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "sunwapta"
+      ]
     },
     {
       "id": "tangle-creek",
       "name": "מפלי Tangle Creek",
       "nameEn": "Tangle Creek Falls",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.266,
       "lng": -117.285,
       "approx": true,
       "days": [
         "2027-09-08"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "tangle"
+      ]
     },
     {
       "id": "abraham-lake",
       "name": "אגם Abraham",
       "nameEn": "Abraham Lake",
-      "region": "icefields",
+      "region": "rockies",
       "lat": 52.23,
       "lng": -116.43,
       "approx": true,
@@ -616,38 +952,52 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "סטייה אופציונלית, לא חלק מברירת המחדל."
+      "summary": "סטייה אופציונלית, לא חלק מברירת המחדל.",
+      "sub": "Icefields Parkway",
+      "imageMatch": [
+        "abraham"
+      ]
     },
     {
       "id": "field",
       "name": "Field",
       "nameEn": "Field, British Columbia",
-      "region": "yoho",
+      "region": "rockies",
       "lat": 51.3955,
       "lng": -116.491,
       "days": [
         "2027-09-08",
         "2027-09-09"
       ],
-      "kind": "lodging-area"
+      "kind": "lodging-area",
+      "sub": "יוהו",
+      "imageQuery": "Field British Columbia Yoho",
+      "imageMatch": [
+        "field"
+      ]
     },
     {
       "id": "lake-louise",
       "name": "אגם Louise",
       "nameEn": "Lake Louise",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.4166,
       "lng": -116.2176,
       "days": [
         "2027-09-09"
       ],
-      "kind": "attraction"
+      "kind": "attraction",
+      "sub": "באנף",
+      "imageQuery": "Lake Louise Alberta",
+      "imageMatch": [
+        "louise"
+      ]
     },
     {
       "id": "moraine-lake",
       "name": "אגם Moraine",
       "nameEn": "Moraine Lake",
-      "region": "banff",
+      "region": "rockies",
       "lat": 51.3217,
       "lng": -116.186,
       "days": [
@@ -743,14 +1093,25 @@
             "label": "בטיחות ודובים – באנף",
             "url": "https://parks.canada.ca/pn-np/ab/banff/securite-safety"
           }
-        ]
-      }
+        ],
+        "important": [
+          "הכביש לאגם סגור לרכב פרטי. מגיעים רק בשאטל של Parks Canada או בתחבורה מסחרית.",
+          "הזמנות השאטל נפתחות ב־15/4/2027 ב־08:00 שעון אלברטה, שהן 17:00 בישראל. מקומות לשעות הבוקר נגמרים מהר.",
+          "בספטמבר ייתכנו הגבלות בגלל דובים בשבילים מסוימים, למשל חובת הליכה בקבוצה. לבדוק בדיווחי השבילים לפני היציאה.",
+          "אין קליטה סלולרית. כדאי לשמור את אישור השאטל במכשיר לפני היציאה."
+        ],
+        "bestTime": "בשאטל מוקדם ככל האפשר. אין הגעה ברכב פרטי."
+      },
+      "sub": "באנף",
+      "imageMatch": [
+        "moraine"
+      ]
     },
     {
       "id": "lax",
-      "name": "נמל התעופה לוס אנג׳לס",
-      "nameEn": "Los Angeles International Airport (LAX)",
-      "region": "losangeles",
+      "name": "נמל התעופה LAX",
+      "nameEn": "Los Angeles International Airport",
+      "region": "la",
       "lat": 33.9416,
       "lng": -118.4085,
       "days": [
@@ -761,106 +1122,157 @@
       "kind": "transport"
     },
     {
-      "id": "la-area",
-      "name": "אזור לוס אנג׳לס",
-      "nameEn": "Los Angeles area",
-      "region": "losangeles",
-      "lat": 34.0522,
-      "lng": -118.2437,
-      "days": [
-        "2027-09-10",
-        "2027-09-11",
-        "2027-09-12",
-        "2027-09-13"
-      ],
-      "kind": "lodging-area",
-      "summary": "ארבעה לילות. המלון והאטרקציות עדיין פתוחים."
+      "id": "griffith",
+      "name": "מצפה Griffith",
+      "nameEn": "Griffith Observatory",
+      "region": "la",
+      "lat": 34.1184,
+      "lng": -118.3004,
+      "days": [],
+      "kind": "attraction",
+      "summary": "מצפה כוכבים עם תצפית על העיר ועל שלט הוליווד.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Griffith Observatory",
+      "imageMatch": [
+        "griffith"
+      ]
+    },
+    {
+      "id": "santa-monica",
+      "name": "מזח סנטה מוניקה",
+      "nameEn": "Santa Monica Pier",
+      "region": "la",
+      "lat": 34.0094,
+      "lng": -118.4973,
+      "days": [],
+      "kind": "attraction",
+      "summary": "המזח והחוף.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Santa Monica Pier",
+      "imageMatch": [
+        "santa monica"
+      ]
+    },
+    {
+      "id": "getty",
+      "name": "מרכז Getty",
+      "nameEn": "Getty Center",
+      "region": "la",
+      "lat": 34.078,
+      "lng": -118.4741,
+      "days": [],
+      "kind": "attraction",
+      "summary": "מוזיאון אמנות, גנים ותצפית על העיר.",
+      "suggestion": true,
+      "optional": true,
+      "imageQuery": "Getty Center Los Angeles",
+      "imageMatch": [
+        "getty"
+      ]
     }
   ],
   "days": [
     {
       "date": "2027-08-19",
       "type": "transit",
-      "region": "california",
-      "title": "טיסה ונחיתה בסן פרנסיסקו",
+      "region": "sf",
+      "title": "נחיתה ומעבר לסן פרנסיסקו",
       "points": [
         "lax",
-        "sfo",
-        "powell-bart"
+        "sfo"
       ],
-      "lodging": "sf-1",
-      "summary": "LY5 נוחתת ב־LAX, ובצהריים LY4556 ל־SFO. מעבר בין טרמינלים ב־LAX.",
+      "lodging": "sf",
+      "summary": "LY5 נוחתת ב־LAX ב־06:00, ובצהריים LY4556 ל־SFO. צריך לעבור בין טרמינלים ב־LAX.",
       "estTime": "יום טיסות",
-      "weatherAlt": null,
       "bring": [
-        "מסמכי נסיעה ו־ESTA",
+        "דרכונים ואישורי ESTA",
         "מטען לטלפון",
         "שכבה חמה לטיסה"
       ]
     },
     {
       "date": "2027-08-20",
-      "type": "tbd",
-      "region": "california",
-      "title": "טרם נקבע – סן פרנסיסקו",
+      "type": "free",
+      "region": "sf",
+      "title": "סן פרנסיסקו – יום פתוח",
       "points": [],
-      "lodging": null
+      "lodging": "sf",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
     },
     {
       "date": "2027-08-21",
-      "type": "tbd",
-      "region": "california",
-      "title": "טרם נקבע",
+      "type": "free",
+      "region": "sf",
+      "title": "סן פרנסיסקו – יום פתוח",
       "points": [],
-      "lodging": null
+      "lodging": "sf",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
     },
     {
       "date": "2027-08-22",
-      "type": "tbd",
-      "region": "california",
-      "title": "טרם נקבע",
+      "type": "free",
+      "region": "sf",
+      "title": "סן פרנסיסקו – יום פתוח",
       "points": [],
-      "lodging": null
+      "lodging": "sf",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של סן פרנסיסקו."
     },
     {
       "date": "2027-08-23",
-      "type": "tbd",
-      "region": "california",
-      "title": "טרם נקבע",
-      "points": [],
-      "lodging": null
+      "type": "transit",
+      "region": "rainier",
+      "title": "טיסה לסיאטל ונסיעה לריינייר",
+      "points": [
+        "sfo",
+        "sea-airport"
+      ],
+      "lodging": "rainier",
+      "summary": "טיסה SFO→SEA ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
+      "estTime": "יום מעבר"
     },
     {
       "date": "2027-08-24",
-      "type": "tbd",
-      "region": "seattle",
-      "title": "טרם נקבע – בדרך לסיאטל",
-      "points": [],
-      "lodging": null
+      "type": "explore",
+      "region": "rainier",
+      "title": "Paradise ו־Reflection Lakes",
+      "points": [
+        "rainier-paradise",
+        "reflection-lakes"
+      ],
+      "lodging": "rainier",
+      "estTime": "5–7 שעות (הערכה)",
+      "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת."
     },
     {
       "date": "2027-08-25",
-      "type": "tbd",
-      "region": "seattle",
-      "title": "טרם נקבע – בדרך לסיאטל",
-      "points": [],
-      "lodging": null
+      "type": "explore",
+      "region": "rainier",
+      "title": "Sunrise",
+      "points": [
+        "rainier-sunrise"
+      ],
+      "lodging": "rainier",
+      "estTime": "5–7 שעות (הערכה)",
+      "weatherAlt": "אפשר להחליף בין הימים לפי התחזית."
     },
     {
       "date": "2027-08-26",
       "type": "transit",
       "region": "seattle",
-      "title": "לינה בסיאטל (מומלץ)",
+      "title": "נסיעה לסיאטל והחזרת הרכב",
       "points": [
-        "seattle"
+        "pike-place",
+        "space-needle"
       ],
-      "lodging": "sea-1",
-      "summary": "ההגעה לסיאטל והמלון טרם נסגרו."
+      "lodging": "seattle",
+      "summary": "החזרת הרכב השכור בסיאטל ולילה בעיר."
     },
     {
       "date": "2027-08-27",
       "type": "cruise",
-      "region": "seattle",
+      "region": "cruise",
       "title": "עלייה לאונייה בסיאטל",
       "points": [
         "seattle-port"
@@ -871,7 +1283,7 @@
     {
       "date": "2027-08-28",
       "type": "cruise",
-      "region": "alaska",
+      "region": "cruise",
       "title": "יום בים",
       "points": [],
       "lodging": "cruise"
@@ -879,7 +1291,7 @@
     {
       "date": "2027-08-29",
       "type": "cruise",
-      "region": "alaska",
+      "region": "cruise",
       "title": "קטצ׳יקן",
       "points": [
         "ketchikan"
@@ -890,7 +1302,7 @@
     {
       "date": "2027-08-30",
       "type": "cruise",
-      "region": "alaska",
+      "region": "cruise",
       "title": "Endicott Arm, קרחון Dawes וג׳ונו",
       "points": [
         "dawes-glacier",
@@ -898,12 +1310,12 @@
         "mendenhall"
       ],
       "lodging": "cruise",
-      "summary": "שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. Mendenhall הוא אופציה."
+      "summary": "שיט נופי מול קרחון Dawes ואז עגינה בג׳ונו. Mendenhall הוא אופציה."
     },
     {
       "date": "2027-08-31",
       "type": "cruise",
-      "region": "alaska",
+      "region": "cruise",
       "title": "סקאגוויי",
       "points": [
         "skagway",
@@ -915,7 +1327,7 @@
     {
       "date": "2027-09-01",
       "type": "cruise",
-      "region": "alaska",
+      "region": "cruise",
       "title": "Inside Passage",
       "points": [],
       "lodging": "cruise"
@@ -923,7 +1335,7 @@
     {
       "date": "2027-09-02",
       "type": "cruise",
-      "region": "victoria",
+      "region": "cruise",
       "title": "ויקטוריה",
       "points": [
         "victoria"
@@ -933,10 +1345,11 @@
     {
       "date": "2027-09-03",
       "type": "transit",
-      "region": "banff",
+      "region": "rockies",
       "title": "ירידה בסיאטל, טיסה לקלגרי ונסיעה לקנמור",
       "points": [
         "seattle-port",
+        "sea-airport",
         "yyc",
         "canmore"
       ],
@@ -947,7 +1360,7 @@
     {
       "date": "2027-09-04",
       "type": "explore",
-      "region": "banff",
+      "region": "rockies",
       "title": "באנף",
       "points": [
         "banff-town",
@@ -963,7 +1376,7 @@
     {
       "date": "2027-09-05",
       "type": "explore",
-      "region": "yoho",
+      "region": "rockies",
       "title": "Johnston Canyon ויוהו",
       "points": [
         "johnston-canyon",
@@ -978,7 +1391,7 @@
     {
       "date": "2027-09-06",
       "type": "transit",
-      "region": "icefields",
+      "region": "rockies",
       "title": "Icefields Parkway צפונה לג׳ספר",
       "points": [
         "bow-lake",
@@ -995,7 +1408,7 @@
     {
       "date": "2027-09-07",
       "type": "explore",
-      "region": "jasper",
+      "region": "rockies",
       "title": "ג׳ספר",
       "points": [
         "medicine-lake",
@@ -1007,7 +1420,7 @@
     {
       "date": "2027-09-08",
       "type": "transit",
-      "region": "icefields",
+      "region": "rockies",
       "title": "דרומה ל־Field",
       "points": [
         "athabasca-falls",
@@ -1023,7 +1436,7 @@
     {
       "date": "2027-09-09",
       "type": "explore",
-      "region": "banff",
+      "region": "rockies",
       "title": "אגמי Louise ו־Moraine",
       "points": [
         "lake-louise",
@@ -1037,55 +1450,52 @@
     {
       "date": "2027-09-10",
       "type": "transit",
-      "region": "losangeles",
-      "title": "החזרת רכב ב־YYC וטיסה ללוס אנג׳לס",
+      "region": "la",
+      "title": "החזרת רכב בקלגרי וטיסה ללוס אנג׳לס",
       "points": [
         "yyc",
-        "lax",
-        "la-area"
+        "lax"
       ],
       "lodging": "la",
       "summary": "הטיסה מתוכננת ולא הוזמנה."
     },
     {
       "date": "2027-09-11",
-      "type": "tbd",
-      "region": "losangeles",
-      "title": "לוס אנג׳לס – טרם נקבע",
-      "points": [
-        "la-area"
-      ],
-      "lodging": "la"
+      "type": "free",
+      "region": "la",
+      "title": "לוס אנג׳לס – יום פתוח",
+      "points": [],
+      "lodging": "la",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
     },
     {
       "date": "2027-09-12",
-      "type": "tbd",
-      "region": "losangeles",
-      "title": "לוס אנג׳לס – טרם נקבע",
-      "points": [
-        "la-area"
-      ],
-      "lodging": "la"
+      "type": "free",
+      "region": "la",
+      "title": "לוס אנג׳לס – יום פתוח",
+      "points": [],
+      "lodging": "la",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
     },
     {
       "date": "2027-09-13",
-      "type": "tbd",
-      "region": "losangeles",
-      "title": "לוס אנג׳לס – טרם נקבע",
-      "points": [
-        "la-area"
-      ],
-      "lodging": "la"
+      "type": "free",
+      "region": "la",
+      "title": "לוס אנג׳לס – יום פתוח",
+      "points": [],
+      "lodging": "la",
+      "summary": "עדיין לא נקבעה תוכנית. ההצעות לאזור מופיעות בעמוד של לוס אנג׳לס."
     },
     {
       "date": "2027-09-14",
       "type": "transit",
-      "region": "losangeles",
+      "region": "la",
       "title": "LY6 הביתה",
       "points": [
         "lax"
       ],
-      "lodging": "plane"
+      "lodging": "plane",
+      "summary": "המראה מ־LAX ב־13:30."
     },
     {
       "date": "2027-09-15",
@@ -1133,6 +1543,20 @@
       "notes": "מעבר מטרמינל B לטרמינל 3 ב־LAX."
     },
     {
+      "id": "sfo-sea",
+      "date": "2027-08-23",
+      "flight": "טרם נקבע",
+      "carrier": "טרם נקבע",
+      "from": "SFO",
+      "fromTz": "America/Los_Angeles",
+      "to": "SEA",
+      "toTz": "America/Los_Angeles",
+      "dep": null,
+      "arr": null,
+      "status": "toclose",
+      "notes": "אחרי הנחיתה: איסוף רכב שכור בשדה."
+    },
+    {
       "id": "sea-yyc",
       "date": "2027-09-03",
       "flight": "טרם נקבע",
@@ -1158,7 +1582,7 @@
       "dep": null,
       "arr": null,
       "status": "toclose",
-      "notes": "אחרי החזרת הרכב ב־YYC."
+      "notes": "אחרי החזרת הרכב בקלגרי."
     },
     {
       "id": "ly6",
@@ -1286,38 +1710,37 @@
   },
   "hotels": [
     {
-      "id": "sf-1",
+      "id": "sf",
       "city": "סן פרנסיסקו",
       "name": "טרם נקבע – הצעה: ליד Powell St BART",
       "checkIn": "2027-08-19",
-      "checkOut": null,
+      "checkOut": "2027-08-23",
       "price": null,
       "deposit": null,
       "cancelBy": null,
       "url": null,
-      "status": "planning",
-      "notes": "Hotel Abri ו־Chancellor להשוואה בלבד. תאריך היציאה מסן פרנסיסקו טרם נקבע."
+      "status": "toclose",
+      "notes": "Hotel Abri ו־Chancellor להשוואה בלבד."
     },
     {
-      "id": "gap-1",
-      "city": "סן פרנסיסקו → סיאטל",
+      "id": "rainier",
+      "city": "הר ריינייר",
       "name": "טרם נקבע",
-      "checkIn": "2027-08-20",
+      "checkIn": "2027-08-23",
       "checkOut": "2027-08-26",
       "price": null,
       "status": "toclose",
-      "gap": true,
-      "notes": "המסלול והלילות טרם נקבעו."
+      "notes": "לינה קרובה לכניסה לפארק."
     },
     {
-      "id": "sea-1",
+      "id": "seattle",
       "city": "סיאטל",
       "name": "טרם נקבע",
       "checkIn": "2027-08-26",
       "checkOut": "2027-08-27",
       "price": null,
       "status": "toclose",
-      "notes": "מומלץ לישון בסיאטל לפני העלייה לאונייה."
+      "notes": "הלילה שלפני העלייה לאונייה."
     },
     {
       "id": "cruise",
@@ -1389,7 +1812,7 @@
       "checkOut": "2027-09-14",
       "price": null,
       "status": "toclose",
-      "notes": "ארבעה לילות."
+      "notes": "ארבעה לילות. כדאי לבחור מלון שנוח ממנו להגיע ל־LAX ב־14/9."
     },
     {
       "id": "plane",
@@ -1402,7 +1825,6 @@
       "notes": "לילה בטיסה."
     }
   ],
-  "hotelsNote": "אומדן קודם לרוקיז: כ־6,000 ₪ לזוג לשבעה לילות.",
   "tasks": [
     {
       "id": "t-shuttle",
@@ -1431,32 +1853,30 @@
       "notes": "אי־תשלום יגרום לביטול."
     },
     {
-      "id": "t-hotel-sf",
-      "title": "מלון בסן פרנסיסקו",
-      "category": "מלונות",
-      "due": null,
+      "id": "t-flight-sfo-sea",
+      "title": "טיסה SFO→SEA ב־23/8",
+      "category": "טיסות",
       "status": "toclose"
     },
     {
-      "id": "t-route-sf-sea",
-      "title": "תכנון המסלול מסן פרנסיסקו לסיאטל (20–26/8)",
-      "category": "תכנון",
-      "due": null,
+      "id": "t-car-sea",
+      "title": "רכב שכור בסיאטל: איסוף בשדה 23/8, החזרה בעיר 26/8",
+      "category": "רכב",
       "status": "toclose"
     },
     {
-      "id": "t-hotel-sea",
-      "title": "מלון בסיאטל ל־26/8",
+      "id": "t-hotels-us",
+      "title": "מלונות: סן פרנסיסקו, ריינייר, סיאטל, לוס אנג׳לס",
       "category": "מלונות",
-      "due": null,
-      "status": "toclose"
+      "status": "toclose",
+      "notes": "4 מלונות חסרים."
     },
     {
-      "id": "t-hotel-la",
-      "title": "מלון בלוס אנג׳לס (10–14/9)",
-      "category": "מלונות",
-      "due": null,
-      "status": "toclose"
+      "id": "t-rainier-entry",
+      "title": "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה לריינייר ב־2027",
+      "category": "הזמנות",
+      "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
+      "status": "planning"
     },
     {
       "id": "t-hotels-rockies",
@@ -1511,7 +1931,7 @@
       "title": "הורדת מפות אופליין ב־Google Maps / Maps.me לכל אזור",
       "category": "לפני הטיסה",
       "status": "toclose",
-      "notes": "סן פרנסיסקו, סיאטל, נמלי אלסקה, ויקטוריה, באנף–יוהו–ג׳ספר, לוס אנג׳לס."
+      "notes": "סן פרנסיסקו, ריינייר, סיאטל, נמלי אלסקה, ויקטוריה, הרוקיז, לוס אנג׳לס."
     }
   ],
   "entry": {
@@ -1542,7 +1962,7 @@
         "title": "ESTA לארה״ב – לכל נוסע",
         "status": "toclose",
         "order": 2,
-        "what": "ישראל בתוכנית פטור מוויזה (VWP), ולכן בעלי דרכון ישראלי ביומטרי מגישים ESTA במקום ויזה. נכנסים לארה״ב שלוש פעמים: ב־19/8, בחזרה מהקרוז דרך ויקטוריה, וב־10/9 מקנדה.",
+        "what": "ישראל בתוכנית הפטור מוויזה (VWP), ולכן בעלי דרכון ישראלי ביומטרי מגישים ESTA במקום ויזה. נכנסים לארה״ב שלוש פעמים: ב־19/8, בחזרה מהקרוז דרך ויקטוריה, וב־10/9 מקנדה.",
         "facts": [
           {
             "text": "מגישים רק באתר הרשמי של CBP. אתרים אחרים גובים עמלת תיווך.",
@@ -1668,6 +2088,10 @@
       "label": "המראה LY5"
     },
     {
+      "date": "2027-08-23",
+      "label": "טיסה לסיאטל ונסיעה להר ריינייר"
+    },
+    {
       "date": "2027-08-27T16:00",
       "label": "עלייה לאונייה בסיאטל"
     },
@@ -1680,32 +2104,304 @@
       "label": "המראה LY6 הביתה"
     }
   ],
-  "costs": [
+  "cars": [
     {
-      "label": "טיסות אל על (לזוג)",
-      "amount": 4181.54,
-      "currency": "USD",
-      "status": "booked"
+      "id": "car-sea",
+      "where": "סיאטל (SEA)",
+      "pickup": "2027-08-23",
+      "pickupPlace": "שדה התעופה SEA",
+      "dropoff": "2027-08-26",
+      "dropoffPlace": "סיאטל",
+      "status": "toclose",
+      "price": null
     },
     {
-      "label": "קרוז Celebrity Edge – סה״כ",
-      "amount": 13519,
-      "currency": "ILS",
-      "status": "booked",
-      "note": "שולמו 1,703 ₪. היתרה עד 18/6/2027."
-    },
-    {
-      "label": "דמי שירות באונייה (משוער)",
-      "amount": 259,
-      "currency": "USD",
-      "status": "booked",
-      "approx": true
-    },
-    {
-      "label": "מלונות ברוקיז (נבדקו, לא שוריינו)",
-      "amount": 2585.61,
-      "currency": "CAD",
-      "status": "option"
+      "id": "car-yyc",
+      "where": "קלגרי (YYC)",
+      "pickup": "2027-09-03",
+      "pickupPlace": "שדה התעופה YYC",
+      "dropoff": "2027-09-10",
+      "dropoffPlace": "שדה התעופה YYC",
+      "status": "toclose",
+      "price": null
     }
-  ]
+  ],
+  "attractions": [
+    {
+      "id": "a-shuttle",
+      "name": "שאטל לאגמי Louise ו־Moraine",
+      "region": "rockies",
+      "point": "moraine-lake",
+      "date": "2027-09-09",
+      "booking": "required",
+      "opens": "2027-04-15T17:00",
+      "opensNote": "08:00 שעון אלברטה = 17:00 בישראל",
+      "url": "https://www.parks.canada.ca/voyage-travel/reserve",
+      "cost": null,
+      "status": "toclose",
+      "notes": "זו הדרך היחידה להגיע ל־Moraine בלי טיול מאורגן."
+    },
+    {
+      "id": "a-parks-pass",
+      "name": "כרטיס כניסה לפארקים הלאומיים בקנדה",
+      "region": "rockies",
+      "booking": "required",
+      "url": "https://parks.canada.ca/voyage-travel/admission",
+      "cost": null,
+      "status": "toclose",
+      "notes": "נדרש בבאנף, יוהו וג׳ספר. המחיר לפי 2027."
+    },
+    {
+      "id": "a-rainier-entry",
+      "name": "כניסה לפארק הר ריינייר",
+      "region": "rainier",
+      "point": "rainier-paradise",
+      "booking": "check",
+      "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
+      "cost": null,
+      "status": "planning",
+      "notes": "יש דמי כניסה. בקיצים האחרונים נדרשה גם הזמנת כניסה בשעה קבועה, ולבדוק אם זה יחול גם ב־2027."
+    },
+    {
+      "id": "a-alcatraz",
+      "name": "אלקטרז",
+      "region": "sf",
+      "point": "alcatraz",
+      "booking": "recommended",
+      "url": "https://www.nps.gov/alca/planyourvisit/index.htm",
+      "cost": null,
+      "status": "option",
+      "notes": "הצעה. הכרטיסים נמכרים מראש ועלולים להיגמר."
+    },
+    {
+      "id": "a-gondola",
+      "name": "רכבל באנף",
+      "region": "rockies",
+      "point": "banff-gondola",
+      "date": "2027-09-04",
+      "booking": "recommended",
+      "url": "https://www.banffjaspercollection.com/attractions/banff-gondola/",
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה. רק אם הראות טובה."
+    },
+    {
+      "id": "a-icefield",
+      "name": "Ice Explorer ו־Skywalk",
+      "region": "rockies",
+      "point": "columbia-icefield",
+      "date": "2027-09-06",
+      "booking": "recommended",
+      "url": "https://www.banffjaspercollection.com/attractions/columbia-icefield/",
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה בתשלום. החלופה החינמית היא שביל התצפית לקרחון."
+    },
+    {
+      "id": "a-maligne",
+      "name": "שיט באגם Maligne",
+      "region": "rockies",
+      "point": "maligne-lake",
+      "date": "2027-09-07",
+      "booking": "recommended",
+      "url": null,
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה. לא הוזמן."
+    },
+    {
+      "id": "a-mendenhall",
+      "name": "Mendenhall ו־Nugget Falls",
+      "region": "cruise",
+      "point": "mendenhall",
+      "date": "2027-08-30",
+      "booking": "recommended",
+      "url": null,
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה. אפשר לקנות דרך Celebrity או באופן עצמאי, ולוודא את שעת החזרה לאונייה."
+    },
+    {
+      "id": "a-whitepass",
+      "name": "רכבת White Pass",
+      "region": "cruise",
+      "point": "white-pass",
+      "date": "2027-08-31",
+      "booking": "recommended",
+      "url": "https://wpyr.com",
+      "cost": null,
+      "status": "option",
+      "notes": "אופציה. לא הוזמן."
+    },
+    {
+      "id": "a-space-needle",
+      "name": "Space Needle",
+      "region": "seattle",
+      "point": "space-needle",
+      "date": "2027-08-26",
+      "booking": "optional",
+      "url": "https://www.spaceneedle.com",
+      "cost": null,
+      "status": "option",
+      "notes": "הצעה."
+    },
+    {
+      "id": "a-griffith",
+      "name": "מצפה Griffith",
+      "region": "la",
+      "point": "griffith",
+      "booking": "none",
+      "url": "https://griffithobservatory.org",
+      "cost": null,
+      "status": "option",
+      "notes": "הצעה. לבדוק את שעות הפתיחה באתר."
+    },
+    {
+      "id": "a-getty",
+      "name": "מרכז Getty",
+      "region": "la",
+      "point": "getty",
+      "booking": "check",
+      "url": "https://www.getty.edu/visit/center/",
+      "cost": null,
+      "status": "option",
+      "notes": "הצעה. לבדוק באתר אם נדרשת הזמנה מראש ואת עלות החניה."
+    }
+  ],
+  "budget": {
+    "note": "התקציב עוד לא נקבע. אפשר למלא במצב עריכה.",
+    "categories": [
+      {
+        "id": "flights-intl",
+        "label": "טיסות אל על",
+        "icon": "✈️",
+        "budget": null,
+        "items": [
+          {
+            "label": "LY5 · LY4556 · LY6 לזוג",
+            "amount": 4181.54,
+            "currency": "USD",
+            "status": "booked"
+          }
+        ]
+      },
+      {
+        "id": "flights-dom",
+        "label": "טיסות פנים",
+        "icon": "🛫",
+        "budget": null,
+        "items": [
+          {
+            "label": "SFO→SEA",
+            "amount": null,
+            "status": "toclose"
+          },
+          {
+            "label": "SEA→YYC",
+            "amount": null,
+            "status": "toclose"
+          },
+          {
+            "label": "YYC→LAX",
+            "amount": null,
+            "status": "toclose"
+          }
+        ]
+      },
+      {
+        "id": "cruise",
+        "label": "קרוז",
+        "icon": "🚢",
+        "budget": null,
+        "items": [
+          {
+            "label": "Celebrity Edge",
+            "amount": 13519,
+            "currency": "ILS",
+            "status": "booked",
+            "paid": 1703,
+            "due": "2027-06-18"
+          },
+          {
+            "label": "דמי שירות באונייה (משוער)",
+            "amount": 259,
+            "currency": "USD",
+            "status": "booked",
+            "approx": true
+          }
+        ]
+      },
+      {
+        "id": "hotels",
+        "label": "מלונות",
+        "icon": "🛏️",
+        "budget": null,
+        "items": [
+          {
+            "label": "רוקיז – 3 לינות (נבדקו, לא שוריינו)",
+            "amount": 2585.61,
+            "currency": "CAD",
+            "status": "option"
+          },
+          {
+            "label": "סן פרנסיסקו · ריינייר · סיאטל · לוס אנג׳לס",
+            "amount": null,
+            "status": "toclose"
+          }
+        ]
+      },
+      {
+        "id": "cars",
+        "label": "רכב",
+        "icon": "🚗",
+        "budget": null,
+        "items": [
+          {
+            "label": "סיאטל 23–26/8",
+            "amount": null,
+            "status": "toclose"
+          },
+          {
+            "label": "קלגרי 3–10/9",
+            "amount": null,
+            "status": "toclose"
+          }
+        ]
+      },
+      {
+        "id": "attractions",
+        "label": "אטרקציות וכניסות",
+        "icon": "🎟️",
+        "budget": null,
+        "items": [
+          {
+            "label": "שאטל, פארקים ואטרקציות",
+            "amount": null,
+            "status": "planning"
+          }
+        ]
+      },
+      {
+        "id": "docs",
+        "label": "ביטוח ומסמכים",
+        "icon": "🛂",
+        "budget": null,
+        "items": [
+          {
+            "label": "ESTA · eTA · ביטוח נסיעות",
+            "amount": null,
+            "status": "toclose"
+          }
+        ]
+      },
+      {
+        "id": "food",
+        "label": "אוכל ושונות",
+        "icon": "🍽️",
+        "budget": null,
+        "items": []
+      }
+    ]
+  },
+  "hotelsNote": "אומדן קודם לרוקיז: כ־6,000 ₪ לזוג לשבעה לילות."
 }
