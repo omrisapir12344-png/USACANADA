@@ -158,7 +158,7 @@
       "to": "2027-09-10",
       "color": "#7b5ea7",
       "tz": "America/Edmonton",
-      "tzLabel": "שעון ההרים (Field – לאמת)",
+      "tzLabel": "שעון ההרים (גם ב־Field וביוהו)",
       "image": "peyto-lake",
       "arrive": "טיסה SEA→YYC ב־3/9 מהצהריים והלאה, ואיסוף רכב בקלגרי. הטיסה והרכב טרם הוזמנו.",
       "lodging": "קנמור 3 לילות · ג׳ספר 2 · Field 2. כל השלושה נבדקו ועדיין לא שוריינו.",
@@ -1680,8 +1680,61 @@
       "imageMatch": [
         "canmore"
       ],
-      "visit": "לינה",
-      "see": "העיירה שבה ישנים, למרגלות הרי Three Sisters."
+      "visit": "ערב או חצי יום",
+      "see": "עיירת הרים שקטה בשער לפארק Banff, נוף Three Sisters ונהר Bow",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "טיול ערב במרכז העיירה",
+            "required": true,
+            "note": "Main Street קטן ונוח להליכה. מסעדות ובתי קפה."
+          },
+          {
+            "name": "Bow River ו־Engine Bridge",
+            "required": false,
+            "note": "הליכה קצרה לאורך הנהר עם נוף ל־Three Sisters. טוב בשקיעה."
+          },
+          {
+            "name": "קניות לטיול",
+            "required": false,
+            "note": "סופרמרקטים גדולים יותר ממה שתמצאו בפארק. כדאי להצטייד כאן."
+          }
+        ],
+        "duration": {
+          "min": "1–2 שעות",
+          "recommended": "ערב רגוע",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות: בוקר וערב קרים, צהריים נעימים",
+          "מעיל דק נגד רוח וגשם",
+          "נעלי הליכה נוחות"
+        ],
+        "expect": {
+          "crowds": "פחות עמוס מ־Banff.",
+          "parking": "חניה ברחוב ובחניונים במרכז. לבדוק שילוט חניה בתשלום.",
+          "toilets": "בבתי קפה ובמבני ציבור.",
+          "signal": "קליטה טובה בעיירה.",
+          "safety": "חיות בר נכנסות לעיירה. לא להאכיל, לשמור מרחק. לשמור אוכל ברכב סגור.",
+          "tips": "Canmore מחוץ לפארק הלאומי. בכניסה ל־Banff צריך אישור כניסה בתוקף."
+        },
+        "bestTime": "שקיעה ליד הנהר",
+        "important": [
+          "Canmore לא בתוך הפארק, אבל כל עצירה ב־Banff/Yoho מחייבת אישור Parks Canada בתוקף"
+        ],
+        "weatherAlt": "בתי קפה וגלריות ב־Main Street",
+        "links": [
+          {
+            "label": "תיירות Canmore (רשמי)",
+            "url": "https://www.explorecanmore.ca"
+          },
+          {
+            "label": "אישורי כניסה לפארקים",
+            "url": "https://parks.canada.ca/voyage-travel/admission"
+          }
+        ]
+      }
     },
     {
       "id": "banff-town",
@@ -1700,7 +1753,64 @@
         "banff"
       ],
       "visit": "1–2 שעות",
-      "see": "הרחוב הראשי Banff Avenue, חנויות ובתי קפה, ונוף להר Cascade."
+      "see": "עיירת הנופש בלב הפארק, Banff Avenue עם Cascade Mountain ברקע",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה ב־Banff Avenue",
+            "required": true,
+            "note": "הרחוב הראשי. חנויות, מסעדות ונוף ל־Cascade Mountain."
+          },
+          {
+            "name": "Cascade Gardens",
+            "required": false,
+            "note": "גנים מעבר לגשר על ה־Bow, נוף יפה חזרה לרחוב."
+          },
+          {
+            "name": "Bow River Trail",
+            "required": false,
+            "note": "שביל לאורך הנהר שמחבר למפלי Bow."
+          }
+        ],
+        "duration": {
+          "min": "45 דק׳",
+          "recommended": "1.5–2 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות, בוקר קר",
+          "מעיל גשם קל",
+          "נעליים נוחות"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בצהריים ובסופ״ש. ספטמבר מעט רגוע יותר מהקיץ.",
+          "parking": "חניה במרכז מוגבלת ובחלקה בתשלום. יש חניון Train Station בקצה העיירה. אפשר להשתמש ב־Roam Transit.",
+          "toilets": "שירותים ציבוריים במרכז ובמרכז המבקרים.",
+          "signal": "קליטה טובה.",
+          "safety": "איילים (elk) מסתובבים בעיירה. לשמור מרחק.",
+          "tips": "מרכז המבקרים של Parks Canada ב־Banff Avenue. שם מקבלים עדכון על שבילים וסגירות."
+        },
+        "bestTime": "בוקר מוקדם או ערב",
+        "important": [
+          "אישור כניסה לפארק Banff חובה"
+        ],
+        "weatherAlt": "Banff Park Museum או בתי קפה ברחוב",
+        "links": [
+          {
+            "label": "Banff National Park",
+            "url": "https://parks.canada.ca/pn-np/ab/banff"
+          },
+          {
+            "label": "Town of Banff",
+            "url": "https://banff.ca"
+          },
+          {
+            "label": "Banff & Lake Louise Tourism",
+            "url": "https://www.banfflakelouise.com"
+          }
+        ]
+      }
     },
     {
       "id": "bow-falls",
@@ -1717,8 +1827,58 @@
       "imageMatch": [
         "bow falls"
       ],
-      "visit": "20–30 דק׳",
-      "see": "מפל רחב ונמוך על נהר Bow, ממש ליד העיירה."
+      "visit": "20–45 דק׳",
+      "see": "מפל רחב ונמוך על נהר Bow, למרגלות מלון Banff Springs",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית המפל",
+            "required": true,
+            "note": "שביל קצר מהחניון לתצפית. מתאים לכולם."
+          },
+          {
+            "name": "Surprise Corner",
+            "required": false,
+            "note": "תצפית מהצד השני על המפל ועל Banff Springs. נסיעה קצרה."
+          },
+          {
+            "name": "הליכה מהעיירה לאורך הנהר",
+            "required": false,
+            "note": "אפשר להגיע ברגל מ־Banff Avenue דרך Bow River Trail."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "45 דק׳ כולל Surprise Corner",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה, ליד המים קריר",
+          "נעליים נוחות"
+        ],
+        "expect": {
+          "crowds": "קבוצות מאורגנות בצהריים.",
+          "parking": "חניון קטן ליד המפל. מתמלא בשעות שיא. אפשר ללכת מהעיירה.",
+          "toilets": "יש באזור החניון.",
+          "signal": "קליטה טובה.",
+          "safety": "זרם חזק ומים קרים. לא לרדת לסלעים ולא להיכנס למים.",
+          "tips": "לשלב עם הליכה בעיירה באותו בוקר."
+        },
+        "bestTime": "בוקר מוקדם",
+        "important": [],
+        "weatherAlt": "התצפית נראית טוב גם בגשם קל. ביום סגרירי לקצר ולחזור לעיירה",
+        "links": [
+          {
+            "label": "Banff & Lake Louise Tourism",
+            "url": "https://www.banfflakelouise.com"
+          },
+          {
+            "label": "Banff National Park",
+            "url": "https://parks.canada.ca/pn-np/ab/banff"
+          }
+        ]
+      }
     },
     {
       "id": "lake-minnewanka",
@@ -1737,7 +1897,69 @@
         "minnewanka"
       ],
       "visit": "45–90 דק׳",
-      "see": "האגם הגדול באזור. הליכה לאורך החוף ותצפית על ההרים."
+      "see": "האגם הגדול בפארק Banff, מים כחולים והרים משני צדדיו",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה לאורך החוף",
+            "required": true,
+            "note": "תצפית מאזור ה־day use. שולחנות פיקניק ושלטי הסבר."
+          },
+          {
+            "name": "Stewart Canyon",
+            "required": false,
+            "note": "הליכה קצרה לגשר מעל הקניון. מעבר לגשר חלות מגבלות דובים."
+          },
+          {
+            "name": "שייט באגם",
+            "required": false,
+            "note": "שייט מסחרי של Pursuit. מומלץ להזמין מראש. שעות ומחירים באתר הרשמי."
+          },
+          {
+            "name": "Two Jack Lake",
+            "required": false,
+            "note": "אגם קטן בדרך חזרה. עצירת צילום קצרה."
+          }
+        ],
+        "duration": {
+          "min": "45 דק׳",
+          "recommended": "1.5 שעות, 2.5 עם שייט",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה ומעיל רוח, ליד האגם קר ונושבת רוח",
+          "כובע וכפפות דקות לבוקר",
+          "נעלי הליכה"
+        ],
+        "expect": {
+          "crowds": "עמוס בצהריים ובסופ״ש.",
+          "parking": "חניה מוגבלת ומתמלאת. Parks Canada ממליצה על Roam Transit.",
+          "toilets": "יש באזור ה־day use.",
+          "signal": "חלשה או חלקית. להוריד מפה מראש.",
+          "safety": "אזור דובים פעיל. ספריי דובים, הליכה בקבוצה ורעש. מים קרים מאוד.",
+          "tips": "לשלב עם Two Jack Lake בלולאה אחת חזרה לעיירה."
+        },
+        "bestTime": "בוקר או שעות אחה״צ המאוחרות",
+        "important": [
+          "נכון ל־2026: 10 Jul–15 Sep, ב־Lake Minnewanka Trail מעבר לגשר Stewart Canyon הליכה רק בקבוצה של 4 לפחות, ספריי דובים חובה. לבדוק שוב ל־2027"
+        ],
+        "weatherAlt": "תצפית מהרכב בדרך הלולאה. אם יש גשם כבד, Banff Park Museum בעיירה",
+        "links": [
+          {
+            "label": "Lake Minnewanka (Parks Canada)",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/les10-top10/minnewanka"
+          },
+          {
+            "label": "מגבלות עונתיות בגלל דובים",
+            "url": "https://parks.canada.ca/pn-np/mtn/ours-bears/gestion-management/ours-bears/minnewanka"
+          },
+          {
+            "label": "שייט Lake Minnewanka (Pursuit)",
+            "url": "https://www.pursuit.com/experiences/lake-minnewanka/"
+          }
+        ]
+      }
     },
     {
       "id": "banff-gondola",
@@ -1758,7 +1980,57 @@
         "gondola"
       ],
       "visit": "1.5–2 שעות",
-      "see": "רכבל לפסגת הר Sulphur עם תצפית על כל העמק. רק אם הראות טובה."
+      "see": "רכבל לפסגת Sulphur Mountain, נוף 360° על עמק Bow והעיירה",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "עלייה ברכבל",
+            "required": true,
+            "note": "נסיעה של כ־8 דק׳ לפסגה. לבדוק מזג אוויר וראות לפני."
+          },
+          {
+            "name": "Sanson's Peak boardwalk",
+            "required": true,
+            "note": "שביל עץ מהתחנה העליונה לפסגה הסמוכה. הרבה מדרגות לכל כיוון."
+          },
+          {
+            "name": "מרפסות תצפית ומסעדה",
+            "required": false,
+            "note": "בתחנה העליונה. Sky Bistro דורש הזמנה."
+          }
+        ],
+        "duration": {
+          "min": "1 שעה",
+          "recommended": "2 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "בפסגה קר בהרבה מבעיירה, להביא שכבה חמה",
+          "כובע וכפפות",
+          "מעיל רוח"
+        ],
+        "expect": {
+          "crowds": "תורים בשעות שיא. עדיף להזמין זמן עלייה מראש.",
+          "parking": "חניון קטן, מתמלא ובתשלום בעונה. יש shuttle חינם מהעיירה וקו Roam 1. לבדוק באתר הרשמי.",
+          "toilets": "בתחנות העליונה והתחתונה.",
+          "signal": "קליטה טובה בפסגה בדרך כלל.",
+          "safety": "רוח חזקה וקור בפסגה. להישאר על ה־boardwalk.",
+          "tips": "לעלות רק ביום בהיר. אם ההרים בעננים, לוותר."
+        },
+        "bestTime": "יום בהיר, בוקר מוקדם או לפני שקיעה",
+        "important": [
+          "אופציונלי: רק אם הראות טובה",
+          "הזמנה מראש מומלצת בעונה. מחירים ושעות באתר הרשמי"
+        ],
+        "weatherAlt": "לוותר על הרכבל. Vermilion Lakes או Bow Falls מלמטה",
+        "links": [
+          {
+            "label": "Banff Gondola (Pursuit)",
+            "url": "https://www.pursuit.com/experiences/banff-gondola/"
+          }
+        ]
+      }
     },
     {
       "id": "vermilion-lakes",
@@ -1777,8 +2049,54 @@
       "imageMatch": [
         "vermilion"
       ],
-      "visit": "20–40 דק׳",
-      "see": "אגמים שקטים עם השתקפות של הר Rundle."
+      "visit": "20–60 דק׳",
+      "see": "שלושה אגמים רדודים עם השתקפות Mount Rundle, ממש מחוץ לעיירה",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "נסיעה ב־Vermilion Lakes Drive",
+            "required": true,
+            "note": "כביש נוף של כ־4.3 ק״מ לאורך האגמים. עצירות קצרות לאורכו."
+          },
+          {
+            "name": "מזחי עץ",
+            "required": false,
+            "note": "מזחים וספסלים לישיבה מול Mount Rundle. מקום טוב לצילום."
+          },
+          {
+            "name": "תצפית על חיות בר",
+            "required": false,
+            "note": "אזור ביצות. לפעמים רואים ציפורים ובעלי חיים. לשמור מרחק."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "45 דק׳ בשקיעה",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה, בערב קר ליד המים",
+          "דוחה יתושים"
+        ],
+        "expect": {
+          "crowds": "עמוס בשקיעה בצילום.",
+          "parking": "חניה מוגבלת ליד האגם הראשון ובכתפי הכביש. יש חניה גם ב־Fenland.",
+          "toilets": "אין כמעט. להתארגן בעיירה.",
+          "signal": "קליטה טובה בדרך כלל, קרוב לעיירה.",
+          "safety": "חיות בר. לא לעצור באמצע הכביש. לא להתקרב לאיילים.",
+          "tips": "לשקיעה, ואם עייפים פשוט לנסוע לאט לאורך הכביש."
+        },
+        "bestTime": "זריחה או שקיעה, ביום בלי רוח",
+        "important": [],
+        "weatherAlt": "לוותר ביום אפור. ההשתקפות היא העיקר",
+        "links": [
+          {
+            "label": "Vermilion Lakes (Parks Canada)",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/les10-top10/vermilion"
+          }
+        ]
+      }
     },
     {
       "id": "johnston-canyon",
@@ -1797,8 +2115,73 @@
       "imageMatch": [
         "johnston"
       ],
-      "visit": "1–1.5 שעות",
-      "see": "שביל על גשרונים לאורך הקניון עד Lower Falls. ל־Upper Falls צריך עוד כשעה."
+      "visit": "1–2.5 שעות",
+      "see": "קניון צר עם גשרי פלדה צמודים לסלע ושני מפלים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Lower Falls",
+            "required": true,
+            "note": "שביל קל על גשרונים לאורך הקניון. בסוף מנהרה קצרה לתצפית קרובה למפל."
+          },
+          {
+            "name": "Upper Falls",
+            "required": false,
+            "note": "המשך עלייה מתונה למפל גבוה יותר. רק אם יש זמן."
+          },
+          {
+            "name": "Ink Pots",
+            "required": false,
+            "note": "מעיינות צבעוניים מעבר ל־Upper Falls. ארוך מדי ליום הזה."
+          }
+        ],
+        "duration": {
+          "min": "1 שעה (Lower Falls)",
+          "recommended": "2–2.5 שעות (עד Upper Falls)",
+          "trails": [
+            {
+              "name": "Lower Falls",
+              "length": "כ־2.4 ק״מ הלוך־חזור",
+              "gain": "מינימלי"
+            },
+            {
+              "name": "Upper Falls",
+              "length": "כ־5 ק״מ הלוך־חזור",
+              "gain": "כ־120 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות, בקניון קר ולח בבוקר",
+          "נעלי הליכה עם סוליה טובה, הגשרונים רטובים",
+          "מעיל גשם קל, רסס ליד המפלים"
+        ],
+        "expect": {
+          "crowds": "מהאתרים העמוסים בפארק. אחרי 9:00 השביל צפוף.",
+          "parking": "חניון מוגבל, מתמלא מוקדם. מ־Canmore: Trans-Canada מערבה עד Castle Junction, ואז מזרחה על 1A עד החניון. אפשר גם Roam Route 9 מ־Banff.",
+          "toilets": "בחניון.",
+          "signal": "חלשה או אין. להוריד מפה מראש.",
+          "safety": "לא לחצות מעקות. סלעים רטובים וחלקלקים. איסור ירידה מהשביל.",
+          "tips": "להגיע לפני 8:30. Lower Falls מספיק אם הזמן קצר."
+        },
+        "bestTime": "מוקדם בבוקר",
+        "important": [
+          "נכון ל־2026: הקטע המזרחי של Bow Valley Parkway (Hwy 1A) סגור לרכבים פרטיים 1 Sep–6 Oct. להגיע דרך Castle Junction. לבדוק שוב ל־2027",
+          "השביל נסגר מ־13 Oct 2026 לעבודות ייצוב סלעים. לוודא לפני הנסיעה שאין סגירה ב־2027"
+        ],
+        "weatherAlt": "הקניון מוגן יחסית ומתאים גם בגשם קל. בגשם כבד לקצר ל־Lower Falls",
+        "links": [
+          {
+            "label": "Bow Valley Parkway (Parks Canada)",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/les10-top10/promenade-de-la-vallee-de-la-bow-bow-valley-parkway"
+          },
+          {
+            "label": "Johnston Canyon (Banff & Lake Louise Tourism)",
+            "url": "https://www.banfflakelouise.com/experiences/johnston-canyon"
+          }
+        ]
+      }
     },
     {
       "id": "emerald-lake",
@@ -1815,8 +2198,67 @@
       "imageMatch": [
         "emerald lake"
       ],
-      "visit": "45–90 דק׳",
-      "see": "אגם ירוק־טורקיז. אפשר ללכת לאורך החוף או לשכור קאנו."
+      "visit": "1–2.5 שעות",
+      "see": "אגם ירוק־טורקיז מוקף הרים ויער, הפנינה של Yoho",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית מהגשר ליד החניון",
+            "required": true,
+            "note": "הנוף הקלאסי על האגם והלודג׳. מיד מהחניון."
+          },
+          {
+            "name": "Emerald Lake Lakeshore trail",
+            "required": false,
+            "note": "שביל שטוח סביב האגם עם נוף להרים ולקרחונים."
+          },
+          {
+            "name": "שכירת קאנו",
+            "required": false,
+            "note": "במזח ליד הלודג׳. מחירים ושעות במקום."
+          }
+        ],
+        "duration": {
+          "min": "30 דק׳",
+          "recommended": "2 שעות כולל הסיבוב",
+          "trails": [
+            {
+              "name": "Emerald Lake Lakeshore",
+              "length": "כ־5.2 ק״מ",
+              "gain": "מינימלי"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות, ליד האגם קריר",
+          "מעיל גשם קל",
+          "נעלי הליכה, השביל בצד האחורי לפעמים בוצי"
+        ],
+        "expect": {
+          "crowds": "עמוס בצהריים.",
+          "parking": "Parks Canada: חניה מוגבלת מאוד. להגיע מוקדם או מאוחר אחה״צ.",
+          "toilets": "בחניון.",
+          "signal": "חלשה או אין. להוריד מפה מראש.",
+          "safety": "מים קרים מאוד. אזור דובים, ספריי דובים מומלץ.",
+          "tips": "לשלב עם Natural Bridge באותה דרך (Emerald Lake Road)."
+        },
+        "bestTime": "בוקר מוקדם או אחה״צ מאוחר, כשהשמש על המים",
+        "important": [
+          "אישור כניסה של Parks Canada חובה גם ב־Yoho"
+        ],
+        "weatherAlt": "בגשם להסתפק בתצפית מהגשר ולהמשיך ל־Field",
+        "links": [
+          {
+            "label": "Yoho: נקודות עניין",
+            "url": "https://parks.canada.ca/pn-np/bc/yoho/activ/places"
+          },
+          {
+            "label": "Yoho: תכנון ביקור",
+            "url": "https://parks.canada.ca/pn-np/bc/yoho/visit"
+          }
+        ]
+      }
     },
     {
       "id": "natural-bridge",
@@ -1835,8 +2277,49 @@
       "imageMatch": [
         "natural bridge"
       ],
-      "visit": "15–20 דק׳",
-      "see": "גשר סלע טבעי שהנהר Kicking Horse חצב."
+      "visit": "15–30 דק׳",
+      "see": "גשר סלע טבעי שנהר Kicking Horse חצב, מים בעוצמה מתחת",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית על הגשר",
+            "required": true,
+            "note": "הליכה קצרה מהחניון. נגיש."
+          },
+          {
+            "name": "שלטי הסבר",
+            "required": false,
+            "note": "שלטים על היווצרות הגשר."
+          }
+        ],
+        "duration": {
+          "min": "15 דק׳",
+          "recommended": "30 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה",
+          "מעיל רוח"
+        ],
+        "expect": {
+          "crowds": "עומס קצר כשמגיעים אוטובוסים.",
+          "parking": "חניון ליד, על Emerald Lake Road.",
+          "toilets": "יש שירותים באתר (לפי Parks Canada).",
+          "signal": "חלשה.",
+          "safety": "זרם חזק ומים קרים. לא לחצות גדרות ולא לעלות על הסלעים.",
+          "tips": "עצירה בדרך ל־Emerald Lake או בחזרה."
+        },
+        "bestTime": "כל שעה ביום",
+        "important": [],
+        "weatherAlt": "קצר ומתאים גם בגשם",
+        "links": [
+          {
+            "label": "Yoho: נקודות עניין",
+            "url": "https://parks.canada.ca/pn-np/bc/yoho/activ/places"
+          }
+        ]
+      }
     },
     {
       "id": "bow-lake",
@@ -2112,8 +2595,60 @@
       "imageMatch": [
         "field"
       ],
-      "visit": "לינה",
-      "see": "כפר קטן ביוהו שבו ישנים."
+      "visit": "בסיס לינה",
+      "see": "כפר קטנטן בלב Yoho, מוקף הרים, לצד מסילת הרכבת",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Yoho Visitor Centre",
+            "required": true,
+            "note": "מידע על שבילים ומצב דרכים. נמצא על Trans-Canada בכניסה ל־Field."
+          },
+          {
+            "name": "הליכת ערב בכפר",
+            "required": false,
+            "note": "כמה רחובות בלבד. נוף ל־Mount Stephen."
+          },
+          {
+            "name": "צפייה ברכבות",
+            "required": false,
+            "note": "רכבות משא ארוכות עוברות בעמק. אפשר לראות מהכפר."
+          }
+        ],
+        "duration": {
+          "min": "30 דק׳",
+          "recommended": "ערב רגוע",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות, ערבים קרים",
+          "מעיל חם לבוקר מוקדם"
+        ],
+        "expect": {
+          "crowds": "שקט מאוד.",
+          "parking": "חניה בכפר ובמקום הלינה.",
+          "toilets": "ב־Visitor Centre ובמקום הלינה.",
+          "signal": "מוגבלת. לבדוק Wi־Fi במקום הלינה.",
+          "safety": "חיות בר. לא להשאיר אוכל בחוץ. זהירות על פסי הרכבת.",
+          "tips": "מעט מאוד שירותים. להצטייד באוכל ודלק מראש, ב־Lake Louise או Golden."
+        },
+        "bestTime": "ערב",
+        "important": [
+          "Field ב־Mountain Time, כמו Banff ו־Calgary. אין הפרש שעות"
+        ],
+        "weatherAlt": "Visitor Centre, או נסיעה קצרה ל־Lake Louise",
+        "links": [
+          {
+            "label": "Yoho: תכנון ביקור",
+            "url": "https://parks.canada.ca/pn-np/bc/yoho/visit"
+          },
+          {
+            "label": "Parks Canada: Mountain Time ב־Field",
+            "url": "https://parks.canada.ca/pn-np/bc/yoho/activ/burgess/stephen"
+          }
+        ]
+      }
     },
     {
       "id": "lake-louise",
@@ -2131,8 +2666,73 @@
       "imageMatch": [
         "louise"
       ],
-      "visit": "1.5–3 שעות",
-      "see": "האגם המפורסם מול קרחון Victoria. הליכה לאורך החוף או קאנו."
+      "visit": "3–5 שעות לשני האגמים",
+      "see": "אגם טורקיז מתחת לקרחון Victoria, ובהמשך Moraine Lake ו־Ten Peaks",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Lake Louise Lakeshore",
+            "required": true,
+            "note": "הליכה לאורך החוף מול הקרחון. הנוף המוכר."
+          },
+          {
+            "name": "Moraine Lake",
+            "required": true,
+            "note": "רק בהסעה או ב־Lake Connector. לעלות ל־Rockpile לתצפית."
+          },
+          {
+            "name": "Lake Agnes Tea House",
+            "required": false,
+            "note": "עלייה מ־Lake Louise לבית תה בהרים. רק אם יש זמן וכוח."
+          },
+          {
+            "name": "קאנו ב־Lake Louise",
+            "required": false,
+            "note": "השכרה במזח. מחירים באתר הרשמי."
+          }
+        ],
+        "duration": {
+          "min": "3 שעות",
+          "recommended": "יום חלקי, 4–5 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות חמות, בבוקר ליד האגמים קר מאוד",
+          "כובע וכפפות דקות",
+          "מעיל גשם",
+          "נעלי הליכה"
+        ],
+        "expect": {
+          "crowds": "מהמקומות העמוסים בקנדה. להזמין הסעה מוקדמת.",
+          "parking": "נכון ל־2026: הסעות Parks Canada בהזמנה מראש. Park and Ride ב־Lake Louise Ski Resort, חניה חינם למחזיקי הזמנה. חניון Lakeshore בתשלום ומתמלא לפני הזריחה. Moraine Lake סגור לרכב פרטי.",
+          "toilets": "בשני האגמים וב־Park and Ride.",
+          "signal": "חלקית באגמים.",
+          "safety": "מים קרים מאוד. אזור דובים, ספריי דובים בשבילים.",
+          "tips": "להזמין ביום פתיחת ההזמנות. אם לא הצלחתם, 60% מהמקומות נפתחים יומיים לפני ב־8:00 MDT (נכון ל־2026)."
+        },
+        "bestTime": "הסעה ראשונה בבוקר",
+        "important": [
+          "נכון ל־2026: הזמנת הסעה חובה. כרטיס ההסעה לא כולל אישור כניסה לפארק. לבדוק שוב ל־2027",
+          "Moraine Lake סגור לרכבים פרטיים כל השנה",
+          "עונת ההסעות 2026: עד 12 Oct. Lake Connector בין האגמים כל 30 דק׳, 7:00–18:00"
+        ],
+        "weatherAlt": "בעננים נמוכים להתמקד ב־Lake Louise בלבד ולוותר על עליות. לשמור את ההזמנה, שינוי כרוך בעמלה",
+        "links": [
+          {
+            "label": "ביקור ב־Lake Louise ו־Moraine Lake",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise"
+          },
+          {
+            "label": "חניה באזור Lake Louise",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise/renseignements-sur-le-stationnement-parking-information"
+          },
+          {
+            "label": "שאלות נפוצות על ההסעות",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise/faq"
+          }
+        ]
+      }
     },
     {
       "id": "moraine-lake",
@@ -2237,9 +2837,10 @@
         ],
         "important": [
           "הכביש לאגם סגור לרכב פרטי. מגיעים רק בשאטל של Parks Canada או בתחבורה מסחרית.",
-          "הזמנות השאטל נפתחות ב־15/4/2027 ב־08:00 שעון אלברטה, שהן 17:00 בישראל. מקומות לשעות הבוקר נגמרים מהר.",
+          "נכון ל־2026: 40% ממקומות השאטל נפתחים באביב (15.4) ב־08:00 שעון אלברטה, שהן 17:00 בישראל. השאר נפתחים יומיים לפני כל יציאה. מקומות לבוקר נגמרים מהר.",
           "בספטמבר ייתכנו הגבלות בגלל דובים בשבילים מסוימים, למשל חובת הליכה בקבוצה. לבדוק בדיווחי השבילים לפני היציאה.",
-          "אין קליטה סלולרית. כדאי לשמור את אישור השאטל במכשיר לפני היציאה."
+          "אין קליטה סלולרית. כדאי לשמור את אישור השאטל במכשיר לפני היציאה.",
+          "כרטיס השאטל לא כולל את כרטיס הכניסה לפארק. צריך את שניהם."
         ],
         "bestTime": "בשאטל מוקדם ככל האפשר. אין הגעה ברכב פרטי."
       },
@@ -2750,7 +3351,7 @@
       "lodging": "canmore",
       "estTime": "כ־8–9 שעות כולל נסיעה (הערכה)",
       "weatherAlt": "בגשם כבד: Lower Falls בלבד, ואחריו Emerald Lake לתצפית קצרה.",
-      "notes": "לבדוק לפני הטיול את הגישה לכביש 1A דרך Castle Junction. ייתכן שיש הגבלת רכב ממזרח.",
+      "notes": "הקטע המזרחי של כביש 1A (Bow Valley Parkway) סגור לרכב פרטי בתחילת ספטמבר בפיילוט אופניים (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction וממשיכים מזרחה. בנוסף, השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
       "drive": [
         "canmore",
         "johnston-canyon",
@@ -3274,7 +3875,8 @@
       "url": "https://www.parks.canada.ca/voyage-travel/reserve",
       "cost": null,
       "status": "toclose",
-      "priority": true
+      "priority": true,
+      "notes": "נכון ל־2026: 40% מהמקומות נפתחים באביב, והשאר ב־08:00 שעון אלברטה יומיים לפני כל יציאה. כרטיס השאטל לא כולל את כרטיס הכניסה לפארק."
     },
     {
       "id": "t-cruise-balance",
@@ -3371,7 +3973,7 @@
       "title": "בדיקת הגישה לכביש 1A דרך Castle Junction",
       "category": "תכנון",
       "status": "planning",
-      "notes": "ייתכן שיש הגבלת רכב ממזרח."
+      "notes": "נכון ל־2026: הקטע המזרחי סגור לרכב פרטי 1.9–6.10. מגיעים דרך Castle Junction. לבדוק את תאריכי 2027."
     },
     {
       "id": "t-offline-maps",
@@ -3645,7 +4247,7 @@
       "point": "banff-gondola",
       "date": "2027-09-04",
       "booking": "recommended",
-      "url": "https://www.banffjaspercollection.com/attractions/banff-gondola/",
+      "url": "https://www.pursuit.com/experiences/banff-gondola/",
       "cost": null,
       "status": "option",
       "notes": "אופציה. רק אם הראות טובה."
