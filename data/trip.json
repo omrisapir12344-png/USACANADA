@@ -1013,7 +1013,8 @@
             "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "rainier-sunrise",
@@ -1765,7 +1766,8 @@
             "url": "https://www.fs.usda.gov/r10/tongass/recreation/trails/nugget-falls-trail"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "skagway",
@@ -2428,7 +2430,8 @@
             "url": "https://www.pursuit.com/experiences/lake-minnewanka/"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "banff-gondola",
@@ -2747,7 +2750,8 @@
             "url": "https://parks.canada.ca/pn-np/bc/yoho/visit"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "natural-bridge",
@@ -2886,7 +2890,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/93n"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "peyto-lake",
@@ -3163,7 +3168,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "jasper-town",
@@ -3394,7 +3400,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/maligne"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "athabasca-falls",
@@ -3588,7 +3595,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "tangle-creek",
@@ -3863,7 +3871,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise/faq"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "moraine-lake",
@@ -3980,7 +3989,8 @@
         "moraine"
       ],
       "visit": "2.5–4 שעות",
-      "see": "אגם טורקיז בעמק עשר הפסגות. תצפית Rockpile."
+      "see": "אגם טורקיז בעמק עשר הפסגות. תצפית Rockpile.",
+      "hike": true
     },
     {
       "id": "lax",
@@ -4353,7 +4363,8 @@
             "url": "https://griffithobservatory.org/visit/getting-here/"
           }
         ]
-      }
+      },
+      "hike": true
     },
     {
       "id": "santa-monica",

@@ -349,13 +349,13 @@
         <div class="legend">${Object.values(CAT).map(c => `<span><i class="cat-pin" style="background:${c.color}">${I(c.icon)}</i>${c.label}</span>`).join('')}<span><i class="cat-pin opt" style="background:#7d8796">${I('star')}</i>אופציה / הצעה</span></div>
         <div class="btns" style="margin:0 0 16px"><button class="btn" id="kmlBtn">${I('download')}ייצוא ל־Google My Maps</button></div>
         <div id="stops">${D.regions.map(r => `<div class="h2" data-region-h="${r.id}"><small class="num">${dm(r.from)}–${dm(r.to)}</small>${esc(r.name)}</div><div class="list" data-region-l="${r.id}">` +
-          D.points.filter(p => p.region === r.id).map(p => `<a class="li" href="#/point/${p.id}" data-plan="${p.optional ? 0 : 1}" data-cat="${catOf(p)}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+          D.points.filter(p => p.region === r.id).map(p => `<a class="li" href="#/point/${p.id}" data-plan="${p.optional ? 0 : 1}" data-cat="${catOf(p)}" data-hike="${p.hike ? 1 : 0}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
             <div class="g"><b>${esc(p.name)}</b><div class="s">${p.days?.length ? esc(p.days.map(fDay).join(', ')) : 'לא שובץ'}${p.suggestion ? ' · הצעה' : p.optional ? ' · אופציה' : ''}</div><div class="s num" style="text-align:right">${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</div></div>${I('chev', 'i chev')}</a>`).join('') + '</div>').join('')}</div>
       </div>`;
   };
   V.map.after = () => {
     const rf = $('#regF'), kf = $('#kindF');
-    const vis = () => D.points.filter(p => (!rf.value || p.region === rf.value) && (!kf.value || (kf.value === 'plan' ? !p.optional : catOf(p) === kf.value)));
+    const vis = () => D.points.filter(p => (!rf.value || p.region === rf.value) && (!kf.value || (kf.value === 'plan' ? !p.optional : catOf(p) === kf.value || (kf.value === 'trail' && p.hike))));
     $('#kmlBtn').addEventListener('click', exportKML);
     let m, layer;
     if ((!D.meta.googleMyMapsEmbed || EDIT()) && typeof L !== 'undefined' && $('#bigmap')) {
@@ -365,7 +365,7 @@
     }
     const draw = () => {
       document.querySelectorAll('[data-region-h],[data-region-l]').forEach(el => { el.hidden = !!rf.value && (el.dataset.regionH || el.dataset.regionL) !== rf.value; });
-      document.querySelectorAll('#stops .li').forEach(el => { el.hidden = !!kf.value && (kf.value === 'plan' ? el.dataset.plan === '0' : el.dataset.cat !== kf.value); });
+      document.querySelectorAll('#stops .li').forEach(el => { el.hidden = !!kf.value && (kf.value === 'plan' ? el.dataset.plan === '0' : (el.dataset.cat !== kf.value && !(kf.value === 'trail' && el.dataset.hike === '1'))); });
       if (!layer) return;
       layer.clearLayers();
       Object.entries(RT.days).forEach(([date, rt]) => { const dd = D.days.find(x => x.date === date); if (!rf.value || dd.region === rf.value) L.polyline(rt.line, { color: '#13233d', weight: 3, opacity: .6, interactive: false }).addTo(layer); });
@@ -380,7 +380,7 @@
         return;
       }
       pts.forEach(p => L.marker([p.lat, p.lng], { icon: catIcon(p), title: p.name, zIndexOffset: catOf(p) === 'lodging' ? 500 : 0 })
-        .bindPopup(`<span class="pop-cat" style="color:${CAT[catOf(p)].color}">${CAT[catOf(p)].label}${p.optional ? ' · ' + (p.suggestion ? 'הצעה' : 'אופציה') : ''}</span><br>` +`<b>${esc(p.name)}</b><br>${esc(region(p.region).name)}${p.days?.length ? ' · ' + esc(p.days.map(fDay).join(', ')) : ''}<br><a href="#/point/${p.id}">למדריך</a> · <a href="${nav(p).google}" target="_blank" rel="noopener">נווט</a>`).addTo(layer));
+        .bindPopup(`<span class="pop-cat" style="color:${CAT[catOf(p)].color}">${CAT[catOf(p)].label}${p.optional ? ' · ' + (p.suggestion ? 'הצעה' : 'אופציה') : ''}${p.hike && catOf(p) !== 'trail' ? ' · יש מסלולי הליכה' : ''}</span><br>` +`<b>${esc(p.name)}</b><br>${esc(region(p.region).name)}${p.days?.length ? ' · ' + esc(p.days.map(fDay).join(', ')) : ''}<br><a href="#/point/${p.id}">למדריך</a> · <a href="${nav(p).google}" target="_blank" rel="noopener">נווט</a>`).addTo(layer));
       if (pts.length) m.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(.12), { maxZoom: 11 });
     };
     rf.addEventListener('change', draw); kf.addEventListener('change', draw); draw();
