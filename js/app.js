@@ -65,6 +65,8 @@
   const bookingLabel = (b) => ({ required: 'חובה להזמין מראש', recommended: 'מומלץ להזמין מראש', check: 'לבדוק אם צריך להזמין', optional: 'אפשר להזמין מראש', none: 'לא נדרשת הזמנה (לבדוק)' }[b] || '');
   const done = () => LS.get('tg.done', {});
   function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
+  const EDIT = () => LS.get('tg.editMode', false);
+  function saveDraft(msg) { D.meta.updated = new Date().toISOString().slice(0, 10); LS.set('tg.draft', D); if (msg) toast(msg); }
   const LODGE_PTS = ['canmore', 'jasper-town', 'field', 'packwood', 'axiom', 'hyatt-olive8'];
 
   /* ---------- weather (Open-Meteo, no key) ---------- */
@@ -314,7 +316,8 @@
       <div class="body" style="padding-top:8px">
         <div class="filters"><div><label for="regF">אזור</label><select id="regF"><option value="">כל המסע</option>${D.regions.map(r => `<option value="${r.id}">${esc(r.name)}</option>`).join('')}</select></div>
           <div><label for="kindF">להציג</label><select id="kindF"><option value="">הכול</option><option value="plan">רק מה שבתוכנית</option></select></div></div>
-        ${embed ? `<iframe class="gframe" style="height:380px;margin-bottom:12px" src="${esc(embed)}" loading="lazy" title="מפת Google My Maps"></iframe>` : '<div id="bigmap" role="application" aria-label="מפה"></div>'}
+        ${EDIT() ? '<div class="notice">מצב עריכה: גררו נקודה כדי להזיז אותה, לחצו על המפה כדי להוסיף נקודה, ולחצו על נקודה כדי לערוך או למחוק.</div>' : ''}
+        ${embed && !EDIT() ? `<iframe class="gframe" style="height:380px;margin-bottom:12px" src="${esc(embed)}" loading="lazy" title="מפת Google My Maps"></iframe>` : '<div id="bigmap" role="application" aria-label="מפה"></div>'}
         <div class="btns" style="margin:0 0 16px"><button class="btn" id="kmlBtn">${I('download')}ייצוא ל־Google My Maps</button></div>
         <div id="stops">${D.regions.map(r => `<div class="h2" data-region-h="${r.id}"><small class="num">${dm(r.from)}–${dm(r.to)}</small>${esc(r.name)}</div><div class="list" data-region-l="${r.id}">` +
           D.points.filter(p => p.region === r.id).map(p => `<a class="li" href="#/point/${p.id}" data-plan="${p.optional ? 0 : 1}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
@@ -326,7 +329,7 @@
     const vis = () => D.points.filter(p => (!rf.value || p.region === rf.value) && (!kf.value || !p.optional));
     $('#kmlBtn').addEventListener('click', exportKML);
     let m, layer;
-    if (!D.meta.googleMyMapsEmbed && typeof L !== 'undefined') {
+    if ((!D.meta.googleMyMapsEmbed || EDIT()) && typeof L !== 'undefined' && $('#bigmap')) {
       m = L.map('bigmap'); maps.push(m);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '© OpenStreetMap' }).addTo(m);
       layer = L.layerGroup().addTo(m);
@@ -336,13 +339,27 @@
       document.querySelectorAll('#stops .li').forEach(el => { el.hidden = !!kf.value && el.dataset.plan === '0'; });
       if (!layer) return;
       layer.clearLayers();
-      Object.entries(RT.days).forEach(([date, rt]) => { const dd = D.days.find(x => x.date === date); if (!rf.value || dd.region === rf.value) L.polyline(rt.line, { color: '#13233d', weight: 3, opacity: .6 }).addTo(layer); });
+      Object.entries(RT.days).forEach(([date, rt]) => { const dd = D.days.find(x => x.date === date); if (!rf.value || dd.region === rf.value) L.polyline(rt.line, { color: '#13233d', weight: 3, opacity: .6, interactive: false }).addTo(layer); });
       const pts = vis();
+      if (EDIT()) {
+        pts.forEach(p => {
+          const mk = L.marker([p.lat, p.lng], { draggable: true, icon: L.divIcon({ className: '', html: `<span class="edit-pin" style="background:${p.optional ? '#7d8796' : '#2d6cb5'}"></span>`, iconSize: [18, 18], iconAnchor: [9, 9] }) })
+            .bindPopup(`<b>${esc(p.name)}</b><br><a href="#/edit/point/${p.id}">עריכה</a> · <a href="#/point/${p.id}">למדריך</a>`).addTo(layer);
+          mk.on('dragend', () => { const ll = mk.getLatLng(); p.lat = +ll.lat.toFixed(5); p.lng = +ll.lng.toFixed(5); saveDraft(`המיקום של ${p.name} עודכן`); });
+        });
+        if (pts.length) m.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(.12), { maxZoom: 11 });
+        return;
+      }
       pts.forEach(p => L.circleMarker([p.lat, p.lng], { radius: p.optional ? 6 : 8, color: '#fff', weight: 2, fillColor: p.optional ? '#7d8796' : '#2d6cb5', fillOpacity: 1 })
         .bindPopup(`<b>${esc(p.name)}</b><br>${esc(region(p.region).name)}${p.days?.length ? ' · ' + esc(p.days.map(fDay).join(', ')) : ''}<br><a href="#/point/${p.id}">למדריך</a> · <a href="${nav(p).google}" target="_blank" rel="noopener">נווט</a>`).addTo(layer));
       if (pts.length) m.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(.12), { maxZoom: 11 });
     };
     rf.addEventListener('change', draw); kf.addEventListener('change', draw); draw();
+    if (EDIT() && m) m.on('click', (e) => {
+      const id = 'p-' + Date.now().toString(36);
+      D.points.push({ id, name: 'נקודה חדשה', nameEn: '', region: rf.value || D.regions[0].id, lat: +e.latlng.lat.toFixed(5), lng: +e.latlng.lng.toFixed(5), days: [], kind: 'attraction', optional: true });
+      saveDraft('נוספה נקודה חדשה'); location.hash = `#/edit/point/${id}`;
+    });
   };
   function exportKML() {
     const pm = D.points.map(p => `<Placemark><name>${esc(p.nameEn || p.name)}</name><description>${esc(p.name)} · ${esc(region(p.region).name)}${p.days?.length ? ' · ' + p.days.join(', ') : ''}</description><Point><coordinates>${p.lng},${p.lat},0</coordinates></Point></Placemark>`).join('');
@@ -445,17 +462,134 @@
       ${h.notes ? `<p class="tiny" style="margin-top:6px">${esc(h.notes)}</p>` : ''}
       ${h.point && point(h.point) ? `<div class="btns" style="margin-top:8px"><a class="btn" href="${nav(point(h.point)).google}" target="_blank" rel="noopener">${I('pin')}ניווט למלון</a></div>` : ''}</div>`; }).join('')}
     <p class="tiny">${esc(D.hotelsNote)}</p></div>`;
-  V.more_offline = () => `${pagehead('הגדרות', 'אופליין ועריכה', '#/more')}<div class="body" style="padding-top:8px">
+  V.more_offline = () => {
+    const on = EDIT(), hasDraft = !!LS.get('tg.draft');
+    const li = (href, icon, t, sub) => `<a class="li" href="${href}"><span class="ic">${I(icon)}</span><div class="g"><b>${t}</b><div class="s">${sub}</div></div>${I('chev', 'i chev')}</a>`;
+    return `${pagehead('הגדרות', 'אופליין ועריכה', '#/more')}<div class="body" style="padding-top:8px">
     <div class="sect"><h4>${I('download')}שמור הכול לאופליין</h4>
       <p>שומר במכשיר את האתר, הנתונים וכל התמונות. מהמפה נשמרים רק אזורים שכבר הוצגו, לפי מדיניות OpenStreetMap. מפות מלאות לניווט כדאי להוריד ב־Google Maps או Maps.me.</p>
       <button class="btn gold" id="saveOff" style="width:100%;margin-top:12px">שמור הכול לאופליין</button>
       <div class="progress" id="offProg" hidden><i></i></div>
       <p class="small" id="offStatus" style="margin-top:8px">${LS.get('tg.offlineAt') ? 'נשמר לאחרונה ב־' + esc(new Date(LS.get('tg.offlineAt')).toLocaleString('he-IL')) : 'עוד לא נשמר במכשיר הזה.'}</p></div>
-    <div class="sect warn"><h4>${I('warn')}מצב עריכה</h4><ul><li><b>עריכה במכשיר הזה לא מגיעה לצופים</b> עד שמפרסמים גרסה חדשה של <span class="ltr">trip.json</span>.</li><li><b>מצב עריכה אינו הרשאת אבטחה.</b> כל מי שיש לו את הקישור רואה את כל התוכן.</li><li>עריכה, ייצוא וייבוא ייבנו בשלב הבא.</li></ul></div></div>`;
-  V.more_offline.after = () => $('#saveOff').addEventListener('click', saveOffline);
+    <div class="sect"><h4>${I('doc')}מצב עריכה</h4>
+      <p>${on ? 'מצב עריכה פעיל. כל שינוי נשמר כטיוטה במכשיר הזה בלבד.' : 'לעורך בלבד. מאפשר לשנות נקודות, משימות, מלונות ותקציב.'}</p>
+      <button class="btn ${on ? '' : 'dark'}" id="editToggle" style="width:100%;margin-top:12px">${on ? 'סיום עריכה' : 'הפעלת מצב עריכה'}</button>
+      ${on ? `<div class="list" style="margin-top:12px;background:var(--bg)">
+        ${li('#/map', 'map', 'נקודות במפה', 'הוספה, גרירה, שינוי ומחיקה')}
+        ${li('#/edit/tasks', 'ticket', 'משימות', 'סטטוס, מועד, הוספה ומחיקה')}
+        ${li('#/edit/hotels', 'bed', 'מלונות', 'שם, מחיר, סטטוס וביטול')}
+        ${li('#/edit/budget', 'wallet', 'תקציב', 'סכום לכל קטגוריה')}
+        ${li('#/edit/json', 'doc', 'עריכה מתקדמת', 'כל הנתונים כ־JSON')}
+      </div>
+      <div class="btns"><button class="btn dark" id="expBtn">${I('download')}ייצוא trip.json</button><label class="btn" for="impFile">ייבוא trip.json</label><input type="file" id="impFile" accept="application/json,.json" hidden></div>
+      ${hasDraft ? '<button class="btn" id="resetDraft" style="width:100%;margin-top:8px;color:var(--alert)">מחיקת הטיוטה וחזרה לגרסה המפורסמת</button>' : ''}` : ''}
+    </div>
+    <div class="sect warn"><h4>${I('warn')}חשוב לדעת</h4><ul>
+      <li><b>עריכה במכשיר הזה לא מגיעה לצופים</b> עד שמפרסמים גרסה חדשה: מייצאים את trip.json, מחליפים אותו בתיקייה data בריפו, והאתר מתעדכן.</li>
+      <li><b>מצב עריכה אינו הרשאת אבטחה.</b> כל מי שיש לו את הקישור רואה את כל התוכן.</li></ul></div></div>`;
+  };
+  V.more_offline.after = () => {
+    $('#saveOff').addEventListener('click', saveOffline);
+    $('#editToggle').addEventListener('click', () => {
+      const on = !EDIT(); LS.set('tg.editMode', on);
+      if (!on) { location.reload(); return; }
+      if (LS.get('tg.draft')) D = LS.get('tg.draft');
+      toast('מצב עריכה הופעל'); route();
+    });
+    $('#expBtn')?.addEventListener('click', exportTrip);
+    $('#impFile')?.addEventListener('change', (e) => {
+      const f = e.target.files[0]; if (!f) return;
+      const r = new FileReader();
+      r.onload = () => { try { const j = JSON.parse(r.result); if (!j.meta || !j.days || !j.points) throw new Error('חסרים meta, days או points'); D = j; saveDraft('הקובץ יובא ונשמר כטיוטה'); route(); } catch (err) { toast('הקובץ לא תקין: ' + err.message); } };
+      r.readAsText(f);
+    });
+    let armed = false;
+    $('#resetDraft')?.addEventListener('click', (e) => {
+      if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי למחוק את הטיוטה'; return; }
+      try { localStorage.removeItem('tg.draft'); } catch { /* ignore */ }
+      location.reload();
+    });
+  };
+
   V.more_credits = () => `${pagehead('מקורות', 'קרדיטים', '#/more')}<div class="body" style="padding-top:8px">
     <p class="lead" style="margin-top:0">מפות © OpenStreetMap contributors · Leaflet 1.9.4 · מרחקי נסיעה: ${esc(RT.source || 'OSRM')} · תחזית: Open-Meteo · גופן IBM Plex Sans Hebrew (SIL OFL). התמונות מ־Wikimedia Commons ברישיון חופשי.</p>
     ${Object.entries(CR).map(([pid, list]) => `<div class="sect"><h4>${esc(point(pid)?.name || pid)}</h4>${list.map(c => `<p class="small" style="margin-top:4px">${credit(c)}</p>`).join('')}</div>`).join('')}</div>`;
+
+  /* ---------- edit mode ---------- */
+  const field = (id, label, value, type = 'text', attrs = '') => `<label class="fld"><span>${label}</span><input id="${id}" type="${type}" value="${esc(value ?? '')}" ${attrs}></label>`;
+  const statusSel = (id, val) => `<select id="${id}">${Object.entries(D.statuses).map(([k, v]) => `<option value="${k}" ${k === val ? 'selected' : ''}>${esc(v.label)}</option>`).join('')}</select>`;
+  V.edit = (kind, id) => {
+    if (!EDIT()) return `${pagehead('עריכה', 'מצב עריכה כבוי', '#/more/offline')}<div class="body"><p class="lead">כדי לערוך, הפעילו מצב עריכה בעמוד ״אופליין ועריכה״.</p></div>`;
+    if (kind === 'point') {
+      const p = point(id); if (!p) return pagehead('עריכה', 'הנקודה לא נמצאה', '#/map');
+      return `${pagehead('עריכת נקודה', p.name, '#/map')}<div class="body" style="padding-top:8px"><div class="sect form">
+        ${field('e-name', 'שם בעברית', p.name)}${field('e-nameEn', 'שם באנגלית (לניווט)', p.nameEn)}
+        <label class="fld"><span>אזור</span><select id="e-region">${D.regions.map(r => `<option value="${r.id}" ${r.id === p.region ? 'selected' : ''}>${esc(r.name)}</option>`).join('')}</select></label>
+        ${field('e-days', 'ימים (YYYY-MM-DD, מופרדים בפסיק)', (p.days || []).join(', '))}
+        ${field('e-visit', 'זמן שהייה', p.visit)}${field('e-see', 'מה רואים (שורה אחת)', p.see)}${field('e-summary', 'תיאור', p.summary)}
+        <div class="row2">${field('e-lat', 'קו רוחב', p.lat, 'number', 'step="0.00001"')}${field('e-lng', 'קו אורך', p.lng, 'number', 'step="0.00001"')}</div>
+        <label class="chk"><input type="checkbox" id="e-optional" ${p.optional ? 'checked' : ''}> אופציה (לא חובה)</label>
+        <label class="chk"><input type="checkbox" id="e-suggestion" ${p.suggestion ? 'checked' : ''}> הצעה (לא בתוכנית)</label>
+        <div class="btns"><button class="btn dark" id="e-save">שמירה</button><button class="btn" id="e-del" style="color:var(--alert)">מחיקה</button></div></div></div>`;
+    }
+    if (kind === 'tasks') return `${pagehead('עריכה', 'משימות', '#/more/offline')}<div class="body" style="padding-top:8px">
+      <div class="btns" style="margin:0 0 12px"><button class="btn" id="t-add">משימה חדשה</button><button class="btn dark" id="t-save">שמירה</button></div>
+      ${D.tasks.map((t, i) => `<div class="sect form">${field('t-title-' + i, 'משימה', t.title)}<div class="row2"><label class="fld"><span>סטטוס</span>${statusSel('t-status-' + i, t.status)}</label>${field('t-due-' + i, 'מועד יעד', t.due || '', 'date')}</div>${field('t-notes-' + i, 'הערה', t.notes)}${field('t-url-' + i, 'קישור', t.url, 'url')}<button class="btn" data-del="${i}" style="color:var(--alert)">מחיקת המשימה</button></div>`).join('')}
+      <div class="btns"><button class="btn dark" id="t-save2">שמירה</button></div></div>`;
+    if (kind === 'hotels') return `${pagehead('עריכה', 'מלונות', '#/more/offline')}<div class="body" style="padding-top:8px">
+      ${D.hotels.map((h, i) => `<div class="sect form"><h4>${esc(h.city)} <span class="small muted num">${dm(h.checkIn)}${h.checkOut ? '–' + dm(h.checkOut) : ''}</span></h4>${field('h-name-' + i, 'שם המלון', h.name)}<div class="row2"><label class="fld"><span>סטטוס</span>${statusSel('h-status-' + i, h.status)}</label>${field('h-price-' + i, 'מחיר לזוג', h.price?.amount ?? '', 'number', 'step="0.01"')}</div><div class="row2">${field('h-cur-' + i, 'מטבע', h.price?.currency || 'USD')}${field('h-cancel-' + i, 'ביטול', h.cancelBy)}</div>${field('h-notes-' + i, 'הערות', h.notes)}</div>`).join('')}
+      <div class="btns"><button class="btn dark" id="h-save">שמירה</button></div></div>`;
+    if (kind === 'budget') return `${pagehead('עריכה', 'תקציב', '#/more/offline')}<div class="body" style="padding-top:8px">
+      ${D.budget.categories.map((c, i) => `<div class="sect form"><h4>${esc(c.label)}</h4><div class="row2">${field('b-amt-' + i, 'תקציב', c.budget?.amount ?? '', 'number', 'step="1"')}${field('b-cur-' + i, 'מטבע', c.budget?.currency || 'ILS')}</div></div>`).join('')}
+      <div class="btns"><button class="btn dark" id="b-save">שמירה</button></div></div>`;
+    if (kind === 'json') return `${pagehead('עריכה מתקדמת', 'כל הנתונים (JSON)', '#/more/offline')}<div class="body" style="padding-top:8px">
+      <p class="lead" style="margin-top:0">עריכה ישירה של trip.json. בשמירה נבדק שהקובץ תקין.</p>
+      <textarea id="j-text" style="min-height:60vh;direction:ltr;text-align:left;font-family:ui-monospace,monospace;font-size:12.5px">${esc(JSON.stringify(D, null, 2))}</textarea>
+      <div class="btns"><button class="btn dark" id="j-save">שמירה</button></div></div>`;
+    return pagehead('עריכה', 'לא נמצא', '#/more/offline');
+  };
+  V.edit.after = (kind, id) => {
+    if (!EDIT()) return;
+    const val = (x) => ($('#' + x)?.value || '').trim();
+    if (kind === 'point') {
+      const p = point(id); if (!p) return;
+      $('#e-save').addEventListener('click', () => {
+        Object.assign(p, { name: val('e-name') || p.name, nameEn: val('e-nameEn'), region: val('e-region'), visit: val('e-visit'), see: val('e-see'), summary: val('e-summary'),
+          days: val('e-days').split(',').map(x => x.trim()).filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x)), lat: +val('e-lat'), lng: +val('e-lng'), optional: $('#e-optional').checked, suggestion: $('#e-suggestion').checked });
+        saveDraft('נשמר');
+      });
+      let armed = false;
+      $('#e-del').addEventListener('click', (e) => {
+        if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי למחוק'; return; }
+        D.points = D.points.filter(x => x.id !== id); D.days.forEach(d => { d.points = d.points.filter(x => x !== id); });
+        saveDraft('הנקודה נמחקה'); location.hash = '#/map';
+      });
+    }
+    if (kind === 'tasks') {
+      const read = () => D.tasks.forEach((t, i) => { t.title = val('t-title-' + i) || t.title; t.status = val('t-status-' + i) || t.status; t.due = val('t-due-' + i) || null; t.notes = val('t-notes-' + i) || undefined; t.url = val('t-url-' + i) || undefined; });
+      ['#t-save', '#t-save2'].forEach(b => $(b).addEventListener('click', () => { read(); saveDraft('המשימות נשמרו'); }));
+      $('#t-add').addEventListener('click', () => { read(); D.tasks.unshift({ id: 't-' + Date.now().toString(36), title: 'משימה חדשה', category: 'כללי', status: 'toclose' }); saveDraft('נוספה משימה'); route(); });
+      view.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', () => { read(); D.tasks.splice(+b.dataset.del, 1); saveDraft('המשימה נמחקה'); route(); }));
+    }
+    if (kind === 'hotels') $('#h-save').addEventListener('click', () => {
+      D.hotels.forEach((h, i) => { h.name = val('h-name-' + i) || h.name; h.status = val('h-status-' + i) || h.status; const a = val('h-price-' + i); h.price = a ? { amount: +a, currency: val('h-cur-' + i) || 'USD' } : null; h.cancelBy = val('h-cancel-' + i) || null; h.notes = val('h-notes-' + i); });
+      saveDraft('המלונות נשמרו');
+    });
+    if (kind === 'budget') $('#b-save').addEventListener('click', () => {
+      D.budget.categories.forEach((c, i) => { const a = val('b-amt-' + i); c.budget = a ? { amount: +a, currency: val('b-cur-' + i) || 'ILS' } : null; });
+      saveDraft('התקציב נשמר');
+    });
+    if (kind === 'json') $('#j-save').addEventListener('click', () => {
+      try { const j = JSON.parse($('#j-text').value); if (!j.meta || !j.days || !j.points) throw new Error('חסרים meta, days או points'); D = j; saveDraft('נשמר'); }
+      catch (e) { toast('הקובץ לא תקין: ' + e.message); }
+    });
+  };
+  function exportTrip() {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(D, null, 2)], { type: 'application/json' }));
+    a.download = 'trip.json'; a.click();
+    toast('trip.json ירד. מחליפים אותו בתיקייה data בריפו, והאתר מתעדכן.');
+  }
 
   async function saveOffline() {
     const prog = $('#offProg'), bar = prog.firstElementChild, st = $('#offStatus');
@@ -479,10 +613,11 @@
     const [, name = 'journey', a] = (location.hash || '#/journey').split('/');
     const v = V[name] || V.journey;
     maps.forEach(m => m.remove()); maps = [];
-    view.innerHTML = v(a);
+    const b = (location.hash || '').split('/')[3];
+    view.innerHTML = (EDIT() ? `<div class="editbar"><span>מצב עריכה · השינויים נשמרים רק במכשיר הזה</span><a href="#/more/offline">ייצוא וסיום</a></div>` : '') + v(a, b);
     const after = name === 'more' && a ? V['more_' + a]?.after : v.after;
-    if (after) after(a);
-    const tab = { region: 'journey', point: 'journey', day: 'today' }[name] || (V[name] ? name : 'journey');
+    if (after) after(a, b);
+    const tab = { region: 'journey', point: 'journey', day: 'today', edit: 'more' }[name] || (V[name] ? name : 'journey');
     document.querySelectorAll('#tabs a').forEach(t => { const on = t.dataset.tab === tab; t.classList.toggle('on', on); if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current'); });
     window.scrollTo(0, 0);
   }
@@ -493,7 +628,7 @@
     try {
       const get = (u) => fetch(u).then(r => r.ok ? r.json() : {}).catch(() => ({}));
       const [trip, credits, routes] = await Promise.all([fetch('data/trip.json').then(r => r.json()), get('data/credits.json'), get('data/routes.json')]);
-      D = trip; CR = credits.points || {}; RT = routes.days ? routes : { days: {} };
+      D = (EDIT() && LS.get('tg.draft')) || trip; CR = credits.points || {}; RT = routes.days ? routes : { days: {} };
     } catch { view.innerHTML = '<div class="body"><div class="notice">לא הצלחתי לטעון את נתוני הטיול. נסו לרענן כשיש חיבור.</div></div>'; return; }
     addEventListener('hashchange', route);
     route();
