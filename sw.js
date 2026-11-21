@@ -1,5 +1,5 @@
 /* Service worker – יומן מסע 2027 */
-const VERSION = 'v4';
+const VERSION = 'v5';
 const SHELL = `shell-${VERSION}`;
 const DATA = 'data';
 const TILES = 'osm-tiles';
@@ -71,7 +71,16 @@ self.addEventListener('fetch', (e) => {
     })());
     return;
   }
-  // Shell + images: cache first
+  // App code (html/css/js): network first, so every update shows up right away; cache when offline
+  if (/\/(index\.html|app\.css|app\.js|manifest\.json)?$/.test(url.pathname) && !url.pathname.includes('/vendor/')) {
+    e.respondWith((async () => {
+      const c = await caches.open(SHELL);
+      try { const r = await fetch(e.request, { cache: 'no-store' }); if (r.ok) c.put(e.request, r.clone()); return r; }
+      catch { return (await c.match(e.request, { ignoreSearch: true })) || (await c.match('index.html')) || Response.error(); }
+    })());
+    return;
+  }
+  // Fonts, Leaflet, icons, images: cache first
   e.respondWith((async () => {
     const hit = await caches.match(e.request, { ignoreSearch: true });
     if (hit) return hit;

@@ -223,6 +223,7 @@
         </div></article>`;
     };
     const backLeg = rt && rt.legs[rt.legs.length - 1];
+    const lastTo = backLeg && point(backLeg.to), arrive = tl && lastTo && lastTo.kind === 'lodging' ? tl.end : null;
     const showBack = backLeg && LODGE_PTS.includes(backLeg.to) && !sights.find(p => p.id === backLeg.to);
     const transport = d.points.map(point).filter(p => p && ['transport'].includes(p.kind));
     const anchor = sights[0] || transport[0] || D.points.find(p => p.region === r.id && !['transport', 'lodging'].includes(p.kind));
@@ -235,13 +236,13 @@
         ${d.summary ? `<p class="lead" style="margin:0 2px 12px">${esc(d.summary)}</p>` : ''}
         ${transport.length && d.type === 'transit' ? `<div class="chips" style="margin-bottom:12px">${transport.map(p => `<span>${I('plane')} ${esc(p.name)}</span>`).join('')}</div>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
-        ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b> · ${sights.length} עצירות · סיום ב<b class="num">${clock(tl.end)}</b> בערך. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
+        ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b>${sights.length ? ` · ${sights.length} עצירות` : ''} · מגיעים ל${esc(point(rt.legs[rt.legs.length - 1].to).name)} בערך ב־<b class="num">${clock(tl.end)}</b>. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
         ${d.driveNote ? `<div class="notice">${esc(d.driveNote)}</div>` : ''}
         ${rt ? `<div class="routemap"><div id="dmap" style="height:100%"></div><a class="gbtn" href="${gDir(d.drive)}" target="_blank" rel="noopener">${I('pin')}פתח בגוגל מפות</a></div>` : ''}
         ${sights.length ? sights.map(stopHtml).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט. אין עצירות בחוף.' : d.type === 'free' ? 'עוד אין תוכנית ליום הזה.' : ''}</p>`}
         ${sugg.length ? `<div class="h2"><small>לא בתוכנית</small>הצעות לאזור</div><div class="list">${sugg.map(p => `<a class="li" href="#/point/${p.id}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}<div class="g"><b>${esc(p.name)}</b><div class="s">${esc(p.visit ? p.visit + ' · ' + (p.see || '') : p.summary || '')}</div></div>${I('chev', 'i chev')}</a>`).join('')}</div>` : ''}
         ${showBack ? legChip(backLeg, false) : ''}
-        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b><div class="small muted">${lodge ? esc(lodge.name) : ''}${lodge?.checkTimes ? ' · ' + esc(lodge.checkTimes) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
+        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b>${arrive != null ? `<div class="arr">${I('clock')}מגיעים בערך ב־<b class="num">${clock(arrive)}</b></div>` : ''}<div class="small muted">${lodge ? esc(lodge.name) : ''}${lodge?.checkTimes ? ' · ' + esc(lodge.checkTimes) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
         <div class="facts" style="margin-top:12px">
           <div class="fact wide"><div class="k">${I('cloud')}תחזית</div><div class="v">${anchor ? wx(anchor.lat, anchor.lng, d.date) : '—'}</div></div>
           ${d.weatherAlt ? `<div class="fact wide"><div class="k">${I('warn')}אם מזג האוויר לא טוב</div><div class="v">${esc(d.weatherAlt)}</div></div>` : ''}
@@ -673,20 +674,27 @@
   /* ---------- day timeline (estimated clock times) ---------- */
   function visitMin(s) {
     if (!s) return null;
+    s = s.split('(')[0];
     const nums = (s.match(/\d+(?:\.\d+)?/g) || []).map(Number);
     if (!nums.length) return null;
+    // mixed units, e.g. "30 דקות–שעה" or "45 דק׳–1.5 שעות": minutes first, hours second
+    if (/דק/.test(s) && /שע/.test(s) && s.search(/דק/) < s.search(/שע/)) return Math.round((nums[0] + (nums[1] ?? 1) * 60) / 2);
     const v = nums.length > 1 ? (nums[0] + nums[1]) / 2 : nums[0];
     return /שע/.test(s) ? Math.round(v * 60) : /דק/.test(s) ? Math.round(v) : null;
   }
   const clock = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(Math.round(m % 60)).padStart(2, '0')}`;
   function timeline(d) {
-    const rt = RT.days[d.date]; if (!rt || !d.drive) return null;
-    const [h, mm] = (d.start || '08:00').split(':').map(Number);
+    const rt = RT.days[d.date]; if (!rt || !d.drive || !d.start) return null;
+    const [h, mm] = d.start.split(':').map(Number);
     let t = h * 60 + mm; const at = {};
     rt.legs.forEach(l => {
       t += Math.round(l.min * 1.15 / 5) * 5;
       const p = point(l.to);
-      if (d.points.includes(l.to) && !['transport', 'lodging'].includes(p.kind)) { at[l.to] = t; t += Math.round((visitMin(p.visit) ?? 45) / 5) * 5; }
+      if (d.points.includes(l.to) && !['transport', 'lodging'].includes(p.kind)) {
+        at[l.to] = t; t += Math.round((visitMin(p.visit) ?? 45) / 5) * 5;
+        // stops reached on foot or by boat from here (in the day's list but not driven to), e.g. Spirit Island
+        for (let i = d.points.indexOf(l.to) + 1; i < d.points.length && !d.drive.includes(d.points[i]); i++) { const q = point(d.points[i]); if (!q || ['transport', 'lodging'].includes(q.kind)) break; at[q.id] = t; t += Math.round((visitMin(q.visit) ?? 45) / 5) * 5; }
+      }
       else at[l.to] = t;
     });
     return { start: h * 60 + mm, at, end: t };
@@ -944,7 +952,12 @@
     } catch { view.innerHTML = '<div class="body"><div class="notice">לא הצלחתי לטעון את נתוני הטיול. נסו לרענן כשיש חיבור.</div></div>'; return; }
     addEventListener('hashchange', route);
     route();
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+    if ('serviceWorker' in navigator) {
+      const hadSW = !!navigator.serviceWorker.controller; let reloaded = false;
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => r.update()).catch(() => {});
+      // a new version took over: reload once so the screen shows it
+      navigator.serviceWorker.addEventListener('controllerchange', () => { if (hadSW && !reloaded) { reloaded = true; location.reload(); } });
+    }
   }
   boot();
 })();
