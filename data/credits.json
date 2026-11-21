@@ -1232,6 +1232,24 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_2012_44.jpg"
       }
+    ],
+    "citadel": [
+      {
+        "file": "assets/img/citadel/1.webp",
+        "title": "File:Citadel Outlets Tree Lighting (pre-show) 11 09 2013 -1 (10784175124).jpg",
+        "author": "Justin Higuchi from Los Angeles, CA, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Citadel_Outlets_Tree_Lighting_(pre-show)_11_09_2013_-1_(10784175124).jpg"
+      },
+      {
+        "file": "assets/img/citadel/2.webp",
+        "title": "File:Citadel Outlets Tree Lighting (pre-show) 11 09 2013 -11 (10784165403).jpg",
+        "author": "Justin Higuchi from Los Angeles, CA, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Citadel_Outlets_Tree_Lighting_(pre-show)_11_09_2013_-11_(10784165403).jpg"
+      }
     ]
   }
 }
