@@ -487,7 +487,7 @@
         "2027-08-20"
       ],
       "kind": "attraction",
-      "summary": "האי וכלא אלקטרז. מגיעים רק במעבורת, וכדאי להזמין מראש.",
+      "summary": "מומלץ מאוד: אחד האתרים הבולטים בסן פרנסיסקו. סיור האודיו בתוך הכלא מצוין. כ־2.5–3.5 שעות כולל המעבורת. חובה להזמין מראש.",
       "suggestion": true,
       "optional": true,
       "imageMatch": [
@@ -4022,6 +4022,88 @@
       ]
     },
     {
+      "id": "desert-hills",
+      "name": "Desert Hills Premium Outlets",
+      "nameEn": "Desert Hills Premium Outlets, Cabazon, CA",
+      "region": "la",
+      "lat": 33.9246,
+      "lng": -116.8183,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "4–6 שעות",
+      "see": "מתחם האאוטלטים הגדול באזור, כ־180 חנויות, כולל מותגי יוקרה.",
+      "summary": "כ־154 ק״מ ממזרח למלון, כשעתיים נסיעה בלי פקקים. יום שלם עם הנסיעה.",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "קניות באאוטלט",
+            "required": true,
+            "note": "מתחם פתוח עם כ־180 חנויות (לפי האתר של המפעיל)."
+          },
+          {
+            "name": "VIP Shopper Club של Simon",
+            "required": false,
+            "note": "הרשמה חינם באתר נותנת לרוב קופון הנחות נוסף. לבדוק באתר לפני."
+          }
+        ],
+        "duration": {
+          "min": "3 שעות",
+          "recommended": "4–6 שעות, ועוד כ־4 שעות נסיעה הלוך־חזור",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קלים. במדבר חם מאוד בספטמבר.",
+          "כובע, משקפי שמש ובקבוק מים."
+        ],
+        "expect": {
+          "crowds": "עמוס בסופי שבוע. ביום חול רגוע יותר.",
+          "parking": "חניה חינם במתחם (לבדוק).",
+          "toilets": "במתחם.",
+          "signal": "טובה.",
+          "safety": "חום כבד בשעות הצהריים. לשתות הרבה.",
+          "tips": "לצאת מוקדם בבוקר כדי להקדים את הפקקים ואת החום. לחזור לפני שעות העומס של אחר הצהריים."
+        },
+        "bestTime": "מהפתיחה בבוקר, ביום חול.",
+        "important": [
+          "שעות הפתיחה משתנות. לבדוק באתר לפני היציאה."
+        ],
+        "weatherAlt": "אם חם מדי או שאין כוח לנסיעה: Citadel Outlets, כ־24 ק״מ מהמלון.",
+        "links": [
+          {
+            "label": "Desert Hills Premium Outlets – האתר הרשמי",
+            "url": "https://www.premiumoutlets.com/desert-hills"
+          }
+        ]
+      },
+      "days": [
+        "2027-09-13"
+      ],
+      "imageMatch": [
+        "desert hills"
+      ]
+    },
+    {
+      "id": "citadel",
+      "name": "Citadel Outlets",
+      "nameEn": "Citadel Outlets, Commerce, CA",
+      "region": "la",
+      "lat": 34.004,
+      "lng": -118.153,
+      "approx": true,
+      "kind": "attraction",
+      "optional": true,
+      "visit": "2–4 שעות",
+      "see": "אאוטלט קטן יותר וקרוב, כ־130 חנויות.",
+      "summary": "החלופה הקרובה: כ־24 ק״מ מהמלון. מתאים לחצי יום.",
+      "days": [
+        "2027-09-13"
+      ],
+      "imageMatch": [
+        "citadel"
+      ]
+    },
+    {
       "id": "griffith",
       "name": "מצפה Griffith",
       "nameEn": "Griffith Observatory",
@@ -4697,12 +4779,22 @@
     },
     {
       "date": "2027-09-13",
-      "type": "free",
+      "type": "explore",
       "region": "la",
-      "title": "לוס אנג׳לס – יום פתוח",
-      "points": [],
+      "title": "יום אאוטלט",
+      "points": [
+        "desert-hills",
+        "citadel"
+      ],
       "lodging": "la",
-      "summary": "יום פתוח. הצעות: סנטה מוניקה, מרכז Getty."
+      "summary": "יום קניות ב־Desert Hills Premium Outlets, מתחם האאוטלטים הגדול באזור. כשעתיים נסיעה לכל כיוון. אם אין כוח לנסיעה ארוכה, Citadel Outlets קרוב הרבה יותר.",
+      "drive": [
+        "park-plaza",
+        "desert-hills",
+        "park-plaza"
+      ],
+      "estTime": "יום מלא, כולל כ־4 שעות נסיעה (הערכה)",
+      "notes": "למחרת בצהריים טסים הביתה. כדאי לחזור מוקדם, לארוז ולוודא שהמזוודות לא חורגות מ־23 ק״ג (מזוודה שנייה עולה 150$ לנוסע)."
     },
     {
       "date": "2027-09-14",
