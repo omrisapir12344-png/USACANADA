@@ -188,7 +188,7 @@
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "griffith",
-      "arrive": "החזרת הרכב ב־YYC וטיסה ל־LAX ב־10/9. הטיסה טרם הוזמנה.",
+      "arrive": "החזרת הרכב ב־YYC, טיסה ל־LAX ב־10/9 (טרם הוזמנה) ואיסוף רכב שכור בשדה.",
       "lodging": "טרם נקבע. ארבעה לילות.",
       "lodgingStatus": "toclose",
       "summary": "ארבעה לילות לפני הטיסה הביתה (LY6, 14/9, 13:30). האטרקציות הן הצעות.",
@@ -197,11 +197,13 @@
         "bring": [
           "כובע",
           "קרם הגנה",
-          "בקבוק מים"
+          "בקבוק מים",
+          "חניה – לבדוק במלון"
         ]
       },
       "beforeYouGo": [
         "טיסה YYC→LAX",
+        "רכב שכור ב־LAX, 10–14/9",
         "מלון בלוס אנג׳לס"
       ]
     }
@@ -1457,7 +1459,7 @@
         "lax"
       ],
       "lodging": "la",
-      "summary": "הטיסה מתוכננת ולא הוזמנה."
+      "summary": "הטיסה מתוכננת ולא הוזמנה. איסוף רכב שכור ב־LAX."
     },
     {
       "date": "2027-09-11",
@@ -1495,7 +1497,7 @@
         "lax"
       ],
       "lodging": "plane",
-      "summary": "המראה מ־LAX ב־13:30."
+      "summary": "החזרת הרכב ב־LAX, והמראה ב־13:30."
     },
     {
       "date": "2027-09-15",
@@ -1865,6 +1867,13 @@
       "status": "toclose"
     },
     {
+      "id": "t-car-lax",
+      "title": "רכב שכור בלוס אנג׳לס: איסוף ב־LAX ב־10/9, החזרה ב־LAX ב־14/9",
+      "category": "רכב",
+      "status": "toclose",
+      "notes": "להחזיר מוקדם: LY6 ממריאה ב־13:30."
+    },
+    {
       "id": "t-hotels-us",
       "title": "מלונות: סן פרנסיסקו, ריינייר, סיאטל, לוס אנג׳לס",
       "category": "מלונות",
@@ -2124,6 +2133,16 @@
       "dropoffPlace": "שדה התעופה YYC",
       "status": "toclose",
       "price": null
+    },
+    {
+      "id": "car-lax",
+      "where": "לוס אנג׳לס (LAX)",
+      "pickup": "2027-09-10",
+      "pickupPlace": "שדה התעופה LAX",
+      "dropoff": "2027-09-14",
+      "dropoffPlace": "שדה התעופה LAX (לפני LY6 ב־13:30)",
+      "status": "toclose",
+      "price": null
     }
   ],
   "attractions": [
@@ -2363,6 +2382,11 @@
           },
           {
             "label": "קלגרי 3–10/9",
+            "amount": null,
+            "status": "toclose"
+          },
+          {
+            "label": "לוס אנג׳לס 10–14/9",
             "amount": null,
             "status": "toclose"
           }

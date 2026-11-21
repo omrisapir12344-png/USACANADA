@@ -234,6 +234,32 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Pike_Place_Market_Seattle.jpg"
       }
+    ],
+    "space-needle": [
+      {
+        "file": "assets/img/space-needle/1.webp",
+        "title": "File:Seattle from Space Needle June 2018 003.jpg",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seattle_from_Space_Needle_June_2018_003.jpg"
+      },
+      {
+        "file": "assets/img/space-needle/2.webp",
+        "title": "File:Seattle from Space Needle June 2018 010.jpg",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seattle_from_Space_Needle_June_2018_010.jpg"
+      },
+      {
+        "file": "assets/img/space-needle/3.webp",
+        "title": "File:Space Needle panorama large.jpg",
+        "author": "photographed by S. Bach, stitched by A. Hornung using Hugin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Space_Needle_panorama_large.jpg"
+      }
     ]
   }
 }

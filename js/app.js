@@ -42,6 +42,7 @@
     const mid = s.slice(1, -1).slice(0, 8).map(ll).join('|');
     return `https://www.google.com/maps/dir/?api=1&origin=${ll(s[0])}&destination=${ll(s[s.length - 1])}${mid ? '&waypoints=' + encodeURIComponent(mid) : ''}&travelmode=driving`;
   };
+  const hasAttr = (p) => D.attractions.some(a => a.point === p.id) ? ' 🎟️' : '';
   const pointStatus = (p) => p.suggestion ? ST('option', 'הצעה') : p.optional ? ST('option', 'אופציה') : (p.region === 'cruise' && p.kind !== 'transport') ? ST('booked', 'בתוכנית הקרוז') : ST('planning', 'בתוכנית');
   const countBox = (iso) => { const n = daysTo(iso); return `<div class="days ${n > 180 ? 'amber' : ''}"><b class="num">${n}</b><span>ימים</span></div>`; };
   function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
@@ -139,6 +140,7 @@
         <div class="fact"><b>⚠️ לסגור לפני שיוצאים</b><ul>${r.beforeYouGo.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
         <div class="fact wide"><b>🎒 לקחת</b><div class="chips" style="margin-top:4px">${r.clothing.bring.map(b => `<span>${esc(b)}</span>`).join('')}</div></div>
       </div>
+      ${(() => { const at = D.attractions.filter(a => a.region === r.id); return at.length ? `<h3 class="sub" style="margin-top:0">🎟️ אטרקציות באזור ומה צריך להזמין</h3>${at.map(attrMini).join('')}<div style="height:12px"></div>` : ''; })()}
       <div class="tabs" style="position:static;border:1px solid var(--line);border-radius:12px;margin-bottom:14px">
         <a href="#/region/${r.id}" class="${tab === 'days' ? 'on' : ''}">יום אחר יום</a>
         <a href="#/region/${r.id}/places" class="${tab === 'places' ? 'on' : ''}">כל המקומות (${pts.filter(p => p.kind !== 'transport').length})</a>
@@ -169,7 +171,7 @@
         <div class="ttl"><h3>${esc(d.title)}</h3></div>
         ${d.summary ? `<p class="desc">${esc(d.summary)}</p>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
-        ${sights.length ? `<div class="chips">${sights.map(p => `<a class="${p.optional ? 'opt' : ''}" href="#/point/${p.id}">${esc(p.name)}${p.suggestion ? ' · הצעה' : p.optional ? ' · אופציה' : ''}</a>`).join('')}</div>` : ''}
+        ${sights.length ? `<div class="chips">${sights.map(p => `<a class="${p.optional ? 'opt' : ''}" href="#/point/${p.id}">${esc(p.name)}${p.suggestion ? ' · הצעה' : p.optional ? ' · אופציה' : ''}${hasAttr(p)}</a>`).join('')}</div>` : ''}
         ${sugg.length ? `<div class="tiny" style="margin:4px 0">הצעות באזור:</div><div class="chips">${sugg.map(p => `<a class="opt" href="#/point/${p.id}">${esc(p.name)}</a>`).join('')}</div>` : ''}
         <div class="facts" style="margin-top:10px">
           ${anchor ? `<div class="fact"><b>🌡️ תחזית</b>${wx(anchor.lat, anchor.lng, d.date)}</div>` : ''}
@@ -185,7 +187,7 @@
   function placeCard(p) {
     return `<article class="card"><a href="#/point/${p.id}">${imgTag(firstImg(p.id), 'img short', p.name)}</a><div class="bd">
       <div class="meta">${p.days?.length ? esc(p.days.map(fDay).join(', ')) : 'לא שובץ ליום'}${p.sub ? ' · ' + esc(p.sub) : ''}</div>
-      <div class="ttl"><h3>${esc(p.name)}</h3>${pointStatus(p)}</div>
+      <div class="ttl"><h3>${esc(p.name)}${hasAttr(p)}</h3>${pointStatus(p)}</div>
       ${p.summary ? `<p class="desc">${esc(p.summary)}</p>` : ''}
       <div class="foot"><a class="btn" href="#/point/${p.id}">למדריך ›</a><a class="lnk" href="${nav(p).google}" target="_blank" rel="noopener">נווט</a></div></div></article>`;
   }
@@ -195,7 +197,7 @@
     const r = region(p.region), g = p.guide, n = nav(p), list = imgs(p.id);
     const vis = LS.get('tg.visited', {}), notes = LS.get('tg.notes', {});
     $('#brandText').textContent = '› ' + p.name;
-    const att = D.attractions.find(a => a.point === p.id);
+    const att = D.attractions.filter(a => a.point === p.id);
     return `<article class="sheet">
       <div class="top"><span>${p.days?.length ? esc(p.days.map(fLong).join(', ')) + ' · ' : ''}${esc(r.name)}${p.sub ? ' · ' + esc(p.sub) : ''}</span><a class="ghost" href="#/region/${r.id}">לאזור ›</a></div>
       ${list.length ? `<div class="gallery" id="gal">${list.map(c => `<figure><img src="${esc(c.file)}" alt="${esc(p.name)}" loading="lazy"><figcaption>${creditLine(c)}</figcaption></figure>`).join('')}</div>
@@ -204,7 +206,7 @@
         <div class="ttl"><h3 style="font-size:26px">${esc(p.name)}</h3>${pointStatus(p)}</div>
         <div class="tiny ltr" style="text-align:right">${esc(p.nameEn || '')}</div>
         ${p.summary ? `<p class="desc" style="margin-top:6px">${esc(p.summary)}</p>` : ''}
-        ${att ? `<div class="notice ${att.booking === 'required' ? '' : 'info'}"><b>${bookingLabel(att.booking)}</b>${att.opensNote ? ` · נפתח ${esc(fFull(att.opens))}, ${esc(att.opensNote)}` : ''}${att.url ? ` · <a href="${esc(att.url)}" target="_blank" rel="noopener">להזמנה / אתר רשמי</a>` : ''}</div>` : ''}
+        ${att.length ? `<h3 class="sub" style="font-size:16px;margin-top:8px">🎟️ אטרקציות במקום</h3>${att.map(attrMini).join('')}` : ''}
         <div class="btn-row" style="margin:6px 0 14px"><a class="btn dark" href="${n.google}" target="_blank" rel="noopener">נווט · Google</a><a class="btn" href="${n.apple}" target="_blank" rel="noopener">Apple</a><a class="btn" href="${n.photos}" target="_blank" rel="noopener">עוד תמונות בגוגל</a></div>
         ${g ? guideBlocks(g) : `<div class="facts">
             <div class="fact wide"><b>🧥 ביגוד וציוד באזור (הערכה)</b><span>${esc(r.clothing.summary)}</span></div>
@@ -300,6 +302,15 @@
     toast('הקובץ ירד. ב־Google My Maps: יצירת מפה ← ייבוא.');
   }
 
+  function attrMini(a) {
+    const p = point(a.point);
+    return `<div class="task ${a.booking === 'required' ? 'hot' : ''}"><div class="g">
+      <div class="t">${esc(a.name)}</div>
+      <div class="s"><b>${bookingLabel(a.booking)}</b>${a.opens ? ` · נפתח ${esc(fFull(a.opens))} (${esc(a.opensNote)})` : ''}${a.date ? ' · ' + esc(fDay(a.date)) : ''}</div>
+      ${a.notes ? `<div class="s">${esc(a.notes)}</div>` : ''}
+      <div class="btn-row" style="margin-top:6px">${a.url ? `<a class="lnk" href="${esc(a.url)}" target="_blank" rel="noopener">להזמנה / אתר רשמי ›</a>` : ''}${p ? `<a class="lnk" href="#/point/${p.id}">${esc(p.name)} ›</a>` : ''}</div>
+    </div>${ST(a.status, a.status === 'option' && p?.suggestion ? 'הצעה' : undefined)}</div>`;
+  }
   const bookingLabel = (b) => ({ required: 'חובה להזמין מראש', recommended: 'מומלץ להזמין מראש', check: 'לבדוק אם צריך להזמין', optional: 'אפשר להזמין מראש', none: 'לא נדרשת הזמנה (לבדוק)' }[b] || '');
 
   V.tasks = () => {
