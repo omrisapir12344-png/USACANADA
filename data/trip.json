@@ -1348,6 +1348,63 @@
       }
     },
     {
+      "id": "juneau-heli",
+      "name": "מסוק והליכה על הקרחון",
+      "nameEn": "Juneau helicopter glacier tour",
+      "region": "cruise",
+      "lat": 58.43,
+      "lng": -134.55,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "כ־3–4 שעות כולל הסעות (הערכה)",
+      "see": "טיסת מסוק מעל שדה הקרח של ג׳ונו ונחיתה על קרחון להליכה מודרכת.",
+      "summary": "הפעילות שבחרתם בג׳ונו. טרם הוזמנה.",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "טיסת מסוק מעל שדה הקרח",
+            "required": true,
+            "note": "מראה מלמעלה של הקרחונים והרכסים סביב ג׳ונו."
+          },
+          {
+            "name": "נחיתה והליכה על הקרחון",
+            "required": true,
+            "note": "הליכה מודרכת על הקרח. לבדוק מראש כמה זמן נמצאים על הקרחון בכל סיור, כי זה משתנה בין הסיורים."
+          }
+        ],
+        "duration": {
+          "min": "כ־2 שעות",
+          "recommended": "3–4 שעות כולל הסעה מהנמל וחזרה (הערכה)",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות חמות ומעיל עמיד למים, גם אם בנמל נעים.",
+          "כובע, כפפות ומשקפי שמש בגלל ההחזר מהקרח.",
+          "לבדוק מה הספק מספק, למשל מגפיים או ציוד לקרח, ומה צריך להביא."
+        ],
+        "expect": {
+          "crowds": "מספר המקומות בכל טיסה מוגבל.",
+          "parking": "בדרך כלל יש הסעה מהנמל לבסיס המסוקים. לבדוק בהזמנה.",
+          "toilets": "בבסיס המסוקים. על הקרחון אין.",
+          "signal": "על הקרחון אין קליטה.",
+          "safety": "הולכים רק עם המדריך ובאזור המסומן. על קרחון יש סדקים.",
+          "tips": "להזמין מוקדם. כדאי לבחור סיור שמתחיל זמן קצר אחרי העגינה, כדי שיישאר מרווח אם הטיסה נדחית."
+        },
+        "bestTime": "סיור מוקדם ככל האפשר אחרי העגינה.",
+        "important": [
+          "סיורי מסוק תלויים במזג האוויר ועלולים להתבטל ביום עצמו. לבדוק את מדיניות הביטול וההחזר לפני שמזמינים.",
+          "אם מזמינים דרך Celebrity, האונייה ממתינה אם הסיור מתעכב. בהזמנה עצמאית האחריות לחזור בזמן היא שלכם.",
+          "בסיורי מסוק נהוגות מגבלות משקל או חיוב לפי משקל. לבדוק אצל הספק."
+        ],
+        "weatherAlt": "אם הטיסה מבוטלת: נוסעים לקרחון Mendenhall ול־Nugget Falls, שאפשר לראות מהקרקע.",
+        "links": []
+      },
+      "days": [
+        "2027-08-30"
+      ]
+    },
+    {
       "id": "mendenhall",
       "name": "קרחון Mendenhall ו־Nugget Falls",
       "nameEn": "Mendenhall Glacier & Nugget Falls",
@@ -1360,7 +1417,7 @@
       ],
       "kind": "attraction",
       "optional": true,
-      "summary": "אופציה, לא הוזמן.",
+      "summary": "אופציה, וגם החלופה אם המסוק מתבטל בגלל מזג האוויר.",
       "tz": "America/Juneau",
       "imageMatch": [
         "mendenhall"
@@ -1512,8 +1569,7 @@
         "2027-08-31"
       ],
       "kind": "attraction",
-      "optional": true,
-      "summary": "אופציה, לא הוזמן.",
+      "summary": "הפעילות שבחרתם בסקאגוויי. טרם הוזמנה.",
       "tz": "America/Juneau",
       "imageQuery": "White Pass and Yukon Route train",
       "imageMatch": [
@@ -4018,7 +4074,8 @@
         "ketchikan"
       ],
       "lodging": "cruise",
-      "summary": "שעות העגינה טרם אומתו."
+      "summary": "עוד לא הוחלט מה עושים. האפשרויות מופיעות בעמוד של קטצ׳יקן.",
+      "notes": "שעות העגינה טרם אומתו. לבדוק לאיזה רציף האונייה מגיעה (מרכז העיר או Ward Cove)."
     },
     {
       "date": "2027-08-30",
@@ -4028,10 +4085,11 @@
       "points": [
         "dawes-glacier",
         "juneau",
+        "juneau-heli",
         "mendenhall"
       ],
       "lodging": "cruise",
-      "summary": "שיט נופי מול קרחון Dawes ואז עגינה בג׳ונו. Mendenhall הוא אופציה."
+      "summary": "בבוקר שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. הפעילות המתוכננת: מסוק והליכה על הקרחון. Mendenhall כאופציה או כחלופה אם המסוק מתבטל."
     },
     {
       "date": "2027-08-31",
@@ -4043,7 +4101,7 @@
         "white-pass"
       ],
       "lodging": "cruise",
-      "summary": "רכבת White Pass היא אופציה ולא הוזמנה."
+      "summary": "הפעילות המתוכננת: רכבת White Pass. אחר כך סיור ברגל בעיירה ההיסטורית."
     },
     {
       "date": "2027-09-01",
@@ -4760,6 +4818,26 @@
       "status": "toclose"
     },
     {
+      "id": "t-juneau-heli",
+      "title": "להזמין מסוק והליכה על הקרחון בג׳ונו (30.8)",
+      "category": "קרוז",
+      "status": "toclose",
+      "notes": "דרך Celebrity, או ספק עצמאי עם מרווח זמן לחזרה לאונייה."
+    },
+    {
+      "id": "t-whitepass",
+      "title": "להזמין את רכבת White Pass בסקאגוויי (31.8)",
+      "category": "קרוז",
+      "status": "toclose",
+      "url": "https://wpyr.com"
+    },
+    {
+      "id": "t-ketchikan",
+      "title": "להחליט מה עושים בקטצ׳יקן (29.8)",
+      "category": "קרוז",
+      "status": "planning"
+    },
+    {
       "id": "t-road-1a",
       "title": "בדיקת הגישה לכביש 1A דרך Castle Junction",
       "category": "תכנון",
@@ -4978,6 +5056,18 @@
   ],
   "attractions": [
     {
+      "id": "a-juneau-heli",
+      "name": "מסוק והליכה על הקרחון, ג׳ונו",
+      "region": "cruise",
+      "point": "juneau-heli",
+      "date": "2027-08-30",
+      "booking": "recommended",
+      "url": null,
+      "cost": null,
+      "status": "planning",
+      "notes": "בחרתם. להזמין מוקדם, דרך Celebrity או ספק עצמאי. תלוי במזג האוויר. לבדוק מדיניות ביטול ומגבלות משקל."
+    },
+    {
       "id": "a-shuttle",
       "name": "שאטל לאגמי Louise ו־Moraine",
       "region": "rockies",
@@ -5069,7 +5159,7 @@
       "url": null,
       "cost": null,
       "status": "option",
-      "notes": "אופציה. השבילים, כולל Nugget Falls, חינם. כניסה למרכז המבקרים בתשלום בקיץ. אפשר להגיע עם טיול של Celebrity או באופן עצמאי, ולוודא את שעת החזרה לאונייה."
+      "notes": "אופציה, וגם חלופה אם המסוק מתבטל. השבילים, כולל Nugget Falls, חינם. כניסה למרכז המבקרים בתשלום בקיץ."
     },
     {
       "id": "a-whitepass",
@@ -5080,8 +5170,8 @@
       "booking": "recommended",
       "url": "https://wpyr.com",
       "cost": null,
-      "status": "option",
-      "notes": "אופציה. לא הוזמן."
+      "status": "planning",
+      "notes": "בחרתם. כדאי להזמין מראש, דרך Celebrity או באתר הרכבת, ולוודא שהסיור מסתיים בזמן לחזרה לאונייה. במסלולים שחוצים לקנדה צריך דרכון."
     },
     {
       "id": "a-space-needle",
