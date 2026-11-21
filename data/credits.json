@@ -716,6 +716,250 @@
         "licenseUrl": "",
         "source": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg"
       }
+    ],
+    "bow-lake": [
+      {
+        "file": "assets/img/bow-lake/1.webp",
+        "title": "File:Bow Lake beim Icefields Parkway.jpg",
+        "author": "Florian Fuchs",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bow_Lake_beim_Icefields_Parkway.jpg"
+      }
+    ],
+    "mistaya-canyon": [
+      {
+        "file": "assets/img/mistaya-canyon/1.webp",
+        "title": "File:Mistaya Canyon (34227376422).jpg",
+        "author": "simpf",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mistaya_Canyon_(34227376422).jpg"
+      },
+      {
+        "file": "assets/img/mistaya-canyon/2.webp",
+        "title": "File:Mistaya Canyon - Along Icefield Parkway - Rocky Mountains - Alberta - Canada.jpg",
+        "author": "Adam Jones, Ph.D.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mistaya_Canyon_-_Along_Icefield_Parkway_-_Rocky_Mountains_-_Alberta_-_Canada.jpg"
+      }
+    ],
+    "big-bend": [
+      {
+        "file": "assets/img/big-bend/1.webp",
+        "title": "File:Big Bend Peak from Icefields Parkway.jpg",
+        "author": "HandsLive",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Big_Bend_Peak_from_Icefields_Parkway.jpg"
+      },
+      {
+        "file": "assets/img/big-bend/2.webp",
+        "title": "File:Big Bend Peak.jpg",
+        "author": "melandory",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Big_Bend_Peak.jpg"
+      }
+    ],
+    "columbia-icefield": [
+      {
+        "file": "assets/img/columbia-icefield/1.webp",
+        "title": "File:Athabasca Glacier from the valley floor, Jasper National Park, Alberta, Canada.jpg",
+        "author": "Ethan Sahagun",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Athabasca_Glacier_from_the_valley_floor,_Jasper_National_Park,_Alberta,_Canada.jpg"
+      },
+      {
+        "file": "assets/img/columbia-icefield/2.webp",
+        "title": "File:Meltwater at the terminus of the Athabasca Glacier, Jasper National Park, Alberta, Canada.jpg",
+        "author": "Ethan Sahagun",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Meltwater_at_the_terminus_of_the_Athabasca_Glacier,_Jasper_National_Park,_Alberta,_Canada.jpg"
+      }
+    ],
+    "jasper-town": [
+      {
+        "file": "assets/img/jasper-town/1.webp",
+        "title": "File:A train in Jasper town, Alberta, Canada.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_train_in_Jasper_town,_Alberta,_Canada.jpg"
+      },
+      {
+        "file": "assets/img/jasper-town/2.webp",
+        "title": "File:Pyramid lake in Jasper town, Alberta, Canada.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pyramid_lake_in_Jasper_town,_Alberta,_Canada.jpg"
+      }
+    ],
+    "medicine-lake": [
+      {
+        "file": "assets/img/medicine-lake/1.webp",
+        "title": "File:Medicine Lake, Jasper National Park, Alberta, Canada.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Medicine_Lake,_Jasper_National_Park,_Alberta,_Canada.jpg"
+      },
+      {
+        "file": "assets/img/medicine-lake/2.webp",
+        "title": "File:Medicine Lake, Jasper National Park, Alberta, Canada1.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Medicine_Lake,_Jasper_National_Park,_Alberta,_Canada1.jpg"
+      }
+    ],
+    "maligne-lake": [
+      {
+        "file": "assets/img/maligne-lake/1.webp",
+        "title": "File:Sunrise at Maligne lake 2.jpg",
+        "author": "Sergey Pesterev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunrise_at_Maligne_lake_2.jpg"
+      },
+      {
+        "file": "assets/img/maligne-lake/2.webp",
+        "title": "File:Sunrise at Maligne lake.jpg",
+        "author": "Sergey Pesterev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunrise_at_Maligne_lake.jpg"
+      }
+    ],
+    "athabasca-falls": [
+      {
+        "file": "assets/img/athabasca-falls/1.webp",
+        "title": "File:Free falling Athabasca Falls.jpg",
+        "author": "Migueldalugdugan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Free_falling_Athabasca_Falls.jpg"
+      },
+      {
+        "file": "assets/img/athabasca-falls/2.webp",
+        "title": "File:Athabasca Falls 2008.JPG",
+        "author": "Gerald Schrenk",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Athabasca_Falls_2008.JPG"
+      }
+    ],
+    "sunwapta-falls": [
+      {
+        "file": "assets/img/sunwapta-falls/1.webp",
+        "title": "File:Sunwapta Falls Jasper National Park Canada.jpg",
+        "author": "Bitan Banerjee",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunwapta_Falls_Jasper_National_Park_Canada.jpg"
+      },
+      {
+        "file": "assets/img/sunwapta-falls/2.webp",
+        "title": "File:Sunwapta Falls.JPG",
+        "author": "Gerald Schrenk",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunwapta_Falls.JPG"
+      }
+    ],
+    "tangle-creek": [
+      {
+        "file": "assets/img/tangle-creek/1.webp",
+        "title": "File:Upper Tangle Creek Falls, Icefield's Parkway.jpg",
+        "author": "KaleighAlysse",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Upper_Tangle_Creek_Falls,_Icefield%27s_Parkway.jpg"
+      },
+      {
+        "file": "assets/img/tangle-creek/2.webp",
+        "title": "File:Tangle Creek Falls.jpg",
+        "author": "Milorad Dimić MD, Serbia",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tangle_Creek_Falls.jpg"
+      }
+    ],
+    "abraham-lake": [
+      {
+        "file": "assets/img/abraham-lake/1.webp",
+        "title": "File:Abraham Lake, Alberta, Canada.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Abraham_Lake,_Alberta,_Canada.jpg"
+      },
+      {
+        "file": "assets/img/abraham-lake/2.webp",
+        "title": "File:Abraham Lake, Alberta, Canada1.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Abraham_Lake,_Alberta,_Canada1.jpg"
+      }
+    ],
+    "field": [
+      {
+        "file": "assets/img/field/1.webp",
+        "title": "File:Mount Field, Field, British Columbia, 2025-07-11.jpg",
+        "author": "Chris Woodrich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Field,_Field,_British_Columbia,_2025-07-11.jpg"
+      },
+      {
+        "file": "assets/img/field/2.webp",
+        "title": "File:The Alluvial Field at Emerald Lake in Yoho National Park, BC.jpg",
+        "author": "Cassidy.joyes",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Alluvial_Field_at_Emerald_Lake_in_Yoho_National_Park,_BC.jpg"
+      }
+    ],
+    "santa-monica": [
+      {
+        "file": "assets/img/santa-monica/1.webp",
+        "title": "File:USA Santa Monica Beach and pier CA.jpg",
+        "author": "Daniel Schwen",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:USA_Santa_Monica_Beach_and_pier_CA.jpg"
+      },
+      {
+        "file": "assets/img/santa-monica/2.webp",
+        "title": "File:Los Angeles (California, USA), Santa Monica Beach -- 2012 -- 5301.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Santa_Monica_Beach_--_2012_--_5301.jpg"
+      }
+    ],
+    "getty": [
+      {
+        "file": "assets/img/getty/1.webp",
+        "title": "File:Los angeles from getty panorama.jpg",
+        "author": "Mfield, Matthew Field, http://www.photography.mattfield.com",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Los_angeles_from_getty_panorama.jpg"
+      },
+      {
+        "file": "assets/img/getty/2.webp",
+        "title": "File:Getty Center from Central Garden on 2009-02-08.png",
+        "author": "Robert F. Tobler",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png"
+      }
     ]
   }
 }
