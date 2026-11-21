@@ -960,6 +960,60 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png"
       }
+    ],
+    "pyramid-lake": [
+      {
+        "file": "assets/img/pyramid-lake/1.webp",
+        "title": "File:Pyramid lake in Jasper town, Alberta, Canada.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pyramid_lake_in_Jasper_town,_Alberta,_Canada.jpg"
+      },
+      {
+        "file": "assets/img/pyramid-lake/2.webp",
+        "title": "File:Pyramid lake in Jasper town, Alberta, Canada1.jpg",
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pyramid_lake_in_Jasper_town,_Alberta,_Canada1.jpg"
+      }
+    ],
+    "spirit-island": [
+      {
+        "file": "assets/img/spirit-island/1.webp",
+        "title": "File:Spirit Island ...Maligne lake.jpg",
+        "author": "Serge Cousineau",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Spirit_Island_...Maligne_lake.jpg"
+      },
+      {
+        "file": "assets/img/spirit-island/2.webp",
+        "title": "File:Spirit Island, Maligne Lake, Jasper NP.jpg",
+        "author": "Christian Abend from Laufen /, Bayern / Deutschland",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Spirit_Island,_Maligne_Lake,_Jasper_NP.jpg"
+      }
+    ],
+    "takakkaw-falls": [
+      {
+        "file": "assets/img/takakkaw-falls/1.webp",
+        "title": "File:Yoho Valley from base of Takakkaw Falls, Yoho National Park, British Columbia, 2025-07-11.jpg",
+        "author": "Crisco 1492",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yoho_Valley_from_base_of_Takakkaw_Falls,_Yoho_National_Park,_British_Columbia,_2025-07-11.jpg"
+      },
+      {
+        "file": "assets/img/takakkaw-falls/2.webp",
+        "title": "File:Takakkaw Falls, west view 20240825 3.jpg",
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Takakkaw_Falls,_west_view_20240825_3.jpg"
+      }
     ]
   }
 }

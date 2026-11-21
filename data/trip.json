@@ -160,10 +160,10 @@
       "tz": "America/Edmonton",
       "tzLabel": "שעון ההרים (גם ב־Field וביוהו)",
       "image": "peyto-lake",
-      "arrive": "טיסה SEA→YYC ב־3/9 מהצהריים והלאה, ואיסוף רכב בקלגרי. הטיסה והרכב טרם הוזמנו.",
-      "lodging": "קנמור 3 לילות · ג׳ספר 2 · Field 2. כל השלושה נבדקו ועדיין לא שוריינו.",
-      "lodgingStatus": "option",
-      "summary": "באנף, יוהו, Icefields Parkway וג׳ספר.",
+      "arrive": "טיסה SEA→YYC ב־3.9 (טרם הוזמנה) ולילה ליד השדה. רכב שכור מ־SIXT בקלגרי, איסוף ב־3.9 אם שעת הנחיתה מאפשרת, אחרת ב־4.9 בבוקר.",
+      "lodging": "קלגרי לילה 1 · ג׳ספר 2 לילות · Dead Man's Flats (ליד קנמור) 4 לילות. הכול הוזמן.",
+      "lodgingStatus": "booked",
+      "summary": "קלגרי ← ג׳ספר דרך כביש הקרחונים ← חזרה דרומה לקנמור ← באנף, יוהו והאגמים ← קלגרי. שישה ימי טיול מלאים.",
       "clothing": {
         "summary": "בספטמבר הבקרים קרים, לעיתים סביב האפס, והצהריים נעימים. ליד הקרחונים קר ויש רוח. שכבות: תרמית, פליז ומעיל רוח או גשם, ונעלי הליכה.",
         "bring": [
@@ -176,11 +176,12 @@
         ]
       },
       "beforeYouGo": [
+        "שאטל לאגמים: 15.4.2027 ב־17:00 שעון ישראל",
+        "כרטיס כניסה לפארקים (גם לכביש הקרחונים)",
         "eTA לקנדה",
         "טיסה SEA→YYC",
-        "רכב בקלגרי",
-        "כרטיס כניסה לפארקים",
-        "שאטל לאגמים – 15/4 ב־17:00"
+        "רכב SIXT בקלגרי",
+        "שיט ל־Spirit Island (מומלץ)"
       ],
       "transfer": "טיסה YYC→LAX ורכב שכור"
     },
@@ -1663,17 +1664,126 @@
       "see": "איסוף או החזרת הרכב השכור."
     },
     {
+      "id": "hampton-yyc",
+      "name": "Hampton Inn Calgary Airport North",
+      "nameEn": "Hampton Inn by Hilton Calgary Airport North, 2021 100 Ave NE, Calgary",
+      "region": "rockies",
+      "lat": 51.1497,
+      "lng": -114.0137,
+      "approx": true,
+      "kind": "lodging",
+      "summary": "מלון ליד שדה התעופה של קלגרי ללילה הראשון בקנדה. ארוחת בוקר כלולה.",
+      "visit": "לינה",
+      "see": "מלון ליד שדה התעופה.",
+      "days": [
+        "2027-09-03"
+      ]
+    },
+    {
+      "id": "forest-park",
+      "name": "Forest Park Hotel",
+      "nameEn": "Forest Park Hotel, 76 Connaught Dr, Jasper",
+      "region": "rockies",
+      "lat": 52.8786,
+      "lng": -118.0797,
+      "approx": true,
+      "kind": "lodging",
+      "sub": "ג׳ספר",
+      "summary": "המלון בג׳ספר לשני לילות, במרכז העיירה.",
+      "visit": "לינה",
+      "see": "מלון במרכז ג׳ספר.",
+      "days": [
+        "2027-09-04"
+      ]
+    },
+    {
+      "id": "dmf-condo",
+      "name": "דירה ב־Dead Man's Flats",
+      "nameEn": "Canmore 2BR Condo, 250 2nd Ave, Dead Man's Flats",
+      "region": "rockies",
+      "lat": 51.0405,
+      "lng": -115.2635,
+      "approx": true,
+      "kind": "lodging",
+      "sub": "קנמור",
+      "summary": "דירת שני חדרי שינה ליד קנמור, ארבעה לילות. כ־10 דקות מקנמור וכ־30 דקות מבאנף.",
+      "visit": "לינה",
+      "see": "דירה ליד קנמור.",
+      "days": [
+        "2027-09-06"
+      ]
+    },
+    {
+      "id": "pyramid-lake",
+      "name": "אגם Pyramid",
+      "nameEn": "Pyramid Lake, Jasper",
+      "region": "rockies",
+      "sub": "ג׳ספר",
+      "lat": 52.925,
+      "lng": -118.096,
+      "approx": true,
+      "kind": "attraction",
+      "optional": true,
+      "visit": "30–60 דק׳",
+      "see": "אגם קרוב לעיירה, עם גשר עץ לאי קטן ונוף להר Pyramid.",
+      "summary": "אגם כ־10 דקות נסיעה מהעיירה. סיבוב קצר אחר הצהריים אם נשאר זמן.",
+      "days": [
+        "2027-09-05"
+      ],
+      "imageMatch": [
+        "pyramid lake"
+      ]
+    },
+    {
+      "id": "spirit-island",
+      "name": "שיט ל־Spirit Island",
+      "nameEn": "Spirit Island, Maligne Lake",
+      "region": "rockies",
+      "sub": "ג׳ספר",
+      "lat": 52.669,
+      "lng": -117.5,
+      "approx": true,
+      "kind": "attraction",
+      "optional": true,
+      "visit": "כ־1.5 שעות (שיט)",
+      "see": "שיט באגם Maligne אל האי הקטן המפורסם. מגיעים רק בשיט.",
+      "summary": "האטרקציה המומלצת בג׳ספר. לבדוק זמינות ומחיר באתר המפעיל.",
+      "days": [
+        "2027-09-05"
+      ],
+      "imageMatch": [
+        "spirit island"
+      ]
+    },
+    {
+      "id": "takakkaw-falls",
+      "name": "מפלי Takakkaw",
+      "nameEn": "Takakkaw Falls, Yoho",
+      "region": "rockies",
+      "sub": "יוהו",
+      "lat": 51.5011,
+      "lng": -116.4815,
+      "approx": true,
+      "kind": "attraction",
+      "optional": true,
+      "visit": "45–60 דק׳",
+      "see": "אחד המפלים הגבוהים בקנדה, בסוף כביש Yoho Valley.",
+      "summary": "תוספת אם הכביש פתוח ויש זמן. הכביש עונתי ויש בו פניות חדות, לבדוק את מצבו באתר Parks Canada.",
+      "days": [
+        "2027-09-08"
+      ],
+      "imageMatch": [
+        "takakkaw"
+      ]
+    },
+    {
       "id": "canmore",
       "name": "קנמור",
       "nameEn": "Canmore, Alberta",
       "region": "rockies",
       "lat": 51.0884,
       "lng": -115.3479,
-      "days": [
-        "2027-09-03",
-        "2027-09-04",
-        "2027-09-05"
-      ],
+      "days": [],
       "kind": "lodging-area",
       "sub": "באנף",
       "imageQuery": "Canmore Three Sisters",
@@ -1734,7 +1844,8 @@
             "url": "https://parks.canada.ca/voyage-travel/admission"
           }
         ]
-      }
+      },
+      "optional": true
     },
     {
       "id": "banff-town",
@@ -1744,7 +1855,7 @@
       "lat": 51.1784,
       "lng": -115.5708,
       "days": [
-        "2027-09-04"
+        "2027-09-07"
       ],
       "kind": "city",
       "sub": "באנף",
@@ -1820,7 +1931,7 @@
       "lat": 51.17,
       "lng": -115.5617,
       "days": [
-        "2027-09-04"
+        "2027-09-07"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -1889,7 +2000,7 @@
       "lng": -115.4952,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-07"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -1970,7 +2081,7 @@
       "lng": -115.573,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-07"
       ],
       "kind": "attraction",
       "optional": true,
@@ -2040,9 +2151,7 @@
       "lat": 51.184,
       "lng": -115.61,
       "approx": true,
-      "days": [
-        "2027-09-04"
-      ],
+      "days": [],
       "kind": "attraction",
       "optional": true,
       "sub": "באנף",
@@ -2106,7 +2215,7 @@
       "lat": 51.2456,
       "lng": -115.8398,
       "days": [
-        "2027-09-05"
+        "2027-09-08"
       ],
       "kind": "trail",
       "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן.",
@@ -2191,7 +2300,7 @@
       "lat": 51.4433,
       "lng": -116.534,
       "days": [
-        "2027-09-05"
+        "2027-09-08"
       ],
       "kind": "attraction",
       "sub": "יוהו",
@@ -2269,7 +2378,7 @@
       "lng": -116.5114,
       "approx": true,
       "days": [
-        "2027-09-05"
+        "2027-09-08"
       ],
       "kind": "attraction",
       "sub": "יוהו",
@@ -2330,7 +2439,7 @@
       "lng": -116.4558,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -2408,7 +2517,7 @@
       "lng": -116.5103,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
@@ -2472,7 +2581,7 @@
       "lng": -116.721,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "trail",
       "sub": "Icefields Parkway",
@@ -2683,10 +2792,7 @@
       "region": "rockies",
       "lat": 52.8737,
       "lng": -118.0814,
-      "days": [
-        "2027-09-06",
-        "2027-09-07"
-      ],
+      "days": [],
       "kind": "lodging-area",
       "sub": "ג׳ספר",
       "imageQuery": "Jasper Alberta town",
@@ -2766,7 +2872,7 @@
       "lng": -117.78,
       "approx": true,
       "days": [
-        "2027-09-07"
+        "2027-09-05"
       ],
       "kind": "attraction",
       "optional": true,
@@ -2834,7 +2940,7 @@
       "lng": -117.638,
       "approx": true,
       "days": [
-        "2027-09-07"
+        "2027-09-05"
       ],
       "kind": "attraction",
       "optional": true,
@@ -2918,7 +3024,7 @@
       "lat": 52.6643,
       "lng": -117.8838,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -2984,7 +3090,7 @@
       "lng": -117.81,
       "approx": true,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
@@ -3044,7 +3150,7 @@
       "lng": -117.645,
       "approx": true,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -3113,7 +3219,7 @@
       "lng": -117.285,
       "approx": true,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -3171,9 +3277,7 @@
       "lat": 52.23,
       "lng": -116.43,
       "approx": true,
-      "days": [
-        "2027-09-08"
-      ],
+      "days": [],
       "kind": "attraction",
       "optional": true,
       "summary": "סטייה אופציונלית, לא חלק מברירת המחדל.",
@@ -3234,10 +3338,7 @@
       "region": "rockies",
       "lat": 51.3955,
       "lng": -116.491,
-      "days": [
-        "2027-09-08",
-        "2027-09-09"
-      ],
+      "days": [],
       "kind": "lodging-area",
       "sub": "יוהו",
       "imageQuery": "Field British Columbia Yoho",
@@ -3297,7 +3398,8 @@
             "url": "https://parks.canada.ca/pn-np/bc/yoho/activ/burgess/stephen"
           }
         ]
-      }
+      },
+      "optional": true
     },
     {
       "id": "lake-louise",
@@ -3949,136 +4051,142 @@
       "date": "2027-09-03",
       "type": "transit",
       "region": "rockies",
-      "title": "ירידה בסיאטל, טיסה לקלגרי ונסיעה לקנמור",
+      "title": "מסיאטל לקלגרי",
       "points": [
         "seattle-port",
         "sea-airport",
         "yyc",
-        "canmore"
+        "hampton-yyc"
       ],
-      "lodging": "canmore",
-      "summary": "האונייה מגיעה ב־06:00, וזו לא שעת הירידה. הטיסה לקלגרי צריכה להיות מהצהריים והלאה. הטיסה והרכב טרם הוזמנו.",
-      "estTime": "יום מעבר",
-      "drive": [
-        "yyc",
-        "canmore"
-      ]
+      "lodging": "yyc-hotel",
+      "summary": "ירידה מהאונייה בסיאטל, טיסה לקלגרי ולינה ב־Hampton Inn ליד השדה. אוספים את הרכב השכור אם שעת הנחיתה מאפשרת. לא מתחילים נסיעה ארוכה אחרי הקרוז.",
+      "estTime": "יום מעבר"
     },
     {
       "date": "2027-09-04",
+      "type": "transit",
+      "region": "rockies",
+      "title": "מקלגרי לג׳ספר דרך כביש הקרחונים",
+      "points": [
+        "bow-lake",
+        "peyto-lake",
+        "mistaya-canyon",
+        "forest-park"
+      ],
+      "lodging": "jasper",
+      "drive": [
+        "hampton-yyc",
+        "bow-lake",
+        "peyto-lake",
+        "mistaya-canyon",
+        "forest-park"
+      ],
+      "summary": "יוצאים סביב 08:00. בדרך עוצרים ב־Bow Lake ובתצפית על Peyto Lake. Mistaya Canyon אם יש זמן. מגיעים ל־Forest Park Hotel לשני לילות.",
+      "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
+      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש.",
+      "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש."
+    },
+    {
+      "date": "2027-09-05",
       "type": "explore",
       "region": "rockies",
-      "title": "באנף",
+      "title": "יום בג׳ספר",
+      "points": [
+        "medicine-lake",
+        "maligne-lake",
+        "spirit-island",
+        "pyramid-lake"
+      ],
+      "lodging": "jasper",
+      "drive": [
+        "forest-park",
+        "medicine-lake",
+        "maligne-lake",
+        "pyramid-lake",
+        "forest-park"
+      ],
+      "summary": "בבוקר אגם Medicine ואגם Maligne. האטרקציה המומלצת: שיט ל־Spirit Island. אחר הצהריים, אם נשאר זמן, סיבוב קצר באגם Pyramid.",
+      "estTime": "6–8 שעות (הערכה)",
+      "notes": "Maligne Canyon סגור מאז השריפה של 2024, וטרם פורסם מועד לפתיחה מחדש. לא בונים עליו. אין דלק בכביש Maligne.",
+      "weatherAlt": "בגשם: השיט עדיין יוצא בדרך כלל, אבל הנוף מוגבל. אפשר לקצר ולבקר בעיירה ג׳ספר."
+    },
+    {
+      "date": "2027-09-06",
+      "type": "transit",
+      "region": "rockies",
+      "title": "מג׳ספר לקנמור דרך כביש הקרחונים",
+      "points": [
+        "athabasca-falls",
+        "goats-glaciers",
+        "sunwapta-falls",
+        "tangle-creek",
+        "columbia-icefield",
+        "big-bend",
+        "dmf-condo"
+      ],
+      "lodging": "dmf",
+      "drive": [
+        "forest-park",
+        "athabasca-falls",
+        "goats-glaciers",
+        "sunwapta-falls",
+        "tangle-creek",
+        "columbia-icefield",
+        "big-bend",
+        "dmf-condo"
+      ],
+      "summary": "יוצאים סביב 08:00 ועוצרים בחלק שלא עשיתם בדרך צפונה. סיור על הקרחון או Skywalk הופכים את זה ליום שלם. בערב מגיעים לדירה ב־Dead Man's Flats לארבעה לילות.",
+      "estTime": "יום מלא (הערכה)",
+      "notes": "למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
+      "weatherAlt": "בעננות נמוכה מוותרים על Big Bend ומתמקדים במפלים ובקרחון Athabasca."
+    },
+    {
+      "date": "2027-09-07",
+      "type": "explore",
+      "region": "rockies",
+      "title": "באנף והסביבה",
       "points": [
         "banff-town",
         "bow-falls",
         "lake-minnewanka",
-        "banff-gondola",
-        "vermilion-lakes"
+        "banff-gondola"
       ],
-      "lodging": "canmore",
-      "estTime": "כ־6–8 שעות (הערכה)",
-      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות או לטייל ברחוב הראשי.",
+      "lodging": "dmf",
       "drive": [
-        "canmore",
+        "dmf-condo",
         "banff-town",
         "bow-falls",
         "lake-minnewanka",
-        "canmore"
-      ]
+        "dmf-condo"
+      ],
+      "summary": "מרכז באנף, מפלי Bow ואגם Minnewanka. את הרכבל מוסיפים רק אם הראות טובה.",
+      "estTime": "6–8 שעות (הערכה)",
+      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי."
     },
     {
-      "date": "2027-09-05",
+      "date": "2027-09-08",
       "type": "explore",
       "region": "rockies",
       "title": "Johnston Canyon ויוהו",
       "points": [
         "johnston-canyon",
         "emerald-lake",
-        "natural-bridge"
+        "natural-bridge",
+        "takakkaw-falls"
       ],
-      "lodging": "canmore",
-      "estTime": "כ־8–9 שעות כולל נסיעה (הערכה)",
-      "weatherAlt": "בגשם כבד: Lower Falls בלבד, ואחריו Emerald Lake לתצפית קצרה.",
-      "notes": "הקטע המזרחי של כביש 1A (Bow Valley Parkway) סגור לרכב פרטי בתחילת ספטמבר בפיילוט אופניים (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction וממשיכים מזרחה. בנוסף, השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
+      "lodging": "dmf",
       "drive": [
-        "canmore",
+        "dmf-condo",
         "johnston-canyon",
         "emerald-lake",
         "natural-bridge",
-        "canmore"
-      ]
-    },
-    {
-      "date": "2027-09-06",
-      "type": "transit",
-      "region": "rockies",
-      "title": "Icefields Parkway צפונה לג׳ספר",
-      "points": [
-        "bow-lake",
-        "peyto-lake",
-        "mistaya-canyon",
-        "big-bend",
-        "columbia-icefield",
-        "jasper-town"
+        "takakkaw-falls",
+        "dmf-condo"
       ],
-      "lodging": "jasper",
-      "estTime": "יום מלא (הערכה)",
-      "weatherAlt": "בעננות נמוכה: מתמקדים ב־Mistaya ובקרחון Athabasca שקרובים לכביש ומוותרים על Peyto.",
-      "drive": [
-        "canmore",
-        "bow-lake",
-        "peyto-lake",
-        "mistaya-canyon",
-        "big-bend",
-        "columbia-icefield",
-        "jasper-town"
-      ],
-      "notes": "דלק: למלא בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing. אין קליטה ברוב הכביש, אז כדאי להוריד מפות וכרטיס כניסה לפארק מראש (נכון ל־2026)."
-    },
-    {
-      "date": "2027-09-07",
-      "type": "explore",
-      "region": "rockies",
-      "title": "ג׳ספר",
-      "points": [
-        "medicine-lake",
-        "maligne-lake"
-      ],
-      "lodging": "jasper",
-      "summary": "השיט באגם Maligne לא הוזמן.",
-      "drive": [
-        "jasper-town",
-        "medicine-lake",
-        "maligne-lake",
-        "jasper-town"
-      ],
-      "notes": "אחרי השריפה של 2024: Maligne Canyon ו־Cavell Road היו סגורים כל עונת 2026. כביש Maligne, אגם Medicine ואגם Maligne פתוחים. אין דלק בכביש Maligne. לבדוק את המצב ל־2027."
-    },
-    {
-      "date": "2027-09-08",
-      "type": "transit",
-      "region": "rockies",
-      "title": "דרומה ל־Field",
-      "points": [
-        "athabasca-falls",
-        "goats-glaciers",
-        "sunwapta-falls",
-        "tangle-creek",
-        "abraham-lake",
-        "field"
-      ],
-      "lodging": "field",
-      "estTime": "יום מלא (הערכה)",
-      "drive": [
-        "jasper-town",
-        "athabasca-falls",
-        "goats-glaciers",
-        "sunwapta-falls",
-        "tangle-creek",
-        "field"
-      ],
-      "notes": "למלא דלק בג׳ספר לפני היציאה דרומה. אין קליטה ברוב Icefields Parkway."
+      "summary": "מתחילים מוקדם בשביל ל־Lower Falls ב־Johnston Canyon, ממשיכים לאגם Emerald ול־Natural Bridge. את מפלי Takakkaw מוסיפים אם הכביש פתוח ויש זמן.",
+      "estTime": "8–9 שעות כולל נסיעה (הערכה)",
+      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
+      "weatherAlt": "בגשם כבד: רק Lower Falls, ואחריו תצפית קצרה באגם Emerald."
     },
     {
       "date": "2027-09-09",
@@ -4089,15 +4197,12 @@
         "lake-louise",
         "moraine-lake"
       ],
-      "lodging": "field",
-      "summary": "שאטל של Parks Canada. ההזמנות נפתחות ב־15/4/2027 ב־17:00 שעון ישראל.",
-      "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "ראו חלופה בדף של אגם Moraine.",
+      "lodging": "dmf",
       "drive": [
-        "field",
+        "dmf-condo",
         "lake-louise",
         "moraine-lake",
-        "field"
+        "dmf-condo"
       ],
       "shuttle": [
         [
@@ -4105,23 +4210,27 @@
           "moraine-lake"
         ]
       ],
-      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב."
+      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
+      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
+      "estTime": "6–8 שעות (הערכה)",
+      "weatherAlt": "ראו חלופה בדף של אגם Moraine."
     },
     {
       "date": "2027-09-10",
       "type": "transit",
       "region": "la",
-      "title": "החזרת רכב בקלגרי וטיסה ללוס אנג׳לס",
+      "title": "טיסה ללוס אנג׳לס",
       "points": [
         "yyc",
         "lax"
       ],
       "lodging": "la",
-      "summary": "הטיסה מתוכננת ולא הוזמנה. איסוף רכב שכור ב־LAX.",
       "drive": [
-        "field",
+        "dmf-condo",
         "yyc"
-      ]
+      ],
+      "summary": "בלי עצירות טיול. אם תבחרו בטיסה של 14:45, יוצאים סביב 09:00 להחזרת הרכב ב־SIXT בקלגרי ומשם בשאטל לטרמינל. בלוס אנג׳לס אוספים רכב שכור ב־LAX.",
+      "estTime": "יום מעבר"
     },
     {
       "date": "2027-09-11",
@@ -4444,56 +4553,63 @@
       "notes": "כלול בעלות הקרוז."
     },
     {
-      "id": "canmore",
-      "city": "קנמור",
-      "name": "Canmore Downtown Hostel",
+      "id": "yyc-hotel",
+      "city": "קלגרי (ליד השדה)",
+      "name": "Hampton Inn by Hilton Calgary Airport North",
       "checkIn": "2027-09-03",
-      "checkOut": "2027-09-06",
+      "checkOut": "2027-09-04",
       "price": {
-        "amount": 1188.81,
+        "amount": 200.95,
         "currency": "CAD"
       },
-      "deposit": null,
-      "cancelBy": null,
-      "url": null,
-      "status": "option",
-      "notes": "חדר פרטי. סוג המיטות לא מובטח. המחיר נבדק בעבר ואינו מחיר נוכחי או מובטח."
+      "status": "booked",
+      "point": "hampton-yyc",
+      "room": "חדר קינג, קומה גבוהה",
+      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
+      "cancelBy": "ביטול חינם עד 29.8.2027 23:59 (שעון מקומי). אחר כך: 190.70 CA$",
+      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0",
+      "notes": "2021 100 Ave NE, קלגרי. ארוחת בוקר כלולה. חניה חינם בזמן השהייה."
     },
     {
       "id": "jasper",
       "city": "ג׳ספר",
-      "name": "Jasper Downtown Hostel",
-      "checkIn": "2027-09-06",
-      "checkOut": "2027-09-08",
+      "name": "Forest Park Hotel",
+      "checkIn": "2027-09-04",
+      "checkOut": "2027-09-06",
       "price": {
-        "amount": 786.6,
+        "amount": 1428.99,
         "currency": "CAD"
       },
-      "deposit": null,
-      "cancelBy": "ביטול לפחות 48 שעות מראש",
-      "url": null,
-      "status": "option",
-      "notes": "מיטת קווין, חדר רחצה פרטי. המחיר נבדק בעבר ואינו מחיר נוכחי או מובטח."
+      "status": "booked",
+      "point": "forest-park",
+      "room": "מרפסת וודלנד, מיטת קינג",
+      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 11:00",
+      "deposit": {
+        "amount": 250,
+        "currency": "CAD",
+        "note": "פיקדון נזקים בצ׳ק־אין, מוחזר תוך כ־14 ימים"
+      },
+      "cancelBy": "ביטול חינם עד 31.8.2027 23:59 (שעון מקומי). אחר כך: 710.51 CA$",
+      "payment": "התשלום הסופי מתבצע מול המלון.",
+      "notes": "76 Connaught Dr, ג׳ספר. המחיר כולל מסים. ארוחות לא כלולות. חניה ו־Wi-Fi חינם. בהזמנה כתוב שהמלון בשיפוצים עד סוף 2026 (בריכה סגורה, לאגף Woodland עולים במדרגות). לבדוק לפני ההגעה."
     },
     {
-      "id": "field",
-      "city": "Field (קולומביה הבריטית)",
-      "name": "Truffle Pigs Lodge",
-      "checkIn": "2027-09-08",
+      "id": "dmf",
+      "city": "Dead Man's Flats (ליד קנמור)",
+      "name": "Canmore 2BR Condo, Near Banff",
+      "checkIn": "2027-09-06",
       "checkOut": "2027-09-10",
       "price": {
-        "amount": 610.2,
+        "amount": 1729.92,
         "currency": "CAD"
       },
-      "deposit": {
-        "amount": 50,
-        "currency": "CAD",
-        "note": "לא מוחזרת"
-      },
-      "cancelBy": null,
-      "url": null,
-      "status": "option",
-      "notes": "המחיר נבדק בעבר ואינו מחיר נוכחי או מובטח."
+      "status": "booked",
+      "point": "dmf-condo",
+      "room": "דירת שני חדרי שינה",
+      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 11:00",
+      "cancelBy": "ביטול חינם עד 31.8.2027 23:59 (שעון מקומי). אחר כך: 1,613.92 CA$",
+      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0",
+      "notes": "250 2nd Ave, Dead Man's Flats. כולל דמי ניקיון. קודי הכניסה נמצאים באישור ההזמנה במייל ולא באתר. על נזק אפשר להיות מחויבים עד 481 CA$."
     },
     {
       "id": "la",
@@ -4580,13 +4696,6 @@
       "notes": "ב־2026 לא נדרשה הזמנה. לבדוק מה הוחלט ל־2027."
     },
     {
-      "id": "t-hotels-rockies",
-      "title": "שריון מלונות ברוקיז (קנמור, ג׳ספר, Field)",
-      "category": "מלונות",
-      "due": null,
-      "status": "option"
-    },
-    {
       "id": "t-flight-sea-yyc",
       "title": "טיסה SEA→YYC ב־3/9, מהצהריים והלאה",
       "category": "טיסות",
@@ -4598,14 +4707,16 @@
       "title": "טיסה YYC→LAX ב־10/9",
       "category": "טיסות",
       "due": null,
-      "status": "toclose"
+      "status": "toclose",
+      "notes": "אופציה שנבדקה: טיסה ב־14:45. טרם הוזמנה."
     },
     {
       "id": "t-car",
-      "title": "רכב ברוקיז – איסוף והחזרה ב־YYC",
+      "title": "רכב SIXT בקלגרי: איסוף 3.9 (או 4.9 בבוקר), החזרה 10.9",
       "category": "רכב",
       "due": null,
-      "status": "toclose"
+      "status": "toclose",
+      "notes": "ביום הטיסה ללוס אנג׳לס להגיע ל־SIXT סביב 09:00 אם הטיסה ב־14:45."
     },
     {
       "id": "t-park-pass",
@@ -4803,14 +4914,6 @@
     {
       "date": "2027-09-14T13:30",
       "label": "המראה LY6 הביתה"
-    },
-    {
-      "date": "2027-08-16",
-      "label": "ביטול חינם אחרון – Axiom, סן פרנסיסקו"
-    },
-    {
-      "date": "2027-08-19",
-      "label": "ביטול חינם אחרון – Packwood"
     }
   ],
   "cars": [
@@ -4826,11 +4929,11 @@
     },
     {
       "id": "car-yyc",
-      "where": "קלגרי (YYC)",
+      "where": "קלגרי (YYC) · SIXT",
       "pickup": "2027-09-03",
-      "pickupPlace": "שדה התעופה YYC",
+      "pickupPlace": "שדה התעופה YYC (אם שעת הנחיתה מאפשרת, אחרת 4.9 בבוקר)",
       "dropoff": "2027-09-10",
-      "dropoffPlace": "שדה התעופה YYC",
+      "dropoffPlace": "SIXT בקלגרי, ומשם שאטל לטרמינל",
       "status": "toclose",
       "price": null
     },
@@ -4897,7 +5000,7 @@
       "name": "רכבל באנף",
       "region": "rockies",
       "point": "banff-gondola",
-      "date": "2027-09-04",
+      "date": "2027-09-07",
       "booking": "recommended",
       "url": "https://www.pursuit.com/experiences/banff-gondola/",
       "cost": null,
@@ -4918,15 +5021,15 @@
     },
     {
       "id": "a-maligne",
-      "name": "שיט באגם Maligne",
+      "name": "שיט ל־Spirit Island (אגם Maligne)",
       "region": "rockies",
-      "point": "maligne-lake",
-      "date": "2027-09-07",
+      "point": "spirit-island",
+      "date": "2027-09-05",
       "booking": "recommended",
       "url": null,
       "cost": null,
       "status": "option",
-      "notes": "אופציה. לא הוזמן."
+      "notes": "האטרקציה המומלצת בג׳ספר. כדאי להזמין מראש. לבדוק מחיר וזמינות באתר המפעיל."
     },
     {
       "id": "a-mendenhall",
@@ -5075,10 +5178,22 @@
             "status": "booked"
           },
           {
-            "label": "רוקיז – 3 לינות (נבדקו, לא שוריינו)",
-            "amount": 2585.61,
+            "label": "Hampton Inn, קלגרי (לילה)",
+            "amount": 200.95,
             "currency": "CAD",
-            "status": "option"
+            "status": "booked"
+          },
+          {
+            "label": "Forest Park Hotel, ג׳ספר (2 לילות)",
+            "amount": 1428.99,
+            "currency": "CAD",
+            "status": "booked"
+          },
+          {
+            "label": "דירה ב־Dead Man's Flats (4 לילות)",
+            "amount": 1729.92,
+            "currency": "CAD",
+            "status": "booked"
           },
           {
             "label": "לוס אנג׳לס (4 לילות)",
@@ -5099,7 +5214,7 @@
             "status": "toclose"
           },
           {
-            "label": "קלגרי 3–10/9",
+            "label": "SIXT קלגרי 3–10/9",
             "amount": null,
             "status": "toclose"
           },
@@ -5145,5 +5260,5 @@
       }
     ]
   },
-  "hotelsNote": "אומדן קודם לרוקיז: כ־6,000 ₪ לזוג לשבעה לילות."
+  "hotelsNote": "כל הלינות עד 10.9 הוזמנו. נשאר רק המלון בלוס אנג׳לס."
 }
