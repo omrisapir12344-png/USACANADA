@@ -296,3 +296,13 @@ textarea { width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid
 .chk { display: flex; align-items: center; gap: 8px; font-size: 14.5px; }
 .chk input { width: 20px; height: 20px; accent-color: var(--blue); }
 .edit-pin { display: block; width: 18px; height: 18px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.35); }
+
+/* map category pins */
+.cat-pin { display: inline-grid; place-items: center; border-radius: 50%; border: 2.5px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.35); color: #fff; box-sizing: border-box; }
+.cat-pin svg { width: 58%; height: 58%; stroke: #fff; stroke-width: 2.2; }
+.cat-pin.opt { opacity: .7; border-style: dashed; }
+.num-pin { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; border: 2.5px solid #fff; color: #fff; font-weight: 800; font-size: 12.5px; box-shadow: 0 1px 5px rgba(0,0,0,.35); box-sizing: border-box; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 0 2px 12px; font-size: 13px; font-weight: 600; color: var(--ink2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend .cat-pin { width: 22px; height: 22px; border-width: 2px; }
+.pop-cat { font-size: 12px; font-weight: 700; }

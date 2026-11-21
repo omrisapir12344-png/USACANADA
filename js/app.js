@@ -24,7 +24,9 @@
     wallet: '<rect x="3" y="6" width="18" height="14" rx="2"/><path d="M16 13h2M3 10h18"/>', chev: '<path d="M15 6l-6 6 6 6"/>',
     cloud: '<path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 2A3 3 0 0 0 7 18z"/>', download: '<path d="M12 3v12M8 11l4 4 4-4M4 19h16"/>',
     image: '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/>', doc: '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/>',
-    map: '<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/>', menu: '<path d="M4 7h16M4 12h16M4 17h10"/>'
+    map: '<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/>',
+    star: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>', eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    hike: '<circle cx="13" cy="4" r="1.6"/><path d="M10 21l2-6 3 3v3M8 12l2-4 4 2 3 2M11 9l-1 5M17 10l2 11"/>', city: '<path d="M4 21V8l6-4v17M10 21V10l10 3v8M3 21h18M7 9v.01M7 13v.01M14 15v.01M17 16v.01"/>', menu: '<path d="M4 7h16M4 12h16M4 17h10"/>'
   };
   const I = (n, cls = 'i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n] || ''}</svg>`;
 
@@ -61,6 +63,20 @@
   });
   const gDir = (ids) => { const pts = ids.map(point); const ll = p => `${p.lat},${p.lng}`; const mid = pts.slice(1, -1).slice(0, 8).map(ll).join('|'); return `https://www.google.com/maps/dir/?api=1&origin=${ll(pts[0])}&destination=${ll(pts[pts.length - 1])}${mid ? '&waypoints=' + encodeURIComponent(mid) : ''}&travelmode=driving`; };
   const statusOf = (p) => p.suggestion ? pill('option', 'הצעה') : p.optional ? pill('option', 'אופציה') : '';
+  const CAT = {
+    airport: { label: 'נמל תעופה', icon: 'plane', color: '#13233d' },
+    port: { label: 'קרוז ונמלים', icon: 'ship', color: '#1f8a8a' },
+    lodging: { label: 'לינה', icon: 'bed', color: '#b48a4a' },
+    trail: { label: 'מסלולי הליכה', icon: 'hike', color: '#2f7a55' },
+    viewpoint: { label: 'תצפיות', icon: 'eye', color: '#7b4fb0' },
+    attraction: { label: 'אטרקציות', icon: 'star', color: '#2d6cb5' },
+    city: { label: 'ערים ועיירות', icon: 'city', color: '#5b6878' }
+  };
+  const catOf = (p) => p.kind === 'transport' ? (/port|terminal/i.test(p.nameEn || '') && !/airport/i.test(p.nameEn || '') ? 'port' : 'airport')
+    : ['port', 'scenic-cruising'].includes(p.kind) ? 'port' : ['lodging', 'lodging-area'].includes(p.kind) ? 'lodging'
+    : CAT[p.kind] ? p.kind : 'attraction';
+  const catIcon = (p, size = 28) => { const c = CAT[catOf(p)]; return L.divIcon({ className: '', iconSize: [size, size], iconAnchor: [size / 2, size / 2], popupAnchor: [0, -size / 2],
+    html: `<span class="cat-pin ${p.optional ? 'opt' : ''}" style="background:${c.color};width:${size}px;height:${size}px">${I(c.icon)}</span>` }); };
   const attrOf = (p) => D.attractions.filter(a => a.point === p.id);
   const bookingLabel = (b) => ({ required: 'חובה להזמין מראש', recommended: 'מומלץ להזמין מראש', check: 'לבדוק אם צריך להזמין', optional: 'אפשר להזמין מראש', none: 'לא נדרשת הזמנה (לבדוק)' }[b] || '');
   const done = () => LS.get('tg.done', {});
@@ -234,8 +250,8 @@
     const line = L.polyline(rt.line, { color: '#13233d', weight: 4, opacity: .85 }).addTo(m);
     let k = 0;
     d.drive.forEach(id => { const p = point(id); const isStop = d.points.includes(id) && !['transport', 'lodging'].includes(p.kind);
-      const mk = L.circleMarker([p.lat, p.lng], { radius: isStop ? 9 : 6, color: '#fff', weight: 2, fillColor: isStop ? '#13233d' : '#b48a4a', fillOpacity: 1 }).addTo(m);
-      if (isStop) mk.bindTooltip(String(++k), { permanent: true, direction: 'top', offset: [0, -8] }); });
+      if (isStop) L.marker([p.lat, p.lng], { icon: L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13], html: `<span class="num-pin" style="background:${CAT[catOf(p)].color}">${++k}</span>` }) }).addTo(m);
+      else L.marker([p.lat, p.lng], { icon: catIcon(p, 24) }).addTo(m); });
     m.fitBounds(line.getBounds().pad(.15));
     maps.push(m);
   };
@@ -315,18 +331,19 @@
     return `${pagehead('כל המסלול', 'מפת הטיול')}
       <div class="body" style="padding-top:8px">
         <div class="filters"><div><label for="regF">אזור</label><select id="regF"><option value="">כל המסע</option>${D.regions.map(r => `<option value="${r.id}">${esc(r.name)}</option>`).join('')}</select></div>
-          <div><label for="kindF">להציג</label><select id="kindF"><option value="">הכול</option><option value="plan">רק מה שבתוכנית</option></select></div></div>
+          <div><label for="kindF">להציג</label><select id="kindF"><option value="">הכול</option><option value="plan">רק מה שבתוכנית</option>${Object.entries(CAT).map(([k, c]) => `<option value="${k}">${c.label}</option>`).join('')}</select></div></div>
         ${EDIT() ? '<div class="notice">מצב עריכה: גררו נקודה כדי להזיז אותה, לחצו על המפה כדי להוסיף נקודה, ולחצו על נקודה כדי לערוך או למחוק.</div>' : ''}
         ${embed && !EDIT() ? `<iframe class="gframe" style="height:380px;margin-bottom:12px" src="${esc(embed)}" loading="lazy" title="מפת Google My Maps"></iframe>` : '<div id="bigmap" role="application" aria-label="מפה"></div>'}
+        <div class="legend">${Object.values(CAT).map(c => `<span><i class="cat-pin" style="background:${c.color}">${I(c.icon)}</i>${c.label}</span>`).join('')}<span><i class="cat-pin opt" style="background:#7d8796">${I('star')}</i>אופציה / הצעה</span></div>
         <div class="btns" style="margin:0 0 16px"><button class="btn" id="kmlBtn">${I('download')}ייצוא ל־Google My Maps</button></div>
         <div id="stops">${D.regions.map(r => `<div class="h2" data-region-h="${r.id}"><small class="num">${dm(r.from)}–${dm(r.to)}</small>${esc(r.name)}</div><div class="list" data-region-l="${r.id}">` +
-          D.points.filter(p => p.region === r.id).map(p => `<a class="li" href="#/point/${p.id}" data-plan="${p.optional ? 0 : 1}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
+          D.points.filter(p => p.region === r.id).map(p => `<a class="li" href="#/point/${p.id}" data-plan="${p.optional ? 0 : 1}" data-cat="${catOf(p)}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}
             <div class="g"><b>${esc(p.name)}</b><div class="s">${p.days?.length ? esc(p.days.map(fDay).join(', ')) : 'לא שובץ'}${p.suggestion ? ' · הצעה' : p.optional ? ' · אופציה' : ''}</div><div class="s num" style="text-align:right">${p.lat.toFixed(4)}, ${p.lng.toFixed(4)}</div></div>${I('chev', 'i chev')}</a>`).join('') + '</div>').join('')}</div>
       </div>`;
   };
   V.map.after = () => {
     const rf = $('#regF'), kf = $('#kindF');
-    const vis = () => D.points.filter(p => (!rf.value || p.region === rf.value) && (!kf.value || !p.optional));
+    const vis = () => D.points.filter(p => (!rf.value || p.region === rf.value) && (!kf.value || (kf.value === 'plan' ? !p.optional : catOf(p) === kf.value)));
     $('#kmlBtn').addEventListener('click', exportKML);
     let m, layer;
     if ((!D.meta.googleMyMapsEmbed || EDIT()) && typeof L !== 'undefined' && $('#bigmap')) {
@@ -336,7 +353,7 @@
     }
     const draw = () => {
       document.querySelectorAll('[data-region-h],[data-region-l]').forEach(el => { el.hidden = !!rf.value && (el.dataset.regionH || el.dataset.regionL) !== rf.value; });
-      document.querySelectorAll('#stops .li').forEach(el => { el.hidden = !!kf.value && el.dataset.plan === '0'; });
+      document.querySelectorAll('#stops .li').forEach(el => { el.hidden = !!kf.value && (kf.value === 'plan' ? el.dataset.plan === '0' : el.dataset.cat !== kf.value); });
       if (!layer) return;
       layer.clearLayers();
       Object.entries(RT.days).forEach(([date, rt]) => { const dd = D.days.find(x => x.date === date); if (!rf.value || dd.region === rf.value) L.polyline(rt.line, { color: '#13233d', weight: 3, opacity: .6, interactive: false }).addTo(layer); });
@@ -350,8 +367,8 @@
         if (pts.length) m.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(.12), { maxZoom: 11 });
         return;
       }
-      pts.forEach(p => L.circleMarker([p.lat, p.lng], { radius: p.optional ? 6 : 8, color: '#fff', weight: 2, fillColor: p.optional ? '#7d8796' : '#2d6cb5', fillOpacity: 1 })
-        .bindPopup(`<b>${esc(p.name)}</b><br>${esc(region(p.region).name)}${p.days?.length ? ' · ' + esc(p.days.map(fDay).join(', ')) : ''}<br><a href="#/point/${p.id}">למדריך</a> · <a href="${nav(p).google}" target="_blank" rel="noopener">נווט</a>`).addTo(layer));
+      pts.forEach(p => L.marker([p.lat, p.lng], { icon: catIcon(p), title: p.name, zIndexOffset: catOf(p) === 'lodging' ? 500 : 0 })
+        .bindPopup(`<span class="pop-cat" style="color:${CAT[catOf(p)].color}">${CAT[catOf(p)].label}${p.optional ? ' · ' + (p.suggestion ? 'הצעה' : 'אופציה') : ''}</span><br>` +`<b>${esc(p.name)}</b><br>${esc(region(p.region).name)}${p.days?.length ? ' · ' + esc(p.days.map(fDay).join(', ')) : ''}<br><a href="#/point/${p.id}">למדריך</a> · <a href="${nav(p).google}" target="_blank" rel="noopener">נווט</a>`).addTo(layer));
       if (pts.length) m.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(.12), { maxZoom: 11 });
     };
     rf.addEventListener('change', draw); kf.addEventListener('change', draw); draw();

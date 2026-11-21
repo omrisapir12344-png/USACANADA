@@ -420,7 +420,7 @@
       "lat": 37.8024,
       "lng": -122.4058,
       "approx": true,
-      "kind": "attraction",
+      "kind": "viewpoint",
       "visit": "45–60 דק׳",
       "see": "מגדל על Telegraph Hill עם תצפית על המפרץ וציורי קיר.",
       "summary": "עלייה רגלית תלולה מ־North Beach. כניסה למגדל בתשלום, לבדוק באתר.",
@@ -441,7 +441,7 @@
       "lat": 37.7763,
       "lng": -122.4328,
       "approx": true,
-      "kind": "attraction",
+      "kind": "viewpoint",
       "visit": "30 דק׳",
       "see": "שורת הבתים הוויקטוריאניים מול קו הרקיע של העיר.",
       "summary": "הנוף מהגבעה ב־Alamo Square Park.",
@@ -462,7 +462,7 @@
       "lat": 37.7544,
       "lng": -122.4477,
       "approx": true,
-      "kind": "attraction",
+      "kind": "viewpoint",
       "visit": "30 דק׳",
       "see": "תצפית על כל העיר והמפרץ.",
       "summary": "כדאי בשעות אחר הצהריים. עלול להיות ערפילי וקר מאוד ברוח.",
@@ -843,7 +843,7 @@
       "days": [
         "2027-08-24"
       ],
-      "kind": "attraction",
+      "kind": "trail",
       "summary": "אזור המבקרים הפופולרי בפארק: כרי פרחים, תצפית על ההר ושבילים כמו Skyline Trail.",
       "suggestion": true,
       "optional": true,
@@ -1025,7 +1025,7 @@
       "days": [
         "2027-08-25"
       ],
-      "kind": "attraction",
+      "kind": "trail",
       "approx": true,
       "summary": "הנקודה הגבוהה ביותר שאפשר להגיע אליה ברכב בפארק, עם תצפית על הצד המזרחי של ההר.",
       "suggestion": true,
@@ -1363,7 +1363,7 @@
       "days": [
         "2027-08-30"
       ],
-      "kind": "scenic-cruising",
+      "kind": "port",
       "summary": "שיט נופי מהאונייה, בלי ירידה לחוף.",
       "tz": "America/Juneau",
       "imageQuery": "Dawes Glacier Endicott Arm",
@@ -1996,7 +1996,7 @@
       "lat": 51.0884,
       "lng": -115.3479,
       "days": [],
-      "kind": "lodging-area",
+      "kind": "city",
       "sub": "באנף",
       "imageQuery": "Canmore Three Sisters",
       "imageMatch": [
@@ -2364,7 +2364,7 @@
       "lng": -115.61,
       "approx": true,
       "days": [],
-      "kind": "attraction",
+      "kind": "viewpoint",
       "optional": true,
       "sub": "באנף",
       "imageMatch": [
@@ -3005,7 +3005,7 @@
       "lat": 52.8737,
       "lng": -118.0814,
       "days": [],
-      "kind": "lodging-area",
+      "kind": "city",
       "sub": "ג׳ספר",
       "imageQuery": "Jasper Alberta town",
       "imageMatch": [
@@ -3551,7 +3551,7 @@
       "lat": 51.3955,
       "lng": -116.491,
       "days": [],
-      "kind": "lodging-area",
+      "kind": "city",
       "sub": "יוהו",
       "imageQuery": "Field British Columbia Yoho",
       "imageMatch": [
@@ -3915,7 +3915,7 @@
       "lat": 34.1281,
       "lng": -118.3255,
       "approx": true,
-      "kind": "attraction",
+      "kind": "viewpoint",
       "visit": "30–45 דק׳",
       "see": "אחת התצפיות הקרובות לשלט, מפארק שכונתי קטן.",
       "summary": "לשלט עצמו אי אפשר להגיע. התצפיות הטובות: Lake Hollywood Park ומצפה Griffith.",
@@ -4113,7 +4113,7 @@
       "days": [
         "2027-09-11"
       ],
-      "kind": "attraction",
+      "kind": "viewpoint",
       "summary": "מצפה כוכבים עם תצפית על העיר ועל שלט הוליווד.",
       "imageQuery": "Griffith Observatory",
       "imageMatch": [
