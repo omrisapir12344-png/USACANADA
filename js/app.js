@@ -83,7 +83,7 @@
   function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
   const EDIT = () => LS.get('tg.editMode', false);
   function saveDraft(msg) { D.meta.updated = new Date().toISOString().slice(0, 10); LS.set('tg.draft', D); if (msg) toast(msg); }
-  const LODGE_PTS = ['crest-trail', 'club-quarters', 'hyatt-olive8', 'hampton-yyc', 'forest-park', 'dmf-condo', 'park-plaza'];
+  const LODGE_PTS = ['packwood-lodge', 'club-quarters', 'hyatt-olive8', 'hampton-yyc', 'forest-park', 'dmf-condo', 'park-plaza'];
 
   /* ---------- weather (Open-Meteo, no key) ---------- */
   const WMO = (c) => c == null ? ['', ''] : c === 0 ? ['☀️', 'בהיר'] : c <= 2 ? ['🌤️', 'מעונן חלקית'] : c === 3 ? ['☁️', 'מעונן'] : c <= 48 ? ['🌫️', 'ערפל'] : c <= 57 ? ['🌦️', 'טפטוף'] : c <= 67 ? ['🌧️', 'גשם'] : c <= 77 ? ['🌨️', 'שלג'] : c <= 82 ? ['🌧️', 'ממטרים'] : c <= 86 ? ['🌨️', 'ממטרי שלג'] : ['⛈️', 'סופות רעמים'];

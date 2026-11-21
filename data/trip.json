@@ -74,7 +74,7 @@
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "rainier-paradise",
       "arrive": "טיסה מסן פרנסיסקו לסיאטל (SEA) ב־23/8 ואיסוף רכב שכור. מהשדה ל־Packwood כ־2.5–3 שעות נסיעה, ולכן צריך טיסה שמגיעה מוקדם מספיק לצ׳ק־אין עד 21:00. הטיסה והרכב טרם הוזמנו.",
-      "lodging": "Crest Trail Lodge. 3 לילות, הוזמן. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק: כשעה ו־10 דקות ל־Paradise וכשעה ו־20 דקות ל־Sunrise. צ׳ק־אין עד 22:00.",
+      "lodging": "Packwood Lodge & Cabins: בקתה עם מטבח וג׳קוזי. 3 לילות, הוזמן. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. צ׳ק־אין עד 21:00.",
       "lodgingStatus": "booked",
       "summary": "שלושה לילות ליד הפארק הלאומי. האטרקציות הן הצעות.",
       "clothing": {
@@ -802,20 +802,20 @@
       "see": "נחיתה ואיסוף או החזרת רכב."
     },
     {
-      "id": "crest-trail",
-      "name": "Crest Trail Lodge",
-      "nameEn": "Crest Trail Lodge, 12729 US Hwy 12, Packwood, WA",
+      "id": "packwood-lodge",
+      "name": "Packwood Lodge & Cabins",
+      "nameEn": "Packwood Lodge & Cabins, 13807 US Hwy 12, Packwood, WA",
       "region": "rainier",
-      "lat": 46.6086,
-      "lng": -121.6783,
+      "lat": 46.6076,
+      "lng": -121.672,
       "approx": true,
       "days": [
         "2027-08-23"
       ],
       "kind": "lodging",
-      "summary": "הלינה ליד הר ריינייר, בעיירה Packwood שמדרום לפארק.",
+      "summary": "בקתה עם מטבח וג׳קוזי בעיירה Packwood, הבסיס לשני הימים בפארק.",
       "visit": "לינה",
-      "see": "מלון דרכים ב־Packwood."
+      "see": "בקתה עם מטבח וג׳קוזי."
     },
     {
       "id": "hyatt-olive8",
@@ -4580,16 +4580,16 @@
       "points": [
         "sfo",
         "sea-airport",
-        "crest-trail"
+        "packwood-lodge"
       ],
       "lodging": "rainier",
       "summary": "טיסה SFO→SEA ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
       "estTime": "יום מעבר",
       "drive": [
         "sea-airport",
-        "crest-trail"
+        "packwood-lodge"
       ],
-      "notes": "צ׳ק־אין ב־Crest Trail Lodge עד 22:00. מהשדה כ־2.5 שעות נסיעה, לבחור טיסה בהתאם."
+      "notes": "צ׳ק־אין ב־Packwood Lodge עד 21:00. מהשדה כ־2.5 שעות נסיעה, אז הטיסה צריכה לנחות בערך עד 17:00."
     },
     {
       "date": "2027-08-24",
@@ -4606,14 +4606,14 @@
       "estTime": "7–9 שעות כולל Skyline Trail (הערכה)",
       "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת.",
       "drive": [
-        "crest-trail",
+        "packwood-lodge",
         "box-canyon",
         "reflection-lakes",
         "rainier-paradise",
         "narada-falls",
-        "crest-trail"
+        "packwood-lodge"
       ],
-      "notes": "Crest Trail Lodge ב־Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית.",
+      "notes": "Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית.",
       "start": "07:30",
       "summary": "נכנסים לפארק דרך Stevens Canyon Road: עצירה קצרה ב־Box Canyon, תצפית בבוקר ב־Reflection Lakes (בלי רוח רואים השתקפות), ואז היום המרכזי ב־Paradise עם Skyline Trail. בדרך חזרה עצירה במפלי Narada."
     },
@@ -4631,10 +4631,10 @@
       "estTime": "7–8 שעות (הערכה)",
       "weatherAlt": "אפשר להחליף בין הימים לפי התחזית.",
       "drive": [
-        "crest-trail",
+        "packwood-lodge",
         "tipsoo-lake",
         "rainier-sunrise",
-        "crest-trail"
+        "packwood-lodge"
       ],
       "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק.",
       "start": "07:30",
@@ -4653,7 +4653,7 @@
       "lodging": "seattle",
       "summary": "נסיעה מ־Packwood לסיאטל, החזרת הרכב ולילה ב־Hyatt at Olive 8.",
       "drive": [
-        "crest-trail",
+        "packwood-lodge",
         "hyatt-olive8"
       ]
     },
@@ -5237,20 +5237,20 @@
     {
       "id": "rainier",
       "city": "הר ריינייר",
-      "name": "Crest Trail Lodge",
+      "name": "Packwood Lodge & Cabins",
       "checkIn": "2027-08-23",
       "checkOut": "2027-08-26",
       "price": {
-        "amount": 523.75,
+        "amount": 833.44,
         "currency": "USD"
       },
       "status": "booked",
-      "notes": "12729 US Hwy 12, Packwood. הבסיס הנוח ביותר לשני הימים בפארק. ארוחות לא כלולות.",
-      "cancelBy": "ביטול חינם עד 20.8.2027 23:59 (שעון מקומי). אחר כך: 523.75$ (כל הסכום)",
-      "point": "crest-trail",
-      "room": "חדר דלוקס, מיטת קווין",
-      "checkTimes": "צ׳ק־אין 15:00–22:00 · צ׳ק־אאוט עד 11:00",
-      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
+      "notes": "13807 US Hwy 12, Packwood. בקתה עם מטבח: כריכים לשבילים וארוחת ערב בבקתה. אין תשלום במזומן.",
+      "cancelBy": "ביטול חינם עד 19.8.2027 23:59 (שעון מקומי). אחר כך: 759.05$",
+      "point": "packwood-lodge",
+      "room": "Deluxe Cabin with Jetted Tub: חדר שינה, סלון ומטבח",
+      "checkTimes": "צ׳ק־אין 16:00–21:00 · צ׳ק־אאוט עד 11:00",
+      "payment": "לפי ההזמנה, המקום מחייב את הכרטיס ישירות לפני ההגעה. לבדוק באפליקציה מתי בדיוק."
     },
     {
       "id": "seattle",
@@ -5375,6 +5375,14 @@
   ],
   "tasks": [
     {
+      "id": "t-cancel-crest",
+      "title": "לבטל את Crest Trail Lodge (הוחלף בבקתה ב־Packwood Lodge)",
+      "category": "מלונות",
+      "due": "2026-11-30",
+      "status": "toclose",
+      "notes": "ביטול חינם עד 20.8.2027, אבל עדיף עכשיו כדי שלא ייווצר חיוב כפול. כרגע שתי ההזמנות פעילות."
+    },
+    {
       "id": "t-shuttle",
       "title": "הזמנת שאטל לאגמי Louise ו־Moraine",
       "category": "הזמנות",
@@ -5429,16 +5437,16 @@
     },
     {
       "id": "t-pay-3",
-      "title": "תשלום מלון: Crest Trail Lodge, ריינייר",
+      "title": "תשלום מלון: Packwood Lodge, ריינייר",
       "category": "תשלומים",
       "due": "2027-02-01",
       "status": "planning",
       "cost": {
-        "amount": 1728,
+        "amount": 2785,
         "currency": "ILS",
         "note": "בערך, לפי שער היום"
       },
-      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+      "notes": "כאן המקום מחייב את הכרטיס בעצמו לפני ההגעה, לא דרך Booking. לבדוק באפליקציה מתי, ואם אפשר לשלם מוקדם."
     },
     {
       "id": "t-pay-4",
@@ -5467,18 +5475,11 @@
       "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
     },
     {
-      "id": "t-packwood-cabin",
-      "title": "להחליט: בקתה עם מטבח ב־Packwood Lodge במקום Crest Trail",
-      "category": "מלונות",
-      "status": "planning",
-      "notes": "Deluxe Cabin with Jetted Tub, כ־₪2,785 ל־3 לילות מול ₪1,728 היום. ביטול חינם בשניהם עד 20.8.2027. אם עוברים: מזמינים קודם, ורק אחרי האישור מבטלים את Crest Trail."
-    },
-    {
       "id": "t-flight-sfo-sea",
       "title": "טיסה SFO→SEA ב־23/8",
       "category": "טיסות",
       "status": "toclose",
-      "notes": "לנחות מספיק מוקדם: הצ׳ק־אין ב־Packwood עד 21:00, ומהשדה יש כ־2.5–3 שעות נסיעה."
+      "notes": "לנחות בערך עד 17:00: הצ׳ק־אין ב־Packwood Lodge עד 21:00, ומהשדה יש כ־2.5 שעות נסיעה."
     },
     {
       "id": "t-car-sea",
@@ -6016,8 +6017,8 @@
             "status": "booked"
           },
           {
-            "label": "Crest Trail Lodge, Packwood (3 לילות)",
-            "amount": 523.75,
+            "label": "Packwood Lodge & Cabins, בקתה עם מטבח (3 לילות)",
+            "amount": 833.44,
             "currency": "USD",
             "status": "booked"
           },
@@ -6297,8 +6298,8 @@
       {
         "task": "t-pay-3",
         "month": "2027-02-01",
-        "label": "Crest Trail Lodge, ריינייר",
-        "amount": 1728
+        "label": "Packwood Lodge, ריינייר (המקום מחייב לפני ההגעה)",
+        "amount": 2785
       },
       {
         "task": "t-pay-4",
