@@ -319,3 +319,8 @@ button.li { background: none; border: 0; border-top: 1px solid var(--line); curs
 .line-item > span:first-child { flex: 1 1 auto; }
 .line-item .v.num, .line-item .v .num { white-space: nowrap; }
 .line-item .v.num { flex: none; max-width: none; }
+.packnav { margin: 14px 0 4px; }
+.packnav a { background: var(--paper); border: 1px solid var(--line); padding: 7px 11px; border-radius: 11px; font-weight: 500; }
+.packnav a.ok { background: var(--goldbg); border-color: transparent; }
+.packnav a b { color: var(--blue); font-weight: 600; margin-inline-start: 4px; }
+.packnav a.ok b { color: var(--goldink); }

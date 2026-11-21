@@ -733,12 +733,21 @@
     const all = D.packing.flatMap(c => c.items.map((x, i) => c.id + ':' + i));
     const n = all.filter(k => got[k]).length;
     return `${pagehead('לפני הטיסה', 'רשימת אריזה', '#/more')}<div class="body" style="padding-top:8px">
-      <div class="prog"><span class="ring" style="background:conic-gradient(var(--blue) 0 ${Math.round(100 * n / all.length)}%, var(--line) 0 100%)"><i class="num">${n}/${all.length}</i></span><div><b style="font-size:17px">נארזו ${n} מתוך ${all.length}</b><div class="small muted">הרשימה מותאמת לערפל, לגשם, לקור בוקר ולחום. הסימון נשמר במכשיר הזה.</div></div></div>
-      ${D.packing.map(c => `<div class="h2" style="font-size:19px"><small>${esc(c.hint || '')}</small>${esc(c.label)}</div>${c.items.map((x, i) => { const k = c.id + ':' + i; return `<label class="task ${got[k] ? 'done' : ''}" style="cursor:pointer"><input type="checkbox" data-pack="${k}" ${got[k] ? 'checked' : ''}><div class="g"><div class="t" style="font-weight:600">${esc(x.t)}</div>${x.n ? `<div class="s">${esc(x.n)}</div>` : ''}</div></label>`; }).join('')}`).join('')}
+      <div class="prog"><span class="ring" id="packRing" style="background:conic-gradient(var(--blue) 0 ${Math.round(100 * n / all.length)}%, var(--line) 0 100%)"><i class="num">${n}/${all.length}</i></span><div><b style="font-size:17px" id="packSum">נארזו ${n} מתוך ${all.length}</b><div class="small muted">מותאם למסלול: ערפל, גשם, קור בוקר, קרוז וחום. הסימון נשמר במכשיר ועובר בסנכרון.</div></div></div>
+      <div class="chips packnav">${D.packing.map(c => { const ks = c.items.map((_, i) => c.id + ':' + i), g = ks.filter(k => got[k]).length; return `<a href="#" data-jump="pk-${c.id}" data-cat="${c.id}" class="${g === ks.length ? 'ok' : ''}">${esc(c.label)} <b class="num">${g}/${ks.length}</b></a>`; }).join('')}</div>
+      ${D.packing.map(c => `<div class="h2" id="pk-${c.id}" style="font-size:19px;scroll-margin-top:12px"><small>${esc(c.hint || '')}</small>${esc(c.label)}</div>${c.items.map((x, i) => { const k = c.id + ':' + i; return `<label class="task ${got[k] ? 'done' : ''}" style="cursor:pointer"><input type="checkbox" data-pack="${k}" ${got[k] ? 'checked' : ''}><div class="g"><div class="t" style="font-weight:600">${esc(x.t)}</div>${x.n ? `<div class="s">${esc(x.n)}</div>` : ''}</div></label>`; }).join('')}`).join('')}
       <button class="btn" id="packReset" style="width:100%;margin-top:12px">ניקוי כל הסימונים</button></div>`;
   };
   V.more_packing.after = () => {
-    view.querySelectorAll('[data-pack]').forEach(cb => cb.addEventListener('change', () => { const m = LS.get('tg.pack', {}); m[cb.dataset.pack] = cb.checked; LS.set('tg.pack', m); cb.closest('.task').classList.toggle('done', cb.checked); }));
+    view.querySelectorAll('[data-pack]').forEach(cb => cb.addEventListener('change', () => { const m = LS.get('tg.pack', {}); m[cb.dataset.pack] = cb.checked; LS.set('tg.pack', m); cb.closest('.task').classList.toggle('done', cb.checked); counts(); }));
+    function counts() {
+      const got = LS.get('tg.pack', {}); let n = 0, all = 0;
+      D.packing.forEach(c => { const g = c.items.filter((_, i) => got[c.id + ':' + i]).length; n += g; all += c.items.length;
+        const ch = view.querySelector(`[data-cat="${c.id}"]`); if (ch) { ch.querySelector('b').textContent = `${g}/${c.items.length}`; ch.classList.toggle('ok', g === c.items.length); } });
+      $('#packSum').textContent = `נארזו ${n} מתוך ${all}`;
+      $('#packRing').style.background = `conic-gradient(var(--blue) 0 ${Math.round(100 * n / all)}%, var(--line) 0 100%)`; $('#packRing i').textContent = `${n}/${all}`;
+    }
+    view.querySelectorAll('[data-jump]').forEach(x => x.addEventListener('click', (e) => { e.preventDefault(); document.getElementById(x.dataset.jump)?.scrollIntoView({ behavior: 'smooth' }); }));
     let armed = false;
     $('#packReset').addEventListener('click', (e) => { if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי לנקות'; return; } LS.set('tg.pack', {}); route(); });
   };
