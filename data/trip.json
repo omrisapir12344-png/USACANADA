@@ -2337,8 +2337,67 @@
       "imageMatch": [
         "bow lake"
       ],
-      "visit": "20–40 דק׳",
-      "see": "אגם גדול ליד הכביש, מול קרחון Crowfoot."
+      "visit": "30–45 דק׳",
+      "see": "אגם טורקיז גדול לרגלי Crowfoot ו־Bow Glacier, מהיפים שעל הכביש",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה קצרה לחוף האגם",
+            "required": true,
+            "note": "שביל חצץ קצר מהחניה לחוף. מקום מצוין לתמונות עם ההשתקפות."
+          },
+          {
+            "name": "תצפית Crowfoot Glacier",
+            "required": false,
+            "note": "חניון תצפית ליד הכביש, דקות ספורות מדרום לאגם. עצירה של כמה דקות."
+          },
+          {
+            "name": "Bow Glacier Falls Trail",
+            "required": false,
+            "note": "מסלול ארוך למפל, לא מתאים ליום נסיעה עמוס. אחרי מפולת סלעים קטלנית ב־2025 דווח שנפתח מחדש עם אזהרות. לבדוק מצב לפני."
+          }
+        ],
+        "duration": {
+          "min": "15 דק׳",
+          "recommended": "30–45 דק׳",
+          "trails": [
+            {
+              "name": "Bow Glacier Falls",
+              "length": "כ־7.6 ק״מ הלוך־חזור",
+              "gain": "כ־95 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות וג׳קט רוח, ליד הקרחונים קר גם בספטמבר",
+          "כובע וכפפות דקות לבוקר",
+          "נעליים סגורות לחוף החצץ"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בקיץ, בעיקר באמצע היום",
+          "parking": "חניה ליד הכביש וחניה ליד The Lodge at Bow Lake, שתיהן מתמלאות",
+          "toilets": "יש שירותים",
+          "signal": "אין קליטה לאורך ה־Parkway",
+          "safety": "מים קרים מאוד, דובים באזור",
+          "tips": "להגיע מוקדם בבוקר. בבוקר שקט יש השתקפות טובה יותר"
+        },
+        "bestTime": "בוקר מוקדם, לפני שהאוטובוסים מגיעים",
+        "important": [
+          "לתדלק ב־Lake Louise לפני העלייה ל־Parkway"
+        ],
+        "weatherAlt": "לצלם מהחניה ולהמשיך. ב־Lodge at Bow Lake יש מסעדה (עונתית, לבדוק)",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Banff), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/promenadedesglaciers-icefieldsparkway"
+          },
+          {
+            "label": "מסלולים על ה־Parkway, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/93n"
+          }
+        ]
+      }
     },
     {
       "id": "peyto-lake",
@@ -2357,7 +2416,52 @@
         "peyto"
       ],
       "visit": "30–45 דק׳",
-      "see": "הליכה קצרה בעלייה לתצפית על אגם בצורת ראש זאב."
+      "see": "תצפית מלמעלה על אגם בצורת ראש זאב בצבע טורקיז עז",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Peyto Lake Lookout",
+            "required": true,
+            "note": "הליכה קצרה בעלייה מהחניה התחתונה אל רציף התצפית. זו העצירה הכי מצולמת ב־Parkway."
+          },
+          {
+            "name": "הליכה לאורך הרכס מעל התצפית",
+            "required": false,
+            "note": "שבילים ממשיכים מעל הרציף ונותנים זוויות שקטות יותר. רק אם יש זמן."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "30–45 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט חם, Bow Summit גבוה וקריר",
+          "נעלי הליכה, השביל תלול מעט"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד, הרציף מתמלא באמצע היום",
+          "parking": "חונים בחניה התחתונה. החניה העליונה רק לרכבי נכים ואוטובוסים",
+          "toilets": "יש שירותים",
+          "signal": "אין קליטה",
+          "safety": "לא לצאת מעבר לגדרות במדרון",
+          "tips": "להגיע מוקדם. אור הבוקר המוקדם או אחר הצהריים טוב לצבע"
+        },
+        "bestTime": "בוקר מוקדם או אחר הצהריים המאוחרים",
+        "important": [],
+        "weatherAlt": "בעננים נמוכים האגם לא נראה. אפשר לוותר ולהמשיך ל־Mistaya Canyon",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Banff), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/promenadedesglaciers-icefieldsparkway"
+          },
+          {
+            "label": "מסלולים על ה־Parkway, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/93n"
+          }
+        ]
+      }
     },
     {
       "id": "mistaya-canyon",
@@ -2375,8 +2479,57 @@
       "imageMatch": [
         "mistaya"
       ],
-      "visit": "30–45 דק׳",
-      "see": "שביל קצר בירידה לקניון צר ומפותל."
+      "visit": "30 דק׳",
+      "see": "קניון צר ומפותל שהנהר חצב בסלע, מגשר קטן מעליו",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "ירידה לגשר מעל הקניון",
+            "required": true,
+            "note": "שביל קצר בירידה עד הגשר. מסתכלים לתוך הקניון משני הצדדים."
+          },
+          {
+            "name": "הצצה לאורך שפת הקניון",
+            "required": false,
+            "note": "רק מהשביל. הסלעים ליד השפה חלקים."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "30 דק׳",
+          "trails": [
+            {
+              "name": "Mistaya Canyon",
+              "length": "כ־1 ק״מ הלוך־חזור",
+              "gain": "מעט, ירידה קלה וחזרה בעלייה"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבה חמה ונעליים עם אחיזה",
+          "ליד המים לח וקריר"
+        ],
+        "expect": {
+          "crowds": "בינוני, פחות מ־Peyto",
+          "parking": "חניון קטן ליד הכביש, עלול להתמלא",
+          "toilets": "יש שירותים",
+          "signal": "אין קליטה",
+          "safety": "להתרחק מהסלעים בשפת הקניון. חלקים ומסוכנים",
+          "tips": "עצירה טובה למתוח רגליים בדרך ל־Saskatchewan Crossing"
+        },
+        "bestTime": "כל שעה ביום, פחות עמוס בבוקר",
+        "important": [
+          "Parks Canada מבקשים להישאר מחוץ לסלעים לבטיחותכם"
+        ],
+        "weatherAlt": "מתאים גם בגשם קל, רק בזהירות על השביל",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Banff), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "big-bend",
@@ -2396,7 +2549,47 @@
         "big bend"
       ],
       "visit": "10–15 דק׳",
-      "see": "עצירת תצפית על העיקול הגדול של הכביש."
+      "see": "פנייה חדה של הכביש בעלייה, עם תצפית לעמק ולמפלים מהצוקים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "עצירה בחניון תצפית",
+            "required": true,
+            "note": "עוצרים רק בחניונים המסומנים. התצפית על הכביש המתפתל ועל העמק."
+          },
+          {
+            "name": "Parker Ridge (באזור)",
+            "required": false,
+            "note": "מסלול רכס פופולרי לא רחוק צפונה. רק אם יש הרבה זמן."
+          }
+        ],
+        "duration": {
+          "min": "5 דק׳",
+          "recommended": "10–15 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט רוח, באזור הזה כבר קר יותר"
+        ],
+        "expect": {
+          "crowds": "נמוך עד בינוני",
+          "parking": "חניונים קטנים בצד הכביש",
+          "toilets": "אין",
+          "signal": "אין קליטה",
+          "safety": "לא לעצור על הכביש עצמו. תנועה מהירה בעלייה",
+          "tips": "בנסיעה צפונה זו עלייה ארוכה אל Sunwapta Pass"
+        },
+        "bestTime": "באור יום, בדרך ל־Columbia Icefield",
+        "important": [],
+        "weatherAlt": "בערפל לדלג",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Banff), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/banff/visit/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "columbia-icefield",
@@ -2416,8 +2609,72 @@
       "imageMatch": [
         "athabasca glacier"
       ],
-      "visit": "1–1.5 שעות",
-      "see": "שביל לקרחון Athabasca. עם Ice Explorer, שהוא אופציה, צריך כשלוש שעות."
+      "visit": "1–1.5 שעות (3 שעות עם Ice Explorer)",
+      "see": "קרחון Athabasca מגיע כמעט עד הכביש. הולכים עד קצה הקרח",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Toe of the Athabasca Glacier Trail",
+            "required": true,
+            "note": "מסלול חינמי קצר עד קרוב לקרחון. בדרך שלטים שמראים עד היכן הגיע הקרח בעבר."
+          },
+          {
+            "name": "Columbia Icefield Discovery Centre",
+            "required": false,
+            "note": "מרכז מבקרים מול הקרחון עם תצפית ומסעדה. לפי Parks Canada פתוח מאי עד ספטמבר."
+          },
+          {
+            "name": "Ice Explorer + Skywalk (בתשלום)",
+            "required": false,
+            "note": "נסיעה ברכב ענק על הקרחון ועמידה על הקרח, ואז רציף זכוכית מעל עמק. כ־2.5–3 שעות, מומלץ להזמין מראש."
+          }
+        ],
+        "duration": {
+          "min": "45 דק׳",
+          "recommended": "1–1.5 שעות",
+          "trails": [
+            {
+              "name": "Toe of the Athabasca Glacier",
+              "length": "כ־1.8 ק״מ הלוך־חזור",
+              "gain": "כ־60 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "מעיל חם, כובע וכפפות. רוח קרה יורדת מהקרחון",
+          "נעלי הליכה סגורות, השביל חצץ וסלעים",
+          "משקפי שמש, הקרח מסנוור"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בצהריים",
+          "parking": "חניה בתחתית הקרחון ליד השביל, וחניה גדולה ב־Discovery Centre",
+          "toilets": "יש ב־Discovery Centre ובחניה",
+          "signal": "אין קליטה, לא לסמוך על הטלפון",
+          "safety": "אסור ללכת על הקרחון. יש סדקים נסתרים והקצה חלול ומתמוטט. היו הרוגים",
+          "tips": "לצאת לשביל לפני או אחרי גל הסיורים. Skywalk נמצא כמה ק״מ צפונה"
+        },
+        "bestTime": "בוקר או אחר הצהריים המאוחרים",
+        "important": [
+          "להישאר על שבילי החצץ המסומנים. הקרחון עצמו לא יציב ומסוכן",
+          "Ice Explorer ו־Skywalk בתשלום, מחירים ושעות לבדוק באתר הרשמי"
+        ],
+        "weatherAlt": "ב־Discovery Centre יש תצוגה ומסעדה עם נוף לקרחון",
+        "links": [
+          {
+            "label": "מסלולי ה־Icefields, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/glaciers-icefields"
+          },
+          {
+            "label": "Columbia Icefield Adventure (Pursuit)",
+            "url": "https://www.pursuit.com/experiences/columbia-icefield/"
+          },
+          {
+            "label": "Icefields Parkway (צד Jasper), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "jasper-town",
@@ -2436,8 +2693,69 @@
       "imageMatch": [
         "jasper"
       ],
-      "visit": "לינה",
-      "see": "העיירה שבה ישנים בג׳ספר."
+      "visit": "ערב + בוקר",
+      "see": "עיירת הרים קטנה, בסיס ללינה, אוכל ודלק. בשיקום אחרי השריפה של 2024",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Jasper Information Centre",
+            "required": false,
+            "note": "מרכז המידע של Parks Canada במרכז העיר. לשאול על סגירות ומצב שבילים עדכני."
+          },
+          {
+            "name": "טיול ברחוב הראשי וארוחת ערב",
+            "required": true,
+            "note": "Connaught Drive ו־Patricia Street. מסעדות וחנויות במרחק הליכה."
+          },
+          {
+            "name": "Pyramid Lake או Lac Beauvert בשקיעה",
+            "required": false,
+            "note": "אגמים קרובים לעיר. לבדוק פתיחה עדכנית לפני."
+          },
+          {
+            "name": "תדלוק לפני היציאה דרומה",
+            "required": true,
+            "note": "אין דלק בין Jasper ל־Saskatchewan Crossing."
+          }
+        ],
+        "duration": {
+          "min": "שעה",
+          "recommended": "ערב פנוי",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה לערב, הלילות קרים בספטמבר"
+        ],
+        "expect": {
+          "crowds": "עמוס בערבים בקיץ",
+          "parking": "חניה ברחובות ובחניונים במרכז, מתמלאת בערב",
+          "toilets": "שירותים ציבוריים בעיר",
+          "signal": "יש קליטה בעיר",
+          "safety": "אילים (Elk) מסתובבים בעיר. לשמור מרחק, בספטמבר זו עונת הייחום והם תוקפניים",
+          "tips": "להזמין מסעדה מראש בערב. חלק מהעסקים עדיין פועלים ממקום זמני"
+        },
+        "bestTime": "ערב, אחרי הנסיעה",
+        "important": [
+          "השריפה של יולי 2024 הרסה חלק מהעיר. נכון ל־2026 העיר פתוחה למבקרים והבנייה מחדש נמשכת, לבדוק שוב ל־2027",
+          "נכון ל־2026 Maligne Canyon ו־Cavell Road סגורים, לבדוק שוב ל־2027"
+        ],
+        "weatherAlt": "בגשם: בתי קפה ומרכז המידע בעיר",
+        "links": [
+          {
+            "label": "מה פתוח ב־Jasper, Parks Canada",
+            "url": "https://www.parks.canada.ca/pn-np/ab/jasper/visit/ouvert-fermee-open-closed"
+          },
+          {
+            "label": "שיקום הפארק אחרי השריפה, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/gestion-management/serviceimmobilier-realty/retablissement-recovery/pc-recovery"
+          },
+          {
+            "label": "Tourism Jasper",
+            "url": "https://www.jasper.travel/"
+          }
+        ]
+      }
     },
     {
       "id": "medicine-lake",
@@ -2457,8 +2775,55 @@
       "imageMatch": [
         "medicine lake"
       ],
-      "visit": "20–30 דק׳",
-      "see": "אגם שמתרוקן בסתיו. עצירה בדרך לאגם Maligne."
+      "visit": "15–20 דק׳",
+      "see": "אגם בעמק Maligne שמפלסו יורד בסוף הקיץ, עם רקע הרים ויער מתחדש",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "עצירה בתצפית בצד הכביש",
+            "required": true,
+            "note": "תצפית עם חניה על Maligne Road בדרך ל־Maligne Lake. עצירה קצרה."
+          },
+          {
+            "name": "חיפוש חיות בדרך",
+            "required": false,
+            "note": "בכביש Maligne Road רואים לפעמים חיות בר. לנסוע לאט."
+          }
+        ],
+        "duration": {
+          "min": "10 דק׳",
+          "recommended": "15–20 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט קל, בבוקר קר"
+        ],
+        "expect": {
+          "crowds": "בינוני",
+          "parking": "חניונים קטנים בצד הכביש",
+          "toilets": "לא בטוח, לבדוק",
+          "signal": "קליטה חלשה או אין",
+          "safety": "דובים באזור. לא לעצור על הכביש כדי לצלם חיות",
+          "tips": "בסוף הקיץ האגם עשוי להיות רדוד מאוד. זה חלק מהתופעה"
+        },
+        "bestTime": "בוקר, בדרך ל־Maligne Lake",
+        "important": [
+          "Maligne Road נפתח מחדש באוקטובר 2024. נכון ל־2026 Maligne Canyon (באותו עמק) סגור, לבדוק שוב ל־2027",
+          "אין תחנות דלק ב־Maligne Road"
+        ],
+        "weatherAlt": "בגשם לדלג ולהישאר באזור העיר",
+        "links": [
+          {
+            "label": "מה פתוח ב־Jasper, Parks Canada",
+            "url": "https://www.parks.canada.ca/pn-np/ab/jasper/visit/ouvert-fermee-open-closed"
+          },
+          {
+            "label": "שבילי אזור Maligne, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/maligne"
+          }
+        ]
+      }
     },
     {
       "id": "maligne-lake",
@@ -2478,8 +2843,72 @@
       "imageMatch": [
         "maligne"
       ],
-      "visit": "1–2 שעות",
-      "see": "אגם ארוך מוקף הרים. השיט בו הוא אופציה ולא הוזמן."
+      "visit": "1.5–2 שעות",
+      "see": "אגם ארוך ותכלת בסוף עמק Maligne, מוקף פסגות וקרחונים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Mary Schäffer Loop",
+            "required": true,
+            "note": "לולאה שטוחה לאורך החוף, עוברת ליד בית הסירות ההיסטורי ותצפית."
+          },
+          {
+            "name": "Moose Lake Loop",
+            "required": false,
+            "note": "לולאה קלה ביער לאגם קטן. סיכוי לראות איילי מוס."
+          },
+          {
+            "name": "קנו או קיאק",
+            "required": false,
+            "note": "אפשר לשכור באגם. שייט ל־Spirit Island לא הוזמן. הוא בהזמנה בלבד ובתשלום."
+          }
+        ],
+        "duration": {
+          "min": "45 דק׳",
+          "recommended": "1.5–2 שעות",
+          "trails": [
+            {
+              "name": "Mary Schäffer Loop",
+              "length": "כ־3.2 ק״מ לולאה",
+              "gain": "כ־0 מ׳"
+            },
+            {
+              "name": "Moose Lake Loop",
+              "length": "כ־2.7 ק״מ לולאה",
+              "gain": "כ־60 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות וג׳קט עמיד לגשם",
+          "כובע וכפפות דקות לבוקר"
+        ],
+        "expect": {
+          "crowds": "עמוס בצהריים ליד בית הסירות",
+          "parking": "כמה חניונים בסוף הכביש",
+          "toilets": "יש באזור החניונים",
+          "signal": "קליטה חלשה או אין",
+          "safety": "דובים ואיילי מוס. לשמור מרחק ולהחזיק תרסיס דובים",
+          "tips": "כ־45 דק׳ נסיעה מהעיר לכל כיוון. לתדלק לפני"
+        },
+        "bestTime": "בוקר מוקדם, אגם שקט וחניה פנויה",
+        "important": [
+          "אין תחנות דלק ב־Maligne Road",
+          "Spirit Island נגיש רק בסירה. אין דרך רגלית"
+        ],
+        "weatherAlt": "בגשם לוותר על כל עמק Maligne ולבלות בעיר",
+        "links": [
+          {
+            "label": "Maligne Lake, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/lac-maligne"
+          },
+          {
+            "label": "שבילי אזור Maligne, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/maligne"
+          }
+        ]
+      }
     },
     {
       "id": "athabasca-falls",
@@ -2497,7 +2926,54 @@
         "athabasca falls"
       ],
       "visit": "30–45 דק׳",
-      "see": "מפל עוצמתי ונקיק צר. שבילים קצרים וגשרונים."
+      "see": "מפל עוצמתי שנופל לערוץ סלע צר, עם גשרים ותצפיות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפיות מעל המפל",
+            "required": true,
+            "note": "שבילים קצרים וגשר מעל הערוץ. רואים את המפל מכמה זוויות."
+          },
+          {
+            "name": "ירידה לערוץ התחתון",
+            "required": false,
+            "note": "מדרגות לערוץ יבש ישן שהנהר חצב. קצר ושווה."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "30–45 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט קל, רסס מים ליד המפל",
+          "נעליים עם אחיזה"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד, עצירה ראשונה של אוטובוסים מ־Jasper",
+          "parking": "חניון גדול, מתמלא בצהריים",
+          "toilets": "יש שירותים (בור)",
+          "signal": "אין קליטה",
+          "safety": "להישאר מאחורי המעקות. הסלעים מעבר חלקים ומסוכנים",
+          "tips": "להגיע לפני 9:00. באזור רואים יער שרוף מהשריפה של 2024"
+        },
+        "bestTime": "בוקר מוקדם, ביציאה מ־Jasper",
+        "important": [
+          "Parks Canada: להישאר על השבילים ומאחורי המעקות"
+        ],
+        "weatherAlt": "מתאים גם בגשם. המפל חזק במיוחד",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Jasper), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
+          },
+          {
+            "label": "מסלולי ה־Icefields, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/glaciers-icefields"
+          }
+        ]
+      }
     },
     {
       "id": "goats-glaciers",
@@ -2516,8 +2992,48 @@
       "imageMatch": [
         "athabasca"
       ],
-      "visit": "10–20 דק׳",
-      "see": "תצפית על נהר Athabasca. לפעמים רואים יעלים."
+      "visit": "10–15 דק׳",
+      "see": "תצפית מעל נהר Athabasca. לפעמים רואים עזי הרים על המצוקים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "שביל סלול קצר לתצפית",
+            "required": true,
+            "note": "כ־50 מ׳ מהחניה. תצפית לנהר ולהרים."
+          },
+          {
+            "name": "חיפוש עזי הרים",
+            "required": false,
+            "note": "לפעמים מגיעות ללקק מינרלים בגדה. לא מובטח."
+          }
+        ],
+        "duration": {
+          "min": "5 דק׳",
+          "recommended": "10–15 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט קל"
+        ],
+        "expect": {
+          "crowds": "נמוך",
+          "parking": "חניון קטן בצד הכביש",
+          "toilets": "יש שירותים (בור)",
+          "signal": "אין קליטה",
+          "safety": "לא לרדת מהשביל אל הגדה, לא להתקרב לחיות",
+          "tips": "משקפת עוזרת לראות עזים"
+        },
+        "bestTime": "בוקר",
+        "important": [],
+        "weatherAlt": "בגשם אפשר לדלג",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Jasper), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "sunwapta-falls",
@@ -2535,8 +3051,58 @@
       "imageMatch": [
         "sunwapta"
       ],
-      "visit": "20–40 דק׳",
-      "see": "מפל בתוך יער, ממש ליד החניה."
+      "visit": "20–30 דק׳ (שעה עם המפל התחתון)",
+      "see": "מפל שנופל סביב אי קטן לתוך ערוץ צר, עם גשר מעליו",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Upper Sunwapta Falls",
+            "required": true,
+            "note": "הליכה של דקות מהחניה לגשר ולתצפית."
+          },
+          {
+            "name": "Lower Sunwapta Falls",
+            "required": false,
+            "note": "שביל ביער לסדרת מפלים נמוכים יותר. שקט יותר מהמפל העליון."
+          }
+        ],
+        "duration": {
+          "min": "20 דק׳",
+          "recommended": "30 דק׳ עד שעה",
+          "trails": [
+            {
+              "name": "Lower Sunwapta Falls",
+              "length": "כ־2.6 ק״מ הלוך־חזור",
+              "gain": "כ־90 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "ג׳קט קל ונעליים עם אחיזה"
+        ],
+        "expect": {
+          "crowds": "בינוני עד עמוס",
+          "parking": "חניון בסוף כביש גישה קצר",
+          "toilets": "יש שירותים (בור)",
+          "signal": "אין קליטה",
+          "safety": "שבילים עם קטעים תלולים. לא לצאת מהגדרות",
+          "tips": "אם הזמן קצר, מספיק המפל העליון"
+        },
+        "bestTime": "בוקר או צהריים",
+        "important": [],
+        "weatherAlt": "המפל העליון מתאים גם בגשם",
+        "links": [
+          {
+            "label": "מסלולי ה־Icefields, Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/glaciers-icefields"
+          },
+          {
+            "label": "Icefields Parkway (צד Jasper), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "tangle-creek",
@@ -2554,8 +3120,48 @@
       "imageMatch": [
         "tangle"
       ],
-      "visit": "10–15 דק׳",
-      "see": "מפל מדורג בצד הכביש."
+      "visit": "10 דק׳",
+      "see": "מפל מדורג יפה ממש ליד הכביש, בלי הליכה",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית מהכביש",
+            "required": true,
+            "note": "המפל נראה מצד הכביש. עצירה של כמה דקות."
+          },
+          {
+            "name": "הליכה קצרה למרגלות המפל",
+            "required": false,
+            "note": "אפשר להתקרב מעט. הסלעים רטובים."
+          }
+        ],
+        "duration": {
+          "min": "5 דק׳",
+          "recommended": "10 דק׳",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט קל"
+        ],
+        "expect": {
+          "crowds": "בינוני, מתמלא מהר כי החניה קטנה",
+          "parking": "חניה קטנה בצד הכביש",
+          "toilets": "יש שירותים (בור)",
+          "signal": "אין קליטה",
+          "safety": "זהירות בחציית הכביש. סלעים רטובים וחלקים",
+          "tips": "כ־8 ק״מ צפונית ל־Columbia Icefield. לפעמים רואים כבשי בר באזור Wilcox"
+        },
+        "bestTime": "כל שעה ביום",
+        "important": [],
+        "weatherAlt": "אפשר גם בגשם, מהרכב",
+        "links": [
+          {
+            "label": "Icefields Parkway (צד Jasper), Parks Canada",
+            "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
+          }
+        ]
+      }
     },
     {
       "id": "abraham-lake",
@@ -2575,8 +3181,51 @@
       "imageMatch": [
         "abraham"
       ],
-      "visit": "סטייה של כמה שעות",
-      "see": "אגם מלאכותי ארוך. סטייה אופציונלית מהמסלול."
+      "visit": "2–3 שעות תוספת (הערכה, כולל נסיעה)",
+      "see": "מאגר מים טורקיז ארוך מחוץ לפארק, נוף פתוח של הרים ומישורים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "נסיעה מזרחה ב־Hwy 11",
+            "required": false,
+            "note": "יוצאים מ־Saskatchewan Crossing מזרחה, מחוץ לפארק הלאומי. לא בתוכנית ברירת המחדל."
+          },
+          {
+            "name": "Kootenay Plains",
+            "required": false,
+            "note": "אזור פתוח ליד הקצה הדרומי של האגם, מנוהל על ידי Alberta Parks."
+          }
+        ],
+        "duration": {
+          "min": "2 שעות",
+          "recommended": "רק אם יש חצי יום פנוי",
+          "trails": []
+        },
+        "clothing": [
+          "ג׳קט רוח, האזור ידוע ברוחות חזקות"
+        ],
+        "expect": {
+          "crowds": "נמוך",
+          "parking": "חניונים פשוטים בצד הכביש",
+          "toilets": "מעט, לא לסמוך",
+          "signal": "קליטה חלשה או אין",
+          "safety": "דרך מרוחקת עם מעט שירותים. לצאת עם מיכל מלא",
+          "tips": "הבועות הקפואות המפורסמות הן רק בחורף. בספטמבר זה בעיקר נוף"
+        },
+        "bestTime": "אחר הצהריים, באור רך",
+        "important": [
+          "מחוץ לפארק הלאומי, בשטח של Alberta",
+          "דלק: לתדלק ב־Saskatchewan Crossing (עונתי) או לפני"
+        ],
+        "weatherAlt": "בגשם או רוח חזקה לוותר",
+        "links": [
+          {
+            "label": "Kootenay Plains, Alberta Parks",
+            "url": "https://albertaparks.ca/parks/central/kootenay-plains-pra/"
+          }
+        ]
+      }
     },
     {
       "id": "field",
@@ -3384,7 +4033,8 @@
         "big-bend",
         "columbia-icefield",
         "jasper-town"
-      ]
+      ],
+      "notes": "דלק: למלא בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing. אין קליטה ברוב הכביש, אז כדאי להוריד מפות וכרטיס כניסה לפארק מראש (נכון ל־2026)."
     },
     {
       "date": "2027-09-07",
@@ -3402,7 +4052,8 @@
         "medicine-lake",
         "maligne-lake",
         "jasper-town"
-      ]
+      ],
+      "notes": "אחרי השריפה של 2024: Maligne Canyon ו־Cavell Road היו סגורים כל עונת 2026. כביש Maligne, אגם Medicine ואגם Maligne פתוחים. אין דלק בכביש Maligne. לבדוק את המצב ל־2027."
     },
     {
       "date": "2027-09-08",
@@ -3426,7 +4077,8 @@
         "sunwapta-falls",
         "tangle-creek",
         "field"
-      ]
+      ],
+      "notes": "למלא דלק בג׳ספר לפני היציאה דרומה. אין קליטה ברוב Icefields Parkway."
     },
     {
       "date": "2027-09-09",
@@ -4216,7 +4868,7 @@
       "url": "https://parks.canada.ca/voyage-travel/admission",
       "cost": null,
       "status": "toclose",
-      "notes": "נדרש בבאנף, יוהו וג׳ספר. המחיר לפי 2027."
+      "notes": "נדרש בבאנף, יוהו וג׳ספר וגם לנסיעה ב־Icefields Parkway. לקנות מראש, כי אין קליטה בדרך. המחיר לפי 2027."
     },
     {
       "id": "a-rainier-entry",
@@ -4259,7 +4911,7 @@
       "point": "columbia-icefield",
       "date": "2027-09-06",
       "booking": "recommended",
-      "url": "https://www.banffjaspercollection.com/attractions/columbia-icefield/",
+      "url": "https://www.pursuit.com/experiences/columbia-icefield/",
       "cost": null,
       "status": "option",
       "notes": "אופציה בתשלום. החלופה החינמית היא שביל התצפית לקרחון."
