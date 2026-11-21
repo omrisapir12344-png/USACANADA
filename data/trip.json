@@ -5413,7 +5413,7 @@
       "id": "t-pay-1",
       "title": "תשלום מלונות: Hampton קלגרי + Hyatt סיאטל",
       "category": "תשלומים",
-      "due": "2026-12-01",
+      "due": "2026-12-15",
       "status": "planning",
       "cost": {
         "amount": 1505,
@@ -5426,7 +5426,7 @@
       "id": "t-pay-2",
       "title": "תשלום מלון: Club Quarters, סן פרנסיסקו",
       "category": "תשלומים",
-      "due": "2027-01-01",
+      "due": "2027-01-15",
       "status": "planning",
       "cost": {
         "amount": 2156,
@@ -5439,7 +5439,7 @@
       "id": "t-pay-3",
       "title": "תשלום מלון: Packwood Lodge, ריינייר",
       "category": "תשלומים",
-      "due": "2027-02-01",
+      "due": "2027-02-15",
       "status": "planning",
       "cost": {
         "amount": 2785,
@@ -5452,7 +5452,7 @@
       "id": "t-pay-4",
       "title": "תשלום מלון: Park Plaza Lodge, לוס אנג׳לס",
       "category": "תשלומים",
-      "due": "2027-03-01",
+      "due": "2027-03-15",
       "status": "planning",
       "cost": {
         "amount": 2870,
@@ -5465,7 +5465,7 @@
       "id": "t-pay-5",
       "title": "תשלום מלון: הדירה ב־Dead Man's Flats",
       "category": "תשלומים",
-      "due": "2027-04-01",
+      "due": "2027-04-15",
       "status": "planning",
       "cost": {
         "amount": 3987,
@@ -6281,35 +6281,35 @@
     }
   ],
   "paymentPlan": {
-    "note": "פריסה של תשלום אחד בחודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
+    "note": "פריסה של תשלום אחד בחודש, ב־15 לכל חודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
     "items": [
       {
         "task": "t-pay-1",
-        "month": "2026-12-01",
+        "month": "2026-12-15",
         "label": "Hampton קלגרי + Hyatt סיאטל",
         "amount": 1505
       },
       {
         "task": "t-pay-2",
-        "month": "2027-01-01",
+        "month": "2027-01-15",
         "label": "Club Quarters, סן פרנסיסקו",
         "amount": 2156
       },
       {
         "task": "t-pay-3",
-        "month": "2027-02-01",
+        "month": "2027-02-15",
         "label": "Packwood Lodge, ריינייר (המקום מחייב לפני ההגעה)",
         "amount": 2785
       },
       {
         "task": "t-pay-4",
-        "month": "2027-03-01",
+        "month": "2027-03-15",
         "label": "Park Plaza Lodge, לוס אנג׳לס",
         "amount": 2870
       },
       {
         "task": "t-pay-5",
-        "month": "2027-04-01",
+        "month": "2027-04-15",
         "label": "הדירה ב־Dead Man's Flats",
         "amount": 3987
       },
