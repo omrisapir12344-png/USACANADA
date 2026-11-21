@@ -1119,6 +1119,132 @@
       }
     },
     {
+      "id": "box-canyon",
+      "name": "Box Canyon",
+      "nameEn": "Box Canyon, Stevens Canyon Road",
+      "region": "rainier",
+      "lat": 46.7646,
+      "lng": -121.6398,
+      "approx": true,
+      "kind": "viewpoint",
+      "visit": "15–20 דק׳",
+      "see": "קניון צר ועמוק מתחת לגשר, ממש ליד הכביש.",
+      "summary": "עצירה קצרה על Stevens Canyon Road בדרך מ־Packwood ל־Paradise.",
+      "days": [
+        "2027-08-24"
+      ],
+      "imageMatch": [
+        "box canyon",
+        "rainier"
+      ]
+    },
+    {
+      "id": "narada-falls",
+      "name": "מפלי Narada",
+      "nameEn": "Narada Falls",
+      "region": "rainier",
+      "lat": 46.7752,
+      "lng": -121.7451,
+      "approx": true,
+      "kind": "viewpoint",
+      "visit": "20–30 דק׳",
+      "see": "מפל גבוה ושביל קצר ותלול לתצפית מלמטה.",
+      "summary": "כמה דקות מתחת ל־Paradise. השביל לתצפית התחתונה קצר אבל תלול וחלקלק מהרסס.",
+      "days": [
+        "2027-08-24"
+      ],
+      "imageMatch": [
+        "narada"
+      ]
+    },
+    {
+      "id": "tipsoo-lake",
+      "name": "Tipsoo Lake",
+      "nameEn": "Tipsoo Lake, Chinook Pass",
+      "region": "rainier",
+      "lat": 46.8697,
+      "lng": -121.518,
+      "approx": true,
+      "kind": "viewpoint",
+      "visit": "30–45 דק׳",
+      "see": "אגם קטן ליד Chinook Pass, עם השתקפות של ההר ופרחים בקיץ.",
+      "summary": "בדרך מ־Packwood ל־Sunrise. נקודת ההתחלה של Naches Peak Loop.",
+      "days": [
+        "2027-08-25"
+      ],
+      "imageMatch": [
+        "tipsoo"
+      ]
+    },
+    {
+      "id": "naches-peak",
+      "name": "Naches Peak Loop",
+      "nameEn": "Naches Peak Loop Trail",
+      "region": "rainier",
+      "lat": 46.871,
+      "lng": -121.515,
+      "approx": true,
+      "kind": "trail",
+      "visit": "כ־2–2.5 שעות",
+      "see": "שביל מעגלי קצר עם כרי פרחים ותצפית על Rainier בחלק השני של הלולאה.",
+      "summary": "מתחיל ב־Tipsoo Lake. מומלץ ללכת עם כיוון השעון כדי שההר יהיה מולכם בחצי השני.",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הלולאה המלאה",
+            "required": true,
+            "note": "כרי פרחים, אגמים קטנים ותצפית על ההר."
+          },
+          {
+            "name": "Dewey Lake (הסתעפות)",
+            "required": false,
+            "note": "הסתעפות שיורדת לאגם. מוסיפה זמן ועלייה בחזרה."
+          }
+        ],
+        "duration": {
+          "min": "כשעתיים",
+          "recommended": "2–2.5 שעות",
+          "trails": [
+            {
+              "name": "Naches Peak Loop",
+              "length": "כ־5.6 ק״מ (לולאה)",
+              "gain": "כ־180 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "נעלי הליכה ושכבה חמה. בגובה הזה קריר גם באוגוסט.",
+          "כובע ומשקפי שמש."
+        ],
+        "expect": {
+          "crowds": "פופולרי מאוד בעונת הפרחים. החניה ב־Tipsoo מתמלאת מוקדם.",
+          "parking": "חניה קטנה ליד Tipsoo Lake ועוד חניה ליד Chinook Pass.",
+          "toilets": "ליד Tipsoo Lake.",
+          "signal": "חלשה עד אין.",
+          "safety": "חלק מהשביל מחוץ לפארק הלאומי ובאזור שמור. נשארים על השביל.",
+          "tips": "להגיע בבוקר מוקדם, ואז להמשיך ל־Sunrise."
+        },
+        "bestTime": "בוקר מוקדם.",
+        "important": [
+          "חלק מהלולאה עובר באזור William O. Douglas Wilderness. לבדוק הנחיות באתר הפארק או ב־USFS."
+        ],
+        "weatherAlt": "בערפל: מוותרים על השביל ונוסעים ישר ל־Sunrise, שלפעמים מעל העננים.",
+        "links": [
+          {
+            "label": "Mount Rainier – אתר הפארק",
+            "url": "https://www.nps.gov/mora/index.htm"
+          }
+        ]
+      },
+      "days": [
+        "2027-08-25"
+      ],
+      "imageMatch": [
+        "naches"
+      ]
+    },
+    {
       "id": "pike-place",
       "name": "Pike Place Market",
       "nameEn": "Pike Place Market",
@@ -1860,6 +1986,26 @@
       }
     },
     {
+      "id": "butchart",
+      "name": "Butchart Gardens",
+      "nameEn": "Butchart Gardens, Victoria",
+      "region": "cruise",
+      "lat": 48.5636,
+      "lng": -123.4698,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "2–3 שעות כולל הגעה",
+      "see": "גנים מפורסמים, כ־40 דקות נסיעה מהנמל.",
+      "summary": "רק אם זמן העגינה מאפשר. בדרך כלל דרך טיול מאורגן של האונייה.",
+      "optional": true,
+      "days": [
+        "2027-09-02"
+      ],
+      "imageMatch": [
+        "butchart"
+      ]
+    },
+    {
       "id": "yyc",
       "name": "נמל התעופה קלגרי",
       "nameEn": "Calgary International Airport (YYC)",
@@ -2356,6 +2502,28 @@
       }
     },
     {
+      "id": "banff-hot-springs",
+      "name": "Banff Upper Hot Springs",
+      "nameEn": "Banff Upper Hot Springs",
+      "region": "rockies",
+      "lat": 51.1527,
+      "lng": -115.5617,
+      "approx": true,
+      "kind": "attraction",
+      "visit": "1–1.5 שעות",
+      "see": "בריכת מעיינות חמים עם נוף להרים.",
+      "summary": "אופציה לערב. כניסה בתשלום, לבדוק שעות ומחירים באתר Parks Canada.",
+      "optional": true,
+      "sub": "באנף",
+      "days": [
+        "2027-09-07"
+      ],
+      "imageMatch": [
+        "hot springs",
+        "banff"
+      ]
+    },
+    {
       "id": "vermilion-lakes",
       "name": "אגמי Vermilion",
       "nameEn": "Vermilion Lakes",
@@ -2427,7 +2595,7 @@
       "lat": 51.2456,
       "lng": -115.8398,
       "days": [
-        "2027-09-08"
+        "2027-09-07"
       ],
       "kind": "trail",
       "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן.",
@@ -2793,7 +2961,7 @@
       "lng": -116.721,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-06"
       ],
       "kind": "trail",
       "sub": "Icefields Parkway",
@@ -4429,37 +4597,48 @@
       "region": "rainier",
       "title": "Paradise ו־Reflection Lakes",
       "points": [
+        "box-canyon",
+        "reflection-lakes",
         "rainier-paradise",
-        "reflection-lakes"
+        "narada-falls"
       ],
       "lodging": "rainier",
-      "estTime": "5–7 שעות (הערכה)",
+      "estTime": "7–9 שעות כולל Skyline Trail (הערכה)",
       "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת.",
       "drive": [
         "crest-trail",
-        "rainier-paradise",
+        "box-canyon",
         "reflection-lakes",
+        "rainier-paradise",
+        "narada-falls",
         "crest-trail"
       ],
-      "notes": "Crest Trail Lodge ב־Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית."
+      "notes": "Crest Trail Lodge ב־Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית.",
+      "start": "07:30",
+      "summary": "נכנסים לפארק דרך Stevens Canyon Road: עצירה קצרה ב־Box Canyon, תצפית בבוקר ב־Reflection Lakes (בלי רוח רואים השתקפות), ואז היום המרכזי ב־Paradise עם Skyline Trail. בדרך חזרה עצירה במפלי Narada."
     },
     {
       "date": "2027-08-25",
       "type": "explore",
       "region": "rainier",
-      "title": "Sunrise",
+      "title": "Tipsoo Lake, Naches Peak ו־Sunrise",
       "points": [
+        "tipsoo-lake",
+        "naches-peak",
         "rainier-sunrise"
       ],
       "lodging": "rainier",
-      "estTime": "5–7 שעות (הערכה)",
+      "estTime": "7–8 שעות (הערכה)",
       "weatherAlt": "אפשר להחליף בין הימים לפי התחזית.",
       "drive": [
         "crest-trail",
+        "tipsoo-lake",
         "rainier-sunrise",
         "crest-trail"
       ],
-      "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק."
+      "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק.",
+      "start": "07:30",
+      "summary": "בבוקר Naches Peak Loop מ־Tipsoo Lake, שביל מעגלי קצר עם פרחים ונוף להר. אחר כך עולים ל־Sunrise, הנקודה הגבוהה שמגיעים אליה ברכב, להליכה ל־Mount Fremont Lookout או ל־Emmons Vista."
     },
     {
       "date": "2027-08-26",
@@ -4549,9 +4728,11 @@
       "region": "cruise",
       "title": "ויקטוריה",
       "points": [
-        "victoria"
+        "victoria",
+        "butchart"
       ],
-      "lodging": "cruise"
+      "lodging": "cruise",
+      "summary": "העגינה בוויקטוריה בדרך כלל קצרה (לאמת שעות). הצעה: הליכה ב־Inner Harbour, בניין הפרלמנט ומלון Empress, בהליכה מהנמל. Butchart Gardens רק אם הזמן מאפשר."
     },
     {
       "date": "2027-09-03",
@@ -4576,7 +4757,6 @@
       "points": [
         "bow-lake",
         "peyto-lake",
-        "mistaya-canyon",
         "forest-park"
       ],
       "lodging": "jasper",
@@ -4584,13 +4764,13 @@
         "hampton-yyc",
         "bow-lake",
         "peyto-lake",
-        "mistaya-canyon",
         "forest-park"
       ],
-      "summary": "יוצאים סביב 08:00. בדרך עוצרים ב־Bow Lake ובתצפית על Peyto Lake. Mistaya Canyon אם יש זמן. מגיעים ל־Forest Park Hotel לשני לילות.",
+      "summary": "יוצאים ב־07:30. עוצרים רק ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. Mistaya Canyon עבר ל־6.9, כי הוא על הכביש דרומה.",
       "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
       "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש.",
-      "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש."
+      "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש.",
+      "start": "07:30"
     },
     {
       "date": "2027-09-05",
@@ -4628,6 +4808,7 @@
         "tangle-creek",
         "columbia-icefield",
         "big-bend",
+        "mistaya-canyon",
         "dmf-condo"
       ],
       "lodging": "dmf",
@@ -4639,60 +4820,65 @@
         "tangle-creek",
         "columbia-icefield",
         "big-bend",
+        "mistaya-canyon",
         "dmf-condo"
       ],
-      "summary": "יוצאים סביב 08:00 ועוצרים בחלק שלא עשיתם בדרך צפונה. סיור על הקרחון או Skywalk הופכים את זה ליום שלם. בערב מגיעים לדירה ב־Dead Man's Flats לארבעה לילות.",
+      "summary": "יוצאים ב־08:00 ועוצרים בחלק שלא עשיתם בדרך צפונה, כולל Mistaya Canyon. אם בוחרים Ice Explorer או Skywalk (כ־3 שעות), מוותרים על Goats and Glaciers ו־Big Bend. בערב מגיעים לדירה.",
       "estTime": "יום מלא (הערכה)",
       "notes": "למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
-      "weatherAlt": "בעננות נמוכה מוותרים על Big Bend ומתמקדים במפלים ובקרחון Athabasca."
+      "weatherAlt": "בעננות נמוכה מוותרים על Big Bend ומתמקדים במפלים ובקרחון Athabasca.",
+      "start": "08:00"
     },
     {
       "date": "2027-09-07",
       "type": "explore",
       "region": "rockies",
-      "title": "באנף והסביבה",
+      "title": "Johnston Canyon ובאנף",
       "points": [
+        "johnston-canyon",
         "banff-town",
         "bow-falls",
         "lake-minnewanka",
-        "banff-gondola"
+        "banff-gondola",
+        "banff-hot-springs"
       ],
       "lodging": "dmf",
       "drive": [
         "dmf-condo",
+        "johnston-canyon",
         "banff-town",
         "bow-falls",
         "lake-minnewanka",
         "dmf-condo"
       ],
-      "summary": "מרכז באנף, מפלי Bow ואגם Minnewanka. את הרכבל מוסיפים רק אם הראות טובה.",
-      "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי."
+      "summary": "מתחילים מוקדם ב־Johnston Canyon, לפני העומס, בשביל ל־Lower Falls. אחר כך מרכז באנף, Bow Falls ואגם Minnewanka. רכבל רק אם הראות טובה, ובערב המעיינות החמים אם יש כוח.",
+      "estTime": "7–8 שעות (הערכה)",
+      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי.",
+      "start": "07:30",
+      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול."
     },
     {
       "date": "2027-09-08",
       "type": "explore",
       "region": "rockies",
-      "title": "Johnston Canyon ויוהו",
+      "title": "יוהו: Emerald Lake, Natural Bridge ו־Takakkaw",
       "points": [
-        "johnston-canyon",
-        "emerald-lake",
         "natural-bridge",
+        "emerald-lake",
         "takakkaw-falls"
       ],
       "lodging": "dmf",
       "drive": [
         "dmf-condo",
-        "johnston-canyon",
-        "emerald-lake",
         "natural-bridge",
+        "emerald-lake",
         "takakkaw-falls",
         "dmf-condo"
       ],
-      "summary": "מתחילים מוקדם בשביל ל־Lower Falls ב־Johnston Canyon, ממשיכים לאגם Emerald ול־Natural Bridge. את מפלי Takakkaw מוסיפים אם הכביש פתוח ויש זמן.",
-      "estTime": "8–9 שעות כולל נסיעה (הערכה)",
-      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
-      "weatherAlt": "בגשם כבד: רק Lower Falls, ואחריו תצפית קצרה באגם Emerald."
+      "summary": "יום יוהו בקצב רגוע: Natural Bridge, הליכה סביב Emerald Lake (ואופציה לקאנו), ומפלי Takakkaw אם הכביש פתוח.",
+      "estTime": "7–8 שעות כולל נסיעה (הערכה)",
+      "weatherAlt": "בגשם כבד: רק Lower Falls, ואחריו תצפית קצרה באגם Emerald.",
+      "start": "08:30"
     },
     {
       "date": "2027-09-09",
