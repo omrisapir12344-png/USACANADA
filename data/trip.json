@@ -90,7 +90,9 @@
       "beforeYouGo": [
         "טיסה SFO→SEA שמגיעה מספיק מוקדם (צ׳ק־אין עד 21:00)",
         "רכב שכור בסיאטל",
-        "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה ב־2027"
+        "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה ב־2027",
+        "כביש Stevens Canyon (הדרך מ־Packwood ל־Paradise): עבודות על גשר מתוכננות באביב 2027. לבדוק שהכביש פתוח, אחרת נוסעים דרך הכניסה Nisqually, וזה ארוך יותר.",
+        "הכביש ל־Sunrise: עבודות על גשר Fryingpan Creek מתוכננות ל־2027–2029. לבדוק עיכובים לפני היציאה."
       ],
       "transfer": "165 ק״מ לסיאטל ברכב"
     },
@@ -257,7 +259,73 @@
       "optional": true,
       "imageMatch": [
         "golden gate"
-      ]
+      ],
+      "see": "הגשר האדום המפורסם. הליכה על המדרכה ותצפיות מ־Battery Spencer ו־Crissy Field",
+      "visit": "1.5–3 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה על הגשר",
+            "required": true,
+            "note": "הולכים על המדרכה לפחות עד המגדל הראשון וחוזרים. הגשר כולו באורך כ־2.7 ק״מ לכל כיוון."
+          },
+          {
+            "name": "תצפית מ־Battery Spencer",
+            "required": false,
+            "note": "נקודת תצפית בצד של Marin, מעל הגשר. עם רכב או מונית, החניה קטנה."
+          },
+          {
+            "name": "Crissy Field",
+            "required": false,
+            "note": "חוף ומדשאה בצד של העיר עם מבט נמוך על הגשר. טוב להליכה רגועה."
+          },
+          {
+            "name": "Fort Point",
+            "required": false,
+            "note": "מבצר היסטורי ממש מתחת לגשר בצד הדרומי. לבדוק שעות פתיחה באתר NPS."
+          }
+        ],
+        "duration": {
+          "min": "שעה",
+          "recommended": "2–3 שעות כולל תצפיות",
+          "trails": [
+            {
+              "name": "הליכה על הגשר מקצה לקצה",
+              "length": "כ־5.5 ק״מ הלוך־חזור",
+              "gain": "כ־0 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "מעיל רוח או שכבה חמה. ערפל ורוח חזקה גם באוגוסט",
+          "שכבות. בין ערפל לשמש ההבדל בטמפרטורה גדול",
+          "נעלי הליכה נוחות"
+        ],
+        "expect": {
+          "crowds": "עמוס בסופי שבוע ובצהריים, בעיקר בכניסה הדרומית.",
+          "parking": "חניונים קטנים בשני צדי הגשר ומתמלאים מהר. מהמרכז נוח באוטובוס Muni או במונית.",
+          "toilets": "יש בכיכר המבקרים בצד הדרומי (Welcome Center).",
+          "signal": "קליטה טובה בדרך כלל.",
+          "safety": "רוח חזקה על הגשר. רוכבי אופניים חולקים את המדרכה, להישאר בצד.",
+          "tips": "ערפל מכסה את הגשר לעתים קרובות בבוקר בקיץ. אם יש ערפל, לנסות שוב אחה״צ או יום אחר."
+        },
+        "bestTime": "אחר הצהריים או לקראת שקיעה, כשהערפל לרוב מתפזר.",
+        "important": [
+          "לפעמים המדרכה המזרחית סגורה לעבודות או בלילה וההולכים מופנים למדרכה אחרת. לבדוק באתר הגשר לפני."
+        ],
+        "weatherAlt": "בערפל כבד אין נוף. אפשר לבקר ב־Presidio או במוזיאונים בעיר ולחזור לגשר ביום בהיר יותר.",
+        "links": [
+          {
+            "label": "האתר הרשמי של הגשר",
+            "url": "https://www.goldengate.org/"
+          },
+          {
+            "label": "Golden Gate National Recreation Area (NPS)",
+            "url": "https://www.nps.gov/goga/index.htm"
+          }
+        ]
+      }
     },
     {
       "id": "alcatraz",
@@ -273,7 +341,69 @@
       "optional": true,
       "imageMatch": [
         "alcatraz"
-      ]
+      ],
+      "see": "האי עם הכלא הפדרלי הנטוש. סיור קולי בתאים ונוף על העיר מהמפרץ",
+      "visit": "2.5–3.5 שעות כולל מעבורת",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "סיור קולי בבית הכלא (Cellhouse Audio Tour)",
+            "required": true,
+            "note": "הסיור המרכזי באי, עם אוזניות. נכלל בכרטיס."
+          },
+          {
+            "name": "שיט במעבורת",
+            "required": true,
+            "note": "הדרך היחידה להגיע. יוצאים מ־Pier 33 (Alcatraz Landing)."
+          },
+          {
+            "name": "תוכניות ריינג׳רים",
+            "required": false,
+            "note": "שיחות קצרות של ריינג׳רים לאורך היום. לוח הזמנים מוצג ברציף באי."
+          },
+          {
+            "name": "גני האי ותצפיות",
+            "required": false,
+            "note": "שבילים סביב האי עם נוף לעיר ולגשר. חלק מהאזורים סגורים בעונת קינון ציפורים."
+          }
+        ],
+        "duration": {
+          "min": "2.5 שעות",
+          "recommended": "3–3.5 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "מעיל רוח ושכבה חמה. קר ורוחני על המעבורת ובאי",
+          "נעליים נוחות. יש עלייה תלולה מהרציף לבית הכלא",
+          "כובע ומשקפי שמש"
+        ],
+        "expect": {
+          "crowds": "מלא בקיץ. הכמות מוגבלת לפי כרטיסים.",
+          "parking": "המעבורת יוצאת מ־Pier 33 ב־Embarcadero. מהמלון נוח בחשמלית F או במונית. חניה באזור יקרה ומוגבלת.",
+          "toilets": "יש ברציף היציאה ובאי.",
+          "signal": "קליטה סבירה באי.",
+          "safety": "השבילים באי תלולים. אין מזון למכירה באי, רק מים. לבדוק כללים באתר.",
+          "tips": "להגיע לרציף לפחות 30 דקות לפני ההפלגה. לא לקנות ממשווקים חיצוניים, רק מהמפעיל הרשמי."
+        },
+        "bestTime": "הפלגה ראשונה של הבוקר, לפני העומס.",
+        "important": [
+          "חובה להזמין מראש. לפי NPS הכרטיסים נגמרים בקיץ עד חודש ויותר מראש (נכון ל־2026, לבדוק שוב ל־2027).",
+          "המפעיל היחיד המורשה הוא Alcatraz City Cruises. מחירים ושעות: לבדוק באתר הרשמי.",
+          "האי סגור בחג המולד, בחג ההודיה וביום השנה החדשה."
+        ],
+        "weatherAlt": "המעבורת יוצאת גם בערפל ובגשם קל. אם בוטל שיט, לפנות למפעיל. חלופה ביום רע: Exploratorium ליד Pier 15.",
+        "links": [
+          {
+            "label": "Alcatraz Island (NPS)",
+            "url": "https://www.nps.gov/alca/index.htm"
+          },
+          {
+            "label": "כרטיסים אצל המפעיל הרשמי",
+            "url": "https://www.cityexperiences.com/san-francisco/city-cruises/alcatraz/"
+          }
+        ]
+      }
     },
     {
       "id": "fishermans-wharf",
@@ -290,7 +420,66 @@
       "imageQuery": "Pier 39 San Francisco",
       "imageMatch": [
         "pier 39"
-      ]
+      ],
+      "see": "רציף תיירותי עם אריות ים ב־Pier 39, מסעדות פירות ים ונוף למפרץ ולאלקטרז",
+      "visit": "1.5–3 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "אריות הים ב־Pier 39",
+            "required": true,
+            "note": "אריות ים שוכבים על רציפים צפים בצד המערבי של Pier 39. בחינם."
+          },
+          {
+            "name": "אוכל ברציף",
+            "required": false,
+            "note": "קלאם צ׳אודר בלחם מחמצת או סרטנים בדוכנים. אפשר גם לשבת במסעדה עם נוף."
+          },
+          {
+            "name": "Ghirardelli Square",
+            "required": false,
+            "note": "מפעל שוקולד לשעבר עם חנויות, בקצה המערבי של האזור. ליד תחנת הקצה של Powell–Hyde."
+          },
+          {
+            "name": "San Francisco Maritime (Hyde Street Pier)",
+            "required": false,
+            "note": "ספינות היסטוריות על רציף. לבדוק שעות באתר NPS."
+          }
+        ],
+        "duration": {
+          "min": "שעה",
+          "recommended": "2–3 שעות כולל ארוחה",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה. רוח קרה מהמים גם בקיץ",
+          "נעליים נוחות להליכה ארוכה על הרציפים"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בקיץ, בעיקר אחה״צ ובסופי שבוע.",
+          "parking": "חניון Pier 39 מול הכניסה, פתוח 24/7, בתשלום. נוח יותר בכבל קאר מ־Powell & Market או בחשמלית F.",
+          "toilets": "יש ב־Pier 39 ובמרכזי הקניות.",
+          "signal": "קליטה טובה.",
+          "safety": "אזור תיירותי. לשמור על ארנק וטלפון בצפיפות.",
+          "tips": "מקום טוב לשלב עם אלקטרז (Pier 33 קרוב) ועם הכבל קאר."
+        },
+        "bestTime": "בוקר מאוחר לאריות הים. ערב לאווירה ושקיעה.",
+        "important": [
+          "מספר אריות הים משתנה לפי עונה. לפעמים יש מעט מאוד."
+        ],
+        "weatherAlt": "יש הרבה מקומות מקורים. Aquarium of the Bay ב־Pier 39 או Musée Mécanique. מחירים לבדוק באתר.",
+        "links": [
+          {
+            "label": "האתר הרשמי של Pier 39",
+            "url": "https://www.pier39.com/"
+          },
+          {
+            "label": "Fisherman's Wharf הרשמי",
+            "url": "https://www.fishermanswharf.org/"
+          }
+        ]
+      }
     },
     {
       "id": "cable-car",
@@ -307,7 +496,58 @@
       "imageQuery": "San Francisco cable car Powell Hyde",
       "imageMatch": [
         "cable car"
-      ]
+      ],
+      "see": "נסיעה בכבל קאר ההיסטורי מ־Powell & Market במעלה ובמורד הגבעות עד Fisherman's Wharf",
+      "visit": "1–2 שעות כולל המתנה",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "נסיעה בקו Powell–Hyde",
+            "required": true,
+            "note": "מתחילים בתחנת הקצה Powell & Market, ליד המלון. מסיימים ב־Hyde & Beach ליד Ghirardelli Square."
+          },
+          {
+            "name": "Lombard Street",
+            "required": false,
+            "note": "הקו עובר ליד הקטע המתפתל. אפשר לרדת ב־Lombard ולהמשיך ברגל."
+          },
+          {
+            "name": "Cable Car Museum",
+            "required": false,
+            "note": "מוזיאון קטן עם המנועים שמושכים את הכבלים. לבדוק שעות באתר הרשמי."
+          }
+        ],
+        "duration": {
+          "min": "20–30 דקות נסיעה לכיוון",
+          "recommended": "שעה עד שעתיים כולל תור",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה. נוסעים באוויר הפתוח",
+          "תיק קטן שאפשר להחזיק ביד אחת"
+        ],
+        "expect": {
+          "crowds": "תור ארוך בתחנת Powell & Market בקיץ, לפעמים שעה ויותר.",
+          "parking": "לא צריך רכב. התחנה במרחק הליכה קצר מ־Axiom Hotel.",
+          "toilets": "אין בכבל קאר. להשתמש לפני, בתחנת BART/Muni Powell או במלון.",
+          "signal": "קליטה טובה.",
+          "safety": "לעמוד על המדרגה החיצונית רק עם אחיזה חזקה. להקשיב למפעיל.",
+          "tips": "בתחנת Hyde & Beach התור לחזרה לרוב קצר יותר. אפשר להתחיל משם, או לעלות בתחנת ביניים."
+        },
+        "bestTime": "מוקדם בבוקר או בערב, כשהתור קצר.",
+        "important": [
+          "בתחנות הקצה צריך לשלם מראש (Clipper, MuniMobile או קיוסק). נכון ל־2026, לבדוק שוב ל־2027.",
+          "מחיר הנסיעה: לבדוק באתר הרשמי של SFMTA."
+        ],
+        "weatherAlt": "הכבל קאר פועל גם בגשם קל. ביום גשום אפשר לבקר ב־Cable Car Museum במקום.",
+        "links": [
+          {
+            "label": "Cable Cars באתר SFMTA",
+            "url": "https://www.sfmta.com/getting-around/muni/cable-cars"
+          }
+        ]
+      }
     },
     {
       "id": "lands-end",
@@ -325,7 +565,69 @@
       "imageQuery": "Lands End San Francisco trail",
       "imageMatch": [
         "lands end"
-      ]
+      ],
+      "see": "שביל חוף מעל צוקים, עם נוף לגשר, הריסות Sutro Baths וחורשות ברוש",
+      "visit": "1.5–2.5 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Coastal Trail",
+            "required": true,
+            "note": "השביל המרכזי לאורך הצוקים עם תצפיות לגשר. מתחילים מחניון Merrie Way או מ־Lands End Lookout."
+          },
+          {
+            "name": "Sutro Baths",
+            "required": false,
+            "note": "שרידי בית מרחץ ענק מתחילת המאה ה־20. ירידה קצרה מהחניון."
+          },
+          {
+            "name": "Mile Rock Beach והלברינת",
+            "required": false,
+            "note": "ירידה במדרגות לחוף קטן ולמבוך אבנים מעל המים. המדרגות תלולות."
+          },
+          {
+            "name": "Legion of Honor",
+            "required": false,
+            "note": "מוזיאון אמנות בקצה השביל, עם תצפית על העיר."
+          }
+        ],
+        "duration": {
+          "min": "שעה",
+          "recommended": "שעתיים",
+          "trails": [
+            {
+              "name": "Coastal Trail (Lands End)",
+              "length": "כ־5.5 ק״מ הלוך־חזור",
+              "gain": "כ־100 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "מעיל רוח. ערפל ורוח חזקה מהאוקיינוס",
+          "נעלי הליכה עם סוליה טובה. יש מדרגות וקטעי עפר",
+          "שכבות. חם בקטעים המוגנים, קר בצוקים"
+        ],
+        "expect": {
+          "crowds": "בינוני. עמוס יותר בסופי שבוע.",
+          "parking": "חניון Merrie Way ליד Lands End Lookout, וחניה ליד Legion of Honor. מתמלא בסופי שבוע.",
+          "toilets": "יש ב־Lands End Lookout (מרכז מבקרים).",
+          "signal": "קליטה סבירה, חלשה במקומות.",
+          "safety": "להישאר על השביל ולהתרחק מהצוקים. היו נפילות קטלניות באזור.",
+          "tips": "אפשר לסיים ב־Cliff House או לשלב עם Golden Gate Park."
+        },
+        "bestTime": "אחר הצהריים, כשהערפל מתפזר. שקיעה יפה מאוד.",
+        "important": [
+          "ההנחיה של NPS: להישאר על השבילים ולשמור מרחק מהצוקים."
+        ],
+        "weatherAlt": "בערפל כבד אין נוף לגשר. אפשר לבקר ב־Legion of Honor או ב־de Young ב־Golden Gate Park.",
+        "links": [
+          {
+            "label": "Lands End (NPS)",
+            "url": "https://www.nps.gov/goga/planyourvisit/landsend.htm"
+          }
+        ]
+      }
     },
     {
       "id": "sea-airport",
@@ -392,8 +694,89 @@
       "imageMatch": [
         "paradise"
       ],
-      "visit": "3–5 שעות",
-      "see": "כרי פרחים ותצפית על ההר. שבילים כמו Skyline Trail."
+      "visit": "3–6 שעות",
+      "see": "כרי פרחים אלפיניים מתחת לפסגת Rainier, קרחונים ומפלי Myrtle Falls",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Skyline Trail (לולאה)",
+            "required": true,
+            "note": "המסלול המרכזי של Paradise. עולה דרך כרי פרחים ל־Panorama Point עם תצפית על הקרחונים."
+          },
+          {
+            "name": "Myrtle Falls",
+            "required": false,
+            "note": "הליכה קצרה וקלה על Skyline Trail עד המפל, עם ההר ברקע. מתאים אם אין זמן ללולאה המלאה."
+          },
+          {
+            "name": "Nisqually Vista Trail",
+            "required": false,
+            "note": "לולאה קצרה ושטוחה יחסית עם תצפית על קרחון Nisqually."
+          },
+          {
+            "name": "Henry M. Jackson Visitor Center",
+            "required": false,
+            "note": "תערוכה, סרט על הפארק ומידע עדכני על מצב השבילים. שווה עצירה לפני היציאה לשביל."
+          }
+        ],
+        "duration": {
+          "min": "כשעתיים (Myrtle Falls ותצפיות)",
+          "recommended": "5–6 שעות כולל Skyline Trail",
+          "trails": [
+            {
+              "name": "Skyline Trail loop",
+              "length": "כ־8.8 ק״מ (לולאה)",
+              "gain": "כ־520 מ׳"
+            },
+            {
+              "name": "Skyline Trail to Myrtle Falls",
+              "length": "כ־1.6 ק״מ הלוך־חזור",
+              "gain": "מתון"
+            },
+            {
+              "name": "Nisqually Vista Trail",
+              "length": "כ־1.9 ק״מ (לולאה)",
+              "gain": "מתון"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות: בוקר קריר בגובה כ־1,650 מ׳, צהריים יכולים להיות חמימים",
+          "מעיל רוח וגשם קל, מזג האוויר על ההר משתנה מהר",
+          "נעלי הליכה עם סוליה טובה, ייתכנו כתמי שלג בחלק העליון",
+          "כובע, משקפי שמש וקרם הגנה, אין צל בכרי הפרחים"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בקיץ, במיוחד בסופי שבוע ובשעות הצהריים.",
+          "parking": "מ־Packwood: US-12, אחר כך SR 123 ו־Stevens Canyon Road (כשעה, אם הכביש פתוח). חלופה דרך כניסת Nisqually (Morton–Ashford), ארוכה יותר. החניה ב־Paradise מתמלאת מוקדם.",
+          "toilets": "יש שירותים ב־Visitor Center ובאזור Paradise Inn. ב־Panorama Point יש שירותים על השביל.",
+          "signal": "קליטה חלשה ולא יציבה בפארק. להוריד מפות לא מקוונות מראש.",
+          "safety": "לא לעלות על כתמי שלג תלולים. אחרי Panorama Point להישאר על High Skyline Trail שעוקף מדרון קרח מסוכן. להישאר על השביל, אסור לדרוך על הצמחייה.",
+          "tips": "להגיע לפני 7:00 או אחרי 16:00 לפי המלצת הפארק. לקחת מים ואוכל, אין אפשרויות רבות בדרך מ־Packwood. דמי כניסה לפארק: לבדוק באתר הרשמי."
+        },
+        "bestTime": "בוקר מוקדם: חניה פנויה, אוויר צלול ופחות אנשים על השביל.",
+        "important": [
+          "הזמנת כניסה מתוזמנת (timed entry): הופעלה ל־Paradise ב־2024 בלבד. ב־2026 הפארק לא דרש הזמנה בשום אזור. נכון ל־2026, לבדוק שוב ל־2027.",
+          "Stevens Canyon Road היה פתוח בקיץ 2026 ונסגר לחורף ב־26 באוקטובר 2026. באביב 2027 מתוכננות עבודות בגשר Grove of the Patriarchs על הכביש עם השפעה על התנועה. נכון ל־2026, לבדוק שוב ל־2027.",
+          "אסור להכניס כלבים לשבילים. אין עמדות טעינה לרכב חשמלי בפארק."
+        ],
+        "weatherAlt": "בעננים ההר לא נראה. לבקר ב־Visitor Center, לעשות הליכה קצרה ל־Myrtle Falls, או לנסוע ל־Longmire ולשבילי היער הנמוכים.",
+        "links": [
+          {
+            "label": "Paradise באתר הפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/paradise.htm"
+          },
+          {
+            "label": "Skyline Trail",
+            "url": "https://www.nps.gov/mora/planyourvisit/skyline-trail.htm"
+          },
+          {
+            "label": "מצב הכבישים בפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
+          }
+        ]
+      }
     },
     {
       "id": "reflection-lakes",
@@ -414,8 +797,66 @@
       "imageMatch": [
         "reflection"
       ],
-      "visit": "20–30 דק׳",
-      "see": "ההר משתקף באגם ביום ללא רוח."
+      "visit": "30 דקות–שעה",
+      "see": "אגמים קטנים לצד הכביש שבהם Mount Rainier משתקף במים שקטים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "תצפית וצילום ההשתקפות",
+            "required": true,
+            "note": "האגמים צמודים ל־Stevens Canyon Road. ההשתקפות הכי טובה כשאין רוח."
+          },
+          {
+            "name": "הליכה לאורך שפת האגם",
+            "required": false,
+            "note": "הליכה קצרה לאורך הגדה לזוויות צילום שונות."
+          },
+          {
+            "name": "Pinnacle Peak Trail",
+            "required": false,
+            "note": "שביל תלול שמתחיל מול האגמים ועולה לאוכף עם נוף על Rainier. רק למי שיש כוח וזמן."
+          }
+        ],
+        "duration": {
+          "min": "15–20 דקות",
+          "recommended": "כשעה, או 2–3 שעות עם Pinnacle Peak",
+          "trails": [
+            {
+              "name": "Pinnacle Peak Trail",
+              "length": "כ־4.2 ק״מ הלוך־חזור",
+              "gain": "לבדוק באתר הפארק"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבה חמה לבוקר, ליד המים קריר",
+          "נעליים נוחות, הגדה יכולה להיות בוצית"
+        ],
+        "expect": {
+          "crowds": "חניה קטנה שמתמלאת בשעות השיא. בבוקר מוקדם שקט יותר.",
+          "parking": "כ־5 ק״מ מזרחית ל־Paradise על Stevens Canyon Road. חניה בצד הכביש. נוח לעצור בדרך בין Packwood ל־Paradise.",
+          "toilets": "לא לסמוך על שירותים במקום. השירותים הקרובים ב־Paradise.",
+          "signal": "קליטה חלשה או אין.",
+          "safety": "תנועה על הכביש ליד החניה. לשמור על השפה ולא לדרוך על הצמחייה.",
+          "tips": "בבוקר אין בדרך כלל רוח והמים חלקים. לבדוק שההר לא בעננים לפני שעוצרים לצילום."
+        },
+        "bestTime": "בוקר מוקדם, לפני שהרוח מתחילה.",
+        "important": [
+          "הגישה תלויה ב־Stevens Canyon Road. הכביש היה פתוח בקיץ 2026 וצפויות עבודות בגשר Grove of the Patriarchs ב־2027. נכון ל־2026, לבדוק שוב ל־2027."
+        ],
+        "weatherAlt": "בעננים או ברוח אין השתקפות. לוותר ולהמשיך ל־Paradise או לחזור בשעה אחרת באותו יום.",
+        "links": [
+          {
+            "label": "Paradise ו־Reflection Lakes באתר הפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/paradise.htm"
+          },
+          {
+            "label": "מצב הכבישים בפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
+          }
+        ]
+      }
     },
     {
       "id": "rainier-sunrise",
@@ -437,8 +878,88 @@
         "sunrise",
         "rainier"
       ],
-      "visit": "3–4 שעות",
-      "see": "הנקודה הגבוהה שמגיעים אליה ברכב, עם נוף לצד המזרחי של ההר."
+      "visit": "4–6 שעות",
+      "see": "הנקודה הגבוהה שאפשר להגיע אליה ברכב בפארק, מול קרחון Emmons ושבילי רכס",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Mount Fremont Lookout",
+            "required": true,
+            "note": "דרך Sourdough Ridge Trail לתצפית אש היסטורית. נוף פתוח על ההר ולפעמים עזי הרים."
+          },
+          {
+            "name": "Emmons Vista Overlooks",
+            "required": false,
+            "note": "הליכה קצרה מהחניה לתצפית על קרחון Emmons. מתאים לכולם."
+          },
+          {
+            "name": "First Burroughs Mountain",
+            "required": false,
+            "note": "שביל בטונדרה אלפינית, קרוב מאוד להר. קשה יותר, לפעמים עם שלג על השביל."
+          },
+          {
+            "name": "Sunrise Visitor Center",
+            "required": false,
+            "note": "מידע על מצב השבילים ותערוכה. פתוח בדרך כלל מתחילת יולי עד תחילת ספטמבר."
+          }
+        ],
+        "duration": {
+          "min": "כשעתיים (תצפיות והליכה קצרה)",
+          "recommended": "5 שעות כולל Mount Fremont Lookout",
+          "trails": [
+            {
+              "name": "Mount Fremont Lookout",
+              "length": "כ־9 ק״מ הלוך־חזור",
+              "gain": "לבדוק באתר הפארק"
+            },
+            {
+              "name": "First Burroughs Mountain",
+              "length": "כ־7.5 ק״מ הלוך־חזור",
+              "gain": "לבדוק באתר הפארק"
+            },
+            {
+              "name": "Emmons Vista Overlooks",
+              "length": "כ־1.6 ק״מ הלוך־חזור",
+              "gain": "מתון"
+            }
+          ]
+        },
+        "clothing": [
+          "שכבות ומעיל רוח: גובה כ־1,950 מ׳, על הרכס נושבת רוח",
+          "כובע, משקפי שמש וקרם הגנה, אין צל בכלל",
+          "נעלי הליכה סגורות, השבילים סלעיים"
+        ],
+        "expect": {
+          "crowds": "עמוס בסופי שבוע. בימי חול ובבוקר פחות.",
+          "parking": "מ־Packwood: US-12, אחר כך SR 123 (Cayuse Pass), SR 410 ו־White River Road עד Sunrise. נסיעה ארוכה יותר מ־Paradise, לבדוק זמן במפות. החניה מתמלאת בשעות השיא.",
+          "toilets": "יש שירותים באזור ה־Visitor Center וה־Day Lodge.",
+          "signal": "קליטה חלשה מאוד או אין. להוריד מפות מראש.",
+          "safety": "הכביש תלול וצר עם פיתולים. בשבילים: גובה, שמש חזקה, שלג על Burroughs. לא להאכיל חיות בר.",
+          "tips": "למלא דלק ב־Packwood. ב־Day Lodge יש אוכל בעונה, אבל כדאי להביא אוכל ומים. דמי כניסה: לבדוק באתר הרשמי."
+        },
+        "bestTime": "בוקר מוקדם: אור טוב על ההר מהצד המזרחי ופחות עומס.",
+        "important": [
+          "הזמנת כניסה מתוזמנת ל־Sunrise הופעלה ב־2024 וב־2025. ב־2026 לא נדרשה הזמנה. נכון ל־2026, לבדוק שוב ל־2027.",
+          "Sunrise Road נפתח בדרך כלל בסוף יוני או בתחילת יולי ונסגר בסוף ספטמבר או בתחילת אוקטובר. סוף אוגוסט בתוך העונה. נכון ל־2026, לבדוק שוב ל־2027.",
+          "החלפת גשר Fryingpan Creek על White River Road: בנייה פעילה מתוכננת ל־2027–2029 עם השפעה צפויה על התנועה. נכון ל־2026, לבדוק שוב ל־2027."
+        ],
+        "weatherAlt": "בעננים נמוכים הנוף נעלם. לוותר על הרכס ולעשות שבילי יער נמוכים, למשל Silver Falls באזור Ohanapecosh, אם פתוח.",
+        "links": [
+          {
+            "label": "Sunrise באתר הפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
+          },
+          {
+            "label": "עבודות בפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/park-construction.htm"
+          },
+          {
+            "label": "מצב הכבישים בפארק",
+            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
+          }
+        ]
+      }
     },
     {
       "id": "pike-place",
@@ -458,8 +979,59 @@
       "imageMatch": [
         "pike place"
       ],
-      "visit": "1–2 שעות",
-      "see": "השוק ההיסטורי, דוכני דגים ופרחים."
+      "visit": "1.5–3 שעות",
+      "see": "שוק ציבורי ותיק מעל המפרץ: דוכני דגים, פירות, אוכל רחוב ו־Gum Wall",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "סיור בשוק הראשי",
+            "required": true,
+            "note": "הדוכנים תחת השלט הגדול Public Market Center. דגים, פירות, פרחים ואוכל."
+          },
+          {
+            "name": "Pike Place Fish Market",
+            "required": false,
+            "note": "הדוכן שבו המוכרים זורקים דגים. כדאי לעמוד ולחכות להופעה."
+          },
+          {
+            "name": "Gum Wall ב־Post Alley",
+            "required": false,
+            "note": "קיר מכוסה מסטיקים בסמטה מתחת לשוק. עצירה קצרה לצילום."
+          },
+          {
+            "name": "אוכל בשוק",
+            "required": false,
+            "note": "הרבה דוכני אוכל ומאפים. כדאי לבוא רעבים ולטעום מכמה מקומות."
+          }
+        ],
+        "duration": {
+          "min": "כשעה",
+          "recommended": "2–3 שעות כולל אוכל",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים נוחים, סוף אוגוסט בסיאטל בדרך כלל נעים",
+          "שכבה דקה לערב או לרוח מהמפרץ"
+        ],
+        "expect": {
+          "crowds": "צפוף מאוד בסופי שבוע ובצהריים. לשמור על התיק.",
+          "parking": "במרכז העיר. חניונים בתשלום באזור, יקר. עדיף להגיע ברגל או בתחבורה ציבורית מהמלון.",
+          "toilets": "יש שירותים ציבוריים בשוק, לא תמיד קל למצוא. אפשר בבתי קפה.",
+          "signal": "קליטה טובה.",
+          "safety": "כיסים ותיקים בצפיפות. באזור מרכז העיר להיות ערניים בערב.",
+          "tips": "רוב הדוכנים נפתחים בבוקר ונסגרים לפני הערב. שעות פתיחה: לבדוק באתר הרשמי. הסניף הראשון של Starbucks נמצא כאן, התור ארוך."
+        },
+        "bestTime": "בוקר, אחרי שהדוכנים נפתחים ולפני עומס הצהריים.",
+        "important": [],
+        "weatherAlt": "רוב השוק מקורה, מתאים גם בגשם.",
+        "links": [
+          {
+            "label": "האתר הרשמי של Pike Place Market",
+            "url": "https://www.pikeplacemarket.org/"
+          }
+        ]
+      }
     },
     {
       "id": "space-needle",
@@ -480,7 +1052,53 @@
         "space needle"
       ],
       "visit": "1–1.5 שעות",
-      "see": "מגדל תצפית על העיר והמפרץ."
+      "see": "מגדל התצפית של סיאטל: נוף על העיר, המפרץ ו־Rainier, ורצפת זכוכית מסתובבת",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "מרפסת התצפית",
+            "required": true,
+            "note": "תצפית פתוחה על העיר והמפרץ. ביום צלול רואים את Mount Rainier."
+          },
+          {
+            "name": "The Loupe",
+            "required": false,
+            "note": "רצפת זכוכית מסתובבת במפלס התחתון של הצריח. מבט ישר למטה."
+          },
+          {
+            "name": "Chihuly Garden and Glass",
+            "required": false,
+            "note": "מוזיאון ואמנות זכוכית צמוד למגדל. יש כרטיס משולב."
+          }
+        ],
+        "duration": {
+          "min": "כשעה",
+          "recommended": "1.5 שעות, או 3 שעות עם Chihuly",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה דקה, למעלה יש רוח",
+          "בגדים נוחים, אין דרישות מיוחדות"
+        ],
+        "expect": {
+          "crowds": "תורים במעלית בשעות השיא ובשקיעה.",
+          "parking": "ב־Seattle Center. חניונים בתשלום בסביבה. אפשר להגיע ב־Monorail מ־Westlake Center במרכז העיר.",
+          "toilets": "יש שירותים במבנה.",
+          "signal": "קליטה טובה.",
+          "safety": "אין סיכון מיוחד.",
+          "tips": "המחיר משתנה לפי עונה ושעה, לבדוק באתר הרשמי ולקנות מראש. לבחור יום צלול בשביל הנוף."
+        },
+        "bestTime": "יום צלול. שקיעה יפה אבל הכי עמוסה.",
+        "important": [],
+        "weatherAlt": "בעננים הנוף מוגבל. לבחור ב־Chihuly Garden and Glass או במוזיאון MoPOP הסמוך, ולדחות את המגדל ליום צלול.",
+        "links": [
+          {
+            "label": "האתר הרשמי של Space Needle",
+            "url": "https://www.spaceneedle.com/"
+          }
+        ]
+      }
     },
     {
       "id": "seattle-port",
@@ -516,7 +1134,66 @@
         "ketchikan"
       ],
       "visit": "לפי שעות העגינה",
-      "see": "עיירת נמל עם רחוב Creek Street ההיסטורי."
+      "see": "עיירת דייגים צבעונית: Creek Street על כלונסאות, עמודי טוטם ומרכז יערות הגשם",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Creek Street ומרכז העיר",
+            "required": true,
+            "note": "רחוב עץ היסטורי על כלונסאות מעל הנחל. הליכה קצרה מהרציפים במרכז העיר."
+          },
+          {
+            "name": "Southeast Alaska Discovery Center",
+            "required": false,
+            "note": "מרכז מבקרים של שירות היערות, כבלוק אחד מהרציפים. תערוכות על יער הגשם ותרבויות הילידים. כניסה בתשלום בקיץ, לבדוק באתר הרשמי."
+          },
+          {
+            "name": "Totem Heritage Center",
+            "required": false,
+            "note": "אוסף עמודי טוטם מקוריים. הליכה של כרבע שעה מהנמל, או שאטל עירוני חינמי בעונה. לבדוק פרטים מקומית."
+          },
+          {
+            "name": "טיסה ימית ל־Misty Fjords",
+            "required": false,
+            "note": "פיורדים ומפלים מהאוויר. דורש הזמנה מראש ותלוי מזג אוויר. לוודא שהחזרה לפני מועד העלייה לאונייה."
+          }
+        ],
+        "duration": {
+          "min": "2–3 שעות במרכז העיר",
+          "recommended": "חצי יום עד יום, לפי שעות העגינה",
+          "trails": []
+        },
+        "clothing": [
+          "מעיל גשם אטום וכובע, זו אחת הערים הגשומות בארה״ב",
+          "שכבות: פליז מתחת למעיל",
+          "נעליים עמידות למים"
+        ],
+        "expect": {
+          "crowds": "צפוף מאוד במרכז העיר בימים עם כמה אוניות.",
+          "parking": "רוב האוניות עוגנות ברציפים 1–4 במרכז העיר, הכל בהליכה. חלק עוגנות ב־Ward Cove, כ־9 ק״מ מהמרכז, ואז נדרשת הסעה.",
+          "toilets": "במרכז המבקרים ובמבני הנמל.",
+          "signal": "קליטה סלולרית טובה במרכז העיר.",
+          "safety": "מדרכות ומדרגות עץ חלקלקות בגשם.",
+          "tips": "לבדוק מראש באיזה רציף עוגנת האונייה. להתחיל מ־Creek Street לפני שהעומס מגיע."
+        },
+        "bestTime": "מיד עם הירידה מהאונייה, לפני שהרחובות מתמלאים",
+        "important": [
+          "לחזור לאונייה לפי מועד העלייה (all aboard). האונייה לא מחכה.",
+          "טיסות ושייט לפיורדים מזמינים מראש."
+        ],
+        "weatherAlt": "Southeast Alaska Discovery Center ו־Totem Heritage Center, שניהם בפנים.",
+        "links": [
+          {
+            "label": "לשכת התיירות של Ketchikan",
+            "url": "https://www.visitktn.com/cruise-travelers/"
+          },
+          {
+            "label": "Southeast Alaska Discovery Center (שירות היערות)",
+            "url": "https://www.fs.usda.gov/r10/tongass/recreation/southeast-alaska-discovery-center"
+          }
+        ]
+      }
     },
     {
       "id": "dawes-glacier",
@@ -536,8 +1213,61 @@
       "imageMatch": [
         "dawes"
       ],
-      "visit": "מהסיפון",
-      "see": "שיט בפיורד צר עד חזית הקרחון."
+      "visit": "כמה שעות שייט נופי מהאונייה, ללא ירידה לחוף",
+      "see": "שייט בפיורד Endicott Arm עד חזית קרחון Dawes, קרחון שמתנפץ לים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "צפייה מהסיפון בחזית הקרחון",
+            "required": true,
+            "note": "Dawes הוא קרחון גאות שגושי קרח מתנתקים ממנו לים. לעמוד בשקט ולהקשיב לרעש הקרח."
+          },
+          {
+            "name": "צפייה בנוף הפיורד בדרך",
+            "required": true,
+            "note": "צוקים, מפלים וקרחונים צפים לאורך הפיורד. אפשר לראות כלבי ים על גושי קרח."
+          },
+          {
+            "name": "מקום תצפית בחרטום או במרפסת",
+            "required": false,
+            "note": "להגיע מוקדם לסיפון העליון בחרטום. מרפסת התא נותנת רק צד אחד."
+          }
+        ],
+        "duration": {
+          "min": "שעה בחזית הקרחון",
+          "recommended": "כל זמן השייט בפיורד",
+          "trails": []
+        },
+        "clothing": [
+          "מעיל חם ואטום לרוח, קר מאוד על הסיפון ליד הקרח",
+          "כובע צמר וכפפות",
+          "משקפת"
+        ],
+        "expect": {
+          "crowds": "הסיפונים הפתוחים מתמלאים מהר כשמתקרבים לקרחון.",
+          "parking": "אין ירידה מהאונייה. הכל מהסיפון.",
+          "toilets": "באונייה.",
+          "signal": "לרוב אין קליטה בפיורד.",
+          "safety": "סיפון רטוב וחלק. רוח חזקה.",
+          "tips": "לעקוב אחרי הודעות הקפטן על שעת ההגעה. משקפת שווה כאן הרבה."
+        },
+        "bestTime": "לפי הודעת הקפטן על ההגעה לחזית הקרחון",
+        "important": [
+          "המסלול תלוי בקרח ובמזג האוויר. הקפטן יכול לקצר או לשנות אותו."
+        ],
+        "weatherAlt": "צפייה מאזורים סגורים עם חלונות פנורמיים באונייה.",
+        "links": [
+          {
+            "label": "Tracy Arm-Fords Terror Wilderness (wilderness.net)",
+            "url": "https://wilderness.net/visit-wilderness/?ID=605"
+          },
+          {
+            "label": "שמורות הטבע ב־Tongass (שירות היערות)",
+            "url": "https://www.fs.usda.gov/r10/tongass/wilderness"
+          }
+        ]
+      }
     },
     {
       "id": "juneau",
@@ -556,7 +1286,66 @@
         "juneau"
       ],
       "visit": "לפי שעות העגינה",
-      "see": "בירת אלסקה, ונקודת היציאה ל־Mendenhall."
+      "see": "בירת אלסקה, אליה אין כביש מבחוץ. מרכז עיר הליכתי וקרחון Mendenhall בקרבת מקום",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "מרכז העיר ו־South Franklin Street",
+            "required": true,
+            "note": "רחובות היסטוריים ממש ליד רציפי האוניות. הכל בהליכה."
+          },
+          {
+            "name": "Goldbelt Tram (Mount Roberts)",
+            "required": false,
+            "note": "רכבל מהנמל לתצפית ושבילים על ההר. נכון לסוף 2026 הרכבל סגור עד להודעה חדשה אחרי תקלה באפריל 2026. לבדוק שוב ל־2027."
+          },
+          {
+            "name": "קרחון Mendenhall ו־Nugget Falls",
+            "required": false,
+            "note": "כ־20 ק״מ מהמרכז. מגיעים בשאטל, מונית או סיור. ראו כרטיס נפרד."
+          },
+          {
+            "name": "שייט לצפייה בלווייתנים",
+            "required": false,
+            "note": "פעילות פופולרית מאוד מ־Juneau. דורש הזמנה מראש ותיאום עם זמן החזרה לאונייה."
+          }
+        ],
+        "duration": {
+          "min": "2–3 שעות במרכז העיר",
+          "recommended": "יום מלא לפי שעות העגינה, עם יציאה אחת מחוץ לעיר",
+          "trails": []
+        },
+        "clothing": [
+          "מעיל גשם אטום",
+          "שכבות חמות, מזג האוויר משתנה מהר",
+          "נעלי הליכה עמידות למים"
+        ],
+        "expect": {
+          "crowds": "צפוף מאוד במרכז העיר בימים עם כמה אוניות.",
+          "parking": "האוניות עוגנות במרכז העיר. מרכז העיר בהליכה. ל־Mendenhall צריך שאטל, מונית או סיור.",
+          "toilets": "במבני הנמל ובמרכז העיר.",
+          "signal": "קליטה טובה בעיר.",
+          "safety": "מדרכות חלקות בגשם. בשייט ובטבע להישמע להוראות המדריכים.",
+          "tips": "להחליט מראש על יציאה אחת עיקרית: קרחון או לווייתנים. לא לנסות להספיק הכל."
+        },
+        "bestTime": "בוקר, לפני שכל האוניות פורקות נוסעים",
+        "important": [
+          "לחזור לאונייה לפי מועד העלייה (all aboard).",
+          "Goldbelt Tram סגור נכון לסוף 2026. לבדוק סטטוס ל־2027 באתר הרשמי."
+        ],
+        "weatherAlt": "מוזיאונים במרכז העיר, למשל Alaska State Museum.",
+        "links": [
+          {
+            "label": "Travel Juneau, לשכת התיירות",
+            "url": "https://www.traveljuneau.com/"
+          },
+          {
+            "label": "Goldbelt Tram, אתר רשמי",
+            "url": "https://goldbelttram.com/"
+          }
+        ]
+      }
     },
     {
       "id": "mendenhall",
@@ -577,7 +1366,66 @@
         "mendenhall"
       ],
       "visit": "2–3 שעות כולל הגעה",
-      "see": "קרחון ומפל Nugget Falls. אופציה."
+      "see": "קרחון Mendenhall ומפל Nugget Falls, שביל קל עד המפל ליד חזית הקרחון",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Photo Point Trail",
+            "required": true,
+            "note": "שביל קצר ונגיש עם תצפית ישירה על הקרחון והאגם."
+          },
+          {
+            "name": "Nugget Falls Trail",
+            "required": true,
+            "note": "שביל מישורי עד המפל ליד הקרחון. כניסה לשבילים ללא תשלום לפי שירות היערות."
+          },
+          {
+            "name": "Mendenhall Glacier Visitor Center",
+            "required": false,
+            "note": "מרכז מבקרים של שירות היערות. בקיץ נדרש כרטיס כניסה למבנה, לבדוק באתר הרשמי."
+          }
+        ],
+        "duration": {
+          "min": "שעה וחצי כולל נסיעה",
+          "recommended": "2–3 שעות כולל הגעה",
+          "trails": [
+            {
+              "name": "Nugget Falls Trail",
+              "length": "כ־1.3 ק״מ לכל כיוון",
+              "gain": "מועט, שביל מישורי"
+            }
+          ]
+        },
+        "clothing": [
+          "מעיל גשם, ליד המפל יש רסס",
+          "שכבה חמה, רוח קרה מהקרחון",
+          "נעליים עמידות למים"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בימי אוניות, במיוחד בשעות הצהריים.",
+          "parking": "כ־20 ק״מ ממרכז Juneau. מגיעים בשאטל מהנמל, מונית או סיור מאורגן.",
+          "toilets": "במרכז המבקרים ובאזור החניה.",
+          "signal": "קליטה סבירה באזור.",
+          "safety": "לא לגשת לקרח או לאגם. להישאר על השבילים. יש דובים באזור.",
+          "tips": "לקנות כרטיס שאטל הלוך־חזור ולוודא שעת חזרה עם מרווח לפני העלייה לאונייה."
+        },
+        "bestTime": "מוקדם ככל האפשר אחרי הירידה מהאונייה",
+        "important": [
+          "לא מוזמן. לתאם הסעה ולשמור מרווח זמן לחזרה לאונייה."
+        ],
+        "weatherAlt": "מרכז המבקרים, תצפית על הקרחון מבפנים.",
+        "links": [
+          {
+            "label": "Mendenhall Glacier Visitor Center (שירות היערות)",
+            "url": "https://www.fs.usda.gov/r10/tongass/offices/mendenhall-glacier-visitor-center"
+          },
+          {
+            "label": "Nugget Falls Trail (שירות היערות)",
+            "url": "https://www.fs.usda.gov/r10/tongass/recreation/trails/nugget-falls-trail"
+          }
+        ]
+      }
     },
     {
       "id": "skagway",
@@ -596,7 +1444,61 @@
         "skagway"
       ],
       "visit": "לפי שעות העגינה",
-      "see": "עיירת הבהלה לזהב, עם רחוב Broadway ההיסטורי."
+      "see": "עיירת הבהלה לזהב של קלונדייק, רחוב Broadway ההיסטורי והרים מסביב",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Broadway והרובע ההיסטורי",
+            "required": true,
+            "note": "מבני עץ מתקופת הבהלה לזהב. הכל בהליכה קצרה מהרציפים."
+          },
+          {
+            "name": "Klondike Gold Rush National Historical Park",
+            "required": true,
+            "note": "מרכז המבקרים בתחנת הרכבת הישנה, פחות מ־800 מ׳ מהרציפים. כניסה חינם. יש מסלול הליכה עצמאי עם אפליקציית NPS."
+          },
+          {
+            "name": "רכבת White Pass & Yukon Route",
+            "required": false,
+            "note": "רכבת נוף להרים. יוצאת ליד הרציפים. ראו כרטיס נפרד."
+          }
+        ],
+        "duration": {
+          "min": "2 שעות בעיירה",
+          "recommended": "יום מלא עם הרכבת, לפי שעות העגינה",
+          "trails": []
+        },
+        "clothing": [
+          "שכבות, לעתים יבש יותר מ־Juneau אבל קר ברוח",
+          "מעיל גשם קל",
+          "נעלי הליכה"
+        ],
+        "expect": {
+          "crowds": "העיירה קטנה ומתמלאת מאוד בימי אוניות.",
+          "parking": "הרציפים בקצה העיירה. מרכז העיר בהליכה.",
+          "toilets": "במרכז המבקרים של NPS ובאזור הנמל.",
+          "signal": "קליטה סבירה בעיירה.",
+          "safety": "בעבר נסגר חלק מרציף Railroad Dock בגלל סכנת מפולות סלעים. להישמע לשילוט ולהוראות הנמל.",
+          "tips": "NPS לא מפעיל עוד סיורים מודרכים ברגל. להוריד מראש את אפליקציית NPS למסלול העצמאי."
+        },
+        "bestTime": "בוקר לעיירה, ואז הרכבת אם הוזמנה",
+        "important": [
+          "לחזור לאונייה לפי מועד העלייה (all aboard).",
+          "סיורים שחוצים לקנדה דורשים דרכון. נכון ל־2026, לבדוק שוב ל־2027."
+        ],
+        "weatherAlt": "מרכז המבקרים והמוזיאונים של NPS בעיירה.",
+        "links": [
+          {
+            "label": "Klondike Gold Rush NHP (NPS)",
+            "url": "https://www.nps.gov/klgo/index.htm"
+          },
+          {
+            "label": "לשכת התיירות של Skagway",
+            "url": "https://skagway.com/"
+          }
+        ]
+      }
     },
     {
       "id": "white-pass",
@@ -617,8 +1519,56 @@
       "imageMatch": [
         "white pass"
       ],
-      "visit": "כ־3 שעות",
-      "see": "רכבת היסטורית במעלה ההרים. אופציה."
+      "visit": "כ־2.5–3 שעות ב־Summit Excursion",
+      "see": "רכבת היסטורית צרה שמטפסת ממפלס הים למעבר White Pass, נוף קניונים ומפלים",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Summit Excursion",
+            "required": true,
+            "note": "הלוך־חזור עד פסגת המעבר בלי לרדת מהרכבת. לפי האתר הרשמי לא נדרש דרכון."
+          },
+          {
+            "name": "מסלולים ארוכים לקנדה",
+            "required": false,
+            "note": "יש מסלולים שממשיכים ל־Yukon או British Columbia. אלה דורשים דרכון ולוקחים יותר זמן."
+          }
+        ],
+        "duration": {
+          "min": "כ־2.5 שעות",
+          "recommended": "כ־2.75 שעות ב־Summit Excursion",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה, קר יותר בפסגה",
+          "מעיל לעמידה במרפסות הקרונות"
+        ],
+        "expect": {
+          "crowds": "הרכבות מלאות בימי אוניות.",
+          "parking": "הרכבת יוצאת ליד רציפי האוניות או ממרכז Skagway.",
+          "toilets": "מומלץ להשתמש לפני העלייה לרכבת. לבדוק באתר הרשמי.",
+          "signal": "חלש עד אין בעלייה להרים.",
+          "safety": "לא להישען החוצה מהמרפסות בין הקרונות.",
+          "tips": "לקחת משקפת ומצלמה. להגיע לנקודת העלייה מוקדם לפי הכרטיס."
+        },
+        "bestTime": "רכבת בוקר משאירה זמן לעיירה אחר כך",
+        "important": [
+          "לא מוזמן. מומלץ להזמין מראש, דרך האונייה או באתר הרשמי.",
+          "מסלולים שחוצים לקנדה דורשים דרכון."
+        ],
+        "weatherAlt": "הנסיעה בתוך קרונות סגורים, כך שאפשר גם בגשם. בערפל הנוף מוגבל.",
+        "links": [
+          {
+            "label": "White Pass & Yukon Route, אתר רשמי",
+            "url": "https://wpyr.com/"
+          },
+          {
+            "label": "Summit Excursion, אתר רשמי",
+            "url": "https://wpyr.com/excursions/product/summit-excursion/"
+          }
+        ]
+      }
     },
     {
       "id": "victoria",
@@ -635,8 +1585,66 @@
       "imageMatch": [
         "victoria"
       ],
-      "visit": "לפי שעות העגינה",
-      "see": "הנמל הפנימי ובניין הפרלמנט. בדרך כלל עגינה קצרה, לאמת."
+      "visit": "לפי שעות העגינה, בדרך כלל עצירה קצרה",
+      "see": "בירת British Columbia: נמל פנימי, בניין הפרלמנט ומלון Fairmont Empress",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "Inner Harbour והטיילת",
+            "required": true,
+            "note": "לב העיר עם הפרלמנט וה־Empress. כ־20–30 דקות הליכה מ־Ogden Point לאורך החוף."
+          },
+          {
+            "name": "בניין הפרלמנט בערב",
+            "required": false,
+            "note": "הבניין מואר באורות בערב. מראה יפה מהנמל."
+          },
+          {
+            "name": "Butchart Gardens",
+            "required": false,
+            "note": "גנים מפורסמים, כ־20 ק״מ מהעיר. דורש סיור או הסעה וזמן מספיק. לבדוק שעות פתיחה באתר."
+          }
+        ],
+        "duration": {
+          "min": "שעתיים במרכז העיר",
+          "recommended": "לפי שעות העגינה",
+          "trails": []
+        },
+        "clothing": [
+          "שכבה חמה לערב",
+          "מעיל גשם קל",
+          "נעלי הליכה"
+        ],
+        "expect": {
+          "crowds": "עמוס ליד הנמל בערבים עם כמה אוניות.",
+          "parking": "האוניות עוגנות ב־Ogden Point. הליכה של 20–30 דקות למרכז, או שאטל, מונית ותחבורה ציבורית.",
+          "toilets": "במסוף הנמל ובמרכז העיר.",
+          "signal": "קנדה: לבדוק נדידה בחבילת הסלולר.",
+          "safety": "עיר בטוחה יחסית. לשים לב בדרך חזרה בחושך.",
+          "tips": "המטבע הוא דולר קנדי. כרטיס אשראי מתקבל כמעט בכל מקום."
+        },
+        "bestTime": "שקיעה ושעות הערב בנמל הפנימי",
+        "important": [
+          "זו קנדה: לרדת עם דרכון. לבדוק דרישות כניסה לפי האזרחות שלכם.",
+          "לחזור לאונייה לפי מועד העלייה (all aboard)."
+        ],
+        "weatherAlt": "Royal BC Museum ליד הנמל הפנימי, לבדוק שעות פתיחה.",
+        "links": [
+          {
+            "label": "Tourism Victoria, לשכת התיירות",
+            "url": "https://www.tourismvictoria.com/"
+          },
+          {
+            "label": "Greater Victoria Harbour Authority, נמל Ogden Point",
+            "url": "https://gvha.ca/"
+          },
+          {
+            "label": "Butchart Gardens, אתר רשמי",
+            "url": "https://butchartgardens.com/"
+          }
+        ]
+      }
     },
     {
       "id": "yyc",
@@ -1273,7 +2281,74 @@
       "imageQuery": "Griffith Observatory",
       "imageMatch": [
         "griffith"
-      ]
+      ],
+      "see": "מצפה כוכבים על הגבעה עם נוף ל־LA ולשלט Hollywood. תערוכות חינם וטלסקופים",
+      "visit": "2–3 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "המרפסות והנוף",
+            "required": true,
+            "note": "תצפית על כל העיר ועל שלט Hollywood. השטח הפתוח פתוח גם כשהבניין סגור."
+          },
+          {
+            "name": "תערוכות בבניין",
+            "required": true,
+            "note": "כניסה לבניין ולתערוכות בחינם. מטוטלת פוקו ותערוכות על החלל."
+          },
+          {
+            "name": "Samuel Oschin Planetarium",
+            "required": false,
+            "note": "מופע בכיפה. בתשלום, כרטיסים בבניין. מחיר ושעות לבדוק באתר."
+          },
+          {
+            "name": "הליכה ל־Mount Hollywood",
+            "required": false,
+            "note": "שביל מהמצפה לפסגה עם נוף טוב לשלט. חשוף לשמש."
+          }
+        ],
+        "duration": {
+          "min": "שעה וחצי",
+          "recommended": "2–3 שעות, כולל שקיעה",
+          "trails": [
+            {
+              "name": "Charlie Turner Trail ל־Mount Hollywood",
+              "length": "כ־4.5 ק״מ הלוך־חזור",
+              "gain": "כ־150 מ׳"
+            }
+          ]
+        },
+        "clothing": [
+          "בגדים קלים ביום. חם מאוד בספטמבר",
+          "כובע, מים וקרם הגנה לשביל",
+          "שכבה דקה לערב"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד לקראת שקיעה ובסופי שבוע.",
+          "parking": "חניה בתשלום בחניון ולאורך הכביש, רק בכרטיס אשראי. מקומות מעטים, ולעתים הכביש נסגר בעומס. אפשר להגיע ב־DASH Observatory.",
+          "toilets": "יש בבניין.",
+          "signal": "קליטה טובה.",
+          "safety": "בשביל: חם וחשוף. נחשים אפשריים. לקחת מים.",
+          "tips": "להגיע שעה וחצי לפני שקיעה כדי למצוא חניה. אחרי החשכה יש טלסקופים ציבוריים בחינם בערבים בהירים."
+        },
+        "bestTime": "לקראת שקיעה ונשארים לאורות העיר.",
+        "important": [
+          "הבניין סגור בימי שני. השטח הפתוח נשאר פתוח (נכון ל־2026, לבדוק שוב ל־2027).",
+          "הכניסה חינם, אבל החניה בתשלום. מחיר ושעות: לבדוק באתר הרשמי."
+        ],
+        "weatherAlt": "ביום מעונן או ערפילי הנוף מוגבל אבל התערוכות בפנים. בחום כבד לוותר על השביל ולהגיע בערב.",
+        "links": [
+          {
+            "label": "האתר הרשמי של Griffith Observatory",
+            "url": "https://griffithobservatory.org/"
+          },
+          {
+            "label": "איך מגיעים וחניה",
+            "url": "https://griffithobservatory.org/visit/getting-here/"
+          }
+        ]
+      }
     },
     {
       "id": "santa-monica",
@@ -1290,7 +2365,61 @@
       "imageQuery": "Santa Monica Pier",
       "imageMatch": [
         "santa monica"
-      ]
+      ],
+      "see": "המזח ההיסטורי עם גלגל ענק, לונה פארק קטן, חוף רחב ותחילת טיילת החוף",
+      "visit": "1.5–3 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "הליכה על המזח",
+            "required": true,
+            "note": "הליכה עד קצה המזח עם נוף לאוקיינוס ולחוף. הכניסה למזח חינם."
+          },
+          {
+            "name": "Pacific Park",
+            "required": false,
+            "note": "הלונה פארק על המזח עם הגלגל הענק. מחירים לבדוק באתר."
+          },
+          {
+            "name": "החוף והשקיעה",
+            "required": false,
+            "note": "חוף רחב מתחת למזח. המים קרירים יחסית."
+          },
+          {
+            "name": "אופניים ל־Venice",
+            "required": false,
+            "note": "שביל אופניים וטיילת לאורך החוף עד Venice Beach, כ־3 ק״מ."
+          }
+        ],
+        "duration": {
+          "min": "שעה",
+          "recommended": "2–3 שעות כולל חוף ושקיעה",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קיציים, בגד ים אם רוצים להיכנס",
+          "כובע וקרם הגנה",
+          "שכבה דקה לערב. לפעמים ערפל חופי בבוקר"
+        ],
+        "expect": {
+          "crowds": "עמוס מאוד בסופי שבוע ובערב.",
+          "parking": "חניונים ציבוריים בתשלום ליד המזח ובמרכז העיר Santa Monica. גם קו Metro E מגיע לאזור.",
+          "toilets": "יש על המזח ולאורך החוף.",
+          "signal": "קליטה טובה.",
+          "safety": "לשמור על חפצים. לשחות רק ליד מגדלי מצילים.",
+          "tips": "בסוף המזח יש שלט \"End of the Trail\" של Route 66. אפשר לשלב עם Third Street Promenade הסמוך."
+        },
+        "bestTime": "לפני שקיעה, ונשארים לאורות הגלגל.",
+        "important": [],
+        "weatherAlt": "בערפל או במזג אוויר קריר אפשר לבקר ב־Third Street Promenade או לנסוע ל־Getty Center.",
+        "links": [
+          {
+            "label": "האתר הרשמי של Santa Monica Pier",
+            "url": "https://www.santamonicapier.org/"
+          }
+        ]
+      }
     },
     {
       "id": "getty",
@@ -1307,7 +2436,69 @@
       "imageQuery": "Getty Center Los Angeles",
       "imageMatch": [
         "getty"
-      ]
+      ],
+      "see": "מוזיאון אמנות על גבעה עם אדריכלות לבנה, גנים ונוף על LA והאוקיינוס",
+      "visit": "2.5–4 שעות",
+      "guide": {
+        "verified": false,
+        "activities": [
+          {
+            "name": "אוסף המוזיאון",
+            "required": true,
+            "note": "ציורים אירופאיים כולל Van Gogh ‏(Irises), צילום ואמנות דקורטיבית. הכניסה חינם."
+          },
+          {
+            "name": "Central Garden",
+            "required": false,
+            "note": "גן מעוצב בין הבניינים, יפה מאוד לטיול רגוע."
+          },
+          {
+            "name": "תצפיות מהמרפסות",
+            "required": false,
+            "note": "נוף לעיר, להרים ולאוקיינוס. ביום בהיר רואים רחוק."
+          },
+          {
+            "name": "סיור אדריכלות",
+            "required": false,
+            "note": "סיורים חינם עם מדריך. לוח זמנים באתר."
+          }
+        ],
+        "duration": {
+          "min": "שעתיים",
+          "recommended": "3–4 שעות",
+          "trails": []
+        },
+        "clothing": [
+          "בגדים קלים. חם בחוץ, ממוזג בפנים",
+          "שכבה דקה לגלריות",
+          "נעליים נוחות"
+        ],
+        "expect": {
+          "crowds": "בינוני. עמוס יותר בסופי שבוע.",
+          "parking": "חניה בתשלום בתחתית הגבעה, משם רכבת קטנה (tram) עולה למוזיאון. מחיר: לבדוק באתר. יש גם אוטובוס Metro 761.",
+          "toilets": "יש בכמה מקומות במתחם.",
+          "signal": "קליטה טובה.",
+          "safety": "אין בעיות מיוחדות.",
+          "tips": "לפעמים יש תור ל־tram בשעות עומס. אפשר גם לעלות ברגל בשביל."
+        },
+        "bestTime": "בפתיחה בבוקר, או אחה״צ מאוחר לאור השקיעה.",
+        "important": [
+          "הכניסה חינם אבל צריך הזמנת כניסה בזמן מוגדר (timed-entry) מראש באתר (נכון ל־2026, לבדוק שוב ל־2027).",
+          "סגור בימי שני. שעות: לבדוק באתר הרשמי.",
+          "נכון ל־2026 חלק מהגלריות סגורות לשיפוצים. לבדוק מה פתוח ל־2027."
+        ],
+        "weatherAlt": "רוב הביקור בפנים, כך שמתאים גם ביום חם מאוד או גשום.",
+        "links": [
+          {
+            "label": "ביקור ב־Getty Center",
+            "url": "https://www.getty.edu/visit/center/"
+          },
+          {
+            "label": "חניה ותחבורה",
+            "url": "https://www.getty.edu/visit/center/parking-and-transportation/"
+          }
+        ]
+      }
     }
   ],
   "days": [
@@ -1393,7 +2584,8 @@
         "rainier-paradise",
         "reflection-lakes",
         "packwood"
-      ]
+      ],
+      "notes": "הדרך הקצרה מ־Packwood ל־Paradise עוברת בכביש Stevens Canyon. לבדוק לפני הטיול שהוא פתוח (עבודות גשר מתוכננות ל־2027)."
     },
     {
       "date": "2027-08-25",
@@ -1410,7 +2602,8 @@
         "packwood",
         "rainier-sunrise",
         "packwood"
-      ]
+      ],
+      "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק."
     },
     {
       "date": "2027-08-26",
@@ -2129,7 +3322,8 @@
       "title": "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה לריינייר ב־2027",
       "category": "הזמנות",
       "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
-      "status": "planning"
+      "status": "planning",
+      "notes": "ב־2026 לא נדרשה הזמנה. לבדוק מה הוחלט ל־2027."
     },
     {
       "id": "t-hotels-rockies",
@@ -2431,18 +3625,18 @@
       "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
       "cost": null,
       "status": "planning",
-      "notes": "יש דמי כניסה. בקיצים האחרונים נדרשה גם הזמנת כניסה בשעה קבועה, ולבדוק אם זה יחול גם ב־2027."
+      "notes": "יש דמי כניסה. ב־2024 נדרשה הזמנת כניסה בשעה קבועה ל־Paradise ול־Sunrise, ב־2025 רק ל־Sunrise, ולפי הפארק ב־2026 לא נדרשה. ל־2027 עוד לא פורסם. לבדוק באביב 2027."
     },
     {
       "id": "a-alcatraz",
       "name": "אלקטרז",
       "region": "sf",
       "point": "alcatraz",
-      "booking": "recommended",
+      "booking": "required",
       "url": "https://www.nps.gov/alca/planyourvisit/index.htm",
       "cost": null,
       "status": "option",
-      "notes": "הצעה. הכרטיסים נמכרים מראש ועלולים להיגמר."
+      "notes": "הצעה. הכרטיסים נמכרים רק מראש, דרך Alcatraz City Cruises, ובקיץ נגמרים לעיתים חודש ויותר לפני (נכון ל־2026)."
     },
     {
       "id": "a-gondola",
@@ -2490,7 +3684,7 @@
       "url": null,
       "cost": null,
       "status": "option",
-      "notes": "אופציה. אפשר לקנות דרך Celebrity או באופן עצמאי, ולוודא את שעת החזרה לאונייה."
+      "notes": "אופציה. השבילים, כולל Nugget Falls, חינם. כניסה למרכז המבקרים בתשלום בקיץ. אפשר להגיע עם טיול של Celebrity או באופן עצמאי, ולוודא את שעת החזרה לאונייה."
     },
     {
       "id": "a-whitepass",
@@ -2525,18 +3719,18 @@
       "url": "https://griffithobservatory.org",
       "cost": null,
       "status": "option",
-      "notes": "הצעה. לבדוק את שעות הפתיחה באתר."
+      "notes": "הצעה. הכניסה חינם. הבניין סגור בימי שני. החניה בתשלום ומוגבלת (נכון ל־2026)."
     },
     {
       "id": "a-getty",
       "name": "מרכז Getty",
       "region": "la",
       "point": "getty",
-      "booking": "check",
+      "booking": "required",
       "url": "https://www.getty.edu/visit/center/",
       "cost": null,
       "status": "option",
-      "notes": "הצעה. לבדוק באתר אם נדרשת הזמנה מראש ואת עלות החניה."
+      "notes": "הצעה. הכניסה חינם אבל צריך להזמין מראש כרטיס לשעה מסוימת. סגור בימי שני. החניה בתשלום (נכון ל־2026)."
     }
   ],
   "budget": {
