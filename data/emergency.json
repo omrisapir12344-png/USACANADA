@@ -1,0 +1,139 @@
+{
+  "checkedOn": "2026-11-21",
+  "numbers": [
+    {
+      "label": "חירום בארה״ב (משטרה, כיבוי, אמבולנס)",
+      "value": "911",
+      "note": "חיוג חינם מכל טלפון, גם בלי כרטיס SIM מקומי. במקרה של איבוד הכרה, פרכוסים או קושי בנשימה – 911 מיד.",
+      "source": "https://www.poison.org/"
+    },
+    {
+      "label": "מוקד הרעלות ארה״ב (Poison Control)",
+      "value": "1-800-222-1222",
+      "note": "חינם, 24/7. יש גם כלי ייעוץ מקוון באתר.",
+      "source": "https://www.poison.org/"
+    },
+    {
+      "label": "חירום בקנדה (משטרה, כיבוי, אמבולנס)",
+      "value": "911",
+      "note": "Parks Canada: בכל הפארקים הלאומיים חייגו 911. הקליטה הסלולרית לא אמינה באזורים מרוחקים.",
+      "source": "https://parks.canada.ca/voyage-travel/securite-safety/urgence-emergency"
+    },
+    {
+      "label": "פארק לאומי ג׳ספר – חילוץ, שריפות יער, חיות בר (לא דחוף)",
+      "value": "780-852-6155",
+      "note": "למצבי סכנת חיים, משטרה ואמבולנס – 911. המספר הזה לחילוץ/שריפות/דיווח חיות בר, לפי טבלת Parks Canada.",
+      "source": "https://parks.canada.ca/voyage-travel/securite-safety/urgence-emergency"
+    },
+    {
+      "label": "פארק לאומי בנאף (אזור קנמור) – חירום וחילוץ",
+      "value": "911",
+      "note": "בבנאף גם חילוץ ושריפות דרך 911. דיווח על חיות בר שאינו דחוף: 403-762-1470.",
+      "source": "https://parks.canada.ca/voyage-travel/securite-safety/urgence-emergency"
+    },
+    {
+      "label": "פארק לאומי הר ריינייר – חירום",
+      "value": "911",
+      "note": "בחירום חייגו 911. הקליטה הסלולרית בפארק חלקית ובמקומות רבים אינה קיימת – לא לסמוך על הטלפון בשבילים; לדווח במרכז מבקרים או לריינג׳ר. טלפון כללי של הפארק (לא לחירום): 360-569-2211.",
+      "source": "https://www.nps.gov/mora/planyourvisit/safety.htm"
+    },
+    {
+      "label": "חדר המצב של משרד החוץ (לישראלים בחו״ל, 24/7)",
+      "value": "+972-2-5303155",
+      "note": "מופיע בדפים רשמיים של נציגויות ישראל (embassies.gov.il), כולל דף הקונסוליה בטורונטו. מומלץ גם להתקין את אפליקציית TravIL של משרד החוץ. לאמת באתר משרד החוץ לפני הטיסה.",
+      "source": "https://embassies.gov.il/toronto/ConsularServices/Pages/General-Information.aspx"
+    }
+  ],
+  "missions": [
+    {
+      "name": "הקונסוליה הכללית של ישראל בסן פרנסיסקו (לצפון-מערב האוקיינוס השקט)",
+      "city": "סן פרנסיסקו",
+      "covers": "צפון קליפורניה, וושינגטון (כולל סיאטל והר ריינייר), אורגון, איידהו, מונטנה, אלסקה",
+      "phone": "(415) 844-7500 (מרכזייה; בחירום לפי הנחיות דף החירום) (לאמת באתר הרשמי)",
+      "url": "https://embassies.gov.il/san-francisco/Contact-us/Pages/emergency-information.aspx"
+    },
+    {
+      "name": "הקונסוליה הכללית של ישראל בלוס אנג׳לס",
+      "city": "לוס אנג׳לס",
+      "covers": "דרום קליפורניה ואזור לוס אנג׳לס",
+      "phone": "323-852-5500 (לאמת באתר הרשמי)",
+      "url": "https://embassies.gov.il/la/AboutTheEmbassy/Pages/contact-us.aspx"
+    },
+    {
+      "name": "הקונסוליה הכללית של ישראל בטורונטו",
+      "city": "טורונטו",
+      "covers": "אונטריו (מערבית לקינגסטון) ומערב קנדה – כולל אלברטה (קלגרי, ג׳ספר, קנמור), בריטיש קולומביה, מניטובה, ססקצ׳ואן והטריטוריות",
+      "phone": "416-823-7215 (לחירום בלבד) (לאמת באתר הרשמי)",
+      "url": "https://embassies.gov.il/toronto/ConsularServices/Pages/General-Information.aspx"
+    },
+    {
+      "name": "שגרירות ישראל באוטווה",
+      "city": "אוטווה",
+      "covers": "מזרח אונטריו עד קינגסטון בלבד (אינה מטפלת באלברטה)",
+      "phone": null,
+      "url": "https://embassies.gov.il/ottawa/ConsularServices/Pages/Jurisdiction.aspx"
+    }
+  ],
+  "hospitals": [
+    {
+      "area": "סן פרנסיסקו",
+      "name": "UCSF Health Hyde Hospital (לשעבר Saint Francis Memorial), 900 Hyde St – מיון 24/7",
+      "note": "כ־2 ק״מ מהמלון, כמה דקות נסיעה (הערכה)",
+      "url": "https://www.ucsfhealth.org/locations/emergency-department-er-hyde"
+    },
+    {
+      "area": "פאקווד / הר ריינייר",
+      "name": "Arbor Health – Morton Hospital, מורטון WA – חדר מיון",
+      "note": "כ־50 ק״מ מהמלון, כ־40 דקות נסיעה בכביש US-12 (הערכה). מאזור הפארק עצמו הדרך ארוכה יותר – בחירום חמור חייגו 911.",
+      "url": "https://myarborhealth.org/services-specialties/er/"
+    },
+    {
+      "area": "סיאטל",
+      "name": "Virginia Mason Medical Center – מיון (כניסה מ־Spring St, ביתן Jones, 1010 Spring St)",
+      "note": "כ־1 ק״מ מהמלון, כ־5 דקות נסיעה (הערכה)",
+      "url": "https://vmfh.org/our-hospitals/virginia-mason-medical-center/emergency-care"
+    },
+    {
+      "area": "קלגרי (ליד שדה התעופה)",
+      "name": "Peter Lougheed Centre, 3500 26 Avenue NE – מיון 24/7",
+      "note": "כ־12 ק״מ מהמלון, כ־15 דקות נסיעה (הערכה)",
+      "url": "https://www.albertahealthservices.ca/findhealth/facility.aspx?id=2"
+    },
+    {
+      "area": "ג׳ספר",
+      "name": "Seton – Jasper Healthcare Centre, 518 Robson St – מיון 24/7",
+      "note": "פחות מ־1 ק״מ מהמלון (הערכה)",
+      "url": "https://www.albertahealthservices.ca/findhealth/facility.aspx?id=1000410"
+    },
+    {
+      "area": "דד מנס פלטס / קנמור",
+      "name": "Canmore General Hospital, 1100 Hospital Place – מיון 24/7",
+      "note": "כ־8–10 ק״מ מהלינה, כ־10 דקות נסיעה (הערכה)",
+      "url": "https://www.albertahealthservices.ca/findhealth/facility.aspx?id=1000951"
+    },
+    {
+      "area": "לוס אנג׳לס",
+      "name": "Cedars-Sinai Medical Center – מיון",
+      "note": "כ־3 ק״מ מהמלון, כ־10 דקות נסיעה (הערכה, תלוי בפקקים)",
+      "url": "https://www.cedars-sinai.org/programs/emergency.html"
+    },
+    {
+      "area": "שייט – Celebrity Edge",
+      "name": "המרכז הרפואי של האונייה",
+      "note": "באונייה יש מרפאה עם צוות רפואי; הטיפול בתשלום נפרד ובדרך כלל נגבה לחשבון האונייה. שמרו קבלות ודו״ח רפואי להגשה לביטוח.",
+      "url": null
+    }
+  ],
+  "tips": [
+    "שמרו את מספר פוליסת ביטוח הנסיעות ואת הטלפון של מוקד הביטוח 24/7 על נייר ובטלפון במצב לא מקוון.",
+    "בארה״ב ביקור בחדר מיון יקר מאוד. כשאין סכנת חיים – התקשרו קודם למוקד הביטוח, שיפנה למרפאה דחופה (Urgent Care) או למוסד שבהסדר.",
+    "בסכנת חיים – אל תחכו לביטוח: חייגו 911 (בארה״ב ובקנדה) ועדכנו את הביטוח אחר כך.",
+    "גם בקנדה טיפול רפואי לתיירים כרוך בתשלום מלא – אותו כלל: ביטוח קודם, אלא אם זה מצב חירום.",
+    "בכל טיפול בקשו דו״ח רפואי וקבלות מפורטות ושמרו אותם להגשת תביעה.",
+    "תרופות: בארה״ב יש רשתות בתי מרקחת CVS ו־Walgreens, בקנדה Shoppers Drug Mart. חלקם פתוחים עד שעה מאוחרת. קחו תרופות קבועות בכמות מספקת עם מרשם באנגלית.",
+    "בפארקים הלאומיים (ריינייר, ג׳ספר, בנאף) הקליטה הסלולרית חלקית – ספרו למישהו על המסלול, הורידו מפות לא מקוונות ואל תסמכו על הטלפון.",
+    "קונסוליה: בסיאטל ובהר ריינייר מטפלת הקונסוליה בסן פרנסיסקו; באלברטה – הקונסוליה בטורונטו (לא השגרירות באוטווה). קווי החירום של הקונסוליות אינם לדרכונים או לוויזות.",
+    "דרכון אבד או נגנב: דווחו למשטרה המקומית וקבלו אישור, ואז פנו לקונסוליה הרלוונטית לתעודת מעבר.",
+    "התקינו את אפליקציית TravIL של משרד החוץ. יש בה כפתורי חיוג מהיר לחירום."
+  ]
+}

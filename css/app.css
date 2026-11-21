@@ -306,3 +306,11 @@ textarea { width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend .cat-pin { width: 22px; height: 22px; border-width: 2px; }
 .pop-cat { font-size: 12px; font-weight: 700; }
+
+/* journal grid */
+.jgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.jgrid figure { margin: 0; position: relative; }
+.jgrid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block; }
+.jgrid button { position: absolute; top: 4px; left: 4px; width: 26px; height: 26px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; font-size: 16px; line-height: 1; }
+button.li { background: none; border: 0; border-top: 1px solid var(--line); cursor: pointer; color: inherit; }
+.form .btn { flex: none; }

@@ -1,5 +1,5 @@
 /* Service worker – יומן מסע 2027 */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = `shell-${VERSION}`;
 const DATA = 'data';
 const TILES = 'osm-tiles';
@@ -14,7 +14,7 @@ const SHELL_FILES = [
   'assets/icons/icon.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
   ...[400, 500, 600, 700].flatMap(w => [`vendor/fonts/plex-hebrew-${w}.woff2`, `vendor/fonts/plex-latin-${w}.woff2`])
 ];
-const DATA_FILES = ['data/trip.json', 'data/credits.json', 'data/routes.json'];
+const DATA_FILES = ['data/trip.json', 'data/credits.json', 'data/routes.json', 'data/emergency.json', 'data/food.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {

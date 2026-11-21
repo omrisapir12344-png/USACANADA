@@ -1,0 +1,213 @@
+{
+  "checkedOn": "2026-11-21",
+  "areas": {
+    "sf": [
+      {
+        "name": "Ferry Building Marketplace",
+        "type": "שוק אוכל",
+        "why": "דוכנים מקומיים, קפה ומאפים בבניין המעבורות ההיסטורי",
+        "price": "$$",
+        "near": "ב־Embarcadero, ליד ה־Ferry Building",
+        "url": "https://www.ferrybuildingmarketplace.com",
+        "query": "Ferry Building Marketplace, San Francisco"
+      },
+      {
+        "name": "Hog Island Oyster Co.",
+        "type": "פירות ים / צדפות",
+        "why": "צדפות טריות מחוות הגידול שלהם, עם נוף למפרץ",
+        "price": "$$$",
+        "near": "בתוך ה־Ferry Building",
+        "url": "https://hogislandoysters.com",
+        "query": "Hog Island Oyster Co, Ferry Building, San Francisco"
+      },
+      {
+        "name": "Tadich Grill",
+        "type": "מסעדת דגים קלאסית",
+        "why": "מהמסעדות הוותיקות בעיר, אווירה של פעם",
+        "price": "$$$",
+        "near": "ב־Financial District, ברחוב California",
+        "url": "https://www.tadichgrillsf.com",
+        "query": "Tadich Grill, San Francisco"
+      },
+      {
+        "name": "Boudin Bakery",
+        "type": "מאפייה / בית קפה",
+        "why": "לחם מחמצת מפורסם, מרק בתוך כיכר לחם",
+        "price": "$",
+        "near": "ב־Fisherman's Wharf, קרוב ל־Pier 39",
+        "url": "https://boudinbakery.com",
+        "query": "Boudin Bakery, 160 Jefferson St, San Francisco"
+      }
+    ],
+    "rainier": [
+      {
+        "name": "Cliff Droppers",
+        "type": "המבורגרים",
+        "why": "סמאשבורגר מוכר בעיירה, עצירה טובה אחרי טיול",
+        "price": "$",
+        "near": "על כביש 12 בפאקווד",
+        "url": null,
+        "query": "Cliff Droppers, Packwood, WA"
+      },
+      {
+        "name": "Blue Spruce Saloon & Grill",
+        "type": "פאב / גריל",
+        "why": "בר ותיק עם אוכל פשוט ואווירה מקומית",
+        "price": "$",
+        "near": "על כביש 12 במרכז פאקווד",
+        "url": null,
+        "query": "Blue Spruce Saloon, Packwood, WA"
+      },
+      {
+        "name": "The Mountain Goat Coffee Company",
+        "type": "בית קפה",
+        "why": "קפה שקולים במקום ומאפים לפני היציאה להר",
+        "price": "$",
+        "near": "ב־Main St בפאקווד",
+        "url": null,
+        "query": "Mountain Goat Coffee Company, Packwood, WA"
+      }
+    ],
+    "seattle": [
+      {
+        "name": "Pike Place Chowder",
+        "type": "מרק צדפות",
+        "why": "צ'אודר עטור פרסים, יש תור אבל שווה",
+        "price": "$",
+        "near": "ב־Post Alley בשוק Pike Place",
+        "url": "https://www.pikeplacechowder.com",
+        "query": "Pike Place Chowder, Seattle"
+      },
+      {
+        "name": "Piroshky Piroshky",
+        "type": "מאפייה רוסית",
+        "why": "פירושקי מלוחים ומתוקים, אוכלים תוך כדי הליכה",
+        "price": "$",
+        "near": "ב־Pike Place, מול השוק",
+        "url": "https://www.piroshkybakery.com",
+        "query": "Piroshky Piroshky, 1908 Pike Place, Seattle"
+      },
+      {
+        "name": "Beecher's Handmade Cheese",
+        "type": "גבינות / בית קפה",
+        "why": "רואים מכינים גבינה, מק אנד צ'יז מפורסם",
+        "price": "$",
+        "near": "ב־Pike Place, ליד השוק",
+        "url": "https://beechershandmadecheese.com",
+        "query": "Beecher's Handmade Cheese, Pike Place, Seattle"
+      },
+      {
+        "name": "Matt's in the Market",
+        "type": "מסעדת דגים",
+        "why": "ארוחה טובה עם נוף לשוק ולמפרץ",
+        "price": "$$$",
+        "near": "בקומה העליונה של שוק Pike Place",
+        "url": "https://mattsinthemarket.com",
+        "query": "Matt's in the Market, Seattle"
+      }
+    ],
+    "rockies": [
+      {
+        "name": "Jasper Brewing Co.",
+        "type": "מבשלת בירה / פאב",
+        "why": "הבירה המקומית של ג'ספר, נפתחה מחדש אחרי השריפה",
+        "price": "$$",
+        "near": "ב־Connaught Drive במרכז ג'ספר",
+        "url": "https://jasperbrewingco.ca",
+        "query": "Jasper Brewing Co, Jasper, AB"
+      },
+      {
+        "name": "Bear's Paw Bakery",
+        "type": "מאפייה",
+        "why": "מוסד בג'ספר, מאפים ולחמניות קינמון נפגעה בשריפה ב־2024, לבדוק שפתוחה.",
+        "price": "$",
+        "near": "במרכז העיירה ג'ספר",
+        "url": "https://www.bearspawbakery.com",
+        "query": "Bear's Paw Bakery, Jasper, AB"
+      },
+      {
+        "name": "The Grizzly House",
+        "type": "פונדו",
+        "why": "פונדו ואבנים חמות מאז שנות ה־60, חוויה רטרו",
+        "price": "$$$",
+        "near": "ב־Banff Avenue במרכז באנף",
+        "url": "https://banffgrizzlyhouse.com",
+        "query": "Grizzly House, Banff, AB"
+      },
+      {
+        "name": "Wild Flour Bakery",
+        "type": "מאפייה / בית קפה",
+        "why": "לחמים, קרואסונים וכריכים לארוחת בוקר",
+        "price": "$",
+        "near": "ב־Bear Street במרכז באנף",
+        "url": "https://www.wildflourbakery.ca",
+        "query": "Wild Flour Bakery, Banff, AB"
+      },
+      {
+        "name": "Rocky Mountain Bagel Co.",
+        "type": "בייגל / בית קפה",
+        "why": "בייגלים טריים, מקום מקומי אהוב",
+        "price": "$",
+        "near": "ב־Main Street בקנמור",
+        "url": null,
+        "query": "Rocky Mountain Bagel Co, Main Street, Canmore, AB"
+      },
+      {
+        "name": "Crazyweed Kitchen",
+        "type": "מסעדה עכשווית",
+        "why": "ארוחת ערב מושקעת, ותיקה מאז 1997",
+        "price": "$$$",
+        "near": "ב־Railway Ave בקנמור",
+        "url": "https://www.crazyweed.ca",
+        "query": "Crazyweed Kitchen, Canmore, AB"
+      },
+      {
+        "name": "Laggan's Mountain Bakery",
+        "type": "מאפייה / דלי",
+        "why": "כריכים ומאפים לצהריים ליד אגם לואיז",
+        "price": "$",
+        "near": "ב־Samson Mall בכפר Lake Louise",
+        "url": null,
+        "query": "Laggan's Mountain Bakery, Lake Louise, AB"
+      }
+    ],
+    "la": [
+      {
+        "name": "The Original Farmers Market",
+        "type": "שוק אוכל",
+        "why": "שוק ותיק מ־1934 עם עשרות דוכנים",
+        "price": "$",
+        "near": "ב־3rd & Fairfax, צמוד ל־The Grove",
+        "url": "https://www.farmersmarketla.com",
+        "query": "The Original Farmers Market, Los Angeles"
+      },
+      {
+        "name": "Canter's Deli",
+        "type": "דלי יהודי",
+        "why": "דלי קלאסי מ־1931, פסטרמה וסנדוויצ'ים",
+        "price": "$$",
+        "near": "ב־Fairfax Ave, הליכה קצרה מהשוק",
+        "url": "https://www.cantersdeli.com",
+        "query": "Canter's Deli, Los Angeles"
+      },
+      {
+        "name": "Pink's Hot Dogs",
+        "type": "נקניקיות",
+        "why": "דוכן נקניקיות אגדי מ־1939",
+        "price": "$",
+        "near": "ב־La Brea, בין המלון להוליווד. צריך רכב.",
+        "url": "https://pinkshollywood.com",
+        "query": "Pink's Hot Dogs, 709 N La Brea Ave, Los Angeles"
+      },
+      {
+        "name": "Musso & Frank Grill",
+        "type": "מסעדה קלאסית / סטייקים",
+        "why": "המסעדה הוותיקה בהוליווד, מאז 1919",
+        "price": "$$$",
+        "near": "בשדרות הוליווד",
+        "url": "https://mussoandfrank.com",
+        "query": "Musso & Frank Grill, Hollywood"
+      }
+    ]
+  }
+}

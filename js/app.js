@@ -103,7 +103,13 @@
     queueMicrotask(async () => {
       const el = document.getElementById(id); if (!el) return;
       const w = await forecast(lat, lng, date);
-      el.innerHTML = w.pending ? `תחזית אמיתית תופיע כאן מ־${esc(new Intl.DateTimeFormat('he-IL').format(w.from))}`
+      if (w.pending) {
+        el.innerHTML = `תחזית אמיתית תופיע כאן מ־${esc(new Intl.DateTimeFormat('he-IL').format(w.from))}`;
+        const c = navigator.onLine || LS.get(`tg.clim.${(+lat).toFixed(1)},${(+lng).toFixed(1)}`) ? await climate(lat, lng, date) : null;
+        if (c) el.innerHTML = `ממוצע לתאריך הזה ב־2016–2025: <b class="num">${Math.round(c.min)}°–${Math.round(c.max)}°</b> · גשם ב־${c.rainy}% מהימים<br><span class="tiny">תחזית אמיתית תופיע מ־${esc(new Intl.DateTimeFormat('he-IL').format(w.from))}</span>`;
+        return;
+      }
+      el.innerHTML = w.pending ? ''
         : w.error ? 'אין חיבור. התחזית תתעדכן כשתהיה קליטה.'
         : `${WMO(w.code)[0]} <b class="num">${Math.round(w.min)}°–${Math.round(w.max)}°</b> · ${WMO(w.code)[1]} · משקעים ${w.pop ?? '–'}%${w.stale ? ' (שמור)' : ''}`;
     });
@@ -179,6 +185,7 @@
         <div class="h2"><small>יום אחר יום</small>המסלול באזור</div>
         ${days.map(dayCard).join('')}
         ${at.length ? `<div class="h2"><small>לפני שיוצאים</small>אטרקציות ומה להזמין</div>${at.map(attrRow).join('')}` : ''}
+        ${foodBlock(r.id)}
         ${r.beforeYouGo?.length ? `<div class="sect warn" style="margin-top:12px"><h4>${I('warn')}לסגור לפני שיוצאים</h4><ul>${r.beforeYouGo.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
       </div>`;
   };
@@ -195,6 +202,7 @@
     const lodge = D.hotels.find(h => h.id === d.lodging);
     const sugg = d.type === 'free' ? D.points.filter(p => p.region === r.id && p.suggestion) : [];
     const typeLbl = { transit: 'יום מעבר', explore: 'יום טיול', cruise: 'קרוז', free: 'יום פתוח' }[d.type];
+    const tl = timeline(d);
     const legChip = (l, first) => l ? `<div class="drive">${first ? '' : '<span class="line"></span>'}<a class="chip ${l.mode}" href="${gDir([l.from, l.to])}" target="_blank" rel="noopener">${I(l.mode === 'shuttle' ? 'bus' : 'car')}${first ? `יוצאים מ${esc(point(l.from).name)} · ` : ''}<b class="num">${l.km} ק״מ</b> · ${durText(l.min)}${l.mode === 'shuttle' ? ' · שאטל' : ''}</a></div>` : '';
     let n = 0;
     const stopHtml = (p) => {
@@ -204,7 +212,7 @@
       return `${legChip(leg, leg && leg === rt.legs[0])}
       <article class="stop" style="margin-bottom:12px">
         <a class="img" href="#/point/${p.id}" style="${bg(firstImg(p.id))}"><span class="n">${++n}</span>${p.visit ? `<span class="dur">${I('clock')}${esc(p.visit)}</span>` : ''}${statusOf(p) ? `<span class="badge">${statusOf(p)}</span>` : ''}</a>
-        <div class="bd"><h3>${esc(p.name)}</h3><div class="sub">${esc([p.sub || r.name, p.nameEn].filter(Boolean).join(' · '))}</div>
+        <div class="bd"><h3>${esc(p.name)}</h3><div class="sub">${tl?.at[p.id] ? `<b class="num" style="color:var(--blue)">≈ ${clock(tl.at[p.id])}</b> · ` : ''}${esc([p.sub || r.name, p.nameEn].filter(Boolean).join(' · '))}</div>
           <div class="rows">
             <div class="row"><span class="ic">${I('mountain')}</span><div><span class="k">מה עושים</span>${esc(p.see || p.summary || '')}${doList ? `<div class="chips" style="margin-top:6px">${doList}</div>` : ''}</div></div>
             ${how ? `<div class="row"><span class="ic">${I('pin')}</span><div><span class="k">איך מגיעים</span>${esc(how)}</div></div>` : ''}
@@ -227,6 +235,7 @@
         ${d.summary ? `<p class="lead" style="margin:0 2px 12px">${esc(d.summary)}</p>` : ''}
         ${transport.length && d.type === 'transit' ? `<div class="chips" style="margin-bottom:12px">${transport.map(p => `<span>${I('plane')} ${esc(p.name)}</span>`).join('')}</div>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
+        ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b> · ${sights.length} עצירות · סיום ב<b class="num">${clock(tl.end)}</b> בערך. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
         ${d.driveNote ? `<div class="notice">${esc(d.driveNote)}</div>` : ''}
         ${rt ? `<div class="routemap"><div id="dmap" style="height:100%"></div><a class="gbtn" href="${gDir(d.drive)}" target="_blank" rel="noopener">${I('pin')}פתח בגוגל מפות</a></div>` : ''}
         ${sights.length ? sights.map(stopHtml).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט. אין עצירות בחוף.' : d.type === 'free' ? 'עוד אין תוכנית ליום הזה.' : ''}</p>`}
@@ -297,6 +306,7 @@
         <p class="est">${g && !g.verified ? 'זמנים, ביגוד ומה מצפה הם הערכה. כדאי לאמת לפני הטיול.' : 'זמן השהייה והביגוד הם הערכה.'}</p>
         <div class="btns" style="margin-bottom:12px"><a class="btn dark" href="${n.google}" target="_blank" rel="noopener">${I('pin')}נווט</a><a class="btn" href="${n.photos}" target="_blank" rel="noopener">${I('image')}עוד תמונות בגוגל</a></div>
         <div class="sect"><h4>${I('map')}מפת Google</h4><div id="gmap"><button class="btn" id="gmapBtn" style="width:100%">הצג את המקום במפת Google</button></div></div>
+        ${journalBlock()}
         <div class="sect"><label class="visited"><input type="checkbox" id="visBox" ${vis[p.id] ? 'checked' : ''}> ביקרנו כאן</label>
           <textarea id="noteBox" style="margin-top:10px" placeholder="הערה אישית: מה היה, מה כדאי לזכור">${esc(notes[p.id] || '')}</textarea>
           <p class="tiny" style="margin-top:6px">נשמר רק במכשיר הזה.</p></div>
@@ -312,6 +322,7 @@
       if (!navigator.onLine) { toast('מפת Google דורשת חיבור. כפתור ״נווט״ עובד עם מפות אופליין.'); return; }
       $('#gmap').innerHTML = `<iframe class="gframe" src="${nav(p).embed}" loading="lazy" title="מפת Google – ${esc(p.name)}"></iframe>`;
     });
+    journalInit(id);
     $('#visBox').addEventListener('change', e => { const v = LS.get('tg.visited', {}); v[id] = e.target.checked; LS.set('tg.visited', v); toast(e.target.checked ? 'סומן: ביקרנו כאן' : 'הסימון בוטל'); });
     $('#noteBox').addEventListener('input', e => { const nn = LS.get('tg.notes', {}); nn[id] = e.target.value; LS.set('tg.notes', nn); });
   };
@@ -407,12 +418,14 @@
     return `${pagehead('לפני הטיול', 'מה נשאר לסגור')}
       <div class="body" style="padding-top:8px">
         <div class="prog"><span class="ring" style="background:conic-gradient(var(--blue) 0 ${pct}%, var(--line) ${pct}% 100%)"><i class="num">${pct}%</i></span><div><b style="font-size:17px">${doneCount} מתוך ${all.length} הושלמו</b><div class="small muted">${dated.length} עם תאריך קבוע · ${D.entry.items.filter(i => i.status !== 'done').length} מסמכים ובריאות</div></div></div>
+        <button class="btn" id="icsBtn2" style="width:100%;margin-bottom:12px">${I('cal')}הוספת כל המועדים ליומן, עם תזכורות</button>
         <div class="seg" role="tablist"><button class="${tab === 'urgent' ? 'on' : ''}" data-go="#/tasks/urgent">לפי דחיפות</button><button class="${tab === 'docs' ? 'on' : ''}" data-go="#/tasks/docs">מסמכים</button><button class="${tab === 'attr' ? 'on' : ''}" data-go="#/tasks/attr">אטרקציות</button></div>
         ${tab === 'docs' ? docs : tab === 'attr' ? attr : urgent}
         <p class="tiny" style="margin-top:12px">הסימון ״בוצע״ נשמר במכשיר הזה.</p>
       </div>`;
   };
   V.tasks.after = () => {
+    $('#icsBtn2')?.addEventListener('click', exportICS);
     view.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { location.hash = b.dataset.go; }));
     view.querySelectorAll('[data-done]').forEach(cb => cb.addEventListener('change', () => { const m = done(); m[cb.dataset.done] = cb.checked; LS.set('tg.done', m); toast(cb.checked ? 'סומן כבוצע' : 'הוחזר לפתוחות'); route(); }));
   };
@@ -429,11 +442,19 @@
           ${li('#/more/hotels', 'bed', 'מלונות', 'לינה לפי לילות')}
         </div>
         <div class="list">
+          ${li('#/more/packing', 'jacket', 'רשימת אריזה', 'לפי האקלים בכל אזור')}
+          ${li('#/more/expenses', 'wallet', 'הוצאות בזמן הטיול', 'רישום מול התקציב, עם המרה לשקלים')}
+          ${li('#/more/emergency', 'warn', 'מידע לחירום', '911, נציגויות ישראל, בית חולים קרוב')}
+          <button class="li" id="icsBtn" style="width:100%;text-align:right;font:inherit"><span class="ic">${I('cal')}</span><div class="g"><b>הוספת המועדים ליומן</b><div class="s">שאטל, תשלומים, ביטולים וטיסות, עם תזכורות</div></div>${I('download', 'i chev')}</button>
+        </div>
+        <div class="list">
           ${li('#/more/offline', 'download', 'שמירה לאופליין ועריכה', LS.get('tg.offlineAt') ? 'נשמר במכשיר' : 'עוד לא נשמר במכשיר הזה')}
+          ${li('#/more/about', 'star', 'על הפרויקט', 'תהליך, עיצוב וטכנולוגיה')}
           ${li('#/more/credits', 'image', 'קרדיטים', 'תמונות, מפות ונתונים')}
         </div>
       </div>`;
   };
+  V.more.after = (sub) => { if (!sub) $('#icsBtn')?.addEventListener('click', exportICS); };
   V.more_attractions = () => `${pagehead('לפני הטיול', 'אטרקציות', '#/more')}<div class="body" style="padding-top:8px"><p class="lead" style="margin-top:0">מה צריך להזמין, מתי ההזמנה נפתחת, ומה רק אופציה.</p>${D.attractions.slice().sort((a, b) => (a.booking === 'required' ? 0 : 1) - (b.booking === 'required' ? 0 : 1)).map(attrRow).join('')}</div>`;
   V.more_budget = () => {
     const tot = { booked: {}, option: {}, due: {} };
@@ -625,6 +646,193 @@
     reg.active.postMessage({ type: 'cache-all', extra: Object.values(CR).flat().map(c => c.file) }, [ch.port2]);
   }
 
+  /* ---------- climate averages (Open-Meteo archive, fetched from the viewer's device, cached) ---------- */
+  async function climate(lat, lng, date) {
+    const key = `tg.clim.${(+lat).toFixed(1)},${(+lng).toFixed(1)}`;
+    let rows = LS.get(key);
+    if (!rows) {
+      try {
+        const j = await (await fetch(`https://archive-api.open-meteo.com/v1/archive?latitude=${(+lat).toFixed(2)}&longitude=${(+lng).toFixed(2)}&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto`)).json();
+        if (!j.daily) return null;
+        rows = j.daily.time.map((t, i) => [t.slice(5), j.daily.temperature_2m_max[i], j.daily.temperature_2m_min[i], j.daily.precipitation_sum[i]])
+          .filter(r => r[0] >= '08-10' && r[0] <= '09-25');
+        LS.set(key, rows);
+      } catch { return null; }
+    }
+    const md = date.slice(5), d0 = toDate(date);
+    const near = rows.filter(r => { const x = toDate('2027-' + r[0]); return Math.abs(x - d0) <= 3 * 864e5; }).filter(r => r[1] != null);
+    if (!near.length) return null;
+    const avg = (k) => near.reduce((s, r) => s + r[k], 0) / near.length;
+    return { max: avg(1), min: avg(2), rainy: Math.round(100 * near.filter(r => (r[3] || 0) >= 1).length / near.length) };
+  }
+
+  /* ---------- day timeline (estimated clock times) ---------- */
+  function visitMin(s) {
+    if (!s) return null;
+    const nums = (s.match(/\d+(?:\.\d+)?/g) || []).map(Number);
+    if (!nums.length) return null;
+    const v = nums.length > 1 ? (nums[0] + nums[1]) / 2 : nums[0];
+    return /שע/.test(s) ? Math.round(v * 60) : /דק/.test(s) ? Math.round(v) : null;
+  }
+  const clock = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(Math.round(m % 60)).padStart(2, '0')}`;
+  function timeline(d) {
+    const rt = RT.days[d.date]; if (!rt || !d.drive) return null;
+    const [h, mm] = (d.start || '08:00').split(':').map(Number);
+    let t = h * 60 + mm; const at = {};
+    rt.legs.forEach(l => {
+      t += Math.round(l.min * 1.15 / 5) * 5;
+      const p = point(l.to);
+      if (d.points.includes(l.to) && !['transport', 'lodging'].includes(p.kind)) { at[l.to] = t; t += Math.round((visitMin(p.visit) ?? 45) / 5) * 5; }
+      else at[l.to] = t;
+    });
+    return { start: h * 60 + mm, at, end: t };
+  }
+
+  /* ---------- calendar export (.ics) ---------- */
+  function exportICS() {
+    const pad = (n) => String(n).padStart(2, '0');
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+    const ymd = (iso) => iso.slice(0, 10).replace(/-/g, '');
+    const next = (iso) => { const x = toDate(iso.slice(0, 10)); x.setDate(x.getDate() + 1); return `${x.getFullYear()}${pad(x.getMonth() + 1)}${pad(x.getDate())}`; };
+    const escI = (s) => String(s).replace(/[\\,;]/g, (c) => '\\' + c).replace(/\n/g, '\\n');
+    const alarm = (trig, txt) => `BEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:${escI(txt)}\r\nTRIGGER:${trig}\r\nEND:VALARM`;
+    const ev = [];
+    const add = (uid, lines, alarms) => ev.push(`BEGIN:VEVENT\r\nUID:${uid}@usacanada2027\r\nDTSTAMP:${stamp}\r\n${lines.join('\r\n')}\r\n${alarms.join('\r\n')}\r\nEND:VEVENT`);
+    D.tasks.forEach(t => {
+      if (t.opens) { const [dd, tt] = t.opens.split('T'); add(t.id, [`DTSTART;TZID=Asia/Jerusalem:${ymd(dd)}T${tt.replace(':', '')}00`, 'DURATION:PT30M', `SUMMARY:${escI(t.title)}`, `DESCRIPTION:${escI((t.opensNote || '') + (t.url ? '\n' + t.url : ''))}`], [alarm('-P1D', t.title), alarm('-PT1H', t.title)]); }
+      else if (t.due) add(t.id, [`DTSTART;VALUE=DATE:${ymd(t.due)}`, `DTEND;VALUE=DATE:${next(t.due)}`, `SUMMARY:${escI(t.title)}`, `DESCRIPTION:${escI(t.notes || '')}`], [alarm('-P7D', t.title), alarm('-P1D', t.title)]);
+    });
+    D.hotels.forEach(hh => {
+      const m = (hh.cancelBy || '').match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/); if (!m) return;
+      const iso = `${m[3]}-${pad(m[2])}-${pad(m[1])}`;
+      add('cancel-' + hh.id, [`DTSTART;VALUE=DATE:${ymd(iso)}`, `DTEND;VALUE=DATE:${next(iso)}`, `SUMMARY:${escI('ביטול חינם אחרון: ' + hh.name)}`, `DESCRIPTION:${escI(hh.cancelBy)}`], [alarm('-P3D', 'ביטול חינם אחרון: ' + hh.name)]);
+    });
+    D.flights.filter(f => f.dep).forEach(f => add('flight-' + f.id, [`DTSTART;TZID=${f.fromTz}:${ymd(f.date)}T${f.dep.replace(':', '')}00`, 'DURATION:PT2H', `SUMMARY:${escI(`טיסה ${f.flight} ${f.from}→${f.to}`)}`], [alarm('-PT3H', `טיסה ${f.flight}`)]));
+    const c = D.cruise;
+    add('cruise-embark', [`DTSTART;TZID=America/Los_Angeles:${ymd(c.embark.date)}T${c.embark.time.replace(':', '')}00`, 'DURATION:PT1H', `SUMMARY:${escI('עלייה לאונייה ' + c.ship)}`], [alarm('-PT3H', 'עלייה לאונייה')]);
+    const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//usacanada2027//he\r\nCALSCALE:GREGORIAN\r\nX-WR-CALNAME:${escI(D.meta.title)}\r\n${ev.join('\r\n')}\r\nEND:VCALENDAR\r\n`;
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'usa-canada-2027.ics'; a.click();
+    toast(`${ev.length} מועדים ירדו כקובץ יומן. פותחים אותו כדי להוסיף ליומן.`);
+  }
+
+  /* ---------- packing list ---------- */
+  V.more_packing = () => {
+    const got = LS.get('tg.pack', {});
+    const all = D.packing.flatMap(c => c.items.map((x, i) => c.id + ':' + i));
+    const n = all.filter(k => got[k]).length;
+    return `${pagehead('לפני הטיסה', 'רשימת אריזה', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="prog"><span class="ring" style="background:conic-gradient(var(--blue) 0 ${Math.round(100 * n / all.length)}%, var(--line) 0 100%)"><i class="num">${n}/${all.length}</i></span><div><b style="font-size:17px">נארזו ${n} מתוך ${all.length}</b><div class="small muted">הרשימה מותאמת לערפל, לגשם, לקור בוקר ולחום. הסימון נשמר במכשיר הזה.</div></div></div>
+      ${D.packing.map(c => `<div class="h2" style="font-size:19px"><small>${esc(c.hint || '')}</small>${esc(c.label)}</div>${c.items.map((x, i) => { const k = c.id + ':' + i; return `<label class="task ${got[k] ? 'done' : ''}" style="cursor:pointer"><input type="checkbox" data-pack="${k}" ${got[k] ? 'checked' : ''}><div class="g"><div class="t" style="font-weight:600">${esc(x.t)}</div>${x.n ? `<div class="s">${esc(x.n)}</div>` : ''}</div></label>`; }).join('')}`).join('')}
+      <button class="btn" id="packReset" style="width:100%;margin-top:12px">ניקוי כל הסימונים</button></div>`;
+  };
+  V.more_packing.after = () => {
+    view.querySelectorAll('[data-pack]').forEach(cb => cb.addEventListener('change', () => { const m = LS.get('tg.pack', {}); m[cb.dataset.pack] = cb.checked; LS.set('tg.pack', m); cb.closest('.task').classList.toggle('done', cb.checked); }));
+    let armed = false;
+    $('#packReset').addEventListener('click', (e) => { if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי לנקות'; return; } LS.set('tg.pack', {}); route(); });
+  };
+
+  /* ---------- emergency ---------- */
+  V.more_emergency = () => {
+    const E = window.__EM;
+    if (!E) return `${pagehead('בטיחות', 'מידע לחירום', '#/more')}<div class="body"><p class="lead">המידע לא נטען. נסו לרענן.</p></div>`;
+    const my = LS.get('tg.insurance', {});
+    return `${pagehead('בטיחות', 'מידע לחירום', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="sect warn"><h4>${I('warn')}במצב חירום: 911</h4><p>גם בארה״ב וגם בקנדה מחייגים 911 למשטרה, אמבולנס וכיבוי.</p></div>
+      <div class="sect"><h4>${I('doc')}הביטוח שלנו</h4><p class="small muted" style="margin-bottom:8px">נשמר רק במכשיר הזה, לא באתר.</p>
+        <label class="fld"><span>חברת ביטוח</span><input id="ins-co" value="${esc(my.co || '')}"></label>
+        <label class="fld" style="margin-top:8px"><span>טלפון חירום 24/7</span><input id="ins-ph" inputmode="tel" value="${esc(my.ph || '')}"></label>
+        <label class="fld" style="margin-top:8px"><span>מספר פוליסה</span><input id="ins-no" value="${esc(my.no || '')}"></label>
+        <button class="btn dark" id="ins-save" style="width:100%;margin-top:10px">שמירה במכשיר</button></div>
+      <div class="sect"><h4>${I('link')}מספרים חשובים</h4>${E.numbers.map(x => `<div class="line-item"><span>${esc(x.label)}${x.note ? `<br><span class="tiny">${esc(x.note)}</span>` : ''}</span><span class="v num">${esc(x.value)}</span></div>`).join('')}</div>
+      <div class="sect"><h4>${I('pin')}נציגויות ישראל</h4>${E.missions.map(m => `<div class="act"><div><b>${esc(m.name)}</b><div class="d">${esc(m.city)}${m.covers ? ' · ' + esc(m.covers) : ''}${m.phone ? ` · <span class="num">${esc(m.phone)}</span>` : ''}</div>${m.url ? `<a class="src" href="${esc(m.url)}" target="_blank" rel="noopener">אתר רשמי ›</a>` : ''}</div></div>`).join('')}</div>
+      <div class="sect"><h4>${I('bed')}בית חולים קרוב לכל לינה</h4>${E.hospitals.map(hh => `<div class="act"><div><b>${esc(hh.area)}: ${esc(hh.name)}</b><div class="d">${esc(hh.note || '')}</div>
+        <div style="display:flex;gap:14px"><a class="src" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hh.name)}" target="_blank" rel="noopener">ניווט ›</a>${hh.url ? `<a class="src" href="${esc(hh.url)}" target="_blank" rel="noopener">אתר ›</a>` : ''}</div></div></div>`).join('')}</div>
+      <div class="sect"><h4>${I('star')}טיפים</h4><ul>${E.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <p class="est">נבדק ב־${esc(fFull(E.checkedOn))}. כדאי לבדוק שוב לפני הטיסה.</p></div>`;
+  };
+  V.more_emergency.after = () => $('#ins-save')?.addEventListener('click', () => { LS.set('tg.insurance', { co: $('#ins-co').value, ph: $('#ins-ph').value, no: $('#ins-no').value }); toast('נשמר במכשיר'); });
+
+  /* ---------- food ---------- */
+  function foodBlock(regionId) {
+    const F = window.__FOOD?.areas?.[regionId]; if (!F?.length) return '';
+    return `<div class="h2"><small>איפה אוכלים</small>המלצות באזור</div><div class="list">${F.map(f => `<a class="li" href="${esc(f.url || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(f.query || f.name))}" target="_blank" rel="noopener">
+      <span class="ic">${I('star')}</span><div class="g"><b>${esc(f.name)} <span class="small muted" style="font-weight:600">${esc(f.price || '')}</span></b><div class="s">${esc(f.type || '')}${f.near ? ' · ' + esc(f.near) : ''}</div>${f.why ? `<div class="s">${esc(f.why)}</div>` : ''}</div>${I('chev', 'i chev')}</a>`).join('')}</div>
+      <p class="est">המלצות כלליות. לבדוק שעות פתיחה לפני שהולכים.</p>`;
+  }
+
+  /* ---------- journal photos (IndexedDB, this device only) ---------- */
+  const idb = () => new Promise((res, rej) => { const r = indexedDB.open('tg-journal', 1); r.onupgradeneeded = () => r.result.createObjectStore('photos', { keyPath: 'id' }); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+  async function jAll(pid) { try { const db = await idb(); return await new Promise(res => { const out = []; const c = db.transaction('photos').objectStore('photos').openCursor(); c.onsuccess = () => { const x = c.result; if (!x) return res(out); if (!pid || x.value.pid === pid) out.push(x.value); x.continue(); }; c.onerror = () => res(out); }); } catch { return []; } }
+  async function jPut(rec) { const db = await idb(); return new Promise((res, rej) => { const tx = db.transaction('photos', 'readwrite'); tx.objectStore('photos').put(rec); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); }
+  async function jDel(id) { const db = await idb(); return new Promise(res => { const tx = db.transaction('photos', 'readwrite'); tx.objectStore('photos').delete(id); tx.oncomplete = res; }); }
+  function shrink(file) {
+    return new Promise((res, rej) => { const img = new Image(); img.onload = () => { const s = Math.min(1, 1600 / Math.max(img.width, img.height)); const c = document.createElement('canvas'); c.width = Math.round(img.width * s); c.height = Math.round(img.height * s); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); c.toBlob(b => b ? res(b) : rej(), 'image/jpeg', .82); URL.revokeObjectURL(img.src); }; img.onerror = rej; img.src = URL.createObjectURL(file); });
+  }
+  const journalBlock = () => `<div class="sect"><h4>${I('image')}התמונות שלנו</h4><div id="jGrid" class="jgrid"></div>
+    <label class="btn" for="jFile" style="width:100%;margin-top:8px">${I('image')}הוספת תמונות</label><input type="file" id="jFile" accept="image/*" multiple hidden>
+    <p class="tiny" style="margin-top:6px">התמונות נשמרות רק בטלפון הזה, מוקטנות. הן לא עולות לאתר.</p></div>`;
+  async function journalInit(pid) {
+    const grid = $('#jGrid'); if (!grid) return;
+    const draw = async () => { const list = (await jAll(pid)).sort((a, b) => a.ts - b.ts); grid.innerHTML = list.map(x => `<figure><img src="${URL.createObjectURL(x.blob)}" alt=""><button data-jdel="${x.id}" aria-label="מחיקה">×</button></figure>`).join('') || '<p class="small muted">עוד אין תמונות.</p>';
+      grid.querySelectorAll('[data-jdel]').forEach(b => b.addEventListener('click', async () => { await jDel(b.dataset.jdel); draw(); })); };
+    $('#jFile').addEventListener('change', async (e) => { for (const f of e.target.files) { try { await jPut({ id: pid + '-' + Date.now() + Math.random().toString(36).slice(2, 6), pid, ts: Date.now(), blob: await shrink(f) }); } catch { toast('לא הצלחתי לשמור תמונה'); } } e.target.value = ''; draw(); toast('נשמר'); });
+    draw();
+  }
+
+  /* ---------- expenses ---------- */
+  V.more_expenses = () => {
+    const ex = LS.get('tg.expenses', []), rates = LS.get('tg.rates', { USD: '', CAD: '' });
+    const cats = [{ id: 'food', label: 'אוכל' }, { id: 'fuel', label: 'דלק' }, { id: 'parking', label: 'חניה' }, { id: 'attractions', label: 'אטרקציות וכניסות' }, { id: 'shopping', label: 'קניות' }, { id: 'transport', label: 'תחבורה ומוניות' }, { id: 'other', label: 'שונות' }];
+    const tot = {}; ex.forEach(e => { tot[e.cur] = (tot[e.cur] || 0) + e.amt; });
+    const toILS = (a, c) => c === 'ILS' ? a : (+rates[c] ? a * +rates[c] : null);
+    const ils = ex.reduce((s, e) => { const v = toILS(e.amt, e.cur); return v == null || s == null ? null : s + v; }, 0);
+    const today = new Date().toISOString().slice(0, 10);
+    return `${pagehead('בזמן הטיול', 'הוצאות', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="tot"><div><b>סה״כ</b>${Object.keys(tot).length ? Object.entries(tot).map(([c, a]) => money(a, c)).join('<br>') : '<span class="muted">—</span>'}</div><div><b>בשקלים</b>${ex.length ? (ils == null ? '<span class="tiny">להזין שערים</span>' : money(ils, 'ILS')) : '<span class="muted">—</span>'}</div><div><b>רשומות</b><span class="num">${ex.length}</span></div></div>
+      <div class="sect form"><h4>${I('wallet')}הוצאה חדשה</h4>
+        <div class="row2"><label class="fld"><span>סכום</span><input id="x-amt" type="number" step="0.01" inputmode="decimal"></label><label class="fld"><span>מטבע</span><select id="x-cur"><option>USD</option><option>CAD</option><option>ILS</option></select></label></div>
+        <div class="row2"><label class="fld"><span>קטגוריה</span><select id="x-cat">${cats.map(c => `<option value="${c.id}">${esc(c.label)}</option>`).join('')}</select></label><label class="fld"><span>תאריך</span><input id="x-date" type="date" value="${today}"></label></div>
+        <label class="fld"><span>הערה</span><input id="x-note" placeholder="למשל: ארוחת ערב בבאנף"></label>
+        <button class="btn dark" id="x-add">הוספה</button></div>
+      <div class="sect form"><h4>${I('wallet')}שערי המרה לשקל</h4><p class="small muted">מזינים ידנית. האתר לא מושך שערים.</p>
+        <div class="row2"><label class="fld"><span>1 USD =</span><input id="r-USD" type="number" step="0.001" value="${esc(rates.USD)}"></label><label class="fld"><span>1 CAD =</span><input id="r-CAD" type="number" step="0.001" value="${esc(rates.CAD)}"></label></div>
+        <button class="btn" id="r-save">שמירת שערים</button></div>
+      ${cats.map(c => { const list = ex.filter(e => e.cat === c.id); if (!list.length) return ''; const sum = list.reduce((s, e) => { const v = toILS(e.amt, e.cur); return v == null || s == null ? null : s + v; }, 0); return `<div class="sect"><h4 style="justify-content:space-between"><span>${esc(c.label)}</span><span class="small muted" style="font-weight:600">${sum != null ? money(sum, 'ILS') : ''}</span></h4>
+        ${list.slice().reverse().map(e => `<div class="line-item"><span>${esc(e.note || '—')}<br><span class="tiny">${esc(fFull(e.date))}</span></span><span class="v">${money(e.amt, e.cur)} <button class="link" data-xdel="${e.id}" aria-label="מחיקה" style="color:var(--alert)">×</button></span></div>`).join('')}</div>`; }).join('')}
+      ${ex.length ? '<button class="btn" id="x-csv" style="width:100%">ייצוא ל־CSV</button>' : ''}
+      <p class="tiny" style="margin-top:8px">ההוצאות נשמרות רק במכשיר הזה.</p></div>`;
+  };
+  V.more_expenses.after = () => {
+    $('#x-add').addEventListener('click', () => {
+      const amt = parseFloat($('#x-amt').value); if (!(amt > 0)) { toast('צריך להזין סכום'); return; }
+      const ex = LS.get('tg.expenses', []); ex.push({ id: Date.now().toString(36), amt, cur: $('#x-cur').value, cat: $('#x-cat').value, date: $('#x-date').value, note: $('#x-note').value.trim() });
+      LS.set('tg.expenses', ex); toast('נוסף'); route();
+    });
+    $('#r-save').addEventListener('click', () => { LS.set('tg.rates', { USD: $('#r-USD').value, CAD: $('#r-CAD').value }); toast('השערים נשמרו'); route(); });
+    view.querySelectorAll('[data-xdel]').forEach(b => b.addEventListener('click', () => { LS.set('tg.expenses', LS.get('tg.expenses', []).filter(e => e.id !== b.dataset.xdel)); route(); }));
+    $('#x-csv')?.addEventListener('click', () => {
+      const rows = [['date', 'category', 'amount', 'currency', 'note'], ...LS.get('tg.expenses', []).map(e => [e.date, e.cat, e.amt, e.cur, (e.note || '').replace(/"/g, '""')])];
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + rows.map(r => r.map(x => `"${x}"`).join(',')).join('\n')], { type: 'text/csv' })); a.download = 'expenses-2027.csv'; a.click();
+    });
+  };
+
+  /* ---------- about (portfolio) ---------- */
+  V.more_about = () => {
+    const pts = D.points.filter(p => !['transport', 'lodging'].includes(p.kind)).length;
+    const km = Object.values(RT.days).reduce((s, d) => s + d.km, 0);
+    return `<section class="hero sm" style="${bg(firstImg('peyto-lake'))}">${topnav('#/more')}<div class="in"><div class="eyebrow">על הפרויקט</div><h1>מדריך טיול אישי, אופליין</h1><p>אתר סטטי בעברית שמרכז מסלול, מלונות, משימות ותקציב לטיול של 27 לילות.</p></div></section>
+      <div class="stats"><div><b class="num">${pts}</b><span>מקומות במדריך</span></div><div><b class="num">${D.days.length}</b><span>ימים</span></div><div><b class="num">${km.toLocaleString('en-US')}</b><span>ק״מ ברכב</span></div></div>
+      <div class="body">
+        <div class="sect"><h4>${I('star')}האתגר</h4><p>טיול מורכב: שש מדינות ומחוזות, קרוז, שלוש השכרות רכב ותשע לינות. המידע היה מפוזר במיילים, באפליקציות ובראש. המטרה: מקום אחד, בעברית, שעובד בטלפון גם בלי קליטה ומראה מה דחוף עכשיו.</p></div>
+        <div class="sect"><h4>${I('doc')}תהליך</h4><ul><li>סקיצות לפני קוד, ושלושה סבבי עיצוב עד שהכיוון אושר.</li><li>חלוקה ברורה בין ״המסע״ (לאן מגיעים ומה עושים) לבין ״משימות״ (מה לסגור).</li><li>כל מסך נבדק ברוחב טלפון, מימין לשמאל ובמצב טיסה.</li></ul></div>
+        <div class="sect"><h4>${I('image')}עיצוב</h4><ul><li>צילום גדול בראש כל עמוד, כחול כהה כצבע בסיס, והדגשה אחת בזהב רק למה שחשוב עכשיו.</li><li>גופן IBM Plex Sans Hebrew, אייקונים קוויים במקום אימוג׳ים.</li><li>ניווט תחתון כמו באפליקציה. סמל וצבע לכל סוג מקום במפה.</li></ul></div>
+        <div class="sect"><h4>${I('map')}טכנולוגיה</h4><ul><li>HTML, CSS ו־JavaScript בלי שלב build. PWA עם service worker ששומר הכול לאופליין.</li><li>מפות OpenStreetMap ו־Leaflet, מרחקים מ־OSRM, תחזית מ־Open-Meteo, תמונות מ־Wikimedia Commons. אף אחד מהם לא דורש מפתח.</li><li>כל הנתונים בקובץ JSON אחד, עם מצב עריכה, ייצוא וייבוא.</li></ul></div>
+        <div class="sect"><h4>${I('warn')}עקרונות</h4><ul><li>לא ממציאים: פרט לא ידוע מסומן ״טרם נקבע״, הערכות מסומנות ״הערכה״, ועובדות שמשתנות מקושרות למקור רשמי.</li><li>פרטיות: אין באתר מספרי הזמנה, קודים, שמות או אמצעי תשלום.</li></ul></div>
+        <a class="btn dark" href="#/journey" style="width:100%">לאתר עצמו</a>
+      </div>`;
+  };
+
+
   /* ---------- router ---------- */
   function route() {
     const [, name = 'journey', a] = (location.hash || '#/journey').split('/');
@@ -644,7 +852,8 @@
     net(); addEventListener('online', net); addEventListener('offline', net);
     try {
       const get = (u) => fetch(u).then(r => r.ok ? r.json() : {}).catch(() => ({}));
-      const [trip, credits, routes] = await Promise.all([fetch('data/trip.json').then(r => r.json()), get('data/credits.json'), get('data/routes.json')]);
+      const [trip, credits, routes, em, food] = await Promise.all([fetch('data/trip.json').then(r => r.json()), get('data/credits.json'), get('data/routes.json'), get('data/emergency.json'), get('data/food.json')]);
+      window.__EM = em.numbers ? em : null; window.__FOOD = food.areas ? food : null;
       D = (EDIT() && LS.get('tg.draft')) || trip; CR = credits.points || {}; RT = routes.days ? routes : { days: {} };
     } catch { view.innerHTML = '<div class="body"><div class="notice">לא הצלחתי לטעון את נתוני הטיול. נסו לרענן כשיש חיבור.</div></div>'; return; }
     addEventListener('hashchange', route);
