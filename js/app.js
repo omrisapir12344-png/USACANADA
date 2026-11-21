@@ -50,7 +50,7 @@
   const imgs = (pid) => CR[pid] || [];
   const firstImg = (pid) => imgs(pid)[0];
   const regionImg = (r) => firstImg(r.image) || D.points.filter(p => p.region === r.id).map(p => firstImg(p.id)).find(Boolean);
-  const dayImg = (d) => d.points.map(point).filter(p => p && p.kind !== 'transport').map(p => firstImg(p.id)).find(Boolean) || (region(d.region) && regionImg(region(d.region)));
+  const dayImg = (d) => d.points.map(point).filter(p => p && !['transport', 'lodging'].includes(p.kind)).map(p => firstImg(p.id)).find(Boolean) || (region(d.region) && regionImg(region(d.region)));
   const bg = (c) => c ? `background-image:url('${esc(c.file)}')` : '';
   const credit = (c, label) => c ? `${label ? esc(label) + ' · ' : ''}<a href="${esc(c.source)}" target="_blank" rel="noopener">${esc(c.author)} / Wikimedia Commons</a> · ${esc(c.license)}` : '';
   const nav = (p) => ({
@@ -65,7 +65,7 @@
   const bookingLabel = (b) => ({ required: 'חובה להזמין מראש', recommended: 'מומלץ להזמין מראש', check: 'לבדוק אם צריך להזמין', optional: 'אפשר להזמין מראש', none: 'לא נדרשת הזמנה (לבדוק)' }[b] || '');
   const done = () => LS.get('tg.done', {});
   function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
-  const LODGE_PTS = ['canmore', 'jasper-town', 'field'];
+  const LODGE_PTS = ['canmore', 'jasper-town', 'field', 'packwood', 'axiom', 'hyatt-olive8'];
 
   /* ---------- weather (Open-Meteo, no key) ---------- */
   const WMO = (c) => c == null ? ['', ''] : c === 0 ? ['☀️', 'בהיר'] : c <= 2 ? ['🌤️', 'מעונן חלקית'] : c === 3 ? ['☁️', 'מעונן'] : c <= 48 ? ['🌫️', 'ערפל'] : c <= 57 ? ['🌦️', 'טפטוף'] : c <= 67 ? ['🌧️', 'גשם'] : c <= 77 ? ['🌨️', 'שלג'] : c <= 82 ? ['🌧️', 'ממטרים'] : c <= 86 ? ['🌨️', 'ממטרי שלג'] : ['⛈️', 'סופות רעמים'];
@@ -102,7 +102,7 @@
   }
   function dayCard(d) {
     const rt = RT.days[d.date];
-    const stops = d.points.map(point).filter(p => p && p.kind !== 'transport');
+    const stops = d.points.map(point).filter(p => p && !['transport', 'lodging'].includes(p.kind));
     return `<a class="daycard ${d.type === 'free' ? 'free' : ''}" href="#/day/${d.date}"><span class="ph" style="${bg(dayImg(d))}"></span><div class="g">
       <div class="d">${esc(fDay(d.date))}</div><b>${esc(d.title)}</b>
       <div class="meta-row">${rt ? `<span>${I('car')}<span class="num">${rt.km} ק״מ</span></span><span>${I('clock')}<span class="num">${hm(rt.min)}</span></span>` : ''}${stops.length ? `<span>${I('pin')}${stops.length} עצירות</span>` : d.type === 'free' ? '<span>יום פתוח</span>' : ''}</div></div></a>`;
@@ -170,7 +170,7 @@
     const r = region(d.region) || { name: '', clothing: { summary: '', bring: [] }, id: '' };
     const idx = D.days.indexOf(d), prev = D.days[idx - 1], next = D.days[idx + 1];
     const rt = RT.days[d.date];
-    const sights = d.points.map(point).filter(p => p && p.kind !== 'transport');
+    const sights = d.points.map(point).filter(p => p && !['transport', 'lodging'].includes(p.kind));
     const c = dayImg(d);
     const regionDays = D.days.filter(x => x.region === d.region);
     const legTo = (pid) => rt?.legs.find(l => l.to === pid);
@@ -198,8 +198,8 @@
     };
     const backLeg = rt && rt.legs[rt.legs.length - 1];
     const showBack = backLeg && LODGE_PTS.includes(backLeg.to) && !sights.find(p => p.id === backLeg.to);
-    const transport = d.points.map(point).filter(p => p && p.kind === 'transport');
-    const anchor = sights[0] || transport[0] || D.points.find(p => p.region === r.id && p.kind !== 'transport');
+    const transport = d.points.map(point).filter(p => p && ['transport'].includes(p.kind));
+    const anchor = sights[0] || transport[0] || D.points.find(p => p.region === r.id && !['transport', 'lodging'].includes(p.kind));
     return `
       <section class="hero md" style="${bg(c)}">${topnav(r.id ? `#/region/${r.id}` : '#/journey', r.name ? `${r.name} · יום ${regionDays.indexOf(d) + 1} מתוך ${regionDays.length}` : '')}
         <div class="in"><div class="eyebrow">${esc(fLong(d.date))} · ${typeLbl}</div><h1>${esc(d.title)}</h1><div class="credit">${credit(c)}</div></div></section>
@@ -214,7 +214,7 @@
         ${sights.length ? sights.map(stopHtml).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט. אין עצירות בחוף.' : d.type === 'free' ? 'עוד אין תוכנית ליום הזה.' : ''}</p>`}
         ${sugg.length ? `<div class="h2"><small>לא בתוכנית</small>הצעות לאזור</div><div class="list">${sugg.map(p => `<a class="li" href="#/point/${p.id}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}<div class="g"><b>${esc(p.name)}</b><div class="s">${esc(p.visit ? p.visit + ' · ' + (p.see || '') : p.summary || '')}</div></div>${I('chev', 'i chev')}</a>`).join('')}</div>` : ''}
         ${showBack ? legChip(backLeg, false) : ''}
-        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b><div class="small muted">${lodge ? esc(lodge.name) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
+        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b><div class="small muted">${lodge ? esc(lodge.name) : ''}${lodge?.checkTimes ? ' · ' + esc(lodge.checkTimes) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
         <div class="facts" style="margin-top:12px">
           <div class="fact wide"><div class="k">${I('cloud')}תחזית</div><div class="v">${anchor ? wx(anchor.lat, anchor.lng, d.date) : '—'}</div></div>
           ${d.weatherAlt ? `<div class="fact wide"><div class="k">${I('warn')}אם מזג האוויר לא טוב</div><div class="v">${esc(d.weatherAlt)}</div></div>` : ''}
@@ -231,7 +231,7 @@
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16, attribution: '© OpenStreetMap' }).addTo(m);
     const line = L.polyline(rt.line, { color: '#13233d', weight: 4, opacity: .85 }).addTo(m);
     let k = 0;
-    d.drive.forEach(id => { const p = point(id); const isStop = d.points.includes(id) && p.kind !== 'transport';
+    d.drive.forEach(id => { const p = point(id); const isStop = d.points.includes(id) && !['transport', 'lodging'].includes(p.kind);
       const mk = L.circleMarker([p.lat, p.lng], { radius: isStop ? 9 : 6, color: '#fff', weight: 2, fillColor: isStop ? '#13233d' : '#b48a4a', fillOpacity: 1 }).addTo(m);
       if (isStop) mk.bindTooltip(String(++k), { permanent: true, direction: 'top', offset: [0, -8] }); });
     m.fitBounds(line.getBounds().pad(.15));
@@ -436,11 +436,14 @@
   };
   V.more_hotels = () => `${pagehead('לינה', 'מלונות', '#/more')}<div class="body" style="padding-top:8px">
     ${D.hotels.map(h => { const n = h.checkIn && h.checkOut ? nights(h.checkIn, h.checkOut) : null; return `<div class="sect"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="small muted" style="font-weight:600"><span class="num">${dm(h.checkIn)} → ${h.checkOut ? dm(h.checkOut) : '?'}</span>${n ? ` · ${n} לילות` : ''}</span>${pill(h.status)}</div>
-      <h4 style="margin-top:4px">${esc(h.city)}</h4><p class="${/טרם נקבע/.test(h.name) ? 'muted' : ''}">${esc(h.name)}</p>
+      <h4 style="margin-top:4px">${esc(h.city)}</h4><p class="${/טרם נקבע/.test(h.name) ? 'muted' : ''}" style="font-weight:600;color:var(--ink)">${esc(h.name)}${h.room ? ` <span class="small muted" style="font-weight:400">· ${esc(h.room)}</span>` : ''}</p>
+      ${h.checkTimes ? `<div class="line-item"><span>שעות</span><span class="v" style="white-space:normal">${esc(h.checkTimes)}</span></div>` : ''}
       <div class="line-item"><span>מחיר סופי לזוג</span><span class="v">${['cruise', 'plane'].includes(h.id) ? 'כלול' : h.price ? money(h.price.amount, h.price.currency) : '<span class="muted">טרם נקבע</span>'}</span></div>
       ${h.deposit ? `<div class="line-item"><span>מקדמה</span><span class="v">${money(h.deposit.amount, h.deposit.currency)} ${esc(h.deposit.note || '')}</span></div>` : ''}
-      ${h.cancelBy ? `<div class="line-item"><span>ביטול</span><span class="v">${esc(h.cancelBy)}</span></div>` : ''}
-      ${h.notes ? `<p class="tiny" style="margin-top:6px">${esc(h.notes)}</p>` : ''}</div>`; }).join('')}
+      ${h.cancelBy ? `<div class="line-item"><span>ביטול</span><span class="v" style="white-space:normal;max-width:65%">${esc(h.cancelBy)}</span></div>` : ''}
+      ${h.payment ? `<div class="line-item"><span>תשלום</span><span class="v" style="white-space:normal;max-width:65%">${esc(h.payment)}</span></div>` : ''}
+      ${h.notes ? `<p class="tiny" style="margin-top:6px">${esc(h.notes)}</p>` : ''}
+      ${h.point && point(h.point) ? `<div class="btns" style="margin-top:8px"><a class="btn" href="${nav(point(h.point)).google}" target="_blank" rel="noopener">${I('pin')}ניווט למלון</a></div>` : ''}</div>`; }).join('')}
     <p class="tiny">${esc(D.hotelsNote)}</p></div>`;
   V.more_offline = () => `${pagehead('הגדרות', 'אופליין ועריכה', '#/more')}<div class="body" style="padding-top:8px">
     <div class="sect"><h4>${I('download')}שמור הכול לאופליין</h4>

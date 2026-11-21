@@ -252,7 +252,8 @@ textarea { width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid
 .li img, .li .ph { width: 54px; height: 54px; border-radius: 11px; object-fit: cover; background: #c9d2de; flex: none; }
 .line-item { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
 .line-item:first-of-type { border-top: 0; }
-.line-item .v { text-align: left; white-space: nowrap; font-weight: 600; }
+.line-item .v { text-align: left; font-weight: 600; max-width: 62%; overflow-wrap: anywhere; }
+.line-item > span:first-child { min-width: 0; }
 .bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; display: flex; margin-top: 8px; }
 .bar i { display: block; height: 100%; }
 .tot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
