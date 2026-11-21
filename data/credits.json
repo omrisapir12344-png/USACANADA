@@ -260,6 +260,58 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Space_Needle_panorama_large.jpg"
       }
+    ],
+    "ketchikan": [
+      {
+        "file": "assets/img/ketchikan/1.webp",
+        "title": "File:Calle histórica Creek, Ketchikan, Alaska, Estados Unidos, 2017-08-16, DD 54.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Calle_hist%C3%B3rica_Creek,_Ketchikan,_Alaska,_Estados_Unidos,_2017-08-16,_DD_54.jpg"
+      },
+      {
+        "file": "assets/img/ketchikan/2.webp",
+        "title": "File:Calle histórica Creek, Ketchikan, Alaska, Estados Unidos, 2017-08-16, DD 52.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Calle_hist%C3%B3rica_Creek,_Ketchikan,_Alaska,_Estados_Unidos,_2017-08-16,_DD_52.jpg"
+      },
+      {
+        "file": "assets/img/ketchikan/3.webp",
+        "title": "File:Calle histórica Creek, Ketchikan, Alaska, Estados Unidos, 2017-08-16, DD 50.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Calle_hist%C3%B3rica_Creek,_Ketchikan,_Alaska,_Estados_Unidos,_2017-08-16,_DD_50.jpg"
+      }
+    ],
+    "dawes-glacier": [
+      {
+        "file": "assets/img/dawes-glacier/1.webp",
+        "title": "File:Dawes Glacier at the head of Endicott Arm Fjord 2.jpg",
+        "author": "Richard Martin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dawes_Glacier_at_the_head_of_Endicott_Arm_Fjord_2.jpg"
+      },
+      {
+        "file": "assets/img/dawes-glacier/2.webp",
+        "title": "File:Dawes Glacier at the head of Endicott Arm Fjord 1.jpg",
+        "author": "Richard Martin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dawes_Glacier_at_the_head_of_Endicott_Arm_Fjord_1.jpg"
+      },
+      {
+        "file": "assets/img/dawes-glacier/3.webp",
+        "title": "File:Dawes Glacier at the head of Endicott Arm Fjord 3.jpg",
+        "author": "Richard Martin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dawes_Glacier_at_the_head_of_Endicott_Arm_Fjord_3.jpg"
+      }
     ]
   }
 }

@@ -168,7 +168,7 @@
       ${pic ? imgTag(pic, 'img short', d.title) : ''}
       <div class="bd">
         <div class="meta">${esc(fDay(d.date))} · ${typeLbl}${d.estTime ? ' · ' + esc(d.estTime) : ''}</div>
-        <div class="ttl"><h3>${esc(d.title)}</h3></div>
+        <div class="ttl"><h3><a href="#/day/${d.date}" style="color:inherit;text-decoration:none">${esc(d.title)}</a></h3></div>
         ${d.summary ? `<p class="desc">${esc(d.summary)}</p>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
         ${sights.length ? `<div class="chips">${sights.map(p => `<a class="${p.optional ? 'opt' : ''}" href="#/point/${p.id}">${esc(p.name)}${p.suggestion ? ' · הצעה' : p.optional ? ' · אופציה' : ''}${hasAttr(p)}</a>`).join('')}</div>` : ''}
@@ -178,7 +178,7 @@
           ${d.weatherAlt ? `<div class="fact"><b>🌧️ אם מזג האוויר לא טוב</b><span>${esc(d.weatherAlt)}</span></div>` : `<div class="fact"><b>🧥 ביגוד</b><span>${esc(r.clothing.summary.split('.')[0])}.</span></div>`}
         </div>
         <div class="foot">
-          ${guide ? `<a class="btn dark" href="#/point/${guide.id}">למדריך ›</a>` : '<span></span>'}
+          <a class="btn dark" href="#/day/${d.date}">למסלול היום ›</a>
           ${route ? `<a class="lnk" href="${route}" target="_blank" rel="noopener">מסלול היום בגוגל מפות</a>` : ''}
         </div>
       </div></article>`;
@@ -249,6 +249,81 @@
     });
     $('#visBox').addEventListener('change', e => { const v = LS.get('tg.visited', {}); v[id] = e.target.checked; LS.set('tg.visited', v); toast(e.target.checked ? 'סומן ״ביקרנו״' : 'הסימון בוטל'); });
     $('#noteBox').addEventListener('input', e => { const n = LS.get('tg.notes', {}); n[id] = e.target.value; LS.set('tg.notes', n); });
+  };
+
+  V.day = (date) => {
+    const d = D.days.find(x => x.date === date); if (!d) return '<p>היום לא נמצא.</p>';
+    const r = region(d.region) || { name: '', clothing: { summary: '', bring: [] }, id: '' };
+    const idx = D.days.indexOf(d), prev = D.days[idx - 1], next = D.days[idx + 1];
+    const stops = d.points.map(point).filter(Boolean);
+    const sights = stops.filter(p => p.kind !== 'transport');
+    const pic = sights.map(p => firstImg(p.id)).find(Boolean) || regionImg(r);
+    const sugg = d.type === 'free' ? D.points.filter(p => p.region === r.id && p.suggestion) : [];
+    const lodge = D.hotels.find(h => h.id === d.lodging);
+    const route = dayRoute(stops);
+    const typeLbl = { transit: 'יום מעבר', explore: 'יום טיול', cruise: 'קרוז', free: 'יום פתוח' }[d.type];
+    const anchor = sights[0] || stops[0] || D.points.find(p => p.region === r.id && p.kind !== 'transport');
+    $('#brandText').textContent = '› ' + fDay(d.date);
+    hero(`<div class="hero region" style="background-image:url('${pic ? esc(pic.file) : ''}')"><div class="in">
+      <div class="date">${esc(fmt(d.date, { weekday: 'long', day: 'numeric', month: 'long' }))} · ${typeLbl}${r.name ? ' · ' + esc(r.name) : ''}</div>
+      <h1>${esc(d.title)}</h1><div class="credit">${creditLine(pic)}</div></div></div>`);
+    const leg = (a, b) => `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=${b.lat},${b.lng}&travelmode=driving`;
+    const stopCard = (p, i, list) => {
+      const g = p.guide, prevStop = list[i - 1];
+      return `${prevStop ? `<div class="leg"><span>⬇</span><a href="${leg(prevStop, p)}" target="_blank" rel="noopener">נסיעה מ${esc(prevStop.name)} – זמן ומסלול בגוגל</a></div>` : ''}
+      <article class="card stopcard">
+        <a href="#/point/${p.id}">${imgTag(firstImg(p.id), 'img', p.name)}</a>
+        <div class="bd">
+          <div class="ttl"><h3><span class="snum">${i + 1}</span>${esc(p.name)}${hasAttr(p)}</h3>${pointStatus(p)}</div>
+          <div class="meta">⏱️ ${esc(p.visit || (g ? g.duration.recommended : 'טרם הוערך'))}${p.sub ? ' · ' + esc(p.sub) : ''}</div>
+          <p class="desc" style="margin-top:6px">${esc(p.see || p.summary || '')}</p>
+          <details class="more"><summary class="btn block">מה רואים, ציוד ומזג אוויר</summary>
+            <div class="facts" style="margin-top:10px">
+              ${g ? `<div class="fact wide"><b>🥾 מה עושים</b>${g.activities.map(a => `<div class="act">${a.required ? ST('must', 'חובה') : ST('option', 'אופציה')}<span>${esc(a.name)}</span></div>`).join('')}</div>` : (p.summary && p.see ? `<div class="fact wide"><b>📍 על המקום</b><span>${esc(p.summary)}</span></div>` : '')}
+              <div class="fact wide"><b>🧥 ציוד וביגוד</b><span>${g ? esc(g.clothing.slice(0, 3).join(' · ')) : esc(r.clothing.summary)}</span></div>
+              ${g?.important?.length ? `<div class="fact wide" style="background:#fffbeb;border-color:#fde68a"><b>⚠️ חשוב</b><span>${esc(g.important[0])}</span></div>` : ''}
+              <div class="fact wide"><b>🌡️ מזג אוויר</b>${wx(p.lat, p.lng, d.date)}</div>
+            </div>
+            <p class="est">ⓘ זמני השהייה והציוד הם הערכה.</p>
+          </details>
+          <div class="foot"><a class="btn dark" href="#/point/${p.id}">למדריך המלא ›</a><a class="lnk" href="${nav(p).google}" target="_blank" rel="noopener">נווט</a></div>
+        </div></article>`;
+    };
+    return `
+      <article class="card"><div class="bd">
+        <div class="ttl"><span class="meta">${esc(r.name)}</span>${lodge ? ST(lodge.status) : ''}</div>
+        ${d.summary ? `<p class="desc">${esc(d.summary)}</p>` : ''}
+        ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
+        <div class="facts">
+          <div class="fact wide"><b>⏱️ כמה זמן?</b><span>${esc(d.estTime || (d.type === 'free' ? 'יום פתוח' : 'טרם הוערך'))}</span></div>
+          <div class="fact wide"><b>🎒 מה ללבוש או לקחת?</b><span>${esc([...(d.bring || []), ...r.clothing.bring].slice(0, 6).join(', '))}</span></div>
+          ${d.weatherAlt ? `<div class="fact wide"><b>🌧️ אם מזג האוויר לא טוב</b><span>${esc(d.weatherAlt)}</span></div>` : ''}
+          ${anchor ? `<div class="fact wide"><b>🌡️ תחזית</b>${wx(anchor.lat, anchor.lng, d.date)}</div>` : ''}
+        </div>
+        <div class="btn-row" style="margin-top:12px">${route ? `<a class="btn dark" href="${route}" target="_blank" rel="noopener">מסלול היום בגוגל מפות</a>` : ''}<a class="btn" href="#/region/${r.id}">לאזור ${esc(r.name)}</a></div>
+      </div></article>
+      <h2 class="sec" style="margin-top:22px">עצירות ביום הזה</h2>
+      ${stops.length ? stops.map(stopCard).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט – אין עצירות בחוף.' : 'אין עדיין עצירות קבועות ליום הזה.'}</p>`}
+      ${sugg.length ? `<h3 class="sub">הצעות לאזור (לא בתוכנית)</h3><div class="cards-2">${sugg.map(p => placeCard(p)).join('')}</div>` : ''}
+      <h2 class="sec" style="margin-top:22px">איפה ישנים?</h2>
+      <article class="card"><div class="bd">${lodge ? `<div class="ttl"><h3>${esc(lodge.city)}</h3>${ST(lodge.status)}</div><p class="desc ${/טרם נקבע/.test(lodge.name) ? 'muted' : ''}">${esc(lodge.name)}</p>${lodge.notes ? `<p class="small muted">${esc(lodge.notes)}</p>` : ''}` : '<p class="muted">אין לינה (סוף הטיול).</p>'}
+        <div class="foot"><a class="btn" href="#/hotels">כל המלונות</a></div></div></article>
+      <div class="btn-row" style="margin-top:8px">
+        ${prev ? `<a class="btn" href="#/day/${prev.date}">› ${esc(fDay(prev.date))}</a>` : ''}
+        ${next ? `<a class="btn" href="#/day/${next.date}">${esc(fDay(next.date))} ‹</a>` : ''}
+      </div>`;
+  };
+
+  V.today = () => {
+    const t = today(), first = toDate(D.days[0].date), last = toDate(D.days[D.days.length - 1].date);
+    if (t >= first && t <= last) { const iso = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; return V.day(iso); }
+    const before = t < first;
+    return `<h2 class="sec">היום בטיול</h2>
+      <p class="lead">${before ? `הטיול מתחיל בעוד ${daysTo(D.days[0].date)} ימים. מ־19/8/2027 יופיע כאן מסלול היום אוטומטית.` : 'הטיול הסתיים.'}</p>
+      <h3 class="sub">כל הימים</h3>
+      ${D.days.map(d => `<a class="stop" href="#/day/${d.date}"><span class="n" style="background:${region(d.region)?.color || '#64748b'}">${esc(String(toDate(d.date).getDate()))}</span>
+        ${(() => { const c = d.points.map(point).filter(p => p && p.kind !== 'transport').map(p => firstImg(p.id)).find(Boolean); return c ? `<img src="${esc(c.file)}" alt="" loading="lazy">` : '<span class="ph"></span>'; })()}
+        <span class="g"><b>${esc(d.title)}</b><span class="s" style="display:block">${esc(fDay(d.date))} · ${esc(region(d.region)?.name || '')}</span></span></a>`).join('')}`;
   };
 
   V.map = () => {
@@ -467,7 +542,7 @@
     hero(''); $('#brandText').textContent = D.meta.title;
     view.innerHTML = v(a, b);
     v.after && v.after(a, b);
-    const tab = { region: 'journey', point: 'journey' }[name] || name;
+    const tab = { region: 'journey', point: 'journey', day: 'today' }[name] || name;
     document.querySelectorAll('#tabs a').forEach(t => { const on = t.dataset.tab === tab; t.classList.toggle('on', on); if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current'); });
     window.scrollTo(0, 0);
   }

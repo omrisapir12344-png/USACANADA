@@ -220,7 +220,9 @@
         "2027-08-19",
         "2027-08-23"
       ],
-      "kind": "transport"
+      "kind": "transport",
+      "visit": "טיסה",
+      "see": "נחיתה ומעבר לעיר ב־BART."
     },
     {
       "id": "golden-gate",
@@ -317,7 +319,9 @@
         "2027-08-23",
         "2027-09-03"
       ],
-      "kind": "transport"
+      "kind": "transport",
+      "visit": "כשעה",
+      "see": "נחיתה ואיסוף או החזרת רכב."
     },
     {
       "id": "rainier-paradise",
@@ -336,7 +340,9 @@
       "imageQuery": "Paradise Mount Rainier meadow",
       "imageMatch": [
         "paradise"
-      ]
+      ],
+      "visit": "3–5 שעות",
+      "see": "כרי פרחים ותצפית על ההר. שבילים כמו Skyline Trail."
     },
     {
       "id": "reflection-lakes",
@@ -356,7 +362,9 @@
       "imageQuery": "Reflection Lakes Mount Rainier",
       "imageMatch": [
         "reflection"
-      ]
+      ],
+      "visit": "20–30 דק׳",
+      "see": "ההר משתקף באגם ביום ללא רוח."
     },
     {
       "id": "rainier-sunrise",
@@ -377,7 +385,9 @@
       "imageMatch": [
         "sunrise",
         "rainier"
-      ]
+      ],
+      "visit": "3–4 שעות",
+      "see": "הנקודה הגבוהה שמגיעים אליה ברכב, עם נוף לצד המזרחי של ההר."
     },
     {
       "id": "pike-place",
@@ -396,7 +406,9 @@
       "imageQuery": "Pike Place Market sign",
       "imageMatch": [
         "pike place"
-      ]
+      ],
+      "visit": "1–2 שעות",
+      "see": "השוק ההיסטורי, דוכני דגים ופרחים."
     },
     {
       "id": "space-needle",
@@ -415,7 +427,9 @@
       "imageQuery": "Space Needle Seattle",
       "imageMatch": [
         "space needle"
-      ]
+      ],
+      "visit": "1–1.5 שעות",
+      "see": "מגדל תצפית על העיר והמפרץ."
     },
     {
       "id": "seattle-port",
@@ -430,7 +444,9 @@
       ],
       "kind": "transport",
       "approx": true,
-      "summary": "הרציף המדויק של Celebrity Edge טרם אומת."
+      "summary": "הרציף המדויק של Celebrity Edge טרם אומת.",
+      "visit": "לפי הקרוז",
+      "see": "עלייה לאונייה ב־16:00 (27/8) או ירידה ממנה (3/9)."
     },
     {
       "id": "ketchikan",
@@ -447,7 +463,9 @@
       "imageQuery": "Ketchikan Creek Street",
       "imageMatch": [
         "ketchikan"
-      ]
+      ],
+      "visit": "לפי שעות העגינה",
+      "see": "עיירת נמל עם רחוב Creek Street ההיסטורי."
     },
     {
       "id": "dawes-glacier",
@@ -466,7 +484,9 @@
       "imageQuery": "Dawes Glacier Endicott Arm",
       "imageMatch": [
         "dawes"
-      ]
+      ],
+      "visit": "מהסיפון",
+      "see": "שיט בפיורד צר עד חזית הקרחון."
     },
     {
       "id": "juneau",
@@ -483,7 +503,9 @@
       "imageQuery": "Juneau Alaska waterfront",
       "imageMatch": [
         "juneau"
-      ]
+      ],
+      "visit": "לפי שעות העגינה",
+      "see": "בירת אלסקה, ונקודת היציאה ל־Mendenhall."
     },
     {
       "id": "mendenhall",
@@ -502,7 +524,9 @@
       "tz": "America/Juneau",
       "imageMatch": [
         "mendenhall"
-      ]
+      ],
+      "visit": "2–3 שעות כולל הגעה",
+      "see": "קרחון ומפל Nugget Falls. אופציה."
     },
     {
       "id": "skagway",
@@ -519,7 +543,9 @@
       "imageQuery": "Skagway Broadway historic",
       "imageMatch": [
         "skagway"
-      ]
+      ],
+      "visit": "לפי שעות העגינה",
+      "see": "עיירת הבהלה לזהב, עם רחוב Broadway ההיסטורי."
     },
     {
       "id": "white-pass",
@@ -539,7 +565,9 @@
       "imageQuery": "White Pass and Yukon Route train",
       "imageMatch": [
         "white pass"
-      ]
+      ],
+      "visit": "כ־3 שעות",
+      "see": "רכבת היסטורית במעלה ההרים. אופציה."
     },
     {
       "id": "victoria",
@@ -555,7 +583,9 @@
       "imageQuery": "Victoria BC Inner Harbour Parliament",
       "imageMatch": [
         "victoria"
-      ]
+      ],
+      "visit": "לפי שעות העגינה",
+      "see": "הנמל הפנימי ובניין הפרלמנט. בדרך כלל עגינה קצרה, לאמת."
     },
     {
       "id": "yyc",
@@ -569,7 +599,9 @@
         "2027-09-10"
       ],
       "kind": "transport",
-      "sub": "באנף"
+      "sub": "באנף",
+      "visit": "כשעה",
+      "see": "איסוף או החזרת הרכב השכור."
     },
     {
       "id": "canmore",
@@ -588,7 +620,9 @@
       "imageQuery": "Canmore Three Sisters",
       "imageMatch": [
         "canmore"
-      ]
+      ],
+      "visit": "לינה",
+      "see": "העיירה שבה ישנים, למרגלות הרי Three Sisters."
     },
     {
       "id": "banff-town",
@@ -605,7 +639,9 @@
       "imageQuery": "Banff Avenue Cascade Mountain",
       "imageMatch": [
         "banff"
-      ]
+      ],
+      "visit": "1–2 שעות",
+      "see": "הרחוב הראשי Banff Avenue, חנויות ובתי קפה, ונוף להר Cascade."
     },
     {
       "id": "bow-falls",
@@ -621,7 +657,9 @@
       "sub": "באנף",
       "imageMatch": [
         "bow falls"
-      ]
+      ],
+      "visit": "20–30 דק׳",
+      "see": "מפל רחב ונמוך על נהר Bow, ממש ליד העיירה."
     },
     {
       "id": "lake-minnewanka",
@@ -638,7 +676,9 @@
       "sub": "באנף",
       "imageMatch": [
         "minnewanka"
-      ]
+      ],
+      "visit": "45–90 דק׳",
+      "see": "האגם הגדול באזור. הליכה לאורך החוף ותצפית על ההרים."
     },
     {
       "id": "banff-gondola",
@@ -657,7 +697,9 @@
       "sub": "באנף",
       "imageMatch": [
         "gondola"
-      ]
+      ],
+      "visit": "1.5–2 שעות",
+      "see": "רכבל לפסגת הר Sulphur עם תצפית על כל העמק. רק אם הראות טובה."
     },
     {
       "id": "vermilion-lakes",
@@ -675,7 +717,9 @@
       "sub": "באנף",
       "imageMatch": [
         "vermilion"
-      ]
+      ],
+      "visit": "20–40 דק׳",
+      "see": "אגמים שקטים עם השתקפות של הר Rundle."
     },
     {
       "id": "johnston-canyon",
@@ -693,7 +737,9 @@
       "imageQuery": "Johnston Canyon Lower Falls",
       "imageMatch": [
         "johnston"
-      ]
+      ],
+      "visit": "1–1.5 שעות",
+      "see": "שביל על גשרונים לאורך הקניון עד Lower Falls. ל־Upper Falls צריך עוד כשעה."
     },
     {
       "id": "emerald-lake",
@@ -709,7 +755,9 @@
       "sub": "יוהו",
       "imageMatch": [
         "emerald lake"
-      ]
+      ],
+      "visit": "45–90 דק׳",
+      "see": "אגם ירוק־טורקיז. אפשר ללכת לאורך החוף או לשכור קאנו."
     },
     {
       "id": "natural-bridge",
@@ -727,7 +775,9 @@
       "imageQuery": "Natural Bridge Kicking Horse River",
       "imageMatch": [
         "natural bridge"
-      ]
+      ],
+      "visit": "15–20 דק׳",
+      "see": "גשר סלע טבעי שהנהר Kicking Horse חצב."
     },
     {
       "id": "bow-lake",
@@ -744,7 +794,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "bow lake"
-      ]
+      ],
+      "visit": "20–40 דק׳",
+      "see": "אגם גדול ליד הכביש, מול קרחון Crowfoot."
     },
     {
       "id": "peyto-lake",
@@ -761,7 +813,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "peyto"
-      ]
+      ],
+      "visit": "30–45 דק׳",
+      "see": "הליכה קצרה בעלייה לתצפית על אגם בצורת ראש זאב."
     },
     {
       "id": "mistaya-canyon",
@@ -778,7 +832,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "mistaya"
-      ]
+      ],
+      "visit": "30–45 דק׳",
+      "see": "שביל קצר בירידה לקניון צר ומפותל."
     },
     {
       "id": "big-bend",
@@ -796,7 +852,9 @@
       "imageQuery": "Big Bend Icefields Parkway",
       "imageMatch": [
         "big bend"
-      ]
+      ],
+      "visit": "10–15 דק׳",
+      "see": "עצירת תצפית על העיקול הגדול של הכביש."
     },
     {
       "id": "columbia-icefield",
@@ -815,7 +873,9 @@
       "imageQuery": "Athabasca Glacier Columbia Icefield",
       "imageMatch": [
         "athabasca glacier"
-      ]
+      ],
+      "visit": "1–1.5 שעות",
+      "see": "שביל לקרחון Athabasca. עם Ice Explorer, שהוא אופציה, צריך כשלוש שעות."
     },
     {
       "id": "jasper-town",
@@ -833,7 +893,9 @@
       "imageQuery": "Jasper Alberta town",
       "imageMatch": [
         "jasper"
-      ]
+      ],
+      "visit": "לינה",
+      "see": "העיירה שבה ישנים בג׳ספר."
     },
     {
       "id": "medicine-lake",
@@ -852,7 +914,9 @@
       "imageQuery": "Medicine Lake Jasper",
       "imageMatch": [
         "medicine lake"
-      ]
+      ],
+      "visit": "20–30 דק׳",
+      "see": "אגם שמתרוקן בסתיו. עצירה בדרך לאגם Maligne."
     },
     {
       "id": "maligne-lake",
@@ -871,7 +935,9 @@
       "sub": "ג׳ספר",
       "imageMatch": [
         "maligne"
-      ]
+      ],
+      "visit": "1–2 שעות",
+      "see": "אגם ארוך מוקף הרים. השיט בו הוא אופציה ולא הוזמן."
     },
     {
       "id": "athabasca-falls",
@@ -887,7 +953,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "athabasca falls"
-      ]
+      ],
+      "visit": "30–45 דק׳",
+      "see": "מפל עוצמתי ונקיק צר. שבילים קצרים וגשרונים."
     },
     {
       "id": "goats-glaciers",
@@ -905,7 +973,9 @@
       "imageQuery": "Goats and Glaciers Athabasca River",
       "imageMatch": [
         "athabasca"
-      ]
+      ],
+      "visit": "10–20 דק׳",
+      "see": "תצפית על נהר Athabasca. לפעמים רואים יעלים."
     },
     {
       "id": "sunwapta-falls",
@@ -922,7 +992,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "sunwapta"
-      ]
+      ],
+      "visit": "20–40 דק׳",
+      "see": "מפל בתוך יער, ממש ליד החניה."
     },
     {
       "id": "tangle-creek",
@@ -939,7 +1011,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "tangle"
-      ]
+      ],
+      "visit": "10–15 דק׳",
+      "see": "מפל מדורג בצד הכביש."
     },
     {
       "id": "abraham-lake",
@@ -958,7 +1032,9 @@
       "sub": "Icefields Parkway",
       "imageMatch": [
         "abraham"
-      ]
+      ],
+      "visit": "סטייה של כמה שעות",
+      "see": "אגם מלאכותי ארוך. סטייה אופציונלית מהמסלול."
     },
     {
       "id": "field",
@@ -976,7 +1052,9 @@
       "imageQuery": "Field British Columbia Yoho",
       "imageMatch": [
         "field"
-      ]
+      ],
+      "visit": "לינה",
+      "see": "כפר קטן ביוהו שבו ישנים."
     },
     {
       "id": "lake-louise",
@@ -993,7 +1071,9 @@
       "imageQuery": "Lake Louise Alberta",
       "imageMatch": [
         "louise"
-      ]
+      ],
+      "visit": "1.5–3 שעות",
+      "see": "האגם המפורסם מול קרחון Victoria. הליכה לאורך החוף או קאנו."
     },
     {
       "id": "moraine-lake",
@@ -1107,7 +1187,9 @@
       "sub": "באנף",
       "imageMatch": [
         "moraine"
-      ]
+      ],
+      "visit": "2.5–4 שעות",
+      "see": "אגם טורקיז בעמק עשר הפסגות. תצפית Rockpile."
     },
     {
       "id": "lax",
@@ -1121,7 +1203,9 @@
         "2027-09-10",
         "2027-09-14"
       ],
-      "kind": "transport"
+      "kind": "transport",
+      "visit": "מעבר בשדה",
+      "see": "מעבר בין טרמינלים או טיסה."
     },
     {
       "id": "griffith",
