@@ -312,6 +312,32 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Dawes_Glacier_at_the_head_of_Endicott_Arm_Fjord_3.jpg"
       }
+    ],
+    "juneau": [
+      {
+        "file": "assets/img/juneau/1.webp",
+        "title": "File:2018-09-20 01 Wide view of Juneau, Alaska USA.jpg",
+        "author": "Gordon Leggett",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2018-09-20_01_Wide_view_of_Juneau,_Alaska_USA.jpg"
+      },
+      {
+        "file": "assets/img/juneau/2.webp",
+        "title": "File:Juneau, Alaska waterfront.jpg",
+        "author": "David Brossard",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juneau,_Alaska_waterfront.jpg"
+      },
+      {
+        "file": "assets/img/juneau/3.webp",
+        "title": "File:Juneau Waterfront 08.jpg",
+        "author": "gillfoto",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Juneau_Waterfront_08.jpg"
+      }
     ]
   }
 }
