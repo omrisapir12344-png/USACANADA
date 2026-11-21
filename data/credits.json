@@ -1122,6 +1122,88 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Painted_Ladies,_Alamo_Square.jpg"
       }
+    ],
+    "narada-falls": [
+      {
+        "file": "assets/img/narada-falls/1.webp",
+        "title": "File:Narada Falls.jpg",
+        "author": "Mr.Z-man",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Narada_Falls.jpg"
+      },
+      {
+        "file": "assets/img/narada-falls/2.webp",
+        "title": "File:Narada Falls 2015-06 395.jpg",
+        "author": "Chris Light",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Narada_Falls_2015-06_395.jpg"
+      }
+    ],
+    "tipsoo-lake": [
+      {
+        "file": "assets/img/tipsoo-lake/1.webp",
+        "title": "File:Mt. Rainier from Tipsoo Lake at Chinook Pass, Washington (69012).jpg",
+        "author": "Angelus Commercial Studio, Portland, Oregon",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Mt._Rainier_from_Tipsoo_Lake_at_Chinook_Pass,_Washington_(69012).jpg"
+      },
+      {
+        "file": "assets/img/tipsoo-lake/2.webp",
+        "title": "File:Tipsoo Lake (234995495).jpeg",
+        "author": "Dana Hutchinson",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tipsoo_Lake_(234995495).jpeg"
+      }
+    ],
+    "naches-peak": [
+      {
+        "file": "assets/img/naches-peak/1.webp",
+        "title": "File:A little snow on the Naches Loop trail - Flickr - brewbooks.jpg",
+        "author": "brewbooks from near Seattle, USA",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_little_snow_on_the_Naches_Loop_trail_-_Flickr_-_brewbooks.jpg"
+      },
+      {
+        "file": "assets/img/naches-peak/2.webp",
+        "title": "File:Rainier Naches Loop Trail (43795286).jpeg",
+        "author": "Sunjae",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rainier_Naches_Loop_Trail_(43795286).jpeg"
+      }
+    ],
+    "butchart": [
+      {
+        "file": "assets/img/butchart/1.webp",
+        "title": "File:Butchart Gardens, Victoria BC Canada (9762447285).jpg",
+        "author": "Bill Wilson from Oklahoma City, USA",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Butchart_Gardens,_Victoria_BC_Canada_(9762447285).jpg"
+      },
+      {
+        "file": "assets/img/butchart/2.webp",
+        "title": "File:Butchart Gardens - Victoria, British Columbia, Canada (28718737523).jpg",
+        "author": "Fyre Mael",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Butchart_Gardens_-_Victoria,_British_Columbia,_Canada_(28718737523).jpg"
+      }
+    ],
+    "banff-hot-springs": [
+      {
+        "file": "assets/img/banff-hot-springs/1.webp",
+        "title": "File:Banff Upper Hot Springs.JPG",
+        "author": "Vigorous action",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff_Upper_Hot_Springs.JPG"
+      }
     ]
   }
 }
