@@ -338,6 +338,344 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Juneau_Waterfront_08.jpg"
       }
+    ],
+    "mendenhall": [
+      {
+        "file": "assets/img/mendenhall/1.webp",
+        "title": "File:Glaciar Mendenhall y cascada Nugget, Juneau, Alaska, Estados Unidos, 2017-08-17, DD 07.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Glaciar_Mendenhall_y_cascada_Nugget,_Juneau,_Alaska,_Estados_Unidos,_2017-08-17,_DD_07.jpg"
+      },
+      {
+        "file": "assets/img/mendenhall/2.webp",
+        "title": "File:Glaciar Mendenhall y cascada Nugget, Juneau, Alaska, Estados Unidos, 2017-08-17, DD 10.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Glaciar_Mendenhall_y_cascada_Nugget,_Juneau,_Alaska,_Estados_Unidos,_2017-08-17,_DD_10.jpg"
+      },
+      {
+        "file": "assets/img/mendenhall/3.webp",
+        "title": "File:Glaciar Mendenhall y cascada Nugget, Juneau, Alaska, Estados Unidos, 2017-08-17, DD 11.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Glaciar_Mendenhall_y_cascada_Nugget,_Juneau,_Alaska,_Estados_Unidos,_2017-08-17,_DD_11.jpg"
+      }
+    ],
+    "skagway": [
+      {
+        "file": "assets/img/skagway/1.webp",
+        "title": "File:Broadway Avenue, Skagway, Alaska.jpg",
+        "author": "Jet Lowe",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Broadway_Avenue,_Skagway,_Alaska.jpg"
+      },
+      {
+        "file": "assets/img/skagway/2.webp",
+        "title": "File:Broadway Avenue, Arctic Brotherhood Hall, Skagway, Alaska.jpg",
+        "author": "Walter J. Smalling, Jr.",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Broadway_Avenue,_Arctic_Brotherhood_Hall,_Skagway,_Alaska.jpg"
+      },
+      {
+        "file": "assets/img/skagway/3.webp",
+        "title": "File:FACADE OF MASCOT SALOON (1898), BROADWAY AVENUE - City of Skagway, Skagway, Skagway-Hoonah-Angoon Census Area, AK HABS AK,18-SKAG,1-15.tif",
+        "author": "Unknown",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:FACADE_OF_MASCOT_SALOON_(1898),_BROADWAY_AVENUE_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-15.tif"
+      }
+    ],
+    "white-pass": [
+      {
+        "file": "assets/img/white-pass/1.webp",
+        "title": "File:Ferrocarril White Pass, Portage, Alaska, Estados Unidos, 2017-08-31, DD 39.jpg",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ferrocarril_White_Pass,_Portage,_Alaska,_Estados_Unidos,_2017-08-31,_DD_39.jpg"
+      },
+      {
+        "file": "assets/img/white-pass/2.webp",
+        "title": "File:White Pass and Yukon Route train entering a tunnel.jpg",
+        "author": "Cullen328",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:White_Pass_and_Yukon_Route_train_entering_a_tunnel.jpg"
+      },
+      {
+        "file": "assets/img/white-pass/3.webp",
+        "title": "File:White Pass & Yukon Train. 2004.jpg",
+        "author": "John Hill",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:White_Pass_%26_Yukon_Train._2004.jpg"
+      }
+    ],
+    "victoria": [
+      {
+        "file": "assets/img/victoria/1.webp",
+        "title": "File:Inner Harbour Causeway, Downtown Victoria BC.JPG",
+        "author": "ChrisJohnstone86",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Inner_Harbour_Causeway,_Downtown_Victoria_BC.JPG"
+      },
+      {
+        "file": "assets/img/victoria/2.webp",
+        "title": "File:Inner Harbour and British Columbia Parliament Buildings, Victoria, at dusk 20240827 1.jpg",
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Inner_Harbour_and_British_Columbia_Parliament_Buildings,_Victoria,_at_dusk_20240827_1.jpg"
+      },
+      {
+        "file": "assets/img/victoria/3.webp",
+        "title": "File:Victoria, BC - BC Parliament from Delta Victoria Ocean Pointe 02 (20560719675).jpg",
+        "author": "Joe Mabel (on Flickr as Joe Mabel from Seattle, US)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Victoria,_BC_-_BC_Parliament_from_Delta_Victoria_Ocean_Pointe_02_(20560719675).jpg"
+      }
+    ],
+    "canmore": [
+      {
+        "file": "assets/img/canmore/1.webp",
+        "title": "File:Three Sister Mountains, Canmore, Alberta.jpg",
+        "author": "Janusz Sobolewski",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Three_Sister_Mountains,_Canmore,_Alberta.jpg"
+      },
+      {
+        "file": "assets/img/canmore/2.webp",
+        "title": "File:Views of The Three Sisters, Canmore.jpg",
+        "author": "KaleighAlysse",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Views_of_The_Three_Sisters,_Canmore.jpg"
+      },
+      {
+        "file": "assets/img/canmore/3.webp",
+        "title": "File:Three Sisters Rockey Mountains Canmore.jpg",
+        "author": "Bhasker Garudadri|garudadri.org",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Three_Sisters_Rockey_Mountains_Canmore.jpg"
+      }
+    ],
+    "banff-town": [
+      {
+        "file": "assets/img/banff-town/1.webp",
+        "title": "File:Cascade Mountain Banff Avenue.jpg",
+        "author": "Adam Bishop",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cascade_Mountain_Banff_Avenue.jpg"
+      },
+      {
+        "file": "assets/img/banff-town/2.webp",
+        "title": "File:Banff Avenue - Cascade Mountain.jpg",
+        "author": "Unknown",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff_Avenue_-_Cascade_Mountain.jpg"
+      },
+      {
+        "file": "assets/img/banff-town/3.webp",
+        "title": "File:Banff Avenue - Cascade Mountain01.jpg",
+        "author": "Unknown",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff_Avenue_-_Cascade_Mountain01.jpg"
+      }
+    ],
+    "bow-falls": [
+      {
+        "file": "assets/img/bow-falls/1.webp",
+        "title": "File:Bow Falls, Banff, south view 20240820 1.jpg",
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bow_Falls,_Banff,_south_view_20240820_1.jpg"
+      },
+      {
+        "file": "assets/img/bow-falls/2.webp",
+        "title": "File:Bow Falls (2677514387).jpg",
+        "author": "Tony Hisgett from Birmingham, UK",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bow_Falls_(2677514387).jpg"
+      },
+      {
+        "file": "assets/img/bow-falls/3.webp",
+        "title": "File:Bow Falls, Banff 01.jpg",
+        "author": "AmazingWikiUser96",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bow_Falls,_Banff_01.jpg"
+      }
+    ],
+    "lake-minnewanka": [
+      {
+        "file": "assets/img/lake-minnewanka/1.webp",
+        "title": "File:Misty Minnewanka Lake.jpg",
+        "author": "Jakub Fryš",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Misty_Minnewanka_Lake.jpg"
+      },
+      {
+        "file": "assets/img/lake-minnewanka/2.webp",
+        "title": "File:Banff National Park (AB, Canada), Lake Minnewanka -- 2022 -- 2316.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff_National_Park_(AB,_Canada),_Lake_Minnewanka_--_2022_--_2316.jpg"
+      },
+      {
+        "file": "assets/img/lake-minnewanka/3.webp",
+        "title": "File:Banff National Park (AB, Canada), Lake Minnewanka -- 2022 -- 2278.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff_National_Park_(AB,_Canada),_Lake_Minnewanka_--_2022_--_2278.jpg"
+      }
+    ],
+    "banff-gondola": [
+      {
+        "file": "assets/img/banff-gondola/1.webp",
+        "title": "File:Banff-National-Park AB Banff-Gondola 2022-09-25.jpg",
+        "author": "Milan Suvajac",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff-National-Park_AB_Banff-Gondola_2022-09-25.jpg"
+      },
+      {
+        "file": "assets/img/banff-gondola/2.webp",
+        "title": "File:Banff-National-Park AB Banff-Gondola 2022-09-25 (9).jpg",
+        "author": "Milan Suvajac",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff-National-Park_AB_Banff-Gondola_2022-09-25_(9).jpg"
+      },
+      {
+        "file": "assets/img/banff-gondola/3.webp",
+        "title": "File:Banff-National-Park AB Banff-Gondola 2022-09-25 (13).jpg",
+        "author": "Milan Suvajac",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Banff-National-Park_AB_Banff-Gondola_2022-09-25_(13).jpg"
+      }
+    ],
+    "vermilion-lakes": [
+      {
+        "file": "assets/img/vermilion-lakes/1.webp",
+        "title": "File:Vermilion Lakes 2 - Banff.jpg",
+        "author": "Jakub Fryš",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vermilion_Lakes_2_-_Banff.jpg"
+      },
+      {
+        "file": "assets/img/vermilion-lakes/2.webp",
+        "title": "File:Vermilion Lakes and Eagle Mountain.jpg",
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vermilion_Lakes_and_Eagle_Mountain.jpg"
+      },
+      {
+        "file": "assets/img/vermilion-lakes/3.webp",
+        "title": "File:Vermilion Lakes.jpg",
+        "author": "Satoru Kikuchi",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vermilion_Lakes.jpg"
+      }
+    ],
+    "johnston-canyon": [
+      {
+        "file": "assets/img/johnston-canyon/1.webp",
+        "title": "File:Johnston Canyon-Lower Falls.jpg",
+        "author": "Florian Fuchs",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Johnston_Canyon-Lower_Falls.jpg"
+      },
+      {
+        "file": "assets/img/johnston-canyon/2.webp",
+        "title": "File:Frozen Waterfall - Johnston Canyon Lower Falls (16253131462).jpg",
+        "author": "Wilson Hui from Calgary, Canada",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Frozen_Waterfall_-_Johnston_Canyon_Lower_Falls_(16253131462).jpg"
+      },
+      {
+        "file": "assets/img/johnston-canyon/3.webp",
+        "title": "File:Lower Falls At Johnston Canyon (9552141).jpeg",
+        "author": "Deepak Vagisha",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lower_Falls_At_Johnston_Canyon_(9552141).jpeg"
+      }
+    ],
+    "emerald-lake": [
+      {
+        "file": "assets/img/emerald-lake/1.webp",
+        "title": "File:Emerald Lake Yoho Winter BC.jpg",
+        "author": "JLRPHOTO",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Emerald_Lake_Yoho_Winter_BC.jpg"
+      },
+      {
+        "file": "assets/img/emerald-lake/2.webp",
+        "title": "File:Emerald lake Yoho national park.jpg",
+        "author": "Soumya.deo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Emerald_lake_Yoho_national_park.jpg"
+      },
+      {
+        "file": "assets/img/emerald-lake/3.webp",
+        "title": "File:Emerald Lake - Yoho National Park, BC, Canada.jpg",
+        "author": "BarbEagen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Emerald_Lake_-_Yoho_National_Park,_BC,_Canada.jpg"
+      }
+    ],
+    "natural-bridge": [
+      {
+        "file": "assets/img/natural-bridge/1.webp",
+        "title": "File:Natural Bridge, Kicking Horse River - panoramio.jpg",
+        "author": "Jack Borno",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Natural_Bridge,_Kicking_Horse_River_-_panoramio.jpg"
+      },
+      {
+        "file": "assets/img/natural-bridge/2.webp",
+        "title": "File:Natural Bridge, Field, BC.jpg",
+        "author": "BrettA343",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Natural_Bridge,_Field,_BC.jpg"
+      },
+      {
+        "file": "assets/img/natural-bridge/3.webp",
+        "title": "File:Natural Bridge (37482586131).jpg",
+        "author": "Sheila Sund from Salem, United States",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Natural_Bridge_(37482586131).jpg"
+      }
     ]
   }
 }
