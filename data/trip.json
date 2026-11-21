@@ -5402,6 +5402,71 @@
       "notes": "אי־תשלום יגרום לביטול."
     },
     {
+      "id": "t-pay-1",
+      "title": "תשלום מלונות: Hampton קלגרי + Hyatt סיאטל",
+      "category": "תשלומים",
+      "due": "2026-12-01",
+      "status": "planning",
+      "cost": {
+        "amount": 1505,
+        "currency": "ILS",
+        "note": "בערך, לפי שער היום"
+      },
+      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+    },
+    {
+      "id": "t-pay-2",
+      "title": "תשלום מלון: Club Quarters, סן פרנסיסקו",
+      "category": "תשלומים",
+      "due": "2027-01-01",
+      "status": "planning",
+      "cost": {
+        "amount": 2156,
+        "currency": "ILS",
+        "note": "בערך, לפי שער היום"
+      },
+      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+    },
+    {
+      "id": "t-pay-3",
+      "title": "תשלום מלון: Crest Trail Lodge, ריינייר",
+      "category": "תשלומים",
+      "due": "2027-02-01",
+      "status": "planning",
+      "cost": {
+        "amount": 1728,
+        "currency": "ILS",
+        "note": "בערך, לפי שער היום"
+      },
+      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+    },
+    {
+      "id": "t-pay-4",
+      "title": "תשלום מלון: Park Plaza Lodge, לוס אנג׳לס",
+      "category": "תשלומים",
+      "due": "2027-03-01",
+      "status": "planning",
+      "cost": {
+        "amount": 2870,
+        "currency": "ILS",
+        "note": "בערך, לפי שער היום"
+      },
+      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+    },
+    {
+      "id": "t-pay-5",
+      "title": "תשלום מלון: הדירה ב־Dead Man's Flats",
+      "category": "תשלומים",
+      "due": "2027-04-01",
+      "status": "planning",
+      "cost": {
+        "amount": 3987,
+        "currency": "ILS",
+        "note": "בערך, לפי שער היום"
+      },
+      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
+    },
+    {
       "id": "t-flight-sfo-sea",
       "title": "טיסה SFO→SEA ב־23/8",
       "category": "טיסות",
@@ -6198,5 +6263,53 @@
         }
       ]
     }
-  ]
+  ],
+  "paymentPlan": {
+    "note": "פריסה של תשלום אחד בחודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
+    "items": [
+      {
+        "task": "t-pay-1",
+        "month": "2026-12-01",
+        "label": "Hampton קלגרי + Hyatt סיאטל",
+        "amount": 1505
+      },
+      {
+        "task": "t-pay-2",
+        "month": "2027-01-01",
+        "label": "Club Quarters, סן פרנסיסקו",
+        "amount": 2156
+      },
+      {
+        "task": "t-pay-3",
+        "month": "2027-02-01",
+        "label": "Crest Trail Lodge, ריינייר",
+        "amount": 1728
+      },
+      {
+        "task": "t-pay-4",
+        "month": "2027-03-01",
+        "label": "Park Plaza Lodge, לוס אנג׳לס",
+        "amount": 2870
+      },
+      {
+        "task": "t-pay-5",
+        "month": "2027-04-01",
+        "label": "הדירה ב־Dead Man's Flats",
+        "amount": 3987
+      },
+      {
+        "task": "t-cruise-balance",
+        "month": "2027-06-18",
+        "label": "יתרת הקרוז",
+        "amount": 11816
+      },
+      {
+        "task": null,
+        "month": "2027-09-04",
+        "label": "Forest Park, ג׳ספר (משלמים במלון)",
+        "amount": null,
+        "cad": 1428.99
+      }
+    ]
+  }
 }
