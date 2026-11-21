@@ -1,1 +1,239 @@
-{"note":"ייווצר אוטומטית ע״י scripts/fetch-images (שלב 2).","points":{}}
+{
+  "note": "ייווצר אוטומטית ע״י scripts/fetch-images (שלב 2).",
+  "points": {
+    "alcatraz": [
+      {
+        "file": "assets/img/alcatraz/1.webp",
+        "title": "File:Alcatraz recreation yard, NW view.jpg",
+        "author": "Photograph: Radomianin",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Alcatraz_recreation_yard,_NW_view.jpg"
+      },
+      {
+        "file": "assets/img/alcatraz/2.webp",
+        "title": "File:Alcatraz Cellhouse.jpg",
+        "author": "Photographed by and copyright of (c) David Corby (User:Miskatonic, uploader) 2006. Cropped by Dr. Blofeld",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Alcatraz_Cellhouse.jpg"
+      },
+      {
+        "file": "assets/img/alcatraz/3.webp",
+        "title": "File:Alcatraz Island as seen from the East.jpg",
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Alcatraz_Island_as_seen_from_the_East.jpg"
+      }
+    ],
+    "cable-car": [
+      {
+        "file": "assets/img/cable-car/1.webp",
+        "title": "File:San Francisco (CA, USA), Powell-Mason Cable Car Turnaround -- 2022 -- 2964.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:San_Francisco_(CA,_USA),_Powell-Mason_Cable_Car_Turnaround_--_2022_--_2964.jpg"
+      },
+      {
+        "file": "assets/img/cable-car/2.webp",
+        "title": "File:San Francisco Cable Car MC.jpg",
+        "author": "Christian Mehlführer, User:Chmehl",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:San_Francisco_Cable_Car_MC.jpg"
+      },
+      {
+        "file": "assets/img/cable-car/3.webp",
+        "title": "File:San Francisco (CA, USA), Cable Car -- 2012 -- 4178.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:San_Francisco_(CA,_USA),_Cable_Car_--_2012_--_4178.jpg"
+      }
+    ],
+    "lands-end": [
+      {
+        "file": "assets/img/lands-end/1.webp",
+        "title": "File:Lands End Trail, San Francisco (35426543562).jpg",
+        "author": "Sharon Mollerus",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lands_End_Trail,_San_Francisco_(35426543562).jpg"
+      },
+      {
+        "file": "assets/img/lands-end/2.webp",
+        "title": "File:Trail in Lands End.jpg",
+        "author": "Mx. Granger",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Trail_in_Lands_End.jpg"
+      },
+      {
+        "file": "assets/img/lands-end/3.webp",
+        "title": "File:Lands End Park, coastal trail, SF.jpg",
+        "author": "Another Believer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lands_End_Park,_coastal_trail,_SF.jpg"
+      }
+    ],
+    "rainier-paradise": [
+      {
+        "file": "assets/img/rainier-paradise/1.webp",
+        "title": "File:Mount Rainier behind the flowering meadows of Paradise Park (18 August 2012).jpg",
+        "author": "Bob Collowan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_behind_the_flowering_meadows_of_Paradise_Park_(18_August_2012).jpg"
+      },
+      {
+        "file": "assets/img/rainier-paradise/2.webp",
+        "title": "File:Mount Rainier - alpine meadow at Paradise 03.jpg",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_-_alpine_meadow_at_Paradise_03.jpg"
+      },
+      {
+        "file": "assets/img/rainier-paradise/3.webp",
+        "title": "File:Mount Rainier - alpine meadow at Paradise 01.jpg",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_-_alpine_meadow_at_Paradise_01.jpg"
+      }
+    ],
+    "reflection-lakes": [
+      {
+        "file": "assets/img/reflection-lakes/1.webp",
+        "title": "File:Reflection Lakes Mount Rainier Seattle (127328459).jpeg",
+        "author": "Tj Kim",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Reflection_Lakes_Mount_Rainier_Seattle_(127328459).jpeg"
+      },
+      {
+        "file": "assets/img/reflection-lakes/2.webp",
+        "title": "File:Mount Rainier and lake reflection.jpg",
+        "author": "US National Park Service",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_and_lake_reflection.jpg"
+      },
+      {
+        "file": "assets/img/reflection-lakes/3.webp",
+        "title": "File:Mt Rainier-Reflection Lake.jpg",
+        "author": "Meckser",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mt_Rainier-Reflection_Lake.jpg"
+      }
+    ],
+    "golden-gate": [
+      {
+        "file": "assets/img/golden-gate/1.webp",
+        "title": "File:Golden Gate Bridge as seen from Marshall’s Beach, March 2018.jpg",
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_March_2018.jpg"
+      },
+      {
+        "file": "assets/img/golden-gate/2.webp",
+        "title": "File:Golden Gate Bridge Yang Ming Line.jpg",
+        "author": "Cary Bass",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_Yang_Ming_Line.jpg"
+      },
+      {
+        "file": "assets/img/golden-gate/3.webp",
+        "title": "File:Golden Gate Bridge by night.jpg",
+        "author": "Image taken by Daniel Schwen",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_by_night.jpg"
+      }
+    ],
+    "fishermans-wharf": [
+      {
+        "file": "assets/img/fishermans-wharf/1.webp",
+        "title": "File:California Sea Lions at Pier 39 August 7 2009.jpg",
+        "author": "Brocken Inaglory",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:California_Sea_Lions_at_Pier_39_August_7_2009.jpg"
+      },
+      {
+        "file": "assets/img/fishermans-wharf/2.webp",
+        "title": "File:San Francisco (CA, USA), Fisherman's Wharf, Pier 39 -- 2012 -- 4196.jpg",
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:San_Francisco_(CA,_USA),_Fisherman%27s_Wharf,_Pier_39_--_2012_--_4196.jpg"
+      },
+      {
+        "file": "assets/img/fishermans-wharf/3.webp",
+        "title": "File:Pier 39, San Francisco 2016.jpg",
+        "author": "Dllu",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pier_39,_San_Francisco_2016.jpg"
+      }
+    ],
+    "rainier-sunrise": [
+      {
+        "file": "assets/img/rainier-sunrise/1.webp",
+        "title": "File:Mount Rainier from Sunrise WA1.jpg",
+        "author": "Acroterion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_from_Sunrise_WA1.jpg"
+      },
+      {
+        "file": "assets/img/rainier-sunrise/2.webp",
+        "title": "File:Mount Rainier and Sunrise (163a05fa-3224-4103-937d-dfb5ca310c0f).JPG",
+        "author": "NPS Photo",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_and_Sunrise_(163a05fa-3224-4103-937d-dfb5ca310c0f).JPG"
+      },
+      {
+        "file": "assets/img/rainier-sunrise/3.webp",
+        "title": "File:Sunrise Ridge & Mt Rainier.jpg",
+        "author": "Chris Light",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunrise_Ridge_%26_Mt_Rainier.jpg"
+      }
+    ],
+    "pike-place": [
+      {
+        "file": "assets/img/pike-place/1.webp",
+        "title": "File:Maximilien Restaurant Sign in Pike Place Market, Seattle, Washington, 2025.jpg",
+        "author": "Julian Lupyan",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Maximilien_Restaurant_Sign_in_Pike_Place_Market,_Seattle,_Washington,_2025.jpg"
+      },
+      {
+        "file": "assets/img/pike-place/2.webp",
+        "title": "File:Waterfront Viewpoint Sign at Pike Place Market, Seattle, Washington, 2025.jpg",
+        "author": "Julian Lupyan",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Waterfront_Viewpoint_Sign_at_Pike_Place_Market,_Seattle,_Washington,_2025.jpg"
+      },
+      {
+        "file": "assets/img/pike-place/3.webp",
+        "title": "File:Pike Place Market Seattle.jpg",
+        "author": "Daniel Schwen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pike_Place_Market_Seattle.jpg"
+      }
+    ]
+  }
+}
