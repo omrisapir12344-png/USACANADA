@@ -314,3 +314,6 @@ textarea { width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid
 .jgrid button { position: absolute; top: 4px; left: 4px; width: 26px; height: 26px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; font-size: 16px; line-height: 1; }
 button.li { background: none; border: 0; border-top: 1px solid var(--line); cursor: pointer; color: inherit; }
 .form .btn { flex: none; }
+.line-item > span:first-child { flex: 1 1 auto; }
+.line-item .v.num, .line-item .v .num { white-space: nowrap; }
+.line-item .v.num { flex: none; max-width: none; }
