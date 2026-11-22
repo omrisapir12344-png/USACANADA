@@ -451,7 +451,6 @@
         </div>
         <div class="list">
           ${li('#/more/offline', 'download', 'שמירה לאופליין ועריכה', LS.get('tg.offlineAt') ? 'נשמר במכשיר' : 'עוד לא נשמר במכשיר הזה')}
-          ${li('#/more/about', 'star', 'על הפרויקט', 'תהליך, עיצוב וטכנולוגיה')}
           ${li('#/more/credits', 'image', 'קרדיטים', 'תמונות, מפות ונתונים')}
         </div>
       </div>`;
@@ -835,22 +834,6 @@
       const rows = [['date', 'category', 'amount', 'currency', 'note'], ...LS.get('tg.expenses', []).map(e => [e.date, e.cat, e.amt, e.cur, (e.note || '').replace(/"/g, '""')])];
       const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + rows.map(r => r.map(x => `"${x}"`).join(',')).join('\n')], { type: 'text/csv' })); a.download = 'expenses-2027.csv'; a.click();
     });
-  };
-
-  /* ---------- about (portfolio) ---------- */
-  V.more_about = () => {
-    const pts = D.points.filter(p => !['transport', 'lodging'].includes(p.kind)).length;
-    const km = Object.values(RT.days).reduce((s, d) => s + d.km, 0);
-    return `<section class="hero sm" style="${bg(firstImg('peyto-lake'))}">${topnav('#/more')}<div class="in"><div class="eyebrow">על הפרויקט</div><h1>מדריך טיול אישי, אופליין</h1><p>אתר סטטי בעברית שמרכז מסלול, מלונות, משימות ותקציב לטיול של 27 לילות.</p></div></section>
-      <div class="stats"><div><b class="num">${pts}</b><span>מקומות במדריך</span></div><div><b class="num">${D.days.length}</b><span>ימים</span></div><div><b class="num">${km.toLocaleString('en-US')}</b><span>ק״מ ברכב</span></div></div>
-      <div class="body">
-        <div class="sect"><h4>${I('star')}האתגר</h4><p>טיול מורכב: שש מדינות ומחוזות, קרוז, שלוש השכרות רכב ותשע לינות. המידע היה מפוזר במיילים, באפליקציות ובראש. המטרה: מקום אחד, בעברית, שעובד בטלפון גם בלי קליטה ומראה מה דחוף עכשיו.</p></div>
-        <div class="sect"><h4>${I('doc')}תהליך</h4><ul><li>סקיצות לפני קוד, ושלושה סבבי עיצוב עד שהכיוון אושר.</li><li>חלוקה ברורה בין ״המסע״ (לאן מגיעים ומה עושים) לבין ״משימות״ (מה לסגור).</li><li>כל מסך נבדק ברוחב טלפון, מימין לשמאל ובמצב טיסה.</li></ul></div>
-        <div class="sect"><h4>${I('image')}עיצוב</h4><ul><li>צילום גדול בראש כל עמוד, כחול כהה כצבע בסיס, והדגשה אחת בזהב רק למה שחשוב עכשיו.</li><li>גופן IBM Plex Sans Hebrew, אייקונים קוויים במקום אימוג׳ים.</li><li>ניווט תחתון כמו באפליקציה. סמל וצבע לכל סוג מקום במפה.</li></ul></div>
-        <div class="sect"><h4>${I('map')}טכנולוגיה</h4><ul><li>HTML, CSS ו־JavaScript בלי שלב build. PWA עם service worker ששומר הכול לאופליין.</li><li>מפות OpenStreetMap ו־Leaflet, מרחקים מ־OSRM, תחזית מ־Open-Meteo, תמונות מ־Wikimedia Commons. אף אחד מהם לא דורש מפתח.</li><li>כל הנתונים בקובץ JSON אחד, עם מצב עריכה, ייצוא וייבוא.</li></ul></div>
-        <div class="sect"><h4>${I('warn')}עקרונות</h4><ul><li>לא ממציאים: פרט לא ידוע מסומן ״טרם נקבע״, הערכות מסומנות ״הערכה״, ועובדות שמשתנות מקושרות למקור רשמי.</li><li>פרטיות: אין באתר מספרי הזמנה, קודים, שמות או אמצעי תשלום.</li></ul></div>
-        <a class="btn dark" href="#/journey" style="width:100%">לאתר עצמו</a>
-      </div>`;
   };
 
 
