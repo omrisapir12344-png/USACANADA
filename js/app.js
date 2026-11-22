@@ -121,7 +121,7 @@
   const pagehead = (kicker, title, back) => `<header class="pagehead">${back ? `<a class="backlink" href="${back}">${I('back')} חזרה</a>` : ''}<div class="kicker">${esc(kicker)}</div><h1>${esc(title)}</h1></header>`;
   function datedItems() {
     const dn = done(), out = [];
-    D.tasks.forEach(t => { if (!dn[t.id] && (t.opens || t.due)) out.push({ id: t.id, title: t.title, date: t.opens || t.due, sub: t.opens ? `נפתח ${dm(t.opens)} · 17:00 שעון ישראל` : `עד ${fFull(t.due)}`, url: t.url }); });
+    D.tasks.forEach(t => { if (!dn[t.id] && t.status !== 'done' && (t.opens || t.due)) out.push({ id: t.id, title: t.title, date: t.opens || t.due, sub: t.opens ? `נפתח ${dm(t.opens)} · 17:00 שעון ישראל` : `עד ${fFull(t.due)}`, url: t.url }); });
     return out.sort((a, b) => toDate(a.date) - toDate(b.date));
   }
   function dayCard(d) {
@@ -410,8 +410,8 @@
     const dated = datedItems(), datedIds = new Set(dated.map(x => x.id));
     const row = (id, title, sub, right, hot, extra = '') => `<div class="task ${dn[id] ? 'done' : ''} ${hot ? 'hot' : ''}"><input type="checkbox" data-done="${id}" ${dn[id] ? 'checked' : ''} aria-label="בוצע: ${esc(title)}"><div class="g"><div class="t">${esc(title)}</div>${sub ? `<div class="s">${sub}</div>` : ''}${extra}</div>${right || ''}</div>`;
     const cats = {};
-    D.tasks.filter(t => !datedIds.has(t.id) && !dn[t.id]).forEach(t => { (cats[t.category] ??= []).push(t); });
-    const finished = all.filter(t => dn[t.id]);
+    D.tasks.filter(t => !datedIds.has(t.id) && !dn[t.id] && t.status !== 'done').forEach(t => { (cats[t.category] ??= []).push(t); });
+    const finished = all.filter(t => dn[t.id] || (t.status === 'done' && D.tasks.some(x => x.id === t.id)));
     const urgent = `
       <div class="grp red">${I('clock')}יש תאריך קבוע</div>
       ${dated.map((u, k) => row(u.id, u.title, esc(u.sub) + (u.url ? ` · <a href="${esc(u.url)}" target="_blank" rel="noopener">קישור</a>` : ''), `<div class="dd"><b class="num" style="color:${k ? 'var(--gold)' : 'var(--alert)'}">${daysTo(u.date)}</b><span>ימים</span></div>`, k === 0)).join('')}
@@ -467,7 +467,7 @@
     const dn = done(), ils = (i, amt) => i.ils != null && amt === i.amount ? i.ils : amt * (R[i.currency] || 0);
     const items = D.budget.categories.flatMap(c => c.items.map(i => ({ ...i, cat: c.label })));
     const booked = items.filter(i => i.status === 'booked' && i.amount != null);
-    const paidOf = (i) => i.task && dn[i.task] ? i.amount : (i.paid ?? 0);
+    const paidOf = (i) => (i.task && (dn[i.task] || D.tasks.some(t => t.id === i.task && t.status === 'done'))) ? i.amount : (i.paid ?? 0);
     const left = booked.map(i => ({ ...i, rest: i.amount - paidOf(i) })).filter(i => i.rest > 0.5);
     const plan = Object.fromEntries((D.paymentPlan?.items || []).filter(x => x.task).map(x => [x.task, x.month]));
     const when = (i) => i.task ? plan[i.task] : i.due;
@@ -729,6 +729,7 @@
     const ev = [];
     const add = (uid, lines, alarms) => ev.push(`BEGIN:VEVENT\r\nUID:${uid}@usacanada2027\r\nDTSTAMP:${stamp}\r\n${lines.join('\r\n')}\r\n${alarms.join('\r\n')}\r\nEND:VEVENT`);
     D.tasks.forEach(t => {
+      if (t.status === 'done') return;
       if (t.opens) { const [dd, tt] = t.opens.split('T'); add(t.id, [`DTSTART;TZID=Asia/Jerusalem:${ymd(dd)}T${tt.replace(':', '')}00`, 'DURATION:PT30M', `SUMMARY:${escI(t.title)}`, `DESCRIPTION:${escI((t.opensNote || '') + (t.url ? '\n' + t.url : ''))}`], [alarm('-P1D', t.title), alarm('-PT1H', t.title)]); }
       else if (t.due) add(t.id, [`DTSTART;VALUE=DATE:${ymd(t.due)}`, `DTEND;VALUE=DATE:${next(t.due)}`, `SUMMARY:${escI(t.title)}`, `DESCRIPTION:${escI(t.notes || '')}`], [alarm('-P7D', t.title), alarm('-P1D', t.title)]);
     });
