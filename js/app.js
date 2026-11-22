@@ -223,7 +223,11 @@
         </div></article>`;
     };
     const backLeg = rt && rt.legs[rt.legs.length - 1];
+    const firstNight = !prev || prev.lodging !== d.lodging;
+    const prevLodge = prev && prev.lodging !== d.lodging ? D.hotels.find(h => h.id === prev.lodging) : null;
+    const checkout = prevLodge && /אאוט/.test(prevLodge.checkTimes || '') ? (prevLodge.checkTimes.split('·').find(s => /אאוט/.test(s)) || '').trim() : '';
     const lastTo = backLeg && point(backLeg.to), arrive = tl && lastTo && lastTo.kind === 'lodging' ? tl.end : null;
+    const ciM = firstNight && (lodge?.checkTimes || '').match(/אין[^\d]*(\d{1,2}):(\d{2})/), early = arrive != null && ciM && arrive < +ciM[1] * 60 + +ciM[2];
     const showBack = backLeg && LODGE_PTS.includes(backLeg.to) && !sights.find(p => p.id === backLeg.to);
     const transport = d.points.map(point).filter(p => p && ['transport'].includes(p.kind));
     const anchor = sights[0] || transport[0] || D.points.find(p => p.region === r.id && !['transport', 'lodging'].includes(p.kind));
@@ -236,13 +240,14 @@
         ${d.summary ? `<p class="lead" style="margin:0 2px 12px">${esc(d.summary)}</p>` : ''}
         ${transport.length && d.type === 'transit' ? `<div class="chips" style="margin-bottom:12px">${transport.map(p => `<span>${I('plane')} ${esc(p.name)}</span>`).join('')}</div>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
+        ${checkout ? `<div class="notice">${I('bed')} ${esc(prevLodge.name)}: ${esc(checkout)}</div>` : ''}
         ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b>${sights.length ? ` · ${sights.length} עצירות` : ''} · מגיעים ל${esc(point(rt.legs[rt.legs.length - 1].to).name)} בערך ב־<b class="num">${clock(tl.end)}</b>. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
         ${d.driveNote ? `<div class="notice">${esc(d.driveNote)}</div>` : ''}
         ${rt ? `<div class="routemap"><div id="dmap" style="height:100%"></div><a class="gbtn" href="${gDir(d.drive)}" target="_blank" rel="noopener">${I('pin')}פתח בגוגל מפות</a></div>` : ''}
         ${sights.length ? sights.map(stopHtml).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט. אין עצירות בחוף.' : d.type === 'free' ? 'עוד אין תוכנית ליום הזה.' : ''}</p>`}
         ${sugg.length ? `<div class="h2"><small>לא בתוכנית</small>הצעות לאזור</div><div class="list">${sugg.map(p => `<a class="li" href="#/point/${p.id}">${firstImg(p.id) ? `<img src="${esc(firstImg(p.id).file)}" alt="" loading="lazy">` : '<span class="ph"></span>'}<div class="g"><b>${esc(p.name)}</b><div class="s">${esc(p.visit ? p.visit + ' · ' + (p.see || '') : p.summary || '')}</div></div>${I('chev', 'i chev')}</a>`).join('')}</div>` : ''}
         ${showBack ? legChip(backLeg, false) : ''}
-        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b>${arrive != null ? `<div class="arr">${I('clock')}מגיעים בערך ב־<b class="num">${clock(arrive)}</b></div>` : ''}<div class="small muted">${lodge ? esc(lodge.name) : ''}${lodge?.checkTimes ? ' · ' + esc(lodge.checkTimes) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
+        <a class="sleep" href="#/more/hotels"><span class="ic">${I('bed')}</span><div style="flex:1;min-width:0"><b>${lodge ? (lodge.id === 'plane' ? 'לילה בטיסה' : 'לנים ב' + esc(lodge.city)) : 'הביתה'}</b>${arrive != null ? `<div class="arr">${I('clock')}${firstNight ? 'מגיעים' : 'חוזרים'} בערך ב־<b class="num">${clock(arrive)}</b></div>${early ? `<div class="tiny" style="color:var(--goldink)">לפני שעת הצ׳ק־אין. אפשר בדרך כלל להשאיר מזוודות בקבלה.</div>` : ''}` : ''}<div class="small muted">${lodge ? esc(lodge.name) : ''}${firstNight && lodge?.checkTimes ? ' · ' + esc(lodge.checkTimes.split('·')[0].trim()) : ''}</div></div>${lodge ? pill(lodge.status) : ''}</a>
         <div class="facts" style="margin-top:12px">
           <div class="fact wide"><div class="k">${I('cloud')}תחזית</div><div class="v">${anchor ? wx(anchor.lat, anchor.lng, d.date) : '—'}</div></div>
           ${d.weatherAlt ? `<div class="fact wide"><div class="k">${I('warn')}אם מזג האוויר לא טוב</div><div class="v">${esc(d.weatherAlt)}</div></div>` : ''}
