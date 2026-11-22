@@ -217,7 +217,7 @@
             <div class="row"><span class="ic">${I('mountain')}</span><div><span class="k">מה עושים</span>${esc(p.see || p.summary || '')}${doList ? `<div class="chips" style="margin-top:6px">${doList}</div>` : ''}</div></div>
             ${how ? `<div class="row"><span class="ic">${I('pin')}</span><div><span class="k">איך מגיעים</span>${esc(how)}</div></div>` : ''}
             <div class="row"><span class="ic">${I('jacket')}</span><div><span class="k">מה ללבוש</span>${esc(g ? g.clothing[0] : r.clothing.summary.split('.').slice(0, 2).join('.') + '.')}</div></div>
-            ${at.length ? `<div class="row"><span class="ic">${I('ticket')}</span><div><span class="k">הזמנה</span>${at.map(a => `${esc(a.name)}: <b>${bookingLabel(a.booking)}</b>`).join('<br>')}</div></div>` : ''}
+            ${at.length ? `<div class="row"><span class="ic">${I('ticket')}</span><div><span class="k">הזמנה</span>${at.map(a => `${esc(a.name)}: <b>${attrState(a) === 'free' ? bookingLabel(a.booking) : ATTR_LBL[attrState(a)]}</b>${['yes', 'undecided'].includes(attrState(a)) ? ` · ${bookingLabel(a.booking)}` : ''}`).join('<br>')} <a class="link" href="#/more/attractions">שינוי ›</a></div></div>` : ''}
           </div>
           <div class="btns"><a class="btn dark" href="#/point/${p.id}">מדריך מלא</a><a class="btn" href="${nav(p).google}" target="_blank" rel="noopener">${I('pin')}נווט</a></div>
         </div></article>`;
@@ -461,35 +461,93 @@
       </div>`;
   };
   V.more.after = (sub) => { if (!sub) $('#icsBtn')?.addEventListener('click', exportICS); };
-  V.more_attractions = () => `${pagehead('לפני הטיול', 'אטרקציות', '#/more')}<div class="body" style="padding-top:8px"><p class="lead" style="margin-top:0">מה צריך להזמין, מתי ההזמנה נפתחת, ומה רק אופציה.</p>${D.attractions.slice().sort((a, b) => (a.booking === 'required' ? 0 : 1) - (b.booking === 'required' ? 0 : 1)).map(attrRow).join('')}</div>`;
+  // decision per attraction: booked / yes (chosen, still to book) / undecided / no / free (no booking needed)
+  const attrState = (a) => {
+    const dec = (LS.get('tg.attrDec', {}) || {})[a.id];
+    if (dec === 'no') return 'no';
+    if (a.status === 'booked' || done()[a.id]) return 'booked';
+    if (a.booking === 'none') return 'free';
+    if (dec === 'yes' || (dec == null && ['planning', 'toclose'].includes(a.status))) return 'yes';
+    return 'undecided';
+  };
+  const ATTR_LBL = { booked: 'הוזמן', yes: 'בתוכנית, להזמין', undecided: 'עוד לא הוחלט', no: 'ויתרתם', free: 'בלי הזמנה' };
+  V.more_attractions = () => {
+    const mode = LS.get('tg.attrView', 'todo');
+    const list = D.attractions.map(a => ({ ...a, st: attrState(a), p: point(a.point) }));
+    const soon = list.filter(a => a.opens && a.st !== 'no' && a.st !== 'booked' && toDate(a.opens) > new Date()).sort((x, y) => x.opens < y.opens ? -1 : 1)[0];
+    const card = (a) => { const im = a.p && firstImg(a.p.id), bcls = a.booking === 'required' ? 'b-red' : a.booking === 'none' ? 'b-ok' : 'b-gold';
+      return `<div class="sect att ${a.st}"><a class="aimg" href="${a.p ? '#/point/' + a.p.id : '#'}" style="${im ? `background-image:url('${esc(im.file)}')` : ''}"></a><div class="g">
+        <b>${esc(a.name)}</b><div class="meta">${esc([a.date ? fDay(a.date) : '', region(a.region)?.name, a.p?.visit].filter(Boolean).join(' · '))}</div>
+        <div class="badges"><span class="badge ${bcls}">${bookingLabel(a.booking)}</span>${a.st === 'booked' ? '<span class="badge b-ok">✓ הוזמן</span>' : ''}${a.cost?.amount ? `<span class="badge b-gray">${money(a.cost.amount, a.cost.currency)}</span>` : ''}</div>
+        ${a.notes ? `<p class="anote">${esc(a.notes)}</p>` : ''}
+        <div class="aact">${a.st === 'undecided' || a.st === 'no' ? `<button data-dec="${a.id}:yes" class="${a.st === 'undecided' ? '' : ''}">בפנים</button>${a.st === 'undecided' ? `<button data-dec="${a.id}:no">לא</button>` : ''}`
+          : a.st === 'yes' ? `${a.url ? `<a class="go" href="${esc(a.url)}" target="_blank" rel="noopener">להזמנה ›</a>` : ''}<button data-booked="${a.id}">סימון ״הוזמן״</button><button class="ghost" data-dec="${a.id}:">לא בטוחים</button>`
+          : a.st === 'booked' ? `<button class="ghost" data-booked="${a.id}">ביטול הסימון</button>`
+          : a.url ? `<a class="go light" href="${esc(a.url)}" target="_blank" rel="noopener">אתר רשמי ›</a>` : ''}</div></div></div>`; };
+    const groups = [['yes-req', 'חובה להזמין', 'var(--alert)', a => a.st === 'yes' && a.booking === 'required'], ['yes', 'בתוכנית, צריך להזמין', 'var(--gold)', a => a.st === 'yes' && a.booking !== 'required'],
+      ['undecided', 'להחליט', 'var(--blue)', a => a.st === 'undecided'], ['booked', 'הוזמן', 'var(--ok)', a => a.st === 'booked'], ['free', 'בלי הזמנה', 'var(--ink3)', a => a.st === 'free'], ['no', 'ויתרתם', 'var(--line)', a => a.st === 'no']];
+    const byDate = () => { const dated = list.filter(a => a.date && a.st !== 'no').sort((x, y) => x.date < y.date ? -1 : 1), und = list.filter(a => !a.date && a.st !== 'no');
+      let last = ''; return dated.map(a => { const h = a.date !== last ? `<div class="grp">${esc(fLong(a.date))}</div>` : ''; last = a.date; return h + card(a); }).join('') + (und.length ? `<div class="grp">בלי תאריך קבוע</div>${und.map(card).join('')}` : ''); };
+    return `${pagehead('לפני הטיול', 'אטרקציות', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="views"><button data-view="todo" class="${mode === 'todo' ? 'on' : ''}">לפי מה לעשות</button><button data-view="date" class="${mode === 'date' ? 'on' : ''}">לפי תאריך</button></div>
+      ${soon ? (() => { const ms = toDate(soon.opens) - new Date(), dd = Math.floor(ms / 864e5), hh = Math.floor(ms % 864e5 / 36e5); return `<div class="count"><span class="k">ההזמנה הכי חשובה</span><b>${esc(soon.name)}</b><div class="small">נפתח ב־${esc(fFull(soon.opens))} ב־${esc(soon.opens.split('T')[1])} שעון ישראל${soon.opensNote ? ' · ' + esc(soon.opensNote) : ''}</div>
+        <div class="cd"><div><span class="num">${dd}</span>ימים</div><div><span class="num">${hh}</span>שעות</div>${soon.url ? `<a href="${esc(soon.url)}" target="_blank" rel="noopener">לאתר ›</a>` : ''}</div></div>`; })() : ''}
+      ${mode === 'date' ? byDate() : groups.map(([id, l, c, f]) => { const g = list.filter(f); return g.length ? `<div class="grp" style="--c:${c}"><i></i>${l} · ${g.length}</div>${id === 'no' || id === 'free' ? `<details class="fold"><summary>הצגה</summary>${g.map(card).join('')}</details>` : g.map(card).join('')}` : ''; }).join('')}
+      <p class="tiny" style="margin-top:12px">״בפנים״ מסמן את האטרקציה ביום שלה בתוכנית. ההחלטות עוברות בסנכרון.</p></div>`;
+  };
+  V.more_attractions.after = () => {
+    view.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { LS.set('tg.attrView', b.dataset.view); route(); }));
+    view.querySelectorAll('[data-dec]').forEach(b => b.addEventListener('click', () => { const [id, v] = b.dataset.dec.split(':'); const m = LS.get('tg.attrDec', {}) || {}; m[id] = v || 'undecided'; LS.set('tg.attrDec', m); route(); }));
+    view.querySelectorAll('[data-booked]').forEach(b => b.addEventListener('click', () => { const m = LS.get('tg.done', {}); m[b.dataset.booked] = !m[b.dataset.booked]; LS.set('tg.done', m); route(); }));
+  };
   V.more_budget = () => {
     const user = LS.get('tg.rates', {}) || {}, R = { ILS: 1, USD: +user.USD || D.budget.rates?.USD || 0, CAD: +user.CAD || D.budget.rates?.CAD || 0 };
-    const dn = done(), ils = (i, amt) => i.ils != null && amt === i.amount ? i.ils : amt * (R[i.currency] || 0);
-    const items = D.budget.categories.flatMap(c => c.items.map(i => ({ ...i, cat: c.label })));
-    const booked = items.filter(i => i.status === 'booked' && i.amount != null);
+    const dn = done(), ils = (i, amt) => i.ils != null && Math.abs(amt - i.amount) < .01 ? i.ils : amt * (R[i.currency] || 0);
+    const cats = D.budget.categories.map(c => ({ ...c, items: c.items.map(i => ({ ...i, cat: c.id })) }));
+    const items = cats.flatMap(c => c.items), booked = items.filter(i => i.status === 'booked' && i.amount != null);
     const paidOf = (i) => i.task && dn[i.task] ? i.amount : (i.paid ?? 0);
-    const left = booked.map(i => ({ ...i, rest: i.amount - paidOf(i) })).filter(i => i.rest > 0.5);
     const plan = Object.fromEntries((D.paymentPlan?.items || []).filter(x => x.task).map(x => [x.task, x.month]));
-    const when = (i) => i.task ? plan[i.task] : i.due;
-    left.sort((a, b) => (when(a) || '9') < (when(b) || '9') ? -1 : 1);
-    const sum = (arr, f) => arr.reduce((s, i) => s + f(i), 0);
-    const totB = sum(booked, i => ils(i, i.amount)), totL = sum(left, i => ils(i, i.rest)), totP = totB - totL;
-    const byCur = (arr, f) => { const o = {}; arr.forEach(i => { o[i.currency] = (o[i.currency] || 0) + f(i); }); return Object.entries(o).map(([c, a]) => money(a, c)).join(' · '); };
-    const notYet = items.filter(i => i.amount == null);
+    const when = (i) => (i.task && plan[i.task]) || i.due || null;
+    const sum = (arr, f) => arr.reduce((s, x) => s + f(x), 0);
     const shek = (n) => '₪' + Math.round(n).toLocaleString('he-IL');
-    return `${pagehead('כסף', 'תקציב מול הזמנות', '#/more')}<div class="body" style="padding-top:8px">
-      <div class="tot"><div><b>הוזמן</b><span class="big num">≈ ${shek(totB)}</span><span class="tiny">${byCur(booked, i => i.amount)}</span></div>
-        <div><b>שולם</b><span class="big num">≈ ${shek(totP)}</span><span class="tiny">${byCur(booked.filter(i => paidOf(i) > 0), paidOf) || '—'}</span></div>
-        <div class="due"><b>נשאר לשלם</b><span class="big num">≈ ${shek(totL)}</span><span class="tiny">${byCur(left, i => i.rest)}</span></div></div>
-      <div class="sect mlist"><h4>${I('cal')}מה נשאר לשלם ומתי</h4>
-        ${left.map(i => `<div class="line-item"><span>${when(i) ? `<b class="num" style="color:var(--navy)">${esc(fmt(when(i), { day: 'numeric', month: 'short', year: '2-digit' }))}</b> · ` : ''}${esc(i.label)}${i.payNote ? `<br><span class="tiny">${esc(i.payNote)}</span>` : ''}${i.paid ? `<br><span class="tiny">שולם ${money(i.paid, i.currency)}, זו היתרה</span>` : ''}</span><span class="v">${i.currency === 'ILS' ? money(i.rest, 'ILS') : `≈ ${shek(ils(i, i.rest))}<br><span class="tiny">${money(i.rest, i.currency)}</span>`}</span></div>`).join('')}
-        <div class="line-item" style="border:0"><span><b>סה״כ</b></span><span class="v"><b>≈ ${shek(totL)}</b></span></div>
-        <p class="tiny" style="margin-top:6px">${esc(D.budget.rates?.note || '')} שער: דולר ${R.USD} · דולר קנדי ${R.CAD}. כשמסמנים תשלום כ״בוצע״ במשימות, הוא יורד מכאן. ${esc(D.paymentPlan?.note || '')}</p><a class="link" href="#/tasks" style="display:inline-block;margin-top:8px">לסמן ״שולם״ במשימות ›</a></div>
-      ${notYet.length ? `<div class="sect warn"><h4>${I('warn')}עוד לא בחישוב</h4><p>${notYet.map(i => esc(i.label)).join(' · ')}</p><p class="small muted" style="margin-top:6px">אלה עוד לא הוזמנו, אז אין סכום. כשיוזמנו, יתווספו לחישוב.</p></div>` : ''}
-      ${D.budget.categories.map(c => { const pi = c.items.find(i => i.paid > 0 && i.paid < i.amount); return `<div class="sect"><h4 style="justify-content:space-between"><span>${esc(c.label)}</span><span class="small muted" style="font-weight:600">תקציב: ${c.budget != null ? money(c.budget.amount, c.budget.currency) : 'להזין'}</span></h4>
-        ${c.items.length ? c.items.map(i => `<div class="line-item"><span>${esc(i.label)} ${pill(i.status)}${i.paid > 0 && i.paid < i.amount && i.due ? `<br><span class="tiny">שולם ${money(i.paid, i.currency)} · יתרה עד ${dm(i.due)}</span>` : ''}</span><span class="v">${i.approx && i.amount != null ? '~' : ''}${money(i.amount, i.currency)}</span></div>`).join('') : '<p class="small muted">אין עדיין פריטים.</p>'}
-        ${pi ? `<div class="bar"><i style="width:${(100 * pi.paid / pi.amount).toFixed(1)}%;background:var(--ok)"></i><i style="width:${(100 - 100 * pi.paid / pi.amount).toFixed(1)}%;background:var(--gold)"></i></div><p class="tiny" style="margin-top:4px">ירוק = שולם · זהב = יתרה</p>` : ''}</div>`; }).join('')}
-      <p class="tiny">${esc(D.hotelsNote)} מחירי האופציות נבדקו בעבר ואינם מובטחים.</p></div>`;
+    const cur = (a, c) => c === 'ILS' ? '' : `${Math.round(a).toLocaleString('he-IL')} ${c === 'USD' ? '$' : 'CA$'}`;
+    // rows: paid parts first, then what is left, grouped by payment (one task = one row)
+    const paidRows = [], due = {};
+    booked.forEach(i => {
+      const pd = paidOf(i), rest = i.amount - pd, name = i.short || i.label;
+      if (pd > .5) paidRows.push({ name: rest > .5 ? name + ', מקדמה' : name, ils: ils(i, pd), sub: cur(pd, i.currency), task: rest > .5 ? null : (i.task && dn[i.task] ? i.task : null) });
+      if (rest > .5) { const k = i.task || name; (due[k] ??= { task: i.task, when: when(i), names: [], ils: 0, subs: [], note: i.payNote }); due[k].names.push(pd > .5 ? name + ', יתרה' : name); due[k].ils += ils(i, rest); due[k].subs.push(cur(rest, i.currency)); }
+    });
+    const dueRows = Object.values(due).sort((a, b) => (a.when || '9') < (b.when || '9') ? -1 : 1);
+    const totB = sum(booked, i => ils(i, i.amount)), totL = sum(dueRows, r => r.ils), totP = totB - totL, pct = totB ? Math.round(100 * totP / totB) : 0;
+    const next = dueRows.find(r => r.when && daysTo(r.when) >= 0) || dueRows[0];
+    const chip = (iso) => iso ? `<span class="date"><b class="num">${toDate(iso).getDate()}</b><small>${esc(fmt(iso, { month: 'short' }))}</small></span>` : '<span class="date">—</span>';
+    const row = (r, paid) => `<div class="ti ${paid ? 'paid' : ''}">${r.task ? `<input type="checkbox" data-paid="${r.task}" ${paid ? 'checked' : ''} aria-label="שולם">` : `<span class="chk-fix">${paid ? '✓' : ''}</span>`}
+      ${paid ? '<span class="date ok">✓</span>' : chip(r.when)}<div class="g"><b>${esc(r.names ? r.names.join(' + ') : r.name)}</b><span>${esc([r.subs ? r.subs.filter(Boolean).join(' + ') : r.sub, r.note].filter(Boolean).join(' · ') || (paid ? 'שולם' : ''))}</span></div><span class="v num">${shek(r.ils)}</span></div>`;
+    const catTot = cats.map(c => ({ label: c.label, v: sum(c.items.filter(i => i.status === 'booked' && i.amount != null), i => ils(i, i.amount)) })).filter(c => c.v > 0);
+    const COL = ['#2d6cb5', '#b48a4a', '#13233d', '#6b8fb8', '#8a6530'];
+    const notYet = items.filter(i => i.amount == null);
+    return `${pagehead('כסף', 'תקציב', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="bhero"><span class="k">נשאר לשלם</span><b class="num">${shek(totL)}</b>
+        <div class="bbar"><i style="width:${pct}%"></i></div><div class="lg2"><span>שולם ${shek(totP)}</span><span>מתוך ${shek(totB)}</span></div></div>
+      ${next ? `<div class="bnext"><span class="k">התשלום הבא${next.when ? ` · ${daysTo(next.when) === 0 ? 'היום' : `בעוד ${daysTo(next.when)} ימים`}` : ''}</span>
+        <div class="t"><div><b>${esc(next.names.join(' + '))}</b><div class="small muted">${next.when ? esc(fmt(next.when, { day: 'numeric', month: 'long', year: 'numeric' })) : ''}${next.note ? ' · ' + esc(next.note) : ''}</div></div><b class="num">${shek(next.ils)}</b></div>
+        ${next.task ? `<button class="btn dark" data-paid-btn="${next.task}">סימון ״שולם״</button>` : ''}</div>` : `<div class="sect"><b>הכול שולם 🎉</b></div>`}
+      <div class="h2 bh"><span>ציר התשלומים</span><small>בערך, בשקלים</small></div>
+      <div class="sect tl">${paidRows.map(r => row(r, true)).join('')}${dueRows.map(r => row(r, false)).join('')}</div>
+      <div class="h2 bh"><span>לאן הולך הכסף</span></div>
+      <div class="sect"><div class="stack">${catTot.map((c, k) => `<i style="width:${(100 * c.v / totB).toFixed(1)}%;background:${COL[k % COL.length]}"></i>`).join('')}</div>
+        <div class="lg3">${catTot.map((c, k) => `<span style="--c:${COL[k % COL.length]}">${esc(c.label)} <b class="num">${shek(c.v)}</b></span>`).join('')}</div></div>
+      ${notYet.length ? `<div class="todo"><b>עוד לא בחישוב</b> · יתווספו כשיוזמנו<div class="chips" style="margin-top:8px">${notYet.map(i => `<span>${esc(i.label)}</span>`).join('')}</div></div>` : ''}
+      <p class="tiny" style="margin-top:12px">${esc(D.budget.rates?.note || '')} שער: דולר ${R.USD} · דולר קנדי ${R.CAD}. סימון ״שולם״ כאן מסמן גם את המשימה, ועובר בסנכרון.</p>
+      <details class="sect" style="margin-top:10px"><summary><b>פירוט מלא לפי קטגוריה</b></summary>
+        ${cats.map(c => `<div class="line-item" style="border:0;padding-top:14px"><b>${esc(c.label)}</b></div>${c.items.length ? c.items.map(i => `<div class="line-item"><span>${esc(i.label)} ${pill(i.status)}</span><span class="v">${i.approx && i.amount != null ? '~' : ''}${money(i.amount, i.currency)}</span></div>`).join('') : '<p class="small muted">אין עדיין פריטים.</p>'}`).join('')}
+        <p class="tiny">${esc(D.hotelsNote)}</p></details></div>`;
+  };
+  V.more_budget.after = () => {
+    const set = (task, on) => { const m = LS.get('tg.done', {}); m[task] = !!on; LS.set('tg.done', m); route(); toast(on ? 'סומן כשולם' : 'הסימון בוטל'); };
+    view.querySelectorAll('[data-paid]').forEach(cb => cb.addEventListener('change', () => set(cb.dataset.paid, cb.checked)));
+    view.querySelector('[data-paid-btn]')?.addEventListener('click', (e) => set(e.currentTarget.dataset.paidBtn, true));
   };
   V.more_transport = () => {
     const tzn = (tz) => ({ 'Asia/Jerusalem': 'שעון ישראל', 'America/Los_Angeles': 'שעון האוקיינוס השקט', 'America/Edmonton': 'שעון ההרים' }[tz] || tz);
@@ -747,27 +805,45 @@
 
   /* ---------- packing list ---------- */
   V.more_packing = () => {
-    const got = LS.get('tg.pack', {});
-    const all = D.packing.flatMap(c => c.items.map((x, i) => c.id + ':' + i));
-    const n = all.filter(k => got[k]).length;
-    return `${pagehead('לפני הטיסה', 'רשימת אריזה', '#/more')}<div class="body" style="padding-top:8px">
-      <div class="prog"><span class="ring" id="packRing" style="background:conic-gradient(var(--blue) 0 ${Math.round(100 * n / all.length)}%, var(--line) 0 100%)"><i class="num">${n}/${all.length}</i></span><div><b style="font-size:17px" id="packSum">נארזו ${n} מתוך ${all.length}</b><div class="small muted">מותאם למסלול: ערפל, גשם, קור בוקר, קרוז וחום. הסימון נשמר במכשיר ועובר בסנכרון.</div></div></div>
-      <div class="chips packnav">${D.packing.map(c => { const ks = c.items.map((_, i) => c.id + ':' + i), g = ks.filter(k => got[k]).length; return `<a href="#" data-jump="pk-${c.id}" data-cat="${c.id}" class="${g === ks.length ? 'ok' : ''}">${esc(c.label)} <b class="num">${g}/${ks.length}</b></a>`; }).join('')}</div>
-      ${D.packing.map(c => `<div class="h2" id="pk-${c.id}" style="font-size:19px;scroll-margin-top:12px"><small>${esc(c.hint || '')}</small>${esc(c.label)}</div>${c.items.map((x, i) => { const k = c.id + ':' + i; return `<label class="task ${got[k] ? 'done' : ''}" style="cursor:pointer"><input type="checkbox" data-pack="${k}" ${got[k] ? 'checked' : ''}><div class="g"><div class="t" style="font-weight:600">${esc(x.t)}</div>${x.n ? `<div class="s">${esc(x.n)}</div>` : ''}</div></label>`; }).join('')}`).join('')}
-      <button class="btn" id="packReset" style="width:100%;margin-top:12px">ניקוי כל הסימונים</button></div>`;
+    const who = LS.get('tg.packWho', 'a'), cat = LS.get('tg.packCat', '');
+    const names = { a: LS.get('tg.packNames', {}).a || LS.get('tg.deviceName', '') || 'אני', b: LS.get('tg.packNames', {}).b || 'בן/בת הזוג', s: 'משותף' };
+    const got = packGot(), qty = LS.get('tg.packQty', {});
+    const mine = (it) => who === 's' ? it.who === 'shared' : it.who !== 'shared';
+    const cats = D.packing.map(c => ({ ...c, list: c.items.map((it, i) => ({ ...it, k: `${who}:${c.id}:${i}` })).filter(mine) })).filter(c => c.list.length);
+    const all = cats.flatMap(c => c.list), n = all.filter(x => got[x.k]).length, pct = all.length ? Math.round(100 * n / all.length) : 0;
+    const row = (x) => { const q = qty[x.k] ?? x.q; return `<div class="pk ${got[x.k] ? 'done' : ''}"><label class="pk-l"><input type="checkbox" data-pack="${x.k}" ${got[x.k] ? 'checked' : ''}><div class="g"><b>${esc(x.t)}</b>${x.tag ? `<span class="tag ${x.tag}">${x.tag === 'buy' ? 'לקנות שם' : 'תיק יד'}</span>` : ''}${x.n ? `<div>${esc(x.n)}</div>` : ''}</div></label>
+      ${q != null ? `<div class="qty" data-q="${x.k}" data-base="${x.q ?? ''}"><button type="button" data-d="-1" aria-label="פחות">−</button><span class="num">${q}</span><button type="button" data-d="1" aria-label="יותר">+</button></div>` : ''}</div>`; };
+    return `${pagehead('לפני הטיסה', 'אריזה', '#/more')}<div class="body" style="padding-top:8px">
+      <div class="sect pk-sum"><div><b id="packSum" style="font-size:17px">ארזת ${n} מתוך ${all.length}</b><div class="small muted">${esc(D.packingNote || '')} מזוודה עד 23 ק״ג.</div></div><span class="ring" id="packRing" style="background:conic-gradient(var(--blue) 0 ${pct}%, var(--line) 0 100%)"><i class="num">${pct}%</i></span></div>
+      <div class="who">${['a', 'b', 's'].map(w => `<button type="button" data-who="${w}" class="${w === who ? 'on' : ''}">${esc(names[w])}</button>`).join('')}</div>
+      ${who !== 's' ? `<p class="small muted" style="margin:-4px 2px 10px">רשימה של ${esc(names[who])}. <a href="#" class="link" id="packRename">שינוי שם</a></p>` : ''}
+      <div class="seg">${[['', 'הכול'], ...cats.map(c => [c.id, c.label])].map(([id, l]) => `<button type="button" data-cat="${id}" class="${id === cat ? 'on' : ''}">${esc(l)}</button>`).join('')}</div>
+      ${cats.filter(c => !cat || c.id === cat).map(c => { const g = c.list.filter(x => got[x.k]).length; return `<div class="h2 pk-h"><small>${esc(c.hint || '')}</small><span>${esc(c.label)}</span><em data-cnt="${c.id}">${g} מתוך ${c.list.length}</em></div><div class="sect pk-list">${c.list.map(row).join('')}</div>`; }).join('')}
+      <button class="btn" id="packReset" style="width:100%;margin-top:12px">ניקוי הסימונים ברשימה הזאת</button></div>`;
   };
+  // old keys were "cat:i" (one shared list) – treat them as the first person's
+  function packGot() {
+    const m = LS.get('tg.pack', {}) || {};
+    Object.keys(m).forEach(k => { if (k.split(':').length === 2) { if (m['a:' + k] == null) m['a:' + k] = m[k]; delete m[k]; } });
+    return m;
+  }
   V.more_packing.after = () => {
-    view.querySelectorAll('[data-pack]').forEach(cb => cb.addEventListener('change', () => { const m = LS.get('tg.pack', {}); m[cb.dataset.pack] = cb.checked; LS.set('tg.pack', m); cb.closest('.task').classList.toggle('done', cb.checked); counts(); }));
-    function counts() {
-      const got = LS.get('tg.pack', {}); let n = 0, all = 0;
-      D.packing.forEach(c => { const g = c.items.filter((_, i) => got[c.id + ':' + i]).length; n += g; all += c.items.length;
-        const ch = view.querySelector(`[data-cat="${c.id}"]`); if (ch) { ch.querySelector('b').textContent = `${g}/${c.items.length}`; ch.classList.toggle('ok', g === c.items.length); } });
-      $('#packSum').textContent = `נארזו ${n} מתוך ${all}`;
-      $('#packRing').style.background = `conic-gradient(var(--blue) 0 ${Math.round(100 * n / all)}%, var(--line) 0 100%)`; $('#packRing i').textContent = `${n}/${all}`;
-    }
-    view.querySelectorAll('[data-jump]').forEach(x => x.addEventListener('click', (e) => { e.preventDefault(); document.getElementById(x.dataset.jump)?.scrollIntoView({ behavior: 'smooth' }); }));
+    const who = LS.get('tg.packWho', 'a');
+    const sync = () => {
+      const got = packGot(); const ks = [...view.querySelectorAll('[data-pack]')].map(x => x.dataset.pack); const n = ks.filter(k => got[k]).length, pct = ks.length ? Math.round(100 * n / ks.length) : 0;
+      $('#packSum').textContent = `ארזת ${n} מתוך ${ks.length}`; $('#packRing').style.background = `conic-gradient(var(--blue) 0 ${pct}%, var(--line) 0 100%)`; $('#packRing i').textContent = pct + '%';
+      view.querySelectorAll('[data-cnt]').forEach(el => { const cks = [...el.closest('.pk-h').nextElementSibling.querySelectorAll('[data-pack]')].map(x => x.dataset.pack); el.textContent = `${cks.filter(k => got[k]).length} מתוך ${cks.length}`; });
+    };
+    view.querySelectorAll('[data-pack]').forEach(cb => cb.addEventListener('change', () => { const m = packGot(); m[cb.dataset.pack] = cb.checked; LS.set('tg.pack', m); cb.closest('.pk').classList.toggle('done', cb.checked); sync(); }));
+    view.querySelectorAll('.qty button').forEach(b => b.addEventListener('click', () => {
+      const box = b.closest('.qty'), k = box.dataset.q, m = LS.get('tg.packQty', {}) || {};
+      const v = Math.max(0, (m[k] ?? +box.dataset.base) + +b.dataset.d); m[k] = v; LS.set('tg.packQty', m); box.querySelector('span').textContent = v;
+    }));
+    view.querySelectorAll('[data-who]').forEach(b => b.addEventListener('click', () => { LS.set('tg.packWho', b.dataset.who); LS.set('tg.packCat', ''); route(); }));
+    view.querySelectorAll('[data-cat]').forEach(b => b.addEventListener('click', () => { LS.set('tg.packCat', b.dataset.cat); route(); }));
+    $('#packRename')?.addEventListener('click', (e) => { e.preventDefault(); const nm = LS.get('tg.packNames', {}) || {}; const v = prompt('שם לרשימה', nm[who] || ''); if (v != null) { nm[who] = v.trim(); LS.set('tg.packNames', nm); route(); } });
     let armed = false;
-    $('#packReset').addEventListener('click', (e) => { if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי לנקות'; return; } LS.set('tg.pack', {}); route(); });
+    $('#packReset').addEventListener('click', (e) => { if (!armed) { armed = true; e.target.textContent = 'ללחוץ שוב כדי לנקות'; return; } const m = packGot(); Object.keys(m).forEach(k => { if (k.startsWith(who + ':')) m[k] = false; }); LS.set('tg.pack', m); route(); });
   };
 
   /* ---------- emergency ---------- */
@@ -857,8 +933,8 @@
 
 
   /* ---------- sync between devices (no server, no keys): share a link that merges on the other phone ---------- */
-  const SYNC_MAPS = ['tg.done', 'tg.visited', 'tg.notes', 'tg.pack'];
-  const SYNC_OBJ = ['tg.insurance', 'tg.rates'];
+  const SYNC_MAPS = ['tg.done', 'tg.visited', 'tg.notes', 'tg.pack', 'tg.packQty', 'tg.attrDec'];
+  const SYNC_OBJ = ['tg.insurance', 'tg.rates', 'tg.packNames'];
   const b64u = (bytes) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   const unb64u = (s) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
   async function pack(obj) {
