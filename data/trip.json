@@ -2823,7 +2823,7 @@
       "lng": -116.4558,
       "approx": true,
       "days": [
-        "2027-09-09"
+        "2027-09-04"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -2902,7 +2902,7 @@
       "lng": -116.5103,
       "approx": true,
       "days": [
-        "2027-09-09"
+        "2027-09-04"
       ],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
@@ -3805,7 +3805,7 @@
       "imageMatch": [
         "louise"
       ],
-      "visit": "3–4 שעות",
+      "visit": "3–5 שעות לשני האגמים",
       "see": "אגם טורקיז מתחת לקרחון Victoria, ובהמשך Moraine Lake ו־Ten Peaks",
       "guide": {
         "verified": false,
@@ -3988,7 +3988,7 @@
       "imageMatch": [
         "moraine"
       ],
-      "visit": "1.5–2.5 שעות",
+      "visit": "2.5–4 שעות",
       "see": "אגם טורקיז בעמק עשר הפסגות. תצפית Rockpile.",
       "hike": true
     },
@@ -4767,17 +4767,21 @@
       "region": "rockies",
       "title": "מקלגרי לג׳ספר דרך כביש הקרחונים",
       "points": [
+        "bow-lake",
+        "peyto-lake",
         "forest-park"
       ],
       "lodging": "jasper",
       "drive": [
         "hampton-yyc",
+        "bow-lake",
+        "peyto-lake",
         "forest-park"
       ],
-      "summary": "יוצאים ב־07:30 ונוסעים ישר לג׳ספר, בלי עצירות ב־Bow Lake וב־Peyto. את שני האגמים מעבירים ל־9.9, אחרי השאטל של Louise ו־Moraine. Mistaya Canyon נשאר ב־6.9, כי הוא על הכביש דרומה.",
-      "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, בלי עצירות (הערכה)",
-      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה.",
-      "weatherAlt": "התוכנית היא נסיעה ישר לג׳ספר, כך שעננות נמוכה לא משנה את המסלול.",
+      "summary": "יוצאים ב־07:30. עוצרים רק ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. Mistaya Canyon עבר ל־6.9, כי הוא על הכביש דרומה.",
+      "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
+      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש.",
+      "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש.",
       "start": "07:30"
     },
     {
@@ -4893,19 +4897,15 @@
       "date": "2027-09-09",
       "type": "explore",
       "region": "rockies",
-      "title": "אגמי Louise ו־Moraine, ואחר הצהריים Bow ו־Peyto",
+      "title": "אגמי Louise ו־Moraine",
       "points": [
         "lake-louise",
-        "moraine-lake",
-        "bow-lake",
-        "peyto-lake"
+        "moraine-lake"
       ],
       "lodging": "dmf",
       "drive": [
         "dmf-condo",
         "lake-louise",
-        "bow-lake",
-        "peyto-lake",
         "dmf-condo"
       ],
       "shuttle": [
@@ -4914,10 +4914,10 @@
           "moraine-lake"
         ]
       ],
-      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב. אחרי השאטל נוסעים צפונה ל־Bow ול־Peyto, וחוזרים לדירה באור יום.",
-      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. אחרי השאטל, בערך בין 15:00 ל־17:00, עולים צפונה בכביש 93 לאגם Bow (כ־35 דקות מלייק לואיז) ומשם עוד כ־10 דקות לתצפית Peyto, וחוזרים לדירה באור יום (שקיעה בסביבות 20:15 בתחילת ספטמבר). זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
-      "estTime": "יום מלא, כולל תוספת אחר הצהריים ל־Bow ול־Peyto (הערכה)",
-      "weatherAlt": "ראו חלופה בדף של אגם Moraine. בעננות נמוכה Peyto מוסתר, ואפשר להסתפק ב־Bow ולחזור לדירה.",
+      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
+      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
+      "estTime": "6–8 שעות (הערכה)",
+      "weatherAlt": "ראו חלופה בדף של אגם Moraine.",
       "start": "07:00"
     },
     {
