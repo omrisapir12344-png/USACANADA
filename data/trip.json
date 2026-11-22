@@ -5973,7 +5973,8 @@
             "label": "LY5 · LY4556 · LY6 לזוג",
             "amount": 4181.54,
             "currency": "USD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 4181.54
           }
         ]
       },
@@ -6019,7 +6020,10 @@
             "amount": 259,
             "currency": "USD",
             "status": "booked",
-            "approx": true
+            "approx": true,
+            "paid": 0,
+            "due": "2027-09-03",
+            "payNote": "נגבה בחשבון האונייה בסוף ההפלגה"
           }
         ]
       },
@@ -6033,43 +6037,64 @@
             "label": "Club Quarters Embarcadero, סן פרנסיסקו (4 לילות)",
             "amount": 653.55,
             "currency": "USD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-2",
+            "ils": 2156
           },
           {
             "label": "Packwood Lodge & Cabins, בקתה עם מטבח (3 לילות)",
             "amount": 833.44,
             "currency": "USD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-3",
+            "ils": 2785
           },
           {
             "label": "Hyatt at Olive 8, סיאטל (לילה)",
             "amount": 315.81,
             "currency": "USD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-1",
+            "ils": 1042
           },
           {
             "label": "Hampton Inn, קלגרי (לילה)",
             "amount": 200.95,
             "currency": "CAD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-1",
+            "ils": 463
           },
           {
             "label": "Forest Park Hotel, ג׳ספר (2 לילות)",
             "amount": 1428.99,
             "currency": "CAD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "due": "2027-09-04",
+            "payNote": "משלמים במלון"
           },
           {
             "label": "דירה ב־Dead Man's Flats (4 לילות)",
             "amount": 1729.92,
             "currency": "CAD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-5",
+            "ils": 3987
           },
           {
             "label": "Park Plaza Lodge, לוס אנג׳לס (4 לילות)",
             "amount": 869.92,
             "currency": "USD",
-            "status": "booked"
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-4",
+            "ils": 2870
           }
         ]
       },
@@ -6129,7 +6154,12 @@
         "budget": null,
         "items": []
       }
-    ]
+    ],
+    "rates": {
+      "USD": 3.31,
+      "CAD": 2.3,
+      "note": "שער משוער לפי הסכומים בשקלים ש־Booking הציג בהזמנות. אפשר לעדכן ב״הוצאות בזמן הטיול״."
+    }
   },
   "hotelsNote": "כל הלינות בטיול הוזמנו.",
   "packing": [

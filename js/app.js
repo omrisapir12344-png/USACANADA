@@ -458,17 +458,31 @@
   V.more.after = (sub) => { if (!sub) $('#icsBtn')?.addEventListener('click', exportICS); };
   V.more_attractions = () => `${pagehead('לפני הטיול', 'אטרקציות', '#/more')}<div class="body" style="padding-top:8px"><p class="lead" style="margin-top:0">מה צריך להזמין, מתי ההזמנה נפתחת, ומה רק אופציה.</p>${D.attractions.slice().sort((a, b) => (a.booking === 'required' ? 0 : 1) - (b.booking === 'required' ? 0 : 1)).map(attrRow).join('')}</div>`;
   V.more_budget = () => {
-    const tot = { booked: {}, option: {}, due: {} };
-    D.budget.categories.forEach(c => c.items.forEach(i => { if (i.amount == null) return; const b = i.status === 'booked' ? 'booked' : 'option'; tot[b][i.currency] = (tot[b][i.currency] || 0) + i.amount; if (i.paid != null) tot.due[i.currency] = (tot.due[i.currency] || 0) + i.amount - i.paid; }));
-    const list = (o) => Object.keys(o).length ? Object.entries(o).map(([c, a]) => money(a, c)).join('<br>') : '<span class="muted">—</span>';
+    const user = LS.get('tg.rates', {}) || {}, R = { ILS: 1, USD: +user.USD || D.budget.rates?.USD || 0, CAD: +user.CAD || D.budget.rates?.CAD || 0 };
+    const dn = done(), ils = (i, amt) => i.ils != null && amt === i.amount ? i.ils : amt * (R[i.currency] || 0);
+    const items = D.budget.categories.flatMap(c => c.items.map(i => ({ ...i, cat: c.label })));
+    const booked = items.filter(i => i.status === 'booked' && i.amount != null);
+    const paidOf = (i) => i.task && dn[i.task] ? i.amount : (i.paid ?? 0);
+    const left = booked.map(i => ({ ...i, rest: i.amount - paidOf(i) })).filter(i => i.rest > 0.5);
+    const plan = Object.fromEntries((D.paymentPlan?.items || []).filter(x => x.task).map(x => [x.task, x.month]));
+    const when = (i) => i.task ? plan[i.task] : i.due;
+    left.sort((a, b) => (when(a) || '9') < (when(b) || '9') ? -1 : 1);
+    const sum = (arr, f) => arr.reduce((s, i) => s + f(i), 0);
+    const totB = sum(booked, i => ils(i, i.amount)), totL = sum(left, i => ils(i, i.rest)), totP = totB - totL;
+    const byCur = (arr, f) => { const o = {}; arr.forEach(i => { o[i.currency] = (o[i.currency] || 0) + f(i); }); return Object.entries(o).map(([c, a]) => money(a, c)).join(' · '); };
+    const notYet = items.filter(i => i.amount == null);
+    const shek = (n) => '₪' + Math.round(n).toLocaleString('he-IL');
     return `${pagehead('כסף', 'תקציב מול הזמנות', '#/more')}<div class="body" style="padding-top:8px">
-      <p class="lead" style="margin-top:0">${esc(D.budget.note)} כל סכום מוצג במטבע המקורי, בלי המרה.</p>
-      <div class="tot"><div><b>הוזמן</b>${list(tot.booked)}</div><div><b>נשאר לשלם</b>${list(tot.due)}</div><div><b>אופציות</b>${list(tot.option)}</div></div>
-      ${D.paymentPlan ? (() => { const dn = done(); return `<div class="sect"><h4>${I('cal')}פריסת תשלומים</h4><p class="small muted" style="margin-bottom:6px">${esc(D.paymentPlan.note)}</p>
-        ${D.paymentPlan.items.map(x => `<div class="line-item"><span><b class="num" style="color:var(--navy)">${esc(fmt(x.month, { day: 'numeric', month: 'short', year: '2-digit' }))}</b> · ${esc(x.label)}${x.task && dn[x.task] ? ' ' + pill('done', 'שולם') : ''}</span><span class="v">${x.amount != null ? money(x.amount, 'ILS') : money(x.cad, 'CAD')}</span></div>`).join('')}
-        <a class="link" href="#/tasks" style="display:inline-block;margin-top:8px">לסמן ״שולם״ במשימות ›</a></div>`; })() : ''}
-      ${D.budget.categories.map(c => { const pi = c.items.find(i => i.paid != null); return `<div class="sect"><h4 style="justify-content:space-between"><span>${esc(c.label)}</span><span class="small muted" style="font-weight:600">תקציב: ${c.budget != null ? money(c.budget.amount, c.budget.currency) : 'להזין'}</span></h4>
-        ${c.items.length ? c.items.map(i => `<div class="line-item"><span>${esc(i.label)} ${pill(i.status)}${i.paid != null ? `<br><span class="tiny">שולם ${money(i.paid, i.currency)} · יתרה עד ${dm(i.due)}</span>` : ''}</span><span class="v">${i.approx && i.amount != null ? '~' : ''}${money(i.amount, i.currency)}</span></div>`).join('') : '<p class="small muted">אין עדיין פריטים.</p>'}
+      <div class="tot"><div><b>הוזמן</b><span class="big num">≈ ${shek(totB)}</span><span class="tiny">${byCur(booked, i => i.amount)}</span></div>
+        <div><b>שולם</b><span class="big num">≈ ${shek(totP)}</span><span class="tiny">${byCur(booked.filter(i => paidOf(i) > 0), paidOf) || '—'}</span></div>
+        <div class="due"><b>נשאר לשלם</b><span class="big num">≈ ${shek(totL)}</span><span class="tiny">${byCur(left, i => i.rest)}</span></div></div>
+      <div class="sect mlist"><h4>${I('cal')}מה נשאר לשלם ומתי</h4>
+        ${left.map(i => `<div class="line-item"><span>${when(i) ? `<b class="num" style="color:var(--navy)">${esc(fmt(when(i), { day: 'numeric', month: 'short', year: '2-digit' }))}</b> · ` : ''}${esc(i.label)}${i.payNote ? `<br><span class="tiny">${esc(i.payNote)}</span>` : ''}${i.paid ? `<br><span class="tiny">שולם ${money(i.paid, i.currency)}, זו היתרה</span>` : ''}</span><span class="v">${i.currency === 'ILS' ? money(i.rest, 'ILS') : `≈ ${shek(ils(i, i.rest))}<br><span class="tiny">${money(i.rest, i.currency)}</span>`}</span></div>`).join('')}
+        <div class="line-item" style="border:0"><span><b>סה״כ</b></span><span class="v"><b>≈ ${shek(totL)}</b></span></div>
+        <p class="tiny" style="margin-top:6px">${esc(D.budget.rates?.note || '')} שער: דולר ${R.USD} · דולר קנדי ${R.CAD}. כשמסמנים תשלום כ״בוצע״ במשימות, הוא יורד מכאן. ${esc(D.paymentPlan?.note || '')}</p><a class="link" href="#/tasks" style="display:inline-block;margin-top:8px">לסמן ״שולם״ במשימות ›</a></div>
+      ${notYet.length ? `<div class="sect warn"><h4>${I('warn')}עוד לא בחישוב</h4><p>${notYet.map(i => esc(i.label)).join(' · ')}</p><p class="small muted" style="margin-top:6px">אלה עוד לא הוזמנו, אז אין סכום. כשיוזמנו, יתווספו לחישוב.</p></div>` : ''}
+      ${D.budget.categories.map(c => { const pi = c.items.find(i => i.paid > 0 && i.paid < i.amount); return `<div class="sect"><h4 style="justify-content:space-between"><span>${esc(c.label)}</span><span class="small muted" style="font-weight:600">תקציב: ${c.budget != null ? money(c.budget.amount, c.budget.currency) : 'להזין'}</span></h4>
+        ${c.items.length ? c.items.map(i => `<div class="line-item"><span>${esc(i.label)} ${pill(i.status)}${i.paid > 0 && i.paid < i.amount && i.due ? `<br><span class="tiny">שולם ${money(i.paid, i.currency)} · יתרה עד ${dm(i.due)}</span>` : ''}</span><span class="v">${i.approx && i.amount != null ? '~' : ''}${money(i.amount, i.currency)}</span></div>`).join('') : '<p class="small muted">אין עדיין פריטים.</p>'}
         ${pi ? `<div class="bar"><i style="width:${(100 * pi.paid / pi.amount).toFixed(1)}%;background:var(--ok)"></i><i style="width:${(100 - 100 * pi.paid / pi.amount).toFixed(1)}%;background:var(--gold)"></i></div><p class="tiny" style="margin-top:4px">ירוק = שולם · זהב = יתרה</p>` : ''}</div>`; }).join('')}
       <p class="tiny">${esc(D.hotelsNote)} מחירי האופציות נבדקו בעבר ואינם מובטחים.</p></div>`;
   };

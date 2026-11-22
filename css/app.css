@@ -261,7 +261,11 @@ textarea { width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid
 .tot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
 .tot div { background: var(--paper); border-radius: 16px; padding: 10px 12px; }
 .tot b { display: block; font-size: 12px; color: var(--ink3); font-weight: 700; }
-.tot .num { font-size: 15.5px; font-weight: 700; display: block; }
+.tot .big { font-size: 17px; font-weight: 700; display: block; margin-top: 2px; color: var(--navy); }
+.tot .tiny { display: block; margin-top: 4px; line-height: 1.5; }
+.tot .due { background: var(--navy); }
+.tot .due b, .tot .due .tiny { color: #c9d3e3; }
+.tot .due .big { color: #fff; }
 .seg-route { display: flex; gap: 10px; align-items: center; direction: ltr; justify-content: flex-end; font-size: 26px; font-weight: 700; color: var(--navy); }
 .seg-route i { font-style: normal; color: var(--ink3); font-weight: 400; }
 .timeline { list-style: none; margin: 0; padding: 0; }
@@ -324,3 +328,4 @@ button.li { background: none; border: 0; border-top: 1px solid var(--line); curs
 .packnav a.ok { background: var(--goldbg); border-color: transparent; }
 .packnav a b { color: var(--blue); font-weight: 600; margin-inline-start: 4px; }
 .packnav a.ok b { color: var(--goldink); }
+.mlist .line-item .v { white-space: nowrap; flex: none; max-width: none; }
