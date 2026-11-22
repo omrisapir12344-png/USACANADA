@@ -5,7 +5,7 @@
     "start": "2027-08-19",
     "end": "2027-09-15",
     "version": 2,
-    "updated": "2026-11-21",
+    "updated": "2026-11-22",
     "travelers": 2,
     "note": "אין בקובץ מספרי הזמנה, פרטי דרכון, שמות נוסעים או אמצעי תשלום – בכוונה.",
     "googleMyMapsEmbed": null,
@@ -74,7 +74,7 @@
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "rainier-paradise",
       "arrive": "טיסה מסן פרנסיסקו לסיאטל (SEA) ב־23/8 ואיסוף רכב שכור. מהשדה ל־Packwood כ־2.5–3 שעות נסיעה, ולכן צריך טיסה שמגיעה מוקדם מספיק לצ׳ק־אין עד 21:00. הטיסה והרכב טרם הוזמנו.",
-      "lodging": "Packwood Lodge & Cabins: בקתה עם מטבח וג׳קוזי. 3 לילות, הוזמן. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. צ׳ק־אין עד 21:00.",
+      "lodging": "Packwood Lodge & Cabins: בקתה עם מטבח וג׳קוזי. 3 לילות, הוזמן ושולם. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. צ׳ק־אין עד 21:00.",
       "lodgingStatus": "booked",
       "summary": "שלושה לילות ליד הפארק הלאומי. האטרקציות הן הצעות.",
       "clothing": {
@@ -2823,7 +2823,7 @@
       "lng": -116.4558,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -2902,7 +2902,7 @@
       "lng": -116.5103,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-09"
       ],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
@@ -3805,7 +3805,7 @@
       "imageMatch": [
         "louise"
       ],
-      "visit": "3–5 שעות לשני האגמים",
+      "visit": "3–4 שעות",
       "see": "אגם טורקיז מתחת לקרחון Victoria, ובהמשך Moraine Lake ו־Ten Peaks",
       "guide": {
         "verified": false,
@@ -3988,7 +3988,7 @@
       "imageMatch": [
         "moraine"
       ],
-      "visit": "2.5–4 שעות",
+      "visit": "1.5–2.5 שעות",
       "see": "אגם טורקיז בעמק עשר הפסגות. תצפית Rockpile.",
       "hike": true
     },
@@ -4767,21 +4767,17 @@
       "region": "rockies",
       "title": "מקלגרי לג׳ספר דרך כביש הקרחונים",
       "points": [
-        "bow-lake",
-        "peyto-lake",
         "forest-park"
       ],
       "lodging": "jasper",
       "drive": [
         "hampton-yyc",
-        "bow-lake",
-        "peyto-lake",
         "forest-park"
       ],
-      "summary": "יוצאים ב־07:30. עוצרים רק ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. Mistaya Canyon עבר ל־6.9, כי הוא על הכביש דרומה.",
-      "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
-      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש.",
-      "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש.",
+      "summary": "יוצאים ב־07:30 ונוסעים ישר לג׳ספר, בלי עצירות ב־Bow Lake וב־Peyto. את שני האגמים מעבירים ל־9.9, אחרי השאטל של Louise ו־Moraine. Mistaya Canyon נשאר ב־6.9, כי הוא על הכביש דרומה.",
+      "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, בלי עצירות (הערכה)",
+      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה.",
+      "weatherAlt": "התוכנית היא נסיעה ישר לג׳ספר, כך שעננות נמוכה לא משנה את המסלול.",
       "start": "07:30"
     },
     {
@@ -4897,16 +4893,19 @@
       "date": "2027-09-09",
       "type": "explore",
       "region": "rockies",
-      "title": "אגמי Louise ו־Moraine",
+      "title": "אגמי Louise ו־Moraine, ואחר הצהריים Bow ו־Peyto",
       "points": [
         "lake-louise",
-        "moraine-lake"
+        "moraine-lake",
+        "bow-lake",
+        "peyto-lake"
       ],
       "lodging": "dmf",
       "drive": [
         "dmf-condo",
         "lake-louise",
-        "moraine-lake",
+        "bow-lake",
+        "peyto-lake",
         "dmf-condo"
       ],
       "shuttle": [
@@ -4915,10 +4914,10 @@
           "moraine-lake"
         ]
       ],
-      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
-      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
-      "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "ראו חלופה בדף של אגם Moraine.",
+      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב. אחרי השאטל נוסעים צפונה ל־Bow ול־Peyto, וחוזרים לדירה באור יום.",
+      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. אחרי השאטל, בערך בין 15:00 ל־17:00, עולים צפונה בכביש 93 לאגם Bow (כ־35 דקות מלייק לואיז) ומשם עוד כ־10 דקות לתצפית Peyto, וחוזרים לדירה באור יום (שקיעה בסביבות 20:15 בתחילת ספטמבר). זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
+      "estTime": "יום מלא, כולל תוספת אחר הצהריים ל־Bow ול־Peyto (הערכה)",
+      "weatherAlt": "ראו חלופה בדף של אגם Moraine. בעננות נמוכה Peyto מוסתר, ואפשר להסתפק ב־Bow ולחזור לדירה.",
       "start": "07:00"
     },
     {
@@ -5269,7 +5268,7 @@
       "point": "packwood-lodge",
       "room": "Deluxe Cabin with Jetted Tub: חדר שינה, סלון ומטבח",
       "checkTimes": "צ׳ק־אין 16:00–21:00 · צ׳ק־אאוט עד 11:00",
-      "payment": "לפי ההזמנה, המקום מחייב את הכרטיס ישירות לפני ההגעה. לבדוק באפליקציה מתי בדיוק."
+      "payment": "שולם במלואו."
     },
     {
       "id": "seattle",
@@ -5459,13 +5458,13 @@
       "title": "תשלום מלון: Packwood Lodge, ריינייר",
       "category": "תשלומים",
       "due": "2027-02-15",
-      "status": "planning",
+      "status": "done",
       "cost": {
         "amount": 2785,
         "currency": "ILS",
         "note": "בערך, לפי שער היום"
       },
-      "notes": "כאן המקום מחייב את הכרטיס בעצמו לפני ההגעה, לא דרך Booking. לבדוק באפליקציה מתי, ואם אפשר לשלם מוקדם."
+      "notes": "שולם במלואו. המקום חייב את הכרטיס ישירות, לא דרך Booking."
     },
     {
       "id": "t-pay-4",
@@ -6053,7 +6052,7 @@
             "amount": 833.44,
             "currency": "USD",
             "status": "booked",
-            "paid": 0,
+            "paid": 833.44,
             "task": "t-pay-3",
             "ils": 2785,
             "short": "Packwood Lodge, ריינייר"
@@ -6800,7 +6799,7 @@
     }
   ],
   "paymentPlan": {
-    "note": "פריסה של תשלום אחד בחודש, ב־15 לכל חודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
+    "note": "Packwood Lodge כבר שולם. שאר המלונות: תשלום אחד בחודש, ב־15 לכל חודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
     "items": [
       {
         "task": "t-pay-1",
@@ -6813,12 +6812,6 @@
         "month": "2027-01-15",
         "label": "Club Quarters, סן פרנסיסקו",
         "amount": 2156
-      },
-      {
-        "task": "t-pay-3",
-        "month": "2027-02-15",
-        "label": "Packwood Lodge, ריינייר (המקום מחייב לפני ההגעה)",
-        "amount": 2785
       },
       {
         "task": "t-pay-4",
