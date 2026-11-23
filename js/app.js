@@ -241,7 +241,7 @@
         ${transport.length && d.type === 'transit' ? `<div class="chips" style="margin-bottom:12px">${transport.map(p => `<span>${I('plane')} ${esc(p.name)}</span>`).join('')}</div>` : ''}
         ${d.notes ? `<div class="notice">${esc(d.notes)}</div>` : ''}
         ${checkout ? `<div class="notice">${I('bed')} ${esc(prevLodge.name)}: ${esc(checkout)}</div>` : ''}
-        ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b>${sights.length ? ` · ${sights.length} עצירות` : ''} · מגיעים ל${esc(point(rt.legs[rt.legs.length - 1].to).name)} בערך ב־<b class="num">${clock(tl.end)}</b>. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
+        ${tl ? `<div class="fact" style="margin-bottom:12px"><div class="k">${I('clock')}לוח זמנים משוער</div><div class="v">יציאה <b class="num">${clock(tl.start)}</b>${sights.length ? ` · ${sights.length === 1 ? 'עצירה אחת' : sights.length + ' עצירות'}` : ''} · מגיעים ל${esc(point(rt.legs[rt.legs.length - 1].to).name)} בערך ב־<b class="num">${clock(tl.end)}</b>. השעות ליד כל עצירה מחושבות מזמני הנסיעה והשהייה, ומשתנות בפועל.</div></div>` : ''}
         ${d.driveNote ? `<div class="notice">${esc(d.driveNote)}</div>` : ''}
         ${rt ? `<div class="routemap"><div id="dmap" style="height:100%"></div><a class="gbtn" href="${gDir(d.drive)}" target="_blank" rel="noopener">${I('pin')}פתח בגוגל מפות</a></div>` : ''}
         ${sights.length ? sights.map(stopHtml).join('') : `<p class="lead">${d.type === 'cruise' ? 'יום שיט. אין עצירות בחוף.' : d.type === 'free' ? 'עוד אין תוכנית ליום הזה.' : ''}</p>`}
@@ -560,7 +560,7 @@
         ${f.notes ? `<p class="small muted" style="margin-top:6px">${esc(f.notes)}</p>` : ''}</div>`).join('')}
       <div class="sect"><h4>${I('plane')}עלות טיסות אל על</h4>${D.flightsInfo.costPerTraveler.map(x => `<div class="line-item"><span>${esc(x.label)} (לנוסע)</span><span class="v">${money(x.amount, x.currency)}</span></div>`).join('')}<div class="line-item"><b>סה״כ לזוג</b><b class="v">${money(D.flightsInfo.totalCouple.amount, 'USD')}</b></div><p class="small muted">${esc(D.flightsInfo.baggage)}</p></div>
       <div class="h2"><small>הוזמן</small>${esc(c.ship)}</div>
-      <div class="sect"><div class="facts"><div class="fact" style="background:var(--bg)"><div class="k">עלייה</div><div class="v">${esc(fDay(c.embark.date))} · <b class="num">${esc(c.embark.time)}</b></div></div><div class="fact" style="background:var(--bg)"><div class="k">הגעה לסיאטל</div><div class="v">${esc(fDay(c.arrival.date))} · <b class="num">${esc(c.arrival.time)}</b></div></div></div>
+      <div class="sect"><div class="facts"><div class="fact" style="background:var(--bg)"><div class="k">הפלגה</div><div class="v">${esc(fDay(c.embark.date))} · <b class="num">${esc(c.embark.time)}</b></div>${c.embark.note ? `<div class="tiny">${esc(c.embark.note)}</div>` : ''}</div><div class="fact" style="background:var(--bg)"><div class="k">הגעה לסיאטל</div><div class="v">${esc(fDay(c.arrival.date))} · <b class="num">${esc(c.arrival.time)}</b></div></div></div>
         <div class="notice">${esc(c.arrival.note)} ${esc(c.verify)}</div>
         <ul class="timeline">${c.itinerary.map(s => `<li><span class="when">${esc(fDay(s.date))}</span><span>${esc(s.place)}</span></li>`).join('')}</ul>
         <div class="line-item"><span>סה״כ</span><span class="v">${money(c.total.amount, 'ILS')}</span></div><div class="line-item"><span>שולם (${esc(c.paid.note)})</span><span class="v">${money(c.paid.amount, 'ILS')}</span></div>
@@ -798,7 +798,7 @@
     });
     D.flights.filter(f => f.dep).forEach(f => add('flight-' + f.id, [`DTSTART;TZID=${f.fromTz}:${ymd(f.date)}T${f.dep.replace(':', '')}00`, 'DURATION:PT2H', `SUMMARY:${escI(`טיסה ${f.flight} ${f.from}→${f.to}`)}`], [alarm('-PT3H', `טיסה ${f.flight}`)]));
     const c = D.cruise;
-    add('cruise-embark', [`DTSTART;TZID=America/Los_Angeles:${ymd(c.embark.date)}T${c.embark.time.replace(':', '')}00`, 'DURATION:PT1H', `SUMMARY:${escI('עלייה לאונייה ' + c.ship)}`], [alarm('-PT3H', 'עלייה לאונייה')]);
+    add('cruise-embark', [`DTSTART;TZID=America/Los_Angeles:${ymd(c.embark.date)}T${c.embark.time.replace(':', '')}00`, 'DURATION:PT1H', `SUMMARY:${escI('ההפלגה יוצאת: ' + c.ship)}`, `DESCRIPTION:${escI(c.embark.note || '')}`], [alarm('-P1D', 'מחר הפלגה. להגיע לנמל לפי חלון העלייה'), alarm('-PT7H', 'להגיע לנמל לפי חלון העלייה')]);
     const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//usacanada2027//he\r\nCALSCALE:GREGORIAN\r\nX-WR-CALNAME:${escI(D.meta.title)}\r\n${ev.join('\r\n')}\r\nEND:VCALENDAR\r\n`;
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'usa-canada-2027.ics'; a.click();
     toast(`${ev.length} מועדים ירדו כקובץ יומן. פותחים אותו כדי להוסיף ליומן.`);

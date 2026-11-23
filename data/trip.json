@@ -131,7 +131,7 @@
       "tz": "America/Juneau",
       "tzLabel": "שעון אלסקה בנמלי אלסקה · שעון האוקיינוס השקט בסיאטל ובוויקטוריה",
       "image": "dawes-glacier",
-      "arrive": "עלייה לאונייה בסיאטל ב־27/8 ב־16:00.",
+      "arrive": "ב־27/8 ההפלגה יוצאת מסיאטל ב־16:00. מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין (Xpress Pass), הרבה לפני ההפלגה. שעת ה־all aboard כתובה במסמכים.",
       "lodging": "על האונייה, 7 לילות.",
       "lodgingStatus": "booked",
       "summary": "קטצ׳יקן, קרחון Dawes וג׳ונו, סקאגוויי, Inside Passage וויקטוריה. האונייה מגיעה לסיאטל ב־3/9 ב־06:00, וזו לא שעת הירידה.",
@@ -1399,7 +1399,7 @@
       "approx": true,
       "summary": "הרציף המדויק של Celebrity Edge טרם אומת.",
       "visit": "לפי הקרוז",
-      "see": "עלייה לאונייה ב־16:00 (27/8) או ירידה ממנה (3/9)."
+      "see": "עלייה לאונייה ב־27/8 לפי חלון העלייה שבחרתם (ההפלגה ב־16:00), וירידה ב־3/9."
     },
     {
       "id": "ketchikan",
@@ -2215,7 +2215,7 @@
       "lat": 51.1784,
       "lng": -115.5708,
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "kind": "city",
       "sub": "באנף",
@@ -2291,7 +2291,7 @@
       "lat": 51.17,
       "lng": -115.5617,
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -2360,7 +2360,7 @@
       "lng": -115.4952,
       "approx": true,
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -2442,7 +2442,7 @@
       "lng": -115.573,
       "approx": true,
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "optional": true,
@@ -2519,7 +2519,7 @@
       "optional": true,
       "sub": "באנף",
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "imageMatch": [
         "hot springs",
@@ -2598,7 +2598,7 @@
       "lat": 51.2456,
       "lng": -115.8398,
       "days": [
-        "2027-09-07"
+        "2027-09-09"
       ],
       "kind": "trail",
       "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן.",
@@ -3033,9 +3033,7 @@
       "lat": 52.05,
       "lng": -116.95,
       "approx": true,
-      "days": [
-        "2027-09-06"
-      ],
+      "days": [],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
       "imageQuery": "Big Bend Icefields Parkway",
@@ -3083,7 +3081,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/banff/visit/promenadedesglaciers-icefieldsparkway"
           }
         ]
-      }
+      },
+      "optional": true
     },
     {
       "id": "columbia-icefield",
@@ -3476,9 +3475,7 @@
       "lat": 52.6,
       "lng": -117.81,
       "approx": true,
-      "days": [
-        "2027-09-06"
-      ],
+      "days": [],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
       "imageQuery": "Goats and Glaciers Athabasca River",
@@ -3526,7 +3523,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
           }
         ]
-      }
+      },
+      "optional": true
     },
     {
       "id": "sunwapta-falls",
@@ -3606,9 +3604,7 @@
       "lat": 52.266,
       "lng": -117.285,
       "approx": true,
-      "days": [
-        "2027-09-06"
-      ],
+      "days": [],
       "kind": "attraction",
       "sub": "Icefields Parkway",
       "imageMatch": [
@@ -3655,7 +3651,8 @@
             "url": "https://parks.canada.ca/pn-np/ab/jasper/activ/itineraires-itineraries/promenadedesglaciers-icefieldsparkway"
           }
         ]
-      }
+      },
+      "optional": true
     },
     {
       "id": "abraham-lake",
@@ -3797,7 +3794,7 @@
       "lat": 51.4166,
       "lng": -116.2176,
       "days": [
-        "2027-09-09"
+        "2027-09-07"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -3882,10 +3879,10 @@
       "lat": 51.3217,
       "lng": -116.186,
       "days": [
-        "2027-09-09"
+        "2027-09-07"
       ],
       "kind": "attraction",
-      "summary": "אגם קרחוני בצבע טורקיז בעמק עשר הפסגות (Valley of the Ten Peaks), אחד הנופים המצולמים ברוקיז. נגיע אליו ב־9/9 באותו יום עם אגם Louise, בשאטל.",
+      "summary": "אגם קרחוני בצבע טורקיז בעמק עשר הפסגות (Valley of the Ten Peaks), אחד הנופים המצולמים ברוקיז. נגיע אליו ב־7/9 באותו יום עם אגם Louise, בשאטל.",
       "guide": {
         "verified": false,
         "activities": [
@@ -4192,9 +4189,7 @@
           }
         ]
       },
-      "days": [
-        "2027-09-12"
-      ],
+      "days": [],
       "imageMatch": [
         "universal studios hollywood"
       ]
@@ -4255,7 +4250,7 @@
         ]
       },
       "days": [
-        "2027-09-13"
+        "2027-09-12"
       ],
       "imageMatch": [
         "desert hills"
@@ -4274,9 +4269,7 @@
       "visit": "2–4 שעות",
       "see": "אאוטלט קטן יותר וקרוב, כ־130 חנויות.",
       "summary": "החלופה הקרובה: כ־24 ק״מ מהמלון. מתאים לחצי יום.",
-      "days": [
-        "2027-09-13"
-      ],
+      "days": [],
       "imageMatch": [
         "citadel"
       ]
@@ -4373,11 +4366,12 @@
       "region": "la",
       "lat": 34.0094,
       "lng": -118.4973,
-      "days": [],
+      "days": [
+        "2027-09-13"
+      ],
       "kind": "attraction",
       "summary": "המזח והחוף.",
-      "suggestion": true,
-      "optional": true,
+      "optional": false,
       "imageQuery": "Santa Monica Pier",
       "imageMatch": [
         "santa monica"
@@ -4678,7 +4672,8 @@
         "seattle-port"
       ],
       "lodging": "cruise",
-      "summary": "עלייה ל־Celebrity Edge ב־16:00."
+      "summary": "עלייה ל־Celebrity Edge. ההפלגה יוצאת ב־16:00, אבל מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין המקוון (Xpress Pass).",
+      "notes": "16:00 היא שעת ההפלגה, לא שעת עלייה. שעת ה־all aboard כתובה במסמכי ההפלגה, ומי שמגיע ב־16:00 מפספס את האונייה. לשים בתיק היד את מה שצריך עד שהמזוודות מגיעות לחדר."
     },
     {
       "date": "2027-08-28",
@@ -4780,7 +4775,7 @@
       ],
       "summary": "יוצאים ב־07:30. עוצרים רק ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. Mistaya Canyon עבר ל־6.9, כי הוא על הכביש דרומה.",
       "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
-      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש.",
+      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש. סוף שבוע ארוך של Labour Day בקנדה (4–6.9, החג ביום שני 6.9). צפוי עומס וחניות מלאות. להגיע מוקדם לתצפיות.",
       "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש.",
       "start": "07:30"
     },
@@ -4805,7 +4800,7 @@
       ],
       "summary": "בבוקר אגם Medicine ואגם Maligne. האטרקציה המומלצת: שיט ל־Spirit Island. אחר הצהריים, אם נשאר זמן, סיבוב קצר באגם Pyramid.",
       "estTime": "6–8 שעות (הערכה)",
-      "notes": "Maligne Canyon סגור מאז השריפה של 2024, וטרם פורסם מועד לפתיחה מחדש. לא בונים עליו. אין דלק בכביש Maligne.",
+      "notes": "Maligne Canyon סגור מאז השריפה של 2024, וטרם פורסם מועד לפתיחה מחדש. לא בונים עליו. אין דלק בכביש Maligne. סוף שבוע של Labour Day: את השיט ל־Spirit Island חובה להזמין מראש.",
       "weatherAlt": "בגשם: השיט עדיין יוצא בדרך כלל, אבל הנוף מוגבל. אפשר לקצר ולבקר בעיירה ג׳ספר.",
       "start": "08:00"
     },
@@ -4816,11 +4811,8 @@
       "title": "מג׳ספר לקנמור דרך כביש הקרחונים",
       "points": [
         "athabasca-falls",
-        "goats-glaciers",
         "sunwapta-falls",
-        "tangle-creek",
         "columbia-icefield",
-        "big-bend",
         "mistaya-canyon",
         "dmf-condo"
       ],
@@ -4828,47 +4820,43 @@
       "drive": [
         "forest-park",
         "athabasca-falls",
-        "goats-glaciers",
         "sunwapta-falls",
-        "tangle-creek",
         "columbia-icefield",
-        "big-bend",
         "mistaya-canyon",
         "dmf-condo"
       ],
-      "summary": "יוצאים ב־08:00 ועוצרים בחלק שלא עשיתם בדרך צפונה, כולל Mistaya Canyon. אם בוחרים Ice Explorer או Skywalk (כ־3 שעות), מוותרים על Goats and Glaciers ו־Big Bend. בערב מגיעים לדירה. בדרך לדירה כדאי לעצור בסופר בקנמור.",
+      "summary": "יוצאים ב־08:00 ועוצרים רק בעיקר: מפלי Athabasca, מפלי Sunwapta, קרחון Athabasca ב־Columbia Icefield ו־Mistaya Canyon. ירדו העצירות הקצרות (Goats and Glaciers, Tangle Creek ו־Big Bend), כי זה היום הכי ארוך בטיול. Ice Explorer ו־Skywalk רק בהזמנה מראש למשבצת בוקר. אחרת הולכים בשביל לקצה הקרחון. בדרך לדירה עוצרים בסופר בקנמור.",
       "estTime": "יום מלא (הערכה)",
-      "notes": "למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
-      "weatherAlt": "בעננות נמוכה מוותרים על Big Bend ומתמקדים במפלים ובקרחון Athabasca.",
+      "notes": "יום Labour Day, חג בקנדה: עומס בכביש ובחניות. למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
+      "weatherAlt": "בעננות נמוכה מתמקדים במפלים ובשביל לקרחון Athabasca, ומוותרים על Ice Explorer אם לא הוזמן.",
       "start": "08:00"
     },
     {
       "date": "2027-09-07",
-      "type": "explore",
-      "region": "rockies",
-      "title": "Johnston Canyon ובאנף",
-      "points": [
-        "johnston-canyon",
-        "banff-town",
-        "bow-falls",
-        "lake-minnewanka",
-        "banff-gondola",
-        "banff-hot-springs"
+      "summary": "יום האגמים, ביום שלישי אחרי החג: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
+      "start": "07:00",
+      "shuttle": [
+        [
+          "lake-louise",
+          "moraine-lake"
+        ]
       ],
-      "lodging": "dmf",
+      "type": "explore",
       "drive": [
         "dmf-condo",
-        "johnston-canyon",
-        "banff-town",
-        "bow-falls",
-        "lake-minnewanka",
+        "lake-louise",
         "dmf-condo"
       ],
-      "summary": "מתחילים מוקדם ב־Johnston Canyon, לפני העומס, בשביל ל־Lower Falls. אחר כך מרכז באנף, Bow Falls ואגם Minnewanka. רכבל רק אם הראות טובה, ובערב המעיינות החמים אם יש כוח.",
-      "estTime": "7–8 שעות (הערכה)",
-      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי.",
-      "start": "07:30",
-      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול."
+      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
+      "region": "rockies",
+      "points": [
+        "lake-louise",
+        "moraine-lake"
+      ],
+      "lodging": "dmf",
+      "title": "אגמי Louise ו־Moraine",
+      "estTime": "6–8 שעות (הערכה)",
+      "weatherAlt": "אם יש ענן נמוך או עשן, מחליפים עם 9.9 (באנף ו־Johnston Canyon). השאטל נקנה לתאריך מסוים, אז צריך לבדוק אם אפשר להחליף. נכון ל־2026, חלק מהמקומות נפתחים יומיים לפני כל יציאה. ראו גם חלופה בדף של אגם Moraine."
     },
     {
       "date": "2027-09-08",
@@ -4895,30 +4883,31 @@
     },
     {
       "date": "2027-09-09",
+      "summary": "מתחילים מוקדם ב־Johnston Canyon, לפני העומס, בשביל ל־Lower Falls. אחר כך מרכז באנף, Bow Falls ואגם Minnewanka. רכבל רק אם הראות טובה, ובערב המעיינות החמים אם יש כוח. זה גם יום הגיבוי: אם ב־7.9 היה מעונן באגמים, מחליפים.",
+      "start": "07:30",
       "type": "explore",
-      "region": "rockies",
-      "title": "אגמי Louise ו־Moraine",
-      "points": [
-        "lake-louise",
-        "moraine-lake"
-      ],
-      "lodging": "dmf",
       "drive": [
         "dmf-condo",
-        "lake-louise",
+        "johnston-canyon",
+        "banff-town",
+        "bow-falls",
+        "lake-minnewanka",
         "dmf-condo"
       ],
-      "shuttle": [
-        [
-          "lake-louise",
-          "moraine-lake"
-        ]
+      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
+      "region": "rockies",
+      "points": [
+        "johnston-canyon",
+        "banff-town",
+        "bow-falls",
+        "lake-minnewanka",
+        "banff-gondola",
+        "banff-hot-springs"
       ],
-      "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
-      "summary": "יום האגמים: שאטל בבוקר, הליכה לאורך שפת Lake Louise ואז תצפית Rockpile במוריין. זה הדבר הראשון שצריך להזמין: ההזמנות נפתחות ב־15.4.2027 ב־17:00 שעון ישראל.",
-      "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "ראו חלופה בדף של אגם Moraine.",
-      "start": "07:00"
+      "lodging": "dmf",
+      "title": "Johnston Canyon ובאנף",
+      "estTime": "7–8 שעות (הערכה)",
+      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי."
     },
     {
       "date": "2027-09-10",
@@ -4964,29 +4953,11 @@
     },
     {
       "date": "2027-09-12",
-      "type": "free",
-      "region": "la",
-      "title": "יוניברסל סטודיוס, אם יהיה כוח",
-      "points": [
-        "universal"
-      ],
-      "lodging": "la",
-      "summary": "אופציה: יום מלא ביוניברסל סטודיוס. אם אין כוח, יום מנוחה או סנטה מוניקה.",
-      "drive": [
-        "park-plaza",
-        "universal",
-        "park-plaza"
-      ],
-      "start": "08:30"
-    },
-    {
-      "date": "2027-09-13",
       "type": "explore",
       "region": "la",
-      "title": "יום אאוטלט",
+      "title": "יום אאוטלט: Desert Hills",
       "points": [
-        "desert-hills",
-        "citadel"
+        "desert-hills"
       ],
       "lodging": "la",
       "summary": "יום קניות ב־Desert Hills Premium Outlets, מתחם האאוטלטים הגדול באזור. כשעתיים נסיעה לכל כיוון. אם אין כוח לנסיעה ארוכה, Citadel Outlets קרוב הרבה יותר.",
@@ -4995,9 +4966,27 @@
         "desert-hills",
         "park-plaza"
       ],
-      "estTime": "יום מלא, כולל כ־4 שעות נסיעה (הערכה)",
-      "notes": "למחרת בצהריים טסים הביתה. כדאי לחזור מוקדם, לארוז ולוודא שהמזוודות לא חורגות מ־23 ק״ג (מזוודה שנייה עולה 150$ לנוסע).",
-      "start": "08:30"
+      "start": "08:30",
+      "estTime": "יום מלא, כולל כ־4 שעות נסיעה (הערכה)"
+    },
+    {
+      "date": "2027-09-13",
+      "type": "explore",
+      "region": "la",
+      "title": "יום אחרון רגוע: סנטה מוניקה והחוף",
+      "points": [
+        "santa-monica"
+      ],
+      "lodging": "la",
+      "summary": "בוקר רגוע ואריזה. יוצאים אחר הצהריים למזח ולחוף בסנטה מוניקה, ונשארים לשקיעה על הים. סיום רגוע לפני הטיסה.",
+      "drive": [
+        "park-plaza",
+        "santa-monica",
+        "park-plaza"
+      ],
+      "estTime": "חצי יום (הערכה)",
+      "notes": "למחרת בבוקר יוצאים מוקדם לשדה. לארוז מראש ולוודא שהמזוודות לא חורגות מ־23 ק״ג (מזוודה שנייה עולה 150$ לנוסע).",
+      "start": "16:00"
     },
     {
       "date": "2027-09-14",
@@ -5009,12 +4998,13 @@
         "lax"
       ],
       "lodging": "plane",
-      "summary": "צ׳ק־אאוט, החזרת הרכב ב־LAX והמראה של LY6 ב־13:30. כדאי לצאת מהמלון מוקדם, כי התנועה בלוס אנג׳לס לא צפויה.",
+      "summary": "צ׳ק־אאוט, החזרת הרכב ב־LAX ושאטל לטרמינל. LY6 ממריאה ב־13:30. יוצאים מהמלון בסביבות 07:45–08:00, כדי להיות בטרמינל בערך ב־09:30, 4 שעות לפני.",
       "drive": [
         "park-plaza",
         "lax"
       ],
-      "start": "09:30"
+      "start": "07:45",
+      "driveNote": "זמן הנסיעה כאן לא כולל פקקים. בבוקר בלוס אנג׳לס זה יכול לקחת פי שניים, ועוד החזרת הרכב והשאטל לטרמינל."
     },
     {
       "date": "2027-09-15",
@@ -5157,7 +5147,8 @@
       "date": "2027-08-27",
       "time": "16:00",
       "place": "סיאטל",
-      "tz": "America/Los_Angeles"
+      "tz": "America/Los_Angeles",
+      "note": "16:00 היא שעת ההפלגה, לא שעת העלייה. מגיעים לנמל לפי חלון העלייה שבוחרים בצ׳ק־אין המקוון (Xpress Pass), ולא יאוחר משעת ה־all aboard שכתובה במסמכי ההפלגה. מי שמגיע ב־16:00 מפספס את האונייה."
     },
     "arrival": {
       "date": "2027-09-03",
@@ -5411,7 +5402,7 @@
       "cost": null,
       "status": "toclose",
       "priority": true,
-      "notes": "נכון ל־2026: 40% מהמקומות נפתחים באביב, והשאר ב־08:00 שעון אלברטה יומיים לפני כל יציאה. כרטיס השאטל לא כולל את כרטיס הכניסה לפארק."
+      "notes": "נכון ל־2026: 40% מהמקומות נפתחים באביב, והשאר ב־08:00 שעון אלברטה יומיים לפני כל יציאה. כרטיס השאטל לא כולל את כרטיס הכניסה לפארק. התאריך בתוכנית: 7.9 (9.9 הוא יום הגיבוי)."
     },
     {
       "id": "t-cruise-balance",
@@ -5426,6 +5417,14 @@
       "status": "toclose",
       "priority": true,
       "notes": "אי־תשלום יגרום לביטול."
+    },
+    {
+      "id": "t-cruise-checkin",
+      "title": "צ׳ק־אין מקוון לקרוז ובחירת חלון עלייה (Xpress Pass)",
+      "category": "קרוז",
+      "due": "2027-07-27",
+      "status": "planning",
+      "notes": "באפליקציה של Celebrity. לבחור חלון עלייה מוקדם, ולרשום את שעת ה־all aboard מהמסמכים. לבדוק באפליקציה מתי הצ׳ק־אין נפתח."
     },
     {
       "id": "t-pay-1",
@@ -5788,7 +5787,7 @@
       "pickup": "2027-09-10",
       "pickupPlace": "שדה התעופה LAX",
       "dropoff": "2027-09-14",
-      "dropoffPlace": "שדה התעופה LAX (לפני LY6 ב־13:30)",
+      "dropoffPlace": "שדה התעופה LAX. יוצאים מהמלון בסביבות 07:45–08:00 לטיסה של 13:30",
       "status": "toclose",
       "price": null
     }
@@ -5811,7 +5810,7 @@
       "name": "שאטל לאגמי Louise ו־Moraine",
       "region": "rockies",
       "point": "moraine-lake",
-      "date": "2027-09-09",
+      "date": "2027-09-07",
       "booking": "required",
       "opens": "2027-04-15T17:00",
       "opensNote": "08:00 שעון אלברטה = 17:00 בישראל",
@@ -5857,7 +5856,7 @@
       "name": "רכבל באנף",
       "region": "rockies",
       "point": "banff-gondola",
-      "date": "2027-09-07",
+      "date": "2027-09-09",
       "booking": "recommended",
       "url": "https://www.pursuit.com/experiences/banff-gondola/",
       "cost": null,
@@ -5870,11 +5869,11 @@
       "region": "rockies",
       "point": "columbia-icefield",
       "date": "2027-09-06",
-      "booking": "recommended",
+      "booking": "required",
       "url": "https://www.pursuit.com/experiences/columbia-icefield/",
       "cost": null,
       "status": "option",
-      "notes": "אופציה בתשלום. החלופה החינמית היא שביל התצפית לקרחון."
+      "notes": "אופציה בתשלום. 6.9 הוא יום Labour Day, אז רק בהזמנה מראש למשבצת בוקר. החלופה החינמית היא השביל לקצה הקרחון."
     },
     {
       "id": "a-maligne",
@@ -5882,11 +5881,11 @@
       "region": "rockies",
       "point": "spirit-island",
       "date": "2027-09-05",
-      "booking": "recommended",
+      "booking": "required",
       "url": null,
       "cost": null,
       "status": "option",
-      "notes": "האטרקציה המומלצת בג׳ספר. כדאי להזמין מראש. לבדוק מחיר וזמינות באתר המפעיל."
+      "notes": "האטרקציה המומלצת בג׳ספר. 5.9 נופל בסוף השבוע של Labour Day, אז חובה להזמין מראש. לבדוק מחיר וזמינות באתר המפעיל."
     },
     {
       "id": "a-mendenhall",
@@ -5951,12 +5950,12 @@
       "name": "יוניברסל סטודיוס הוליווד",
       "region": "la",
       "point": "universal",
-      "date": "2027-09-12",
+      "date": null,
       "booking": "recommended",
       "url": "https://www.universalstudioshollywood.com",
       "cost": null,
       "status": "option",
-      "notes": "אופציה, אם יהיה לכם כוח. לקנות כרטיסים מראש באתר הרשמי."
+      "notes": "לא בתוכנית: 12.9 הוקצה לאאוטלט. אם תרצו בכל זאת, אפשר במקום יום אחר. לקנות כרטיסים מראש באתר הרשמי."
     }
   ],
   "budget": {
