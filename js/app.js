@@ -83,7 +83,7 @@
   function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
   const EDIT = () => LS.get('tg.editMode', false);
   function saveDraft(msg) { D.meta.updated = new Date().toISOString().slice(0, 10); LS.set('tg.draft', D); if (msg) toast(msg); }
-  const LODGE_PTS = ['packwood-lodge', 'club-quarters', 'hyatt-olive8', 'hampton-yyc', 'forest-park', 'dmf-condo', 'park-plaza'];
+  const LODGE_PTS = ['hampton-yyc', 'forest-park', 'douglas-fir', 'marqueen', 'park-plaza'];
 
   /* ---------- weather (Open-Meteo, no key) ---------- */
   const WMO = (c) => c == null ? ['', ''] : c === 0 ? ['☀️', 'בהיר'] : c <= 2 ? ['🌤️', 'מעונן חלקית'] : c === 3 ? ['☁️', 'מעונן'] : c <= 48 ? ['🌫️', 'ערפל'] : c <= 57 ? ['🌦️', 'טפטוף'] : c <= 67 ? ['🌧️', 'גשם'] : c <= 77 ? ['🌨️', 'שלג'] : c <= 82 ? ['🌧️', 'ממטרים'] : c <= 86 ? ['🌨️', 'ממטרי שלג'] : ['⛈️', 'סופות רעמים'];
@@ -150,7 +150,7 @@
     const km = Object.values(RT.days).reduce((s, d) => s + d.km, 0);
     return `
       <section class="hero" style="${bg(c)}">${topnav()}
-        <div class="in"><div class="eyebrow num">19.8 — 15.9.2027 · ${totalNights} לילות</div>
+        <div class="in"><div class="eyebrow num">${dm(D.meta.start)} — ${fFull(D.meta.end)} · ${totalNights} לילות</div>
           <h1>${esc(D.meta.title)}</h1><p>${esc(D.meta.subtitle)}</p><div class="credit">${credit(c, 'אגם מוריין')}</div></div></section>
       <div class="stats"><div><b class="num">${Math.max(0, daysTo(D.meta.start))}</b><span>ימים לטיסה</span></div><div><b>${D.regions.length}</b><span>אזורים</span></div><div><b class="num">${km ? km.toLocaleString('en-US') : '—'}</b><span>ק״מ ברכב</span></div></div>
       <div class="body">
@@ -338,7 +338,7 @@
     if (t >= first && t <= last) { const iso = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; V.today.iso = iso; return V.day(iso); }
     V.today.iso = null;
     return `${pagehead('היום בטיול', t < first ? `עוד ${daysTo(D.days[0].date)} ימים` : 'הטיול הסתיים')}
-      <div class="body" style="padding-top:8px"><p class="lead" style="margin-top:0">${t < first ? 'מ־19.8.2027 יופיע כאן אוטומטית המסלול של אותו יום. בינתיים, כל הימים:' : ''}</p>
+      <div class="body" style="padding-top:8px"><p class="lead" style="margin-top:0">${t < first ? `מ־${fFull(D.meta.start)} יופיע כאן אוטומטית המסלול של אותו יום. בינתיים, כל הימים:` : ''}</p>
       ${D.regions.map(r => `<div class="h2"><small class="num">${dm(r.from)}–${dm(r.to)}</small>${esc(r.name)}</div>${D.days.filter(d => d.region === r.id).map(dayCard).join('')}`).join('')}</div>`;
   };
   V.today.after = () => { if (V.today.iso) V.day.after(V.today.iso); };
@@ -516,7 +516,7 @@
     booked.forEach(i => {
       const pd = paidOf(i), rest = i.amount - pd, name = i.short || i.label;
       if (pd > .5) paidRows.push({ name: rest > .5 ? name + ', מקדמה' : name, ils: ils(i, pd), sub: cur(pd, i.currency), task: rest > .5 ? null : (i.task && dn[i.task] ? i.task : null) });
-      if (rest > .5) { const k = i.task || name; (due[k] ??= { task: i.task, when: when(i), names: [], ils: 0, subs: [], note: i.payNote }); due[k].names.push(pd > .5 ? name + ', יתרה' : name); due[k].ils += ils(i, rest); due[k].subs.push(cur(rest, i.currency)); }
+      if (rest > .5) { const k = i.task || name; (due[k] ??= { task: i.task, when: when(i), names: [], ils: 0, subs: [], note: i.payNote }); const nm = pd > .5 ? name + ', יתרה' : name; if (!due[k].names.includes(nm)) due[k].names.push(nm); due[k].ils += ils(i, rest); due[k].subs.push(cur(rest, i.currency)); }
     });
     const dueRows = Object.values(due).sort((a, b) => (a.when || '9') < (b.when || '9') ? -1 : 1);
     const totB = sum(booked, i => ils(i, i.amount)), totL = sum(dueRows, r => r.ils), totP = totB - totL, pct = totB ? Math.round(100 * totP / totB) : 0;

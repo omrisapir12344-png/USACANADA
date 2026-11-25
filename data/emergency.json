@@ -76,21 +76,9 @@
   ],
   "hospitals": [
     {
-      "area": "סן פרנסיסקו",
-      "name": "UCSF Health Hyde Hospital (לשעבר Saint Francis Memorial), 900 Hyde St – מיון 24/7",
-      "note": "כ־2 ק״מ מהמלון, כמה דקות נסיעה (הערכה)",
-      "url": "https://www.ucsfhealth.org/locations/emergency-department-er-hyde"
-    },
-    {
-      "area": "פאקווד / הר ריינייר",
-      "name": "Arbor Health – Morton Hospital, מורטון WA – חדר מיון",
-      "note": "כ־50 ק״מ מהמלון, כ־40 דקות נסיעה בכביש US-12 (הערכה). מאזור הפארק עצמו הדרך ארוכה יותר – בחירום חמור חייגו 911.",
-      "url": "https://myarborhealth.org/services-specialties/er/"
-    },
-    {
       "area": "סיאטל",
       "name": "Virginia Mason Medical Center – מיון (כניסה מ־Spring St, ביתן Jones, 1010 Spring St)",
-      "note": "כ־1 ק״מ מהמלון, כ־5 דקות נסיעה (הערכה)",
+      "note": "כ־3 ק״מ מהמלון ב־Queen Anne, כ־10 דקות נסיעה (הערכה)",
       "url": "https://vmfh.org/our-hospitals/virginia-mason-medical-center/emergency-care"
     },
     {
@@ -106,9 +94,9 @@
       "url": "https://www.albertahealthservices.ca/findhealth/facility.aspx?id=1000410"
     },
     {
-      "area": "דד מנס פלטס / קנמור",
+      "area": "באנף / קנמור",
       "name": "Canmore General Hospital, 1100 Hospital Place – מיון 24/7",
-      "note": "כ־8–10 ק״מ מהלינה, כ־10 דקות נסיעה (הערכה)",
+      "note": "כ־25 ק״מ מבאנף, כ־20 דקות נסיעה (הערכה). גם בבאנף עצמה יש בית חולים. בחירום חמור חייגו 911.",
       "url": "https://www.albertahealthservices.ca/findhealth/facility.aspx?id=1000951"
     },
     {

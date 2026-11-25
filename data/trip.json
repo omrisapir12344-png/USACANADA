@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "טיול מסע ארה״ב וקנדה 2027",
-    "subtitle": "סן פרנסיסקו, הר ריינייר, שבעה לילות באלסקה, הרוקיז הקנדיים ולוס אנג׳לס.",
-    "start": "2027-08-19",
-    "end": "2027-09-15",
+    "subtitle": "הרוקיז הקנדיים, שבעה לילות באלסקה ולוס אנג׳לס.",
+    "start": "2027-09-01",
+    "end": "2027-09-22",
     "version": 2,
-    "updated": "2026-11-22",
+    "updated": "2026-11-26",
     "travelers": 2,
     "note": "אין בקובץ מספרי הזמנה, פרטי דרכון, שמות נוסעים או אמצעי תשלום – בכוונה.",
     "googleMyMapsEmbed": null,
@@ -35,135 +35,19 @@
   },
   "regions": [
     {
-      "id": "sf",
-      "name": "סן פרנסיסקו",
-      "nameEn": "San Francisco",
-      "from": "2027-08-19",
-      "to": "2027-08-23",
-      "color": "#e0703a",
-      "tz": "America/Los_Angeles",
-      "tzLabel": "שעון האוקיינוס השקט",
-      "image": "golden-gate",
-      "arrive": "נוחתים ב־SFO ב־19/8 ב־13:29 (LY4556 מ־LAX). משם ב־BART לתחנת Embarcadero, ליד המלון.",
-      "lodging": "Club Quarters Embarcadero, הרובע הפיננסי. 4 לילות, הוזמן.",
-      "lodgingStatus": "booked",
-      "summary": "ארבעה לילות. גשר הזהב הוא חובה. שאר המקומות הם הצעה לתוכנית של שלושה ימים.",
-      "clothing": {
-        "summary": "באוגוסט יכול להיות קריר, עם ערפל ורוח, במיוחד בערב וליד המים. שכבות: חולצה קצרה, סווטשירט ומעיל רוח.",
-        "bring": [
-          "מעיל רוח",
-          "שכבה חמה לערב",
-          "נעליים נוחות (עליות)",
-          "קרם הגנה"
-        ]
-      },
-      "beforeYouGo": [
-        "אלקטרז: להזמין מראש (נגמר בקיץ)",
-        "ESTA לשני הנוסעים"
-      ],
-      "transfer": "טיסה SFO→SEA ורכב שכור"
-    },
-    {
-      "id": "rainier",
-      "name": "הר ריינייר",
-      "nameEn": "Mount Rainier",
-      "from": "2027-08-23",
-      "to": "2027-08-26",
-      "color": "#5b8f3a",
-      "tz": "America/Los_Angeles",
-      "tzLabel": "שעון האוקיינוס השקט",
-      "image": "rainier-paradise",
-      "arrive": "טיסה מסן פרנסיסקו לסיאטל (SEA) ב־23/8 ואיסוף רכב שכור. מהשדה ל־Packwood כ־2.5–3 שעות נסיעה, ולכן צריך טיסה שמגיעה מוקדם מספיק לצ׳ק־אין עד 21:00. הטיסה והרכב טרם הוזמנו.",
-      "lodging": "Packwood Lodge & Cabins: בקתה עם מטבח וג׳קוזי. 3 לילות, הוזמן ושולם. Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. צ׳ק־אין עד 21:00.",
-      "lodgingStatus": "booked",
-      "summary": "שלושה לילות ליד הפארק הלאומי. האטרקציות הן הצעות.",
-      "clothing": {
-        "summary": "בגובה יכול להיות קר בבוקר ובערב, גם באוגוסט, ומזג האוויר משתנה מהר. שכבות, מעיל גשם ונעלי הליכה.",
-        "bring": [
-          "שכבות חמות",
-          "מעיל גשם",
-          "נעלי הליכה",
-          "מים וחטיפים",
-          "דלק מלא"
-        ]
-      },
-      "beforeYouGo": [
-        "טיסה SFO→SEA שמגיעה מספיק מוקדם (צ׳ק־אין עד 21:00)",
-        "רכב שכור בסיאטל",
-        "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה ב־2027",
-        "באביב 2027: לבדוק שכביש Stevens Canyon פתוח (עבודות גשר מתוכננות). אם הוא סגור, הנסיעה מ־Packwood ל־Paradise ארוכה יותר, דרך הכניסה המערבית.",
-        "לבדוק עיכובים בכביש ל־Sunrise (עבודות על גשר Fryingpan Creek ב־2027–2029)."
-      ],
-      "transfer": "165 ק״מ לסיאטל ברכב"
-    },
-    {
-      "id": "seattle",
-      "name": "סיאטל",
-      "nameEn": "Seattle",
-      "from": "2027-08-26",
-      "to": "2027-08-27",
-      "color": "#3f73b5",
-      "tz": "America/Los_Angeles",
-      "tzLabel": "שעון האוקיינוס השקט",
-      "image": "seattle",
-      "arrive": "נסיעה מריינייר לסיאטל והחזרת הרכב ב־26/8.",
-      "lodging": "Hyatt at Olive 8, מרכז העיר. לילה אחד, הוזמן.",
-      "lodgingStatus": "booked",
-      "summary": "לילה אחד בעיר לפני הקרוז.",
-      "clothing": {
-        "summary": "מתון, עם אפשרות לגשם. שכבה ארוכה ומעיל גשם קל.",
-        "bring": [
-          "מעיל גשם קל"
-        ]
-      },
-      "beforeYouGo": [
-        "מלון בסיאטל ל־26/8"
-      ],
-      "transfer": "עלייה לאונייה ב־27/8"
-    },
-    {
-      "id": "cruise",
-      "name": "קרוז אלסקה",
-      "nameEn": "Alaska cruise · Celebrity Edge",
-      "from": "2027-08-27",
-      "to": "2027-09-03",
-      "color": "#1f9e8f",
-      "tz": "America/Juneau",
-      "tzLabel": "שעון אלסקה בנמלי אלסקה · שעון האוקיינוס השקט בסיאטל ובוויקטוריה",
-      "image": "dawes-glacier",
-      "arrive": "ב־27/8 ההפלגה יוצאת מסיאטל ב־16:00. מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין (Xpress Pass), הרבה לפני ההפלגה. שעת ה־all aboard כתובה במסמכים.",
-      "lodging": "על האונייה, 7 לילות.",
-      "lodgingStatus": "booked",
-      "summary": "קטצ׳יקן, קרחון Dawes וג׳ונו, סקאגוויי, Inside Passage וויקטוריה. האונייה מגיעה לסיאטל ב־3/9 ב־06:00, וזו לא שעת הירידה.",
-      "clothing": {
-        "summary": "קריר ולעיתים קרובות גשום בנמלים ובשיט מול הקרחונים. שכבות, מעיל עמיד למים, כובע וכפפות לסיפון.",
-        "bring": [
-          "מעיל עמיד למים",
-          "כובע צמר וכפפות",
-          "משקפת",
-          "תיק יום לנמלים"
-        ]
-      },
-      "beforeYouGo": [
-        "יתרת תשלום עד 18/6/2027",
-        "לאמת שעות עגינה ושעת חזרה לאונייה"
-      ],
-      "transfer": "טיסה SEA→YYC ורכב שכור"
-    },
-    {
       "id": "rockies",
       "name": "הרוקיז הקנדיים",
       "nameEn": "Canadian Rockies",
-      "from": "2027-09-03",
-      "to": "2027-09-10",
+      "from": "2027-09-01",
+      "to": "2027-09-09",
       "color": "#7b5ea7",
       "tz": "America/Edmonton",
       "tzLabel": "שעון ההרים (גם ב־Field וביוהו)",
       "image": "peyto-lake",
-      "arrive": "טיסה SEA→YYC ב־3.9 (טרם הוזמנה) ולילה ליד השדה. רכב שכור מ־SIXT בקלגרי, איסוף ב־3.9 אם שעת הנחיתה מאפשרת, אחרת ב־4.9 בבוקר.",
-      "lodging": "קלגרי לילה 1 · ג׳ספר 2 לילות · Dead Man's Flats (ליד קנמור, דירה עם מטבח) 4 לילות. הכול הוזמן.",
+      "arrive": "LY7 ו־WestJet דרך טורונטו ב־1.9 (טרם הונפק, קונים עם השוברים), נחיתה בקלגרי ב־21:05 ולילה ליד השדה. רכב שכור: איסוף בשדה ב־2.9 בבוקר.",
+      "lodging": "קלגרי לילה 1 · ג׳ספר 2 לילות (Forest Park, סוויטה עם מטבח) · באנף 4 לילות (Douglas Fir Resort) · קלגרי לילה 1 לפני הטיסה לסיאטל. הכול הוזמן.",
       "lodgingStatus": "booked",
-      "summary": "קלגרי ← ג׳ספר דרך כביש הקרחונים ← חזרה דרומה לקנמור ← באנף, יוהו והאגמים ← קלגרי. שישה ימי טיול מלאים.",
+      "summary": "קלגרי ← ג׳ספר בכביש הקרחונים ← דרומה לבאנף ← יוהו, באנף והאגמים ← קלגרי. שישה ימי טיול מלאים ועוד יום גיבוי.",
       "clothing": {
         "summary": "בספטמבר הבקרים קרים, לעיתים סביב האפס, והצהריים נעימים. ליד הקרחונים קר ויש רוח. שכבות: תרמית, פליז ומעיל רוח או גשם, ונעלי הליכה.",
         "bring": [
@@ -176,29 +60,84 @@
         ]
       },
       "beforeYouGo": [
-        "שאטל לאגמים: 15.4.2027 ב־17:00 שעון ישראל",
+        "שאטל לאגמים: 15.4.2027 ב־17:00 שעון ישראל (ל־7.9)",
         "כרטיס כניסה לפארקים (גם לכביש הקרחונים)",
         "eTA לקנדה",
-        "טיסה SEA→YYC",
-        "רכב SIXT בקלגרי",
-        "שיט ל־Spirit Island (מומלץ)"
+        "סוף שבוע Labour Day (4–6.9): להזמין מראש Spirit Island ו־Ice Explorer",
+        "רכב שכור בקלגרי, 2–9.9",
+        "טיסה YYC→SEA ב־9.9"
       ],
-      "transfer": "טיסה YYC→LAX ורכב שכור"
+      "transfer": "טיסה YYC→SEA ב־9.9"
+    },
+    {
+      "id": "seattle",
+      "name": "סיאטל",
+      "nameEn": "Seattle",
+      "from": "2027-09-09",
+      "to": "2027-09-10",
+      "color": "#3f73b5",
+      "tz": "America/Los_Angeles",
+      "tzLabel": "שעון האוקיינוס השקט",
+      "image": "seattle",
+      "arrive": "טיסה מקלגרי ב־9.9 בבוקר (טרם הוזמנה). בסיאטל לא צריך רכב.",
+      "lodging": "MarQueen Hotel, שכונת Queen Anne ליד Space Needle. לילה אחד, הוזמן.",
+      "lodgingStatus": "booked",
+      "summary": "חצי יום בעיר ולילה לפני הקרוז.",
+      "clothing": {
+        "summary": "מתון, עם אפשרות לגשם. שכבה ארוכה ומעיל גשם קל.",
+        "bring": [
+          "מעיל גשם קל"
+        ]
+      },
+      "beforeYouGo": [
+        "טיסה YYC→SEA ב־9.9"
+      ],
+      "transfer": "עלייה לאונייה ב־10.9"
+    },
+    {
+      "id": "cruise",
+      "name": "קרוז אלסקה",
+      "nameEn": "Alaska cruise · Celebrity Edge",
+      "from": "2027-09-10",
+      "to": "2027-09-17",
+      "color": "#1f9e8f",
+      "tz": "America/Juneau",
+      "tzLabel": "שעון אלסקה בנמלי אלסקה · שעון האוקיינוס השקט בסיאטל ובוויקטוריה",
+      "image": "dawes-glacier",
+      "arrive": "ב־10.9 ההפלגה יוצאת מסיאטל ב־16:00. מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין (Xpress Pass), הרבה לפני ההפלגה. שעת ה־all aboard כתובה במסמכים.",
+      "lodging": "על האונייה, 7 לילות.",
+      "lodgingStatus": "booked",
+      "summary": "קטצ׳יקן, קרחון Dawes וג׳ונו, סקאגוויי, Inside Passage וויקטוריה. האונייה מגיעה לסיאטל ב־17.9 ב־06:00, וזו לא שעת הירידה. ההעברה מ־27.8 ל־10.9 ממתינה לאישור סנורמה.",
+      "clothing": {
+        "summary": "קריר ולעיתים קרובות גשום בנמלים ובשיט מול הקרחונים. שכבות, מעיל עמיד למים, כובע וכפפות לסיפון.",
+        "bring": [
+          "מעיל עמיד למים",
+          "כובע צמר וכפפות",
+          "משקפת",
+          "תיק יום לנמלים"
+        ]
+      },
+      "beforeYouGo": [
+        "אישור סנורמה על המעבר להפלגה ב־10.9",
+        "יתרת התשלום: 70 יום לפני ההפלגה (בערך 2.7.2027, לאמת)",
+        "לאמת שעות עגינה ושעת חזרה לאונייה"
+      ],
+      "transfer": "טיסה SEA→LAX ורכב שכור"
     },
     {
       "id": "la",
       "name": "לוס אנג׳לס",
       "nameEn": "Los Angeles",
-      "from": "2027-09-10",
-      "to": "2027-09-14",
+      "from": "2027-09-17",
+      "to": "2027-09-21",
       "color": "#d4a017",
       "tz": "America/Los_Angeles",
       "tzLabel": "שעון האוקיינוס השקט",
       "image": "griffith",
-      "arrive": "החזרת הרכב ב־YYC, טיסה ל־LAX ב־10/9 (טרם הוזמנה) ואיסוף רכב שכור בשדה.",
+      "arrive": "ירידה מהאונייה ב־17.9, טיסה SEA→LAX (טרם הוזמנה) ואיסוף רכב שכור ב־LAX.",
       "lodging": "Park Plaza Lodge, Third Street (ליד Farmers Market ו־The Grove). 4 לילות, הוזמן.",
       "lodgingStatus": "booked",
-      "summary": "ארבעה לילות. יום בהוליווד: שדרת הכוכבים, תצפית על השלט ומצפה Griffith. יוניברסל כאופציה ליום נוסף.",
+      "summary": "ארבעה לילות בסוף הטיול: יום בהוליווד, יום אאוטלט ב־Desert Hills, ויום קל עם The Grove וסנטה מוניקה. משם ישר הביתה, עם הקניות במזוודה.",
       "clothing": {
         "summary": "חם ויבש. בגדים קלים, כובע ומשקפי שמש.",
         "bring": [
@@ -209,583 +148,13 @@
         ]
       },
       "beforeYouGo": [
-        "טיסה YYC→LAX",
-        "רכב שכור ב־LAX, 10–14/9"
+        "טיסה SEA→LAX ב־17.9",
+        "רכב שכור ב־LAX, 17–21.9",
+        "כרטיס LY6 ל־21.9 (עם השוברים)"
       ]
     }
   ],
   "points": [
-    {
-      "id": "sfo",
-      "name": "נמל התעופה SFO",
-      "nameEn": "San Francisco International Airport",
-      "region": "sf",
-      "lat": 37.6213,
-      "lng": -122.379,
-      "days": [
-        "2027-08-19",
-        "2027-08-23"
-      ],
-      "kind": "transport",
-      "visit": "טיסה",
-      "see": "נחיתה ומעבר לעיר ב־BART."
-    },
-    {
-      "id": "club-quarters",
-      "name": "Club Quarters Embarcadero",
-      "nameEn": "Club Quarters Hotel Embarcadero, 424 Clay St, San Francisco",
-      "region": "sf",
-      "lat": 37.7953,
-      "lng": -122.4005,
-      "days": [
-        "2027-08-19"
-      ],
-      "kind": "lodging",
-      "summary": "המלון בסן פרנסיסקו, ברובע הפיננסי ליד ה־Embarcadero ו־Ferry Building. מהשדה מגיעים ב־BART לתחנת Embarcadero.",
-      "visit": "לינה",
-      "see": "מלון ליד ה־Embarcadero."
-    },
-    {
-      "id": "golden-gate",
-      "name": "גשר הזהב",
-      "nameEn": "Golden Gate Bridge",
-      "region": "sf",
-      "lat": 37.8199,
-      "lng": -122.4783,
-      "days": [
-        "2027-08-21"
-      ],
-      "kind": "attraction",
-      "summary": "חובה בטיול. החוויה הכי טובה: הליכה על הגשר, או חצייה ברגל או באופניים והמשך לסוסליטו.",
-      "imageMatch": [
-        "golden gate"
-      ],
-      "see": "הגשר האדום המפורסם. הליכה על המדרכה ותצפיות מ־Battery Spencer ו־Crissy Field",
-      "visit": "1.5–3 שעות",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "הליכה על הגשר",
-            "required": true,
-            "note": "הולכים על המדרכה לפחות עד המגדל הראשון וחוזרים. הגשר כולו באורך כ־2.7 ק״מ לכל כיוון."
-          },
-          {
-            "name": "תצפית מ־Battery Spencer",
-            "required": false,
-            "note": "נקודת תצפית בצד של Marin, מעל הגשר. עם רכב או מונית, החניה קטנה."
-          },
-          {
-            "name": "Crissy Field",
-            "required": false,
-            "note": "חוף ומדשאה בצד של העיר עם מבט נמוך על הגשר. טוב להליכה רגועה."
-          },
-          {
-            "name": "Fort Point",
-            "required": false,
-            "note": "מבצר היסטורי ממש מתחת לגשר בצד הדרומי. לבדוק שעות פתיחה באתר NPS."
-          }
-        ],
-        "duration": {
-          "min": "שעה",
-          "recommended": "2–3 שעות כולל תצפיות",
-          "trails": [
-            {
-              "name": "הליכה על הגשר מקצה לקצה",
-              "length": "כ־5.5 ק״מ הלוך־חזור",
-              "gain": "כ־0 מ׳"
-            }
-          ]
-        },
-        "clothing": [
-          "מעיל רוח או שכבה חמה. ערפל ורוח חזקה גם באוגוסט",
-          "שכבות. בין ערפל לשמש ההבדל בטמפרטורה גדול",
-          "נעלי הליכה נוחות"
-        ],
-        "expect": {
-          "crowds": "עמוס בסופי שבוע ובצהריים, בעיקר בכניסה הדרומית.",
-          "parking": "חניונים קטנים בשני צדי הגשר ומתמלאים מהר. מהמרכז נוח באוטובוס Muni או במונית.",
-          "toilets": "יש בכיכר המבקרים בצד הדרומי (Welcome Center).",
-          "signal": "קליטה טובה בדרך כלל.",
-          "safety": "רוח חזקה על הגשר. רוכבי אופניים חולקים את המדרכה, להישאר בצד.",
-          "tips": "ערפל מכסה את הגשר לעתים קרובות בבוקר בקיץ. אם יש ערפל, לנסות שוב אחה״צ או יום אחר."
-        },
-        "bestTime": "אחר הצהריים או לקראת שקיעה, כשהערפל לרוב מתפזר.",
-        "important": [
-          "לפעמים המדרכה המזרחית סגורה לעבודות או בלילה וההולכים מופנים למדרכה אחרת. לבדוק באתר הגשר לפני."
-        ],
-        "weatherAlt": "בערפל כבד אין נוף. אפשר לבקר ב־Presidio או במוזיאונים בעיר ולחזור לגשר ביום בהיר יותר.",
-        "links": [
-          {
-            "label": "האתר הרשמי של הגשר",
-            "url": "https://www.goldengate.org/"
-          },
-          {
-            "label": "Golden Gate National Recreation Area (NPS)",
-            "url": "https://www.nps.gov/goga/index.htm"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ferry-building",
-      "name": "Ferry Building",
-      "nameEn": "Ferry Building Marketplace, San Francisco",
-      "region": "sf",
-      "lat": 37.7955,
-      "lng": -122.3937,
-      "approx": true,
-      "kind": "attraction",
-      "visit": "45–60 דק׳",
-      "see": "שוק אוכל במבנה המעבורות ההיסטורי, ליד המלון.",
-      "summary": "דקות הליכה מהמלון. מכאן יוצאות המעבורות לסוסליטו.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-20"
-      ],
-      "imageMatch": [
-        "ferry building"
-      ]
-    },
-    {
-      "id": "sausalito",
-      "name": "סוסליטו",
-      "nameEn": "Sausalito, CA",
-      "region": "sf",
-      "lat": 37.8591,
-      "lng": -122.4853,
-      "approx": true,
-      "kind": "attraction",
-      "visit": "2–3 שעות",
-      "see": "עיירת חוף צבעונית מעבר לגשר. חוזרים במעבורת ל־Ferry Building.",
-      "summary": "הדרך הקלאסית: חוצים את גשר הזהב ברגל או באופניים שכורים, ממשיכים לסוסליטו וחוזרים במעבורת. לבדוק לוחות זמנים של המעבורת.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-21"
-      ],
-      "imageMatch": [
-        "sausalito"
-      ]
-    },
-    {
-      "id": "lombard",
-      "name": "רחוב Lombard",
-      "nameEn": "Lombard Street (crooked section), San Francisco",
-      "region": "sf",
-      "lat": 37.8021,
-      "lng": -122.4187,
-      "approx": true,
-      "kind": "attraction",
-      "visit": "20–30 דק׳",
-      "see": "הקטע המתפתל המפורסם. יפה מלמטה ומלמעלה.",
-      "summary": "קרוב לקו ה־Cable Car של Powell–Hyde.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-20"
-      ],
-      "imageMatch": [
-        "lombard"
-      ]
-    },
-    {
-      "id": "chinatown",
-      "name": "צ׳יינה טאון",
-      "nameEn": "Chinatown, San Francisco (Grant Ave)",
-      "region": "sf",
-      "lat": 37.7941,
-      "lng": -122.4078,
-      "approx": true,
-      "kind": "attraction",
-      "visit": "1–1.5 שעות",
-      "see": "הצ׳יינה טאון הוותיק בצפון אמריקה, שער Dragon Gate ורחוב Grant.",
-      "summary": "בהליכה מהמלון.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-22"
-      ],
-      "imageMatch": [
-        "chinatown",
-        "san francisco"
-      ]
-    },
-    {
-      "id": "coit-tower",
-      "name": "Coit Tower",
-      "nameEn": "Coit Tower, Telegraph Hill, San Francisco",
-      "region": "sf",
-      "lat": 37.8024,
-      "lng": -122.4058,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "45–60 דק׳",
-      "see": "מגדל על Telegraph Hill עם תצפית על המפרץ וציורי קיר.",
-      "summary": "עלייה רגלית תלולה מ־North Beach. כניסה למגדל בתשלום, לבדוק באתר.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-22"
-      ],
-      "imageMatch": [
-        "coit"
-      ]
-    },
-    {
-      "id": "painted-ladies",
-      "name": "Painted Ladies",
-      "nameEn": "Painted Ladies, Alamo Square, San Francisco",
-      "region": "sf",
-      "lat": 37.7763,
-      "lng": -122.4328,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "30 דק׳",
-      "see": "שורת הבתים הוויקטוריאניים מול קו הרקיע של העיר.",
-      "summary": "הנוף מהגבעה ב־Alamo Square Park.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-22"
-      ],
-      "imageMatch": [
-        "painted ladies"
-      ]
-    },
-    {
-      "id": "twin-peaks",
-      "name": "Twin Peaks",
-      "nameEn": "Twin Peaks viewpoint, San Francisco",
-      "region": "sf",
-      "lat": 37.7544,
-      "lng": -122.4477,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "30 דק׳",
-      "see": "תצפית על כל העיר והמפרץ.",
-      "summary": "כדאי בשעות אחר הצהריים. עלול להיות ערפילי וקר מאוד ברוח.",
-      "suggestion": true,
-      "optional": true,
-      "days": [
-        "2027-08-22"
-      ],
-      "imageMatch": [
-        "twin peaks",
-        "san francisco"
-      ]
-    },
-    {
-      "id": "alcatraz",
-      "name": "אלקטרז",
-      "nameEn": "Alcatraz Island",
-      "region": "sf",
-      "lat": 37.8267,
-      "lng": -122.423,
-      "days": [
-        "2027-08-20"
-      ],
-      "kind": "attraction",
-      "summary": "מומלץ מאוד: אחד האתרים הבולטים בסן פרנסיסקו. סיור האודיו בתוך הכלא מצוין. כ־2.5–3.5 שעות כולל המעבורת. חובה להזמין מראש.",
-      "suggestion": true,
-      "optional": true,
-      "imageMatch": [
-        "alcatraz"
-      ],
-      "see": "האי עם הכלא הפדרלי הנטוש. סיור קולי בתאים ונוף על העיר מהמפרץ",
-      "visit": "2.5–3.5 שעות כולל מעבורת",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "סיור קולי בבית הכלא (Cellhouse Audio Tour)",
-            "required": true,
-            "note": "הסיור המרכזי באי, עם אוזניות. נכלל בכרטיס."
-          },
-          {
-            "name": "שיט במעבורת",
-            "required": true,
-            "note": "הדרך היחידה להגיע. יוצאים מ־Pier 33 (Alcatraz Landing)."
-          },
-          {
-            "name": "תוכניות ריינג׳רים",
-            "required": false,
-            "note": "שיחות קצרות של ריינג׳רים לאורך היום. לוח הזמנים מוצג ברציף באי."
-          },
-          {
-            "name": "גני האי ותצפיות",
-            "required": false,
-            "note": "שבילים סביב האי עם נוף לעיר ולגשר. חלק מהאזורים סגורים בעונת קינון ציפורים."
-          }
-        ],
-        "duration": {
-          "min": "2.5 שעות",
-          "recommended": "3–3.5 שעות",
-          "trails": []
-        },
-        "clothing": [
-          "מעיל רוח ושכבה חמה. קר ורוחני על המעבורת ובאי",
-          "נעליים נוחות. יש עלייה תלולה מהרציף לבית הכלא",
-          "כובע ומשקפי שמש"
-        ],
-        "expect": {
-          "crowds": "מלא בקיץ. הכמות מוגבלת לפי כרטיסים.",
-          "parking": "המעבורת יוצאת מ־Pier 33 ב־Embarcadero. מהמלון נוח בחשמלית F או במונית. חניה באזור יקרה ומוגבלת.",
-          "toilets": "יש ברציף היציאה ובאי.",
-          "signal": "קליטה סבירה באי.",
-          "safety": "השבילים באי תלולים. אין מזון למכירה באי, רק מים. לבדוק כללים באתר.",
-          "tips": "להגיע לרציף לפחות 30 דקות לפני ההפלגה. לא לקנות ממשווקים חיצוניים, רק מהמפעיל הרשמי."
-        },
-        "bestTime": "הפלגה ראשונה של הבוקר, לפני העומס.",
-        "important": [
-          "חובה להזמין מראש. לפי NPS הכרטיסים נגמרים בקיץ עד חודש ויותר מראש (נכון ל־2026, לבדוק שוב ל־2027).",
-          "המפעיל היחיד המורשה הוא Alcatraz City Cruises. מחירים ושעות: לבדוק באתר הרשמי.",
-          "האי סגור בחג המולד, בחג ההודיה וביום השנה החדשה."
-        ],
-        "weatherAlt": "המעבורת יוצאת גם בערפל ובגשם קל. אם בוטל שיט, לפנות למפעיל. חלופה ביום רע: Exploratorium ליד Pier 15.",
-        "links": [
-          {
-            "label": "Alcatraz Island (NPS)",
-            "url": "https://www.nps.gov/alca/index.htm"
-          },
-          {
-            "label": "כרטיסים אצל המפעיל הרשמי",
-            "url": "https://www.cityexperiences.com/san-francisco/city-cruises/alcatraz/"
-          }
-        ]
-      }
-    },
-    {
-      "id": "fishermans-wharf",
-      "name": "Fisherman's Wharf ו־Pier 39",
-      "nameEn": "Fisherman's Wharf & Pier 39",
-      "region": "sf",
-      "lat": 37.8087,
-      "lng": -122.4098,
-      "days": [
-        "2027-08-20"
-      ],
-      "kind": "attraction",
-      "summary": "רציפים, אריות ים ואוכל ים.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "Pier 39 San Francisco",
-      "imageMatch": [
-        "pier 39"
-      ],
-      "see": "רציף תיירותי עם אריות ים ב־Pier 39, מסעדות פירות ים ונוף למפרץ ולאלקטרז",
-      "visit": "1.5–3 שעות",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "אריות הים ב־Pier 39",
-            "required": true,
-            "note": "אריות ים שוכבים על רציפים צפים בצד המערבי של Pier 39. בחינם."
-          },
-          {
-            "name": "אוכל ברציף",
-            "required": false,
-            "note": "קלאם צ׳אודר בלחם מחמצת או סרטנים בדוכנים. אפשר גם לשבת במסעדה עם נוף."
-          },
-          {
-            "name": "Ghirardelli Square",
-            "required": false,
-            "note": "מפעל שוקולד לשעבר עם חנויות, בקצה המערבי של האזור. ליד תחנת הקצה של Powell–Hyde."
-          },
-          {
-            "name": "San Francisco Maritime (Hyde Street Pier)",
-            "required": false,
-            "note": "ספינות היסטוריות על רציף. לבדוק שעות באתר NPS."
-          }
-        ],
-        "duration": {
-          "min": "שעה",
-          "recommended": "2–3 שעות כולל ארוחה",
-          "trails": []
-        },
-        "clothing": [
-          "שכבה חמה. רוח קרה מהמים גם בקיץ",
-          "נעליים נוחות להליכה ארוכה על הרציפים"
-        ],
-        "expect": {
-          "crowds": "עמוס מאוד בקיץ, בעיקר אחה״צ ובסופי שבוע.",
-          "parking": "חניון Pier 39 מול הכניסה, פתוח 24/7, בתשלום. נוח יותר בכבל קאר מ־Powell & Market או בחשמלית F.",
-          "toilets": "יש ב־Pier 39 ובמרכזי הקניות.",
-          "signal": "קליטה טובה.",
-          "safety": "אזור תיירותי. לשמור על ארנק וטלפון בצפיפות.",
-          "tips": "מקום טוב לשלב עם אלקטרז (Pier 33 קרוב) ועם הכבל קאר."
-        },
-        "bestTime": "בוקר מאוחר לאריות הים. ערב לאווירה ושקיעה.",
-        "important": [
-          "מספר אריות הים משתנה לפי עונה. לפעמים יש מעט מאוד."
-        ],
-        "weatherAlt": "יש הרבה מקומות מקורים. Aquarium of the Bay ב־Pier 39 או Musée Mécanique. מחירים לבדוק באתר.",
-        "links": [
-          {
-            "label": "האתר הרשמי של Pier 39",
-            "url": "https://www.pier39.com/"
-          },
-          {
-            "label": "Fisherman's Wharf הרשמי",
-            "url": "https://www.fishermanswharf.org/"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cable-car",
-      "name": "רכבל הכבלים (Cable Car)",
-      "nameEn": "Powell–Hyde Cable Car",
-      "region": "sf",
-      "lat": 37.7849,
-      "lng": -122.4075,
-      "days": [
-        "2027-08-20"
-      ],
-      "kind": "attraction",
-      "summary": "הקרוניות ההיסטוריות. תחנת הקצה בפינת Powell ו־Market, ליד אזור הלינה המוצע.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "San Francisco cable car Powell Hyde",
-      "imageMatch": [
-        "cable car"
-      ],
-      "see": "נסיעה בכבל קאר ההיסטורי מ־Powell & Market במעלה ובמורד הגבעות עד Fisherman's Wharf",
-      "visit": "1–2 שעות כולל המתנה",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "נסיעה בקו Powell–Hyde",
-            "required": true,
-            "note": "מתחילים בתחנת הקצה Powell & Market, ליד המלון. מסיימים ב־Hyde & Beach ליד Ghirardelli Square."
-          },
-          {
-            "name": "Lombard Street",
-            "required": false,
-            "note": "הקו עובר ליד הקטע המתפתל. אפשר לרדת ב־Lombard ולהמשיך ברגל."
-          },
-          {
-            "name": "Cable Car Museum",
-            "required": false,
-            "note": "מוזיאון קטן עם המנועים שמושכים את הכבלים. לבדוק שעות באתר הרשמי."
-          }
-        ],
-        "duration": {
-          "min": "20–30 דקות נסיעה לכיוון",
-          "recommended": "שעה עד שעתיים כולל תור",
-          "trails": []
-        },
-        "clothing": [
-          "שכבה חמה. נוסעים באוויר הפתוח",
-          "תיק קטן שאפשר להחזיק ביד אחת"
-        ],
-        "expect": {
-          "crowds": "תור ארוך בתחנת Powell & Market בקיץ, לפעמים שעה ויותר.",
-          "parking": "לא צריך רכב. מהמלון כ־15 דקות הליכה לתחנת הקצה ב־Powell & Market, או לקו California Street שקרוב יותר.",
-          "toilets": "אין בכבל קאר. להשתמש לפני, בתחנת BART/Muni Powell או במלון.",
-          "signal": "קליטה טובה.",
-          "safety": "לעמוד על המדרגה החיצונית רק עם אחיזה חזקה. להקשיב למפעיל.",
-          "tips": "בתחנת Hyde & Beach התור לחזרה לרוב קצר יותר. אפשר להתחיל משם, או לעלות בתחנת ביניים."
-        },
-        "bestTime": "מוקדם בבוקר או בערב, כשהתור קצר.",
-        "important": [
-          "בתחנות הקצה צריך לשלם מראש (Clipper, MuniMobile או קיוסק). נכון ל־2026, לבדוק שוב ל־2027.",
-          "מחיר הנסיעה: לבדוק באתר הרשמי של SFMTA."
-        ],
-        "weatherAlt": "הכבל קאר פועל גם בגשם קל. ביום גשום אפשר לבקר ב־Cable Car Museum במקום.",
-        "links": [
-          {
-            "label": "Cable Cars באתר SFMTA",
-            "url": "https://www.sfmta.com/getting-around/muni/cable-cars"
-          }
-        ]
-      }
-    },
-    {
-      "id": "lands-end",
-      "name": "Lands End",
-      "nameEn": "Lands End Trail",
-      "region": "sf",
-      "lat": 37.7802,
-      "lng": -122.5113,
-      "days": [
-        "2027-08-22"
-      ],
-      "kind": "trail",
-      "approx": true,
-      "summary": "שביל חוף עם תצפית על גשר הזהב.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "Lands End San Francisco trail",
-      "imageMatch": [
-        "lands end"
-      ],
-      "see": "שביל חוף מעל צוקים, עם נוף לגשר, הריסות Sutro Baths וחורשות ברוש",
-      "visit": "1.5–2.5 שעות",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "Coastal Trail",
-            "required": true,
-            "note": "השביל המרכזי לאורך הצוקים עם תצפיות לגשר. מתחילים מחניון Merrie Way או מ־Lands End Lookout."
-          },
-          {
-            "name": "Sutro Baths",
-            "required": false,
-            "note": "שרידי בית מרחץ ענק מתחילת המאה ה־20. ירידה קצרה מהחניון."
-          },
-          {
-            "name": "Mile Rock Beach והלברינת",
-            "required": false,
-            "note": "ירידה במדרגות לחוף קטן ולמבוך אבנים מעל המים. המדרגות תלולות."
-          },
-          {
-            "name": "Legion of Honor",
-            "required": false,
-            "note": "מוזיאון אמנות בקצה השביל, עם תצפית על העיר."
-          }
-        ],
-        "duration": {
-          "min": "שעה",
-          "recommended": "שעתיים",
-          "trails": [
-            {
-              "name": "Coastal Trail (Lands End)",
-              "length": "כ־5.5 ק״מ הלוך־חזור",
-              "gain": "כ־100 מ׳"
-            }
-          ]
-        },
-        "clothing": [
-          "מעיל רוח. ערפל ורוח חזקה מהאוקיינוס",
-          "נעלי הליכה עם סוליה טובה. יש מדרגות וקטעי עפר",
-          "שכבות. חם בקטעים המוגנים, קר בצוקים"
-        ],
-        "expect": {
-          "crowds": "בינוני. עמוס יותר בסופי שבוע.",
-          "parking": "חניון Merrie Way ליד Lands End Lookout, וחניה ליד Legion of Honor. מתמלא בסופי שבוע.",
-          "toilets": "יש ב־Lands End Lookout (מרכז מבקרים).",
-          "signal": "קליטה סבירה, חלשה במקומות.",
-          "safety": "להישאר על השביל ולהתרחק מהצוקים. היו נפילות קטלניות באזור.",
-          "tips": "אפשר לסיים ב־Cliff House או לשלב עם Golden Gate Park."
-        },
-        "bestTime": "אחר הצהריים, כשהערפל מתפזר. שקיעה יפה מאוד.",
-        "important": [
-          "ההנחיה של NPS: להישאר על השבילים ולשמור מרחק מהצוקים."
-        ],
-        "weatherAlt": "בערפל כבד אין נוף לגשר. אפשר לבקר ב־Legion of Honor או ב־de Young ב־Golden Gate Park.",
-        "links": [
-          {
-            "label": "Lands End (NPS)",
-            "url": "https://www.nps.gov/goga/planyourvisit/landsend.htm"
-          }
-        ]
-      }
-    },
     {
       "id": "sea-airport",
       "name": "נמל התעופה סיאטל SEA",
@@ -794,456 +163,12 @@
       "lat": 47.4502,
       "lng": -122.3088,
       "days": [
-        "2027-08-23",
-        "2027-09-03"
+        "2027-09-09",
+        "2027-09-17"
       ],
       "kind": "transport",
       "visit": "כשעה",
       "see": "נחיתה ואיסוף או החזרת רכב."
-    },
-    {
-      "id": "packwood-lodge",
-      "name": "Packwood Lodge & Cabins",
-      "nameEn": "Packwood Lodge & Cabins, 13807 US Hwy 12, Packwood, WA",
-      "region": "rainier",
-      "lat": 46.6076,
-      "lng": -121.672,
-      "approx": true,
-      "days": [
-        "2027-08-23"
-      ],
-      "kind": "lodging",
-      "summary": "בקתה עם מטבח וג׳קוזי בעיירה Packwood, הבסיס לשני הימים בפארק.",
-      "visit": "לינה",
-      "see": "בקתה עם מטבח וג׳קוזי."
-    },
-    {
-      "id": "hyatt-olive8",
-      "name": "Hyatt at Olive 8",
-      "nameEn": "Hyatt at Olive 8, 1635 8th Ave, Seattle",
-      "region": "seattle",
-      "lat": 47.6141,
-      "lng": -122.334,
-      "approx": true,
-      "days": [
-        "2027-08-26"
-      ],
-      "kind": "lodging",
-      "summary": "המלון בסיאטל, במרכז העיר, ללילה שלפני הקרוז.",
-      "visit": "לינה",
-      "see": "מלון במרכז סיאטל."
-    },
-    {
-      "id": "rainier-paradise",
-      "name": "Paradise",
-      "nameEn": "Paradise, Mount Rainier",
-      "region": "rainier",
-      "lat": 46.7859,
-      "lng": -121.7353,
-      "days": [
-        "2027-08-24"
-      ],
-      "kind": "trail",
-      "summary": "אזור המבקרים הפופולרי בפארק: כרי פרחים, תצפית על ההר ושבילים כמו Skyline Trail.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "Paradise Mount Rainier meadow",
-      "imageMatch": [
-        "paradise"
-      ],
-      "visit": "3–6 שעות",
-      "see": "כרי פרחים אלפיניים מתחת לפסגת Rainier, קרחונים ומפלי Myrtle Falls",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "Skyline Trail (לולאה)",
-            "required": true,
-            "note": "המסלול המרכזי של Paradise. עולה דרך כרי פרחים ל־Panorama Point עם תצפית על הקרחונים."
-          },
-          {
-            "name": "Myrtle Falls",
-            "required": false,
-            "note": "הליכה קצרה וקלה על Skyline Trail עד המפל, עם ההר ברקע. מתאים אם אין זמן ללולאה המלאה."
-          },
-          {
-            "name": "Nisqually Vista Trail",
-            "required": false,
-            "note": "לולאה קצרה ושטוחה יחסית עם תצפית על קרחון Nisqually."
-          },
-          {
-            "name": "Henry M. Jackson Visitor Center",
-            "required": false,
-            "note": "תערוכה, סרט על הפארק ומידע עדכני על מצב השבילים. שווה עצירה לפני היציאה לשביל."
-          }
-        ],
-        "duration": {
-          "min": "כשעתיים (Myrtle Falls ותצפיות)",
-          "recommended": "5–6 שעות כולל Skyline Trail",
-          "trails": [
-            {
-              "name": "Skyline Trail loop",
-              "length": "כ־8.8 ק״מ (לולאה)",
-              "gain": "כ־520 מ׳"
-            },
-            {
-              "name": "Skyline Trail to Myrtle Falls",
-              "length": "כ־1.6 ק״מ הלוך־חזור",
-              "gain": "מתון"
-            },
-            {
-              "name": "Nisqually Vista Trail",
-              "length": "כ־1.9 ק״מ (לולאה)",
-              "gain": "מתון"
-            }
-          ]
-        },
-        "clothing": [
-          "שכבות: בוקר קריר בגובה כ־1,650 מ׳, צהריים יכולים להיות חמימים",
-          "מעיל רוח וגשם קל, מזג האוויר על ההר משתנה מהר",
-          "נעלי הליכה עם סוליה טובה, ייתכנו כתמי שלג בחלק העליון",
-          "כובע, משקפי שמש וקרם הגנה, אין צל בכרי הפרחים"
-        ],
-        "expect": {
-          "crowds": "עמוס מאוד בקיץ, במיוחד בסופי שבוע ובשעות הצהריים.",
-          "parking": "מ־Packwood: US-12, אחר כך SR 123 ו־Stevens Canyon Road (כשעה, אם הכביש פתוח). חלופה דרך כניסת Nisqually (Morton–Ashford), ארוכה יותר. החניה ב־Paradise מתמלאת מוקדם.",
-          "toilets": "יש שירותים ב־Visitor Center ובאזור Paradise Inn. ב־Panorama Point יש שירותים על השביל.",
-          "signal": "קליטה חלשה ולא יציבה בפארק. להוריד מפות לא מקוונות מראש.",
-          "safety": "לא לעלות על כתמי שלג תלולים. אחרי Panorama Point להישאר על High Skyline Trail שעוקף מדרון קרח מסוכן. להישאר על השביל, אסור לדרוך על הצמחייה.",
-          "tips": "להגיע לפני 7:00 או אחרי 16:00 לפי המלצת הפארק. לקחת מים ואוכל, אין אפשרויות רבות בדרך מ־Packwood. דמי כניסה לפארק: לבדוק באתר הרשמי."
-        },
-        "bestTime": "בוקר מוקדם: חניה פנויה, אוויר צלול ופחות אנשים על השביל.",
-        "important": [
-          "הזמנת כניסה מתוזמנת (timed entry): הופעלה ל־Paradise ב־2024 בלבד. ב־2026 הפארק לא דרש הזמנה בשום אזור. נכון ל־2026, לבדוק שוב ל־2027.",
-          "Stevens Canyon Road היה פתוח בקיץ 2026 ונסגר לחורף ב־26 באוקטובר 2026. באביב 2027 מתוכננות עבודות בגשר Grove of the Patriarchs על הכביש עם השפעה על התנועה. נכון ל־2026, לבדוק שוב ל־2027.",
-          "אסור להכניס כלבים לשבילים. אין עמדות טעינה לרכב חשמלי בפארק."
-        ],
-        "weatherAlt": "בעננים ההר לא נראה. לבקר ב־Visitor Center, לעשות הליכה קצרה ל־Myrtle Falls, או לנסוע ל־Longmire ולשבילי היער הנמוכים.",
-        "links": [
-          {
-            "label": "Paradise באתר הפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/paradise.htm"
-          },
-          {
-            "label": "Skyline Trail",
-            "url": "https://www.nps.gov/mora/planyourvisit/skyline-trail.htm"
-          },
-          {
-            "label": "מצב הכבישים בפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
-          }
-        ]
-      }
-    },
-    {
-      "id": "reflection-lakes",
-      "name": "Reflection Lakes",
-      "nameEn": "Reflection Lakes",
-      "region": "rainier",
-      "lat": 46.7685,
-      "lng": -121.731,
-      "days": [
-        "2027-08-24"
-      ],
-      "kind": "viewpoint",
-      "approx": true,
-      "summary": "אגמים קטנים שבהם ההר משתקף ביום נאה. ממש ליד הכביש.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "Reflection Lakes Mount Rainier",
-      "imageMatch": [
-        "reflection"
-      ],
-      "visit": "30 דקות–שעה",
-      "see": "אגמים קטנים לצד הכביש שבהם Mount Rainier משתקף במים שקטים",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "תצפית וצילום ההשתקפות",
-            "required": true,
-            "note": "האגמים צמודים ל־Stevens Canyon Road. ההשתקפות הכי טובה כשאין רוח."
-          },
-          {
-            "name": "הליכה לאורך שפת האגם",
-            "required": false,
-            "note": "הליכה קצרה לאורך הגדה לזוויות צילום שונות."
-          },
-          {
-            "name": "Pinnacle Peak Trail",
-            "required": false,
-            "note": "שביל תלול שמתחיל מול האגמים ועולה לאוכף עם נוף על Rainier. רק למי שיש כוח וזמן."
-          }
-        ],
-        "duration": {
-          "min": "15–20 דקות",
-          "recommended": "כשעה, או 2–3 שעות עם Pinnacle Peak",
-          "trails": [
-            {
-              "name": "Pinnacle Peak Trail",
-              "length": "כ־4.2 ק״מ הלוך־חזור",
-              "gain": "לבדוק באתר הפארק"
-            }
-          ]
-        },
-        "clothing": [
-          "שכבה חמה לבוקר, ליד המים קריר",
-          "נעליים נוחות, הגדה יכולה להיות בוצית"
-        ],
-        "expect": {
-          "crowds": "חניה קטנה שמתמלאת בשעות השיא. בבוקר מוקדם שקט יותר.",
-          "parking": "כ־5 ק״מ מזרחית ל־Paradise על Stevens Canyon Road. חניה בצד הכביש. נוח לעצור בדרך בין Packwood ל־Paradise.",
-          "toilets": "לא לסמוך על שירותים במקום. השירותים הקרובים ב־Paradise.",
-          "signal": "קליטה חלשה או אין.",
-          "safety": "תנועה על הכביש ליד החניה. לשמור על השפה ולא לדרוך על הצמחייה.",
-          "tips": "בבוקר אין בדרך כלל רוח והמים חלקים. לבדוק שההר לא בעננים לפני שעוצרים לצילום."
-        },
-        "bestTime": "בוקר מוקדם, לפני שהרוח מתחילה.",
-        "important": [
-          "הגישה תלויה ב־Stevens Canyon Road. הכביש היה פתוח בקיץ 2026 וצפויות עבודות בגשר Grove of the Patriarchs ב־2027. נכון ל־2026, לבדוק שוב ל־2027."
-        ],
-        "weatherAlt": "בעננים או ברוח אין השתקפות. לוותר ולהמשיך ל־Paradise או לחזור בשעה אחרת באותו יום.",
-        "links": [
-          {
-            "label": "Paradise ו־Reflection Lakes באתר הפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/paradise.htm"
-          },
-          {
-            "label": "מצב הכבישים בפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
-          }
-        ]
-      },
-      "hike": true
-    },
-    {
-      "id": "rainier-sunrise",
-      "name": "Sunrise",
-      "nameEn": "Sunrise, Mount Rainier",
-      "region": "rainier",
-      "lat": 46.9145,
-      "lng": -121.6427,
-      "days": [
-        "2027-08-25"
-      ],
-      "kind": "trail",
-      "approx": true,
-      "summary": "הנקודה הגבוהה ביותר שאפשר להגיע אליה ברכב בפארק, עם תצפית על הצד המזרחי של ההר.",
-      "suggestion": true,
-      "optional": true,
-      "imageQuery": "Sunrise Mount Rainier",
-      "imageMatch": [
-        "sunrise",
-        "rainier"
-      ],
-      "visit": "4–6 שעות",
-      "see": "הנקודה הגבוהה שאפשר להגיע אליה ברכב בפארק, מול קרחון Emmons ושבילי רכס",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "Mount Fremont Lookout",
-            "required": true,
-            "note": "דרך Sourdough Ridge Trail לתצפית אש היסטורית. נוף פתוח על ההר ולפעמים עזי הרים."
-          },
-          {
-            "name": "Emmons Vista Overlooks",
-            "required": false,
-            "note": "הליכה קצרה מהחניה לתצפית על קרחון Emmons. מתאים לכולם."
-          },
-          {
-            "name": "First Burroughs Mountain",
-            "required": false,
-            "note": "שביל בטונדרה אלפינית, קרוב מאוד להר. קשה יותר, לפעמים עם שלג על השביל."
-          },
-          {
-            "name": "Sunrise Visitor Center",
-            "required": false,
-            "note": "מידע על מצב השבילים ותערוכה. פתוח בדרך כלל מתחילת יולי עד תחילת ספטמבר."
-          }
-        ],
-        "duration": {
-          "min": "כשעתיים (תצפיות והליכה קצרה)",
-          "recommended": "5 שעות כולל Mount Fremont Lookout",
-          "trails": [
-            {
-              "name": "Mount Fremont Lookout",
-              "length": "כ־9 ק״מ הלוך־חזור",
-              "gain": "לבדוק באתר הפארק"
-            },
-            {
-              "name": "First Burroughs Mountain",
-              "length": "כ־7.5 ק״מ הלוך־חזור",
-              "gain": "לבדוק באתר הפארק"
-            },
-            {
-              "name": "Emmons Vista Overlooks",
-              "length": "כ־1.6 ק״מ הלוך־חזור",
-              "gain": "מתון"
-            }
-          ]
-        },
-        "clothing": [
-          "שכבות ומעיל רוח: גובה כ־1,950 מ׳, על הרכס נושבת רוח",
-          "כובע, משקפי שמש וקרם הגנה, אין צל בכלל",
-          "נעלי הליכה סגורות, השבילים סלעיים"
-        ],
-        "expect": {
-          "crowds": "עמוס בסופי שבוע. בימי חול ובבוקר פחות.",
-          "parking": "מ־Packwood: US-12, אחר כך SR 123 (Cayuse Pass), SR 410 ו־White River Road עד Sunrise. נסיעה ארוכה יותר מ־Paradise, לבדוק זמן במפות. החניה מתמלאת בשעות השיא.",
-          "toilets": "יש שירותים באזור ה־Visitor Center וה־Day Lodge.",
-          "signal": "קליטה חלשה מאוד או אין. להוריד מפות מראש.",
-          "safety": "הכביש תלול וצר עם פיתולים. בשבילים: גובה, שמש חזקה, שלג על Burroughs. לא להאכיל חיות בר.",
-          "tips": "למלא דלק ב־Packwood. ב־Day Lodge יש אוכל בעונה, אבל כדאי להביא אוכל ומים. דמי כניסה: לבדוק באתר הרשמי."
-        },
-        "bestTime": "בוקר מוקדם: אור טוב על ההר מהצד המזרחי ופחות עומס.",
-        "important": [
-          "הזמנת כניסה מתוזמנת ל־Sunrise הופעלה ב־2024 וב־2025. ב־2026 לא נדרשה הזמנה. נכון ל־2026, לבדוק שוב ל־2027.",
-          "Sunrise Road נפתח בדרך כלל בסוף יוני או בתחילת יולי ונסגר בסוף ספטמבר או בתחילת אוקטובר. סוף אוגוסט בתוך העונה. נכון ל־2026, לבדוק שוב ל־2027.",
-          "החלפת גשר Fryingpan Creek על White River Road: בנייה פעילה מתוכננת ל־2027–2029 עם השפעה צפויה על התנועה. נכון ל־2026, לבדוק שוב ל־2027."
-        ],
-        "weatherAlt": "בעננים נמוכים הנוף נעלם. לוותר על הרכס ולעשות שבילי יער נמוכים, למשל Silver Falls באזור Ohanapecosh, אם פתוח.",
-        "links": [
-          {
-            "label": "Sunrise באתר הפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
-          },
-          {
-            "label": "עבודות בפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/park-construction.htm"
-          },
-          {
-            "label": "מצב הכבישים בפארק",
-            "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
-          }
-        ]
-      }
-    },
-    {
-      "id": "box-canyon",
-      "name": "Box Canyon",
-      "nameEn": "Box Canyon, Stevens Canyon Road",
-      "region": "rainier",
-      "lat": 46.7646,
-      "lng": -121.6398,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "15–20 דק׳",
-      "see": "קניון צר ועמוק מתחת לגשר, ממש ליד הכביש.",
-      "summary": "עצירה קצרה על Stevens Canyon Road בדרך מ־Packwood ל־Paradise.",
-      "days": [
-        "2027-08-24"
-      ],
-      "imageMatch": [
-        "box canyon",
-        "rainier"
-      ]
-    },
-    {
-      "id": "narada-falls",
-      "name": "מפלי Narada",
-      "nameEn": "Narada Falls",
-      "region": "rainier",
-      "lat": 46.7752,
-      "lng": -121.7451,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "20–30 דק׳",
-      "see": "מפל גבוה ושביל קצר ותלול לתצפית מלמטה.",
-      "summary": "כמה דקות מתחת ל־Paradise. השביל לתצפית התחתונה קצר אבל תלול וחלקלק מהרסס.",
-      "days": [
-        "2027-08-24"
-      ],
-      "imageMatch": [
-        "narada"
-      ]
-    },
-    {
-      "id": "tipsoo-lake",
-      "name": "Tipsoo Lake",
-      "nameEn": "Tipsoo Lake, Chinook Pass",
-      "region": "rainier",
-      "lat": 46.8697,
-      "lng": -121.518,
-      "approx": true,
-      "kind": "viewpoint",
-      "visit": "30–45 דק׳",
-      "see": "אגם קטן ליד Chinook Pass, עם השתקפות של ההר ופרחים בקיץ.",
-      "summary": "בדרך מ־Packwood ל־Sunrise. נקודת ההתחלה של Naches Peak Loop.",
-      "days": [
-        "2027-08-25"
-      ],
-      "imageMatch": [
-        "tipsoo"
-      ]
-    },
-    {
-      "id": "naches-peak",
-      "name": "Naches Peak Loop",
-      "nameEn": "Naches Peak Loop Trail",
-      "region": "rainier",
-      "lat": 46.871,
-      "lng": -121.515,
-      "approx": true,
-      "kind": "trail",
-      "visit": "כ־2–2.5 שעות",
-      "see": "שביל מעגלי קצר עם כרי פרחים ותצפית על Rainier בחלק השני של הלולאה.",
-      "summary": "מתחיל ב־Tipsoo Lake. מומלץ ללכת עם כיוון השעון כדי שההר יהיה מולכם בחצי השני.",
-      "guide": {
-        "verified": false,
-        "activities": [
-          {
-            "name": "הלולאה המלאה",
-            "required": true,
-            "note": "כרי פרחים, אגמים קטנים ותצפית על ההר."
-          },
-          {
-            "name": "Dewey Lake (הסתעפות)",
-            "required": false,
-            "note": "הסתעפות שיורדת לאגם. מוסיפה זמן ועלייה בחזרה."
-          }
-        ],
-        "duration": {
-          "min": "כשעתיים",
-          "recommended": "2–2.5 שעות",
-          "trails": [
-            {
-              "name": "Naches Peak Loop",
-              "length": "כ־5.6 ק״מ (לולאה)",
-              "gain": "כ־180 מ׳"
-            }
-          ]
-        },
-        "clothing": [
-          "נעלי הליכה ושכבה חמה. בגובה הזה קריר גם באוגוסט.",
-          "כובע ומשקפי שמש."
-        ],
-        "expect": {
-          "crowds": "פופולרי מאוד בעונת הפרחים. החניה ב־Tipsoo מתמלאת מוקדם.",
-          "parking": "חניה קטנה ליד Tipsoo Lake ועוד חניה ליד Chinook Pass.",
-          "toilets": "ליד Tipsoo Lake.",
-          "signal": "חלשה עד אין.",
-          "safety": "חלק מהשביל מחוץ לפארק הלאומי ובאזור שמור. נשארים על השביל.",
-          "tips": "להגיע בבוקר מוקדם, ואז להמשיך ל־Sunrise."
-        },
-        "bestTime": "בוקר מוקדם.",
-        "important": [
-          "חלק מהלולאה עובר באזור William O. Douglas Wilderness. לבדוק הנחיות באתר הפארק או ב־USFS."
-        ],
-        "weatherAlt": "בערפל: מוותרים על השביל ונוסעים ישר ל־Sunrise, שלפעמים מעל העננים.",
-        "links": [
-          {
-            "label": "Mount Rainier – אתר הפארק",
-            "url": "https://www.nps.gov/mora/index.htm"
-          }
-        ]
-      },
-      "days": [
-        "2027-08-25"
-      ],
-      "imageMatch": [
-        "naches"
-      ]
     },
     {
       "id": "pike-place",
@@ -1253,7 +178,7 @@
       "lat": 47.6097,
       "lng": -122.3422,
       "days": [
-        "2027-08-26"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "summary": "השוק ההיסטורי של סיאטל.",
@@ -1325,7 +250,7 @@
       "lat": 47.6205,
       "lng": -122.3493,
       "days": [
-        "2027-08-26"
+        "2027-09-09"
       ],
       "kind": "attraction",
       "summary": "מגדל התצפית. כניסה בתשלום.",
@@ -1392,14 +317,14 @@
       "lat": 47.6062,
       "lng": -122.3421,
       "days": [
-        "2027-08-27",
-        "2027-09-03"
+        "2027-09-10",
+        "2027-09-17"
       ],
       "kind": "transport",
       "approx": true,
       "summary": "הרציף המדויק של Celebrity Edge טרם אומת.",
       "visit": "לפי הקרוז",
-      "see": "עלייה לאונייה ב־27/8 לפי חלון העלייה שבחרתם (ההפלגה ב־16:00), וירידה ב־3/9."
+      "see": "עלייה לאונייה ב־10.9 לפי חלון העלייה שבחרתם (ההפלגה ב־16:00), וירידה ב־17.9."
     },
     {
       "id": "ketchikan",
@@ -1409,7 +334,7 @@
       "lat": 55.3422,
       "lng": -131.6461,
       "days": [
-        "2027-08-29"
+        "2027-09-12"
       ],
       "kind": "port",
       "tz": "America/Juneau",
@@ -1488,7 +413,7 @@
       "lng": -132.8,
       "approx": true,
       "days": [
-        "2027-08-30"
+        "2027-09-13"
       ],
       "kind": "port",
       "summary": "שיט נופי מהאונייה, בלי ירידה לחוף.",
@@ -1561,7 +486,7 @@
       "lat": 58.3019,
       "lng": -134.4197,
       "days": [
-        "2027-08-30"
+        "2027-09-13"
       ],
       "kind": "port",
       "tz": "America/Juneau",
@@ -1685,7 +610,7 @@
         "links": []
       },
       "days": [
-        "2027-08-30"
+        "2027-09-13"
       ]
     },
     {
@@ -1697,7 +622,7 @@
       "lng": -134.5456,
       "approx": true,
       "days": [
-        "2027-08-30"
+        "2027-09-13"
       ],
       "kind": "attraction",
       "optional": true,
@@ -1777,7 +702,7 @@
       "lat": 59.4583,
       "lng": -135.3139,
       "days": [
-        "2027-08-31"
+        "2027-09-14"
       ],
       "kind": "port",
       "tz": "America/Juneau",
@@ -1851,7 +776,7 @@
       "lng": -135.312,
       "approx": true,
       "days": [
-        "2027-08-31"
+        "2027-09-14"
       ],
       "kind": "attraction",
       "summary": "הפעילות שבחרתם בסקאגוויי. טרם הוזמנה.",
@@ -1919,7 +844,7 @@
       "lat": 48.4284,
       "lng": -123.3656,
       "days": [
-        "2027-09-02"
+        "2027-09-16"
       ],
       "kind": "port",
       "imageQuery": "Victoria BC Inner Harbour Parliament",
@@ -2001,7 +926,7 @@
       "summary": "רק אם זמן העגינה מאפשר. בדרך כלל דרך טיול מאורגן של האונייה.",
       "optional": true,
       "days": [
-        "2027-09-02"
+        "2027-09-16"
       ],
       "imageMatch": [
         "butchart"
@@ -2015,8 +940,8 @@
       "lat": 51.1215,
       "lng": -114.0076,
       "days": [
-        "2027-09-03",
-        "2027-09-10"
+        "2027-09-01",
+        "2027-09-09"
       ],
       "kind": "transport",
       "sub": "באנף",
@@ -2036,7 +961,8 @@
       "visit": "לינה",
       "see": "מלון ליד שדה התעופה.",
       "days": [
-        "2027-09-03"
+        "2027-09-01",
+        "2027-09-08"
       ]
     },
     {
@@ -2053,24 +979,7 @@
       "visit": "לינה",
       "see": "מלון במרכז ג׳ספר.",
       "days": [
-        "2027-09-04"
-      ]
-    },
-    {
-      "id": "dmf-condo",
-      "name": "דירה ב־Dead Man's Flats",
-      "nameEn": "Canmore 2BR Condo, 250 2nd Ave, Dead Man's Flats",
-      "region": "rockies",
-      "lat": 51.0405,
-      "lng": -115.2635,
-      "approx": true,
-      "kind": "lodging",
-      "sub": "קנמור",
-      "summary": "דירת שני חדרי שינה עם מטבח ליד קנמור, ארבעה לילות. כ־10 דקות מקנמור וכ־30 דקות מבאנף.",
-      "visit": "לינה",
-      "see": "דירה ליד קנמור.",
-      "days": [
-        "2027-09-06"
+        "2027-09-02"
       ]
     },
     {
@@ -2088,7 +997,7 @@
       "see": "אגם קרוב לעיירה, עם גשר עץ לאי קטן ונוף להר Pyramid.",
       "summary": "אגם כ־10 דקות נסיעה מהעיירה. סיבוב קצר אחר הצהריים אם נשאר זמן.",
       "days": [
-        "2027-09-05"
+        "2027-09-03"
       ],
       "imageMatch": [
         "pyramid lake"
@@ -2109,7 +1018,7 @@
       "see": "שיט באגם Maligne אל האי הקטן המפורסם. מגיעים רק בשיט.",
       "summary": "האטרקציה המומלצת בג׳ספר. לבדוק זמינות ומחיר באתר המפעיל.",
       "days": [
-        "2027-09-05"
+        "2027-09-03"
       ],
       "imageMatch": [
         "spirit island"
@@ -2130,7 +1039,7 @@
       "see": "אחד המפלים הגבוהים בקנדה, בסוף כביש Yoho Valley.",
       "summary": "תוספת אם הכביש פתוח ויש זמן. הכביש עונתי ויש בו פניות חדות, לבדוק את מצבו באתר Parks Canada.",
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "imageMatch": [
         "takakkaw"
@@ -2215,7 +1124,7 @@
       "lat": 51.1784,
       "lng": -115.5708,
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "kind": "city",
       "sub": "באנף",
@@ -2291,7 +1200,7 @@
       "lat": 51.17,
       "lng": -115.5617,
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -2360,7 +1269,7 @@
       "lng": -115.4952,
       "approx": true,
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "kind": "attraction",
       "sub": "באנף",
@@ -2442,7 +1351,7 @@
       "lng": -115.573,
       "approx": true,
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "kind": "attraction",
       "optional": true,
@@ -2519,7 +1428,7 @@
       "optional": true,
       "sub": "באנף",
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "imageMatch": [
         "hot springs",
@@ -2534,7 +1443,9 @@
       "lat": 51.184,
       "lng": -115.61,
       "approx": true,
-      "days": [],
+      "days": [
+        "2027-09-08"
+      ],
       "kind": "viewpoint",
       "optional": true,
       "sub": "באנף",
@@ -2598,7 +1509,7 @@
       "lat": 51.2456,
       "lng": -115.8398,
       "days": [
-        "2027-09-09"
+        "2027-09-05"
       ],
       "kind": "trail",
       "summary": "Lower Falls כברירת מחדל. Upper Falls רק אם יש זמן.",
@@ -2683,7 +1594,7 @@
       "lat": 51.4433,
       "lng": -116.534,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "attraction",
       "sub": "יוהו",
@@ -2762,7 +1673,7 @@
       "lng": -116.5114,
       "approx": true,
       "days": [
-        "2027-09-08"
+        "2027-09-06"
       ],
       "kind": "attraction",
       "sub": "יוהו",
@@ -2823,7 +1734,7 @@
       "lng": -116.4558,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-02"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -2902,7 +1813,7 @@
       "lng": -116.5103,
       "approx": true,
       "days": [
-        "2027-09-04"
+        "2027-09-02"
       ],
       "kind": "viewpoint",
       "sub": "Icefields Parkway",
@@ -2966,7 +1877,7 @@
       "lng": -116.721,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "trail",
       "sub": "Icefields Parkway",
@@ -3093,7 +2004,7 @@
       "lng": -117.224,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "attraction",
       "summary": "תצפית מהשביל המסומן. Ice Explorer ו־Skywalk בתשלום הם אופציה.",
@@ -3257,7 +2168,7 @@
       "lng": -117.78,
       "approx": true,
       "days": [
-        "2027-09-05"
+        "2027-09-03"
       ],
       "kind": "attraction",
       "optional": true,
@@ -3325,7 +2236,7 @@
       "lng": -117.638,
       "approx": true,
       "days": [
-        "2027-09-05"
+        "2027-09-03"
       ],
       "kind": "attraction",
       "optional": true,
@@ -3410,7 +2321,7 @@
       "lat": 52.6643,
       "lng": -117.8838,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -3535,7 +2446,7 @@
       "lng": -117.645,
       "approx": true,
       "days": [
-        "2027-09-06"
+        "2027-09-04"
       ],
       "kind": "attraction",
       "sub": "Icefields Parkway",
@@ -3997,9 +2908,8 @@
       "lat": 33.9416,
       "lng": -118.4085,
       "days": [
-        "2027-08-19",
-        "2027-09-10",
-        "2027-09-14"
+        "2027-09-17",
+        "2027-09-21"
       ],
       "kind": "transport",
       "visit": "מעבר בשדה",
@@ -4018,8 +2928,8 @@
       "visit": "לינה",
       "see": "מלון באזור Fairfax.",
       "days": [
-        "2027-09-10",
-        "2027-09-14"
+        "2027-09-17",
+        "2027-09-21"
       ]
     },
     {
@@ -4076,7 +2986,7 @@
         "links": []
       },
       "days": [
-        "2027-09-11"
+        "2027-09-18"
       ],
       "imageMatch": [
         "walk of fame"
@@ -4127,7 +3037,7 @@
         "links": []
       },
       "days": [
-        "2027-09-11"
+        "2027-09-18"
       ],
       "imageMatch": [
         "hollywood sign"
@@ -4250,7 +3160,7 @@
         ]
       },
       "days": [
-        "2027-09-12"
+        "2027-09-19"
       ],
       "imageMatch": [
         "desert hills"
@@ -4282,7 +3192,7 @@
       "lat": 34.1184,
       "lng": -118.3004,
       "days": [
-        "2027-09-11"
+        "2027-09-18"
       ],
       "kind": "viewpoint",
       "summary": "מצפה כוכבים עם תצפית על העיר ועל שלט הוליווד.",
@@ -4367,7 +3277,7 @@
       "lat": 34.0094,
       "lng": -118.4973,
       "days": [
-        "2027-09-13"
+        "2027-09-20"
       ],
       "kind": "attraction",
       "summary": "המזח והחוף.",
@@ -4509,255 +3419,57 @@
           }
         ]
       }
+    },
+    {
+      "id": "douglas-fir",
+      "name": "Douglas Fir Resort & Chalets",
+      "nameEn": "Douglas Fir Resort & Chalets, 525 Tunnel Mountain Rd, Banff",
+      "region": "rockies",
+      "kind": "lodging",
+      "lat": 51.1857,
+      "lng": -115.5537,
+      "approx": true,
+      "visit": "לינה",
+      "summary": "הבסיס לארבעה לילות בבאנף, על Tunnel Mountain, כמה דקות נסיעה ממרכז העיירה.",
+      "see": "סטודיו לארבעה לילות.",
+      "days": [
+        "2027-09-04"
+      ]
+    },
+    {
+      "id": "marqueen",
+      "name": "MarQueen Hotel",
+      "nameEn": "MarQueen Hotel, 600 Queen Anne Ave N, Seattle",
+      "region": "seattle",
+      "kind": "lodging",
+      "lat": 47.6245,
+      "lng": -122.3567,
+      "approx": true,
+      "visit": "לינה",
+      "summary": "מלון בשכונת Queen Anne, ליד Seattle Center ו־Space Needle. לילה לפני הקרוז.",
+      "see": "לילה אחד לפני ההפלגה.",
+      "days": [
+        "2027-09-09"
+      ]
     }
   ],
   "days": [
     {
-      "date": "2027-08-19",
-      "type": "transit",
-      "region": "sf",
-      "title": "נחיתה ומעבר לסן פרנסיסקו",
-      "points": [
-        "lax",
-        "sfo",
-        "club-quarters"
-      ],
-      "lodging": "sf",
-      "summary": "LY5 נוחתת ב־LAX ב־06:00, ובצהריים LY4556 ל־SFO. צריך לעבור בין טרמינלים ב־LAX. מ־SFO ב־BART לתחנת Embarcadero.",
-      "estTime": "יום טיסות",
-      "bring": [
-        "דרכונים ואישורי ESTA",
-        "מטען לטלפון",
-        "שכבה חמה לטיסה"
-      ]
-    },
-    {
-      "date": "2027-08-20",
-      "type": "explore",
-      "region": "sf",
-      "title": "ה־Embarcadero, הרציפים ואלקטרז",
-      "points": [
-        "ferry-building",
-        "fishermans-wharf",
-        "alcatraz",
-        "cable-car",
-        "lombard"
-      ],
-      "lodging": "sf",
-      "summary": "הצעה: בוקר ב־Ferry Building ליד המלון, הליכה לאורך ה־Embarcadero ל־Pier 39 ול־Fisherman's Wharf, אלקטרז (אם הוזמן), ונסיעה ב־Cable Car עם עצירה ב־Lombard.",
-      "estTime": "יום מלא ברגל ובתחבורה ציבורית (הערכה)"
-    },
-    {
-      "date": "2027-08-21",
-      "type": "explore",
-      "region": "sf",
-      "title": "גשר הזהב וסוסליטו",
-      "points": [
-        "golden-gate",
-        "sausalito"
-      ],
-      "lodging": "sf",
-      "summary": "היום של הגשר: מגיעים ל־Crissy Field או לתצפית ליד הגשר, חוצים אותו ברגל או באופניים שכורים, ממשיכים לסוסליטו וחוזרים במעבורת ל־Ferry Building, ליד המלון.",
-      "estTime": "5–7 שעות (הערכה)",
-      "weatherAlt": "הגשר מכוסה לעיתים בערפל, בעיקר בבוקר. אם לא רואים כלום, מחליפים עם 22.8 ומנסים שוב."
-    },
-    {
-      "date": "2027-08-22",
-      "type": "explore",
-      "region": "sf",
-      "title": "צ׳יינה טאון, תצפיות ושכונות",
-      "points": [
-        "chinatown",
-        "coit-tower",
-        "painted-ladies",
-        "twin-peaks",
-        "lands-end"
-      ],
-      "lodging": "sf",
-      "summary": "הצעה: צ׳יינה טאון ו־Coit Tower בבוקר, Painted Ladies אחר הצהריים, ושקיעה ב־Twin Peaks או ב־Lands End עם נוף לגשר.",
-      "estTime": "יום מלא (הערכה)"
-    },
-    {
-      "date": "2027-08-23",
-      "type": "transit",
-      "region": "rainier",
-      "title": "טיסה לסיאטל ונסיעה לריינייר",
-      "points": [
-        "sfo",
-        "sea-airport",
-        "packwood-lodge"
-      ],
-      "lodging": "rainier",
-      "summary": "טיסה SFO→SEA ואיסוף רכב שכור בשדה. הטיסה והרכב טרם הוזמנו.",
-      "estTime": "יום מעבר",
-      "drive": [
-        "sea-airport",
-        "packwood-lodge"
-      ],
-      "notes": "צ׳ק־אין ב־Packwood Lodge עד 21:00. מהשדה כ־2.5 שעות נסיעה, אז הטיסה צריכה לנחות בערך עד 17:00."
-    },
-    {
-      "date": "2027-08-24",
-      "type": "explore",
-      "region": "rainier",
-      "title": "Paradise ו־Reflection Lakes",
-      "points": [
-        "box-canyon",
-        "reflection-lakes",
-        "rainier-paradise",
-        "narada-falls"
-      ],
-      "lodging": "rainier",
-      "estTime": "7–9 שעות כולל Skyline Trail (הערכה)",
-      "weatherAlt": "בעננות נמוכה ההר מוסתר. במקרה כזה עדיף לעשות שבילי יער נמוכים ולנסות שוב למחרת.",
-      "drive": [
-        "packwood-lodge",
-        "box-canyon",
-        "reflection-lakes",
-        "rainier-paradise",
-        "narada-falls",
-        "packwood-lodge"
-      ],
-      "notes": "Packwood הוא הבסיס הנוח ביותר לשני הימים בפארק. לפני הטיול צריך לבדוק שכביש Stevens Canyon פתוח, אחרת הנסיעה ל־Paradise ארוכה יותר, דרך הכניסה המערבית.",
-      "start": "07:30",
-      "summary": "נכנסים לפארק דרך Stevens Canyon Road: עצירה קצרה ב־Box Canyon, תצפית בבוקר ב־Reflection Lakes (בלי רוח רואים השתקפות), ואז היום המרכזי ב־Paradise עם Skyline Trail. בדרך חזרה עצירה במפלי Narada."
-    },
-    {
-      "date": "2027-08-25",
-      "type": "explore",
-      "region": "rainier",
-      "title": "Tipsoo Lake, Naches Peak ו־Sunrise",
-      "points": [
-        "tipsoo-lake",
-        "naches-peak",
-        "rainier-sunrise"
-      ],
-      "lodging": "rainier",
-      "estTime": "7–8 שעות (הערכה)",
-      "weatherAlt": "אפשר להחליף בין הימים לפי התחזית.",
-      "drive": [
-        "packwood-lodge",
-        "tipsoo-lake",
-        "rainier-sunrise",
-        "packwood-lodge"
-      ],
-      "notes": "בכביש ל־Sunrise מתוכננות עבודות על גשר Fryingpan Creek ב־2027. לבדוק עיכובים באתר הפארק.",
-      "start": "07:30",
-      "summary": "בבוקר Naches Peak Loop מ־Tipsoo Lake, שביל מעגלי קצר עם פרחים ונוף להר. אחר כך עולים ל־Sunrise, הנקודה הגבוהה שמגיעים אליה ברכב, להליכה ל־Mount Fremont Lookout או ל־Emmons Vista."
-    },
-    {
-      "date": "2027-08-26",
-      "type": "transit",
-      "region": "seattle",
-      "title": "נסיעה לסיאטל והחזרת הרכב",
-      "points": [
-        "pike-place",
-        "space-needle",
-        "hyatt-olive8"
-      ],
-      "lodging": "seattle",
-      "summary": "נסיעה מ־Packwood לסיאטל, החזרת הרכב ולילה ב־Hyatt at Olive 8.",
-      "drive": [
-        "packwood-lodge",
-        "hyatt-olive8"
-      ],
-      "start": "10:00"
-    },
-    {
-      "date": "2027-08-27",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "עלייה לאונייה בסיאטל",
-      "points": [
-        "seattle-port"
-      ],
-      "lodging": "cruise",
-      "summary": "עלייה ל־Celebrity Edge. ההפלגה יוצאת ב־16:00, אבל מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין המקוון (Xpress Pass).",
-      "notes": "16:00 היא שעת ההפלגה, לא שעת עלייה. שעת ה־all aboard כתובה במסמכי ההפלגה, ומי שמגיע ב־16:00 מפספס את האונייה. לשים בתיק היד את מה שצריך עד שהמזוודות מגיעות לחדר."
-    },
-    {
-      "date": "2027-08-28",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "יום בים",
-      "points": [],
-      "lodging": "cruise"
-    },
-    {
-      "date": "2027-08-29",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "קטצ׳יקן",
-      "points": [
-        "ketchikan"
-      ],
-      "lodging": "cruise",
-      "summary": "הצעה: יום רגוע אחרי הימים העמוסים שיבואו. הליכה ברחוב Creek Street ההיסטורי ומרכז הטוטמים ברגל מהרציף, בלי להזמין כלום. אם יש תקציב לחוויה אווירית: טיסה ימית ל־Misty Fjords, בהזמנה מראש.",
-      "notes": "שעות העגינה טרם אומתו. לבדוק לאיזה רציף האונייה מגיעה (מרכז העיר או Ward Cove)."
-    },
-    {
-      "date": "2027-08-30",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "Endicott Arm, קרחון Dawes וג׳ונו",
-      "points": [
-        "dawes-glacier",
-        "juneau",
-        "juneau-heli",
-        "mendenhall"
-      ],
-      "lodging": "cruise",
-      "summary": "בבוקר שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. הפעילות המתוכננת: מסוק והליכה על הקרחון. Mendenhall כאופציה או כחלופה אם המסוק מתבטל."
-    },
-    {
-      "date": "2027-08-31",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "סקאגוויי",
-      "points": [
-        "skagway",
-        "white-pass"
-      ],
-      "lodging": "cruise",
-      "summary": "הפעילות המתוכננת: רכבת White Pass. אחר כך סיור ברגל בעיירה ההיסטורית."
-    },
-    {
       "date": "2027-09-01",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "Inside Passage",
-      "points": [],
-      "lodging": "cruise"
-    },
-    {
-      "date": "2027-09-02",
-      "type": "cruise",
-      "region": "cruise",
-      "title": "ויקטוריה",
-      "points": [
-        "victoria",
-        "butchart"
-      ],
-      "lodging": "cruise",
-      "summary": "העגינה בוויקטוריה בדרך כלל קצרה (לאמת שעות). הצעה: הליכה ב־Inner Harbour, בניין הפרלמנט ומלון Empress, בהליכה מהנמל. Butchart Gardens רק אם הזמן מאפשר."
-    },
-    {
-      "date": "2027-09-03",
       "type": "transit",
       "region": "rockies",
-      "title": "מסיאטל לקלגרי",
+      "title": "טיסה לקלגרי דרך טורונטו",
       "points": [
-        "seattle-port",
-        "sea-airport",
         "yyc",
         "hampton-yyc"
       ],
       "lodging": "yyc-hotel",
-      "summary": "ירידה מהאונייה בסיאטל, טיסה לקלגרי ולינה ב־Hampton Inn ליד השדה. אוספים את הרכב השכור אם שעת הנחיתה מאפשרת. לא מתחילים נסיעה ארוכה אחרי הקרוז.",
-      "estTime": "יום מעבר"
+      "summary": "LY7 ממריאה ב־10:15 לטורונטו, ומשם WestJet (WS1681) לקלגרי. נחיתה ב־21:05, ולילה ב־Hampton Inn ליד השדה. את הרכב אוספים רק למחרת בבוקר.",
+      "notes": "כ־20 שעות בדרך. הכניסה לקנדה בטורונטו, אז צריך eTA בתוקף. בהזמנה במלון כתוב שמגיעים בסביבות 22:30.",
+      "estTime": "יום טיסה"
     },
     {
-      "date": "2027-09-04",
+      "date": "2027-09-02",
       "type": "transit",
       "region": "rockies",
       "title": "מקלגרי לג׳ספר דרך כביש הקרחונים",
@@ -4768,19 +3480,19 @@
       ],
       "lodging": "jasper",
       "drive": [
-        "hampton-yyc",
+        "yyc",
         "bow-lake",
         "peyto-lake",
         "forest-park"
       ],
-      "summary": "יוצאים ב־07:30. עוצרים רק ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. Mistaya Canyon עבר ל־6.9, כי הוא על הכביש דרומה.",
+      "summary": "אוספים את הרכב בשדה ויוצאים מוקדם. עוצרים ב־Bow Lake ובתצפית על Peyto Lake, וממשיכים לג׳ספר. את Mistaya, הקרחון והמפלים עושים בדרך חזרה ב־4.9.",
       "estTime": "כ־6 שעות נהיגה נטו לפי OSRM, ועוד העצירות (הערכה)",
-      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. לבדוק לפני כן את מועדי האטרקציות בכביש. סוף שבוע ארוך של Labour Day בקנדה (4–6.9, החג ביום שני 6.9). צפוי עומס וחניות מלאות. להגיע מוקדם לתצפיות.",
+      "notes": "למלא דלק בלייק לואיז. בדרך יש רק תחנה עונתית ב־Saskatchewan River Crossing, וברוב הכביש אין קליטה. 2.9 הוא יום חמישי, לפני סוף השבוע של Labour Day.",
       "weatherAlt": "בעננות נמוכה Peyto מוסתר. מתמקדים ב־Bow Lake וב־Mistaya שקרובים לכביש.",
       "start": "07:30"
     },
     {
-      "date": "2027-09-05",
+      "date": "2027-09-03",
       "type": "explore",
       "region": "rockies",
       "title": "יום בג׳ספר",
@@ -4800,36 +3512,88 @@
       ],
       "summary": "בבוקר אגם Medicine ואגם Maligne. האטרקציה המומלצת: שיט ל־Spirit Island. אחר הצהריים, אם נשאר זמן, סיבוב קצר באגם Pyramid.",
       "estTime": "6–8 שעות (הערכה)",
-      "notes": "Maligne Canyon סגור מאז השריפה של 2024, וטרם פורסם מועד לפתיחה מחדש. לא בונים עליו. אין דלק בכביש Maligne. סוף שבוע של Labour Day: את השיט ל־Spirit Island חובה להזמין מראש.",
+      "notes": "Maligne Canyon סגור מאז השריפה של 2024, וטרם פורסם מועד לפתיחה מחדש. לא בונים עליו. אין דלק בכביש Maligne. מתחילים סוף שבוע של Labour Day: את השיט ל־Spirit Island חובה להזמין מראש.",
       "weatherAlt": "בגשם: השיט עדיין יוצא בדרך כלל, אבל הנוף מוגבל. אפשר לקצר ולבקר בעיירה ג׳ספר.",
       "start": "08:00"
     },
     {
-      "date": "2027-09-06",
+      "date": "2027-09-04",
       "type": "transit",
       "region": "rockies",
-      "title": "מג׳ספר לקנמור דרך כביש הקרחונים",
+      "title": "מג׳ספר לבאנף דרך כביש הקרחונים",
       "points": [
         "athabasca-falls",
         "sunwapta-falls",
         "columbia-icefield",
         "mistaya-canyon",
-        "dmf-condo"
+        "douglas-fir"
       ],
-      "lodging": "dmf",
+      "lodging": "banff",
       "drive": [
         "forest-park",
         "athabasca-falls",
         "sunwapta-falls",
         "columbia-icefield",
         "mistaya-canyon",
-        "dmf-condo"
+        "douglas-fir"
       ],
-      "summary": "יוצאים ב־08:00 ועוצרים רק בעיקר: מפלי Athabasca, מפלי Sunwapta, קרחון Athabasca ב־Columbia Icefield ו־Mistaya Canyon. ירדו העצירות הקצרות (Goats and Glaciers, Tangle Creek ו־Big Bend), כי זה היום הכי ארוך בטיול. Ice Explorer ו־Skywalk רק בהזמנה מראש למשבצת בוקר. אחרת הולכים בשביל לקצה הקרחון. בדרך לדירה עוצרים בסופר בקנמור.",
+      "summary": "יוצאים ב־08:00 ועוצרים בעיקר: מפלי Athabasca, מפלי Sunwapta, קרחון Athabasca ב־Columbia Icefield ו־Mistaya Canyon. Ice Explorer ו־Skywalk רק בהזמנה מראש למשבצת בוקר. אחרת הולכים בשביל לקצה הקרחון. בדרך לבאנף עוצרים בסופר.",
       "estTime": "יום מלא (הערכה)",
-      "notes": "יום Labour Day, חג בקנדה: עומס בכביש ובחניות. למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
+      "notes": "שבת של סוף השבוע של Labour Day: עומס בכביש ובחניות. למלא דלק בג׳ספר לפני היציאה. ברוב הכביש אין קליטה.",
       "weatherAlt": "בעננות נמוכה מתמקדים במפלים ובשביל לקרחון Athabasca, ומוותרים על Ice Explorer אם לא הוזמן.",
       "start": "08:00"
+    },
+    {
+      "date": "2027-09-05",
+      "summary": "מתחילים מוקדם ב־Johnston Canyon, לפני העומס, בשביל ל־Lower Falls. אחר כך מרכז באנף, Bow Falls ואגם Minnewanka. רכבל רק אם הראות טובה, ובערב המעיינות החמים אם יש כוח.",
+      "start": "07:30",
+      "type": "explore",
+      "drive": [
+        "douglas-fir",
+        "johnston-canyon",
+        "banff-town",
+        "bow-falls",
+        "lake-minnewanka",
+        "douglas-fir"
+      ],
+      "notes": "יום ראשון של סוף השבוע הארוך: להגיע ל־Johnston Canyon מוקדם. הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. לבדוק את המצב לפני הטיול.",
+      "region": "rockies",
+      "points": [
+        "johnston-canyon",
+        "banff-town",
+        "bow-falls",
+        "lake-minnewanka",
+        "banff-gondola",
+        "banff-hot-springs"
+      ],
+      "lodging": "banff",
+      "title": "Johnston Canyon ובאנף",
+      "estTime": "7–8 שעות (הערכה)",
+      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי."
+    },
+    {
+      "date": "2027-09-06",
+      "type": "explore",
+      "region": "rockies",
+      "title": "יוהו: Emerald Lake, Natural Bridge ו־Takakkaw",
+      "points": [
+        "natural-bridge",
+        "emerald-lake",
+        "takakkaw-falls"
+      ],
+      "lodging": "banff",
+      "drive": [
+        "douglas-fir",
+        "natural-bridge",
+        "emerald-lake",
+        "takakkaw-falls",
+        "douglas-fir"
+      ],
+      "summary": "יום יוהו בקצב רגוע: Natural Bridge, הליכה סביב Emerald Lake (ואופציה לקאנו), ומפלי Takakkaw אם הכביש פתוח.",
+      "estTime": "7–8 שעות כולל נסיעה (הערכה)",
+      "weatherAlt": "בגשם כבד: רק Lower Falls, ואחריו תצפית קצרה באגם Emerald.",
+      "start": "08:30",
+      "notes": "יום Labour Day, חג בקנדה. לחניות ב־Emerald Lake ובכביש ל־Takakkaw להגיע מוקדם."
     },
     {
       "date": "2027-09-07",
@@ -4843,9 +3607,9 @@
       ],
       "type": "explore",
       "drive": [
-        "dmf-condo",
+        "douglas-fir",
         "lake-louise",
-        "dmf-condo"
+        "douglas-fir"
       ],
       "driveNote": "בין האגמים נוסעים בשאטל של Parks Canada, לא ברכב.",
       "region": "rockies",
@@ -4853,83 +3617,148 @@
         "lake-louise",
         "moraine-lake"
       ],
-      "lodging": "dmf",
+      "lodging": "banff",
       "title": "אגמי Louise ו־Moraine",
       "estTime": "6–8 שעות (הערכה)",
-      "weatherAlt": "אם יש ענן נמוך או עשן, מחליפים עם 9.9 (באנף ו־Johnston Canyon). השאטל נקנה לתאריך מסוים, אז צריך לבדוק אם אפשר להחליף. נכון ל־2026, חלק מהמקומות נפתחים יומיים לפני כל יציאה. ראו גם חלופה בדף של אגם Moraine."
+      "weatherAlt": "אם יש ענן נמוך או עשן, מחליפים עם 8.9 (יום הגיבוי). השאטל נקנה לתאריך מסוים, אז צריך לבדוק אם אפשר להחליף. נכון ל־2026, חלק מהמקומות נפתחים יומיים לפני כל יציאה. ראו גם חלופה בדף של אגם Moraine."
     },
     {
       "date": "2027-09-08",
-      "type": "explore",
+      "type": "transit",
       "region": "rockies",
-      "title": "יוהו: Emerald Lake, Natural Bridge ו־Takakkaw",
+      "title": "יום גיבוי בבאנף, ובערב לקלגרי",
       "points": [
-        "natural-bridge",
-        "emerald-lake",
-        "takakkaw-falls"
+        "vermilion-lakes",
+        "hampton-yyc"
       ],
-      "lodging": "dmf",
+      "lodging": "yyc-hotel2",
       "drive": [
-        "dmf-condo",
-        "natural-bridge",
-        "emerald-lake",
-        "takakkaw-falls",
-        "dmf-condo"
+        "douglas-fir",
+        "vermilion-lakes",
+        "hampton-yyc"
       ],
-      "summary": "יום יוהו בקצב רגוע: Natural Bridge, הליכה סביב Emerald Lake (ואופציה לקאנו), ומפלי Takakkaw אם הכביש פתוח.",
-      "estTime": "7–8 שעות כולל נסיעה (הערכה)",
-      "weatherAlt": "בגשם כבד: רק Lower Falls, ואחריו תצפית קצרה באגם Emerald.",
-      "start": "08:30"
+      "start": "12:00",
+      "summary": "בוקר פנוי: אם ב־7.9 היה מעונן באגמים, חוזרים ל־Louise ו־Moraine (צריך מקום בשאטל). אחרת בוקר רגוע ותצפית על Vermilion Lakes. אחר הצהריים נוסעים לקלגרי (כשעה וחצי) ולילה ב־Hampton ליד השדה.",
+      "notes": "צ׳ק־אאוט מ־Douglas Fir בבוקר. ב־Hampton יש ארוחת בוקר כלולה.",
+      "estTime": "חצי יום (הערכה)"
     },
     {
       "date": "2027-09-09",
-      "summary": "מתחילים מוקדם ב־Johnston Canyon, לפני העומס, בשביל ל־Lower Falls. אחר כך מרכז באנף, Bow Falls ואגם Minnewanka. רכבל רק אם הראות טובה, ובערב המעיינות החמים אם יש כוח. זה גם יום הגיבוי: אם ב־7.9 היה מעונן באגמים, מחליפים.",
-      "start": "07:30",
-      "type": "explore",
-      "drive": [
-        "dmf-condo",
-        "johnston-canyon",
-        "banff-town",
-        "bow-falls",
-        "lake-minnewanka",
-        "dmf-condo"
-      ],
-      "notes": "הקטע המזרחי של כביש 1A סגור לרכב פרטי בתחילת ספטמבר (ב־2026: 1.9–6.10). מגיעים ל־Johnston Canyon מכביש 1 דרך Castle Junction. השביל נסגר לעבודות באוקטובר 2026. לבדוק את המצב לפני הטיול.",
-      "region": "rockies",
+      "type": "transit",
+      "region": "seattle",
+      "title": "טיסה לסיאטל וחצי יום בעיר",
       "points": [
-        "johnston-canyon",
-        "banff-town",
-        "bow-falls",
-        "lake-minnewanka",
-        "banff-gondola",
-        "banff-hot-springs"
+        "yyc",
+        "sea-airport",
+        "pike-place",
+        "space-needle",
+        "marqueen"
       ],
-      "lodging": "dmf",
-      "title": "Johnston Canyon ובאנף",
-      "estTime": "7–8 שעות (הערכה)",
-      "weatherAlt": "בראות נמוכה מוותרים על הרכבל. אפשר לטבול במעיינות החמים או לטייל ברחוב הראשי."
+      "lodging": "seattle",
+      "summary": "מחזירים את הרכב בשדה בקלגרי וטסים בבוקר לסיאטל. אחר הצהריים Pike Place Market, ובערב Space Needle, שנמצא ליד המלון.",
+      "notes": "בשדה בקלגרי עוברים את ביקורת הגבולות של ארה״ב לפני הטיסה, אז להגיע 2.5–3 שעות לפני. הטיסה עוד לא הוזמנה.",
+      "estTime": "יום מעבר"
     },
     {
       "date": "2027-09-10",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "עלייה לאונייה בסיאטל",
+      "points": [
+        "seattle-port"
+      ],
+      "lodging": "cruise",
+      "summary": "עלייה ל־Celebrity Edge. ההפלגה יוצאת ב־16:00, אבל מגיעים לנמל לפי חלון העלייה שבחרתם בצ׳ק־אין המקוון (Xpress Pass). מ־MarQueen לנמל במונית.",
+      "notes": "16:00 היא שעת ההפלגה, לא שעת עלייה. שעת ה־all aboard כתובה במסמכי ההפלגה, ומי שמגיע ב־16:00 מפספס את האונייה. לשים בתיק היד את מה שצריך עד שהמזוודות מגיעות לחדר."
+    },
+    {
+      "date": "2027-09-11",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "יום בים",
+      "points": [],
+      "lodging": "cruise"
+    },
+    {
+      "date": "2027-09-12",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "קטצ׳יקן",
+      "points": [
+        "ketchikan"
+      ],
+      "lodging": "cruise",
+      "summary": "הצעה: יום רגוע אחרי הימים העמוסים שיבואו. הליכה ברחוב Creek Street ההיסטורי ומרכז הטוטמים ברגל מהרציף, בלי להזמין כלום. אם יש תקציב לחוויה אווירית: טיסה ימית ל־Misty Fjords, בהזמנה מראש.",
+      "notes": "שעות העגינה טרם אומתו. לבדוק לאיזה רציף האונייה מגיעה (מרכז העיר או Ward Cove)."
+    },
+    {
+      "date": "2027-09-13",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "Endicott Arm, קרחון Dawes וג׳ונו",
+      "points": [
+        "dawes-glacier",
+        "juneau",
+        "juneau-heli",
+        "mendenhall"
+      ],
+      "lodging": "cruise",
+      "summary": "בבוקר שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. הפעילות המתוכננת: מסוק והליכה על הקרחון. Mendenhall כאופציה או כחלופה אם המסוק מתבטל."
+    },
+    {
+      "date": "2027-09-14",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "סקאגוויי",
+      "points": [
+        "skagway",
+        "white-pass"
+      ],
+      "lodging": "cruise",
+      "summary": "הפעילות המתוכננת: רכבת White Pass. אחר כך סיור ברגל בעיירה ההיסטורית."
+    },
+    {
+      "date": "2027-09-15",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "Inside Passage",
+      "points": [],
+      "lodging": "cruise"
+    },
+    {
+      "date": "2027-09-16",
+      "type": "cruise",
+      "region": "cruise",
+      "title": "ויקטוריה",
+      "points": [
+        "victoria",
+        "butchart"
+      ],
+      "lodging": "cruise",
+      "summary": "העגינה בוויקטוריה בדרך כלל קצרה (לאמת שעות). הצעה: הליכה ב־Inner Harbour, בניין הפרלמנט ומלון Empress, בהליכה מהנמל. Butchart Gardens רק אם הזמן מאפשר."
+    },
+    {
+      "date": "2027-09-17",
       "type": "transit",
       "region": "la",
-      "title": "טיסה ללוס אנג׳לס",
+      "title": "ירידה מהאונייה וטיסה ללוס אנג׳לס",
       "points": [
-        "yyc",
+        "seattle-port",
+        "sea-airport",
         "lax",
         "park-plaza"
       ],
       "lodging": "la",
       "drive": [
-        "dmf-condo",
-        "yyc"
+        "lax",
+        "park-plaza"
       ],
-      "summary": "בלי עצירות טיול. אם תבחרו בטיסה של 14:45, יוצאים סביב 09:00 להחזרת הרכב ב־SIXT בקלגרי ומשם בשאטל לטרמינל. בלוס אנג׳לס אוספים רכב שכור ב־LAX.",
-      "estTime": "יום מעבר",
-      "start": "09:00"
+      "summary": "האונייה מגיעה לסיאטל ב־06:00. אחרי הירידה נוסעים לשדה, טסים ללוס אנג׳לס ואוספים רכב שכור ב־LAX.",
+      "notes": "לבחור טיסה מהצהריים, כי שעת הירידה לא ידועה מראש. הטיסה עוד לא הוזמנה.",
+      "estTime": "יום מעבר"
     },
     {
-      "date": "2027-09-11",
+      "date": "2027-09-18",
       "type": "explore",
       "region": "la",
       "title": "יום בהוליווד",
@@ -4952,7 +3781,7 @@
       "start": "09:30"
     },
     {
-      "date": "2027-09-12",
+      "date": "2027-09-19",
       "type": "explore",
       "region": "la",
       "title": "יום אאוטלט: Desert Hills",
@@ -4970,15 +3799,15 @@
       "estTime": "יום מלא, כולל כ־4 שעות נסיעה (הערכה)"
     },
     {
-      "date": "2027-09-13",
+      "date": "2027-09-20",
       "type": "explore",
       "region": "la",
-      "title": "יום אחרון רגוע: סנטה מוניקה והחוף",
+      "title": "יום קל: The Grove וסנטה מוניקה",
       "points": [
         "santa-monica"
       ],
       "lodging": "la",
-      "summary": "בוקר רגוע ואריזה. יוצאים אחר הצהריים למזח ולחוף בסנטה מוניקה, ונשארים לשקיעה על הים. סיום רגוע לפני הטיסה.",
+      "summary": "בבוקר The Grove ו־Farmers Market, שנמצאים במרחק הליכה מהמלון, ואריזה. אחר הצהריים המזח והחוף בסנטה מוניקה, ושקיעה על הים.",
       "drive": [
         "park-plaza",
         "santa-monica",
@@ -4986,10 +3815,10 @@
       ],
       "estTime": "חצי יום (הערכה)",
       "notes": "למחרת בבוקר יוצאים מוקדם לשדה. לארוז מראש ולוודא שהמזוודות לא חורגות מ־23 ק״ג (מזוודה שנייה עולה 150$ לנוסע).",
-      "start": "16:00"
+      "start": "15:00"
     },
     {
-      "date": "2027-09-14",
+      "date": "2027-09-21",
       "type": "transit",
       "region": "la",
       "title": "LY6 הביתה",
@@ -4998,7 +3827,7 @@
         "lax"
       ],
       "lodging": "plane",
-      "summary": "צ׳ק־אאוט, החזרת הרכב ב־LAX ושאטל לטרמינל. LY6 ממריאה ב־13:30. יוצאים מהמלון בסביבות 07:45–08:00, כדי להיות בטרמינל בערך ב־09:30, 4 שעות לפני.",
+      "summary": "צ׳ק־אאוט, החזרת הרכב ב־LAX ושאטל לטרמינל. LY6 ממריאה ב־13:30 (לפי הלוח הקודם, לאמת בכרטיס החדש). יוצאים מהמלון בסביבות 07:45–08:00, כדי להיות בטרמינל בערך ב־09:30.",
       "drive": [
         "park-plaza",
         "lax"
@@ -5007,7 +3836,7 @@
       "driveNote": "זמן הנסיעה כאן לא כולל פקקים. בבוקר בלוס אנג׳לס זה יכול לקחת פי שניים, ועוד החזרת הרכב והשאטל לטרמינל."
     },
     {
-      "date": "2027-09-15",
+      "date": "2027-09-22",
       "type": "transit",
       "region": null,
       "title": "נחיתה בתל אביב",
@@ -5018,84 +3847,52 @@
   ],
   "flights": [
     {
-      "id": "ly5",
-      "date": "2027-08-19",
-      "flight": "LY5",
-      "carrier": "אל על",
+      "id": "ly7",
+      "date": "2027-09-01",
+      "flight": "LY7 + WS1681",
+      "carrier": "אל על + WestJet, דרך טורונטו",
       "from": "TLV",
       "fromTerminal": "3",
       "fromTz": "Asia/Jerusalem",
-      "to": "LAX",
-      "toTerminal": "B",
-      "toTz": "America/Los_Angeles",
-      "dep": "01:05",
-      "arr": "06:00",
-      "arrDate": "2027-08-19",
-      "status": "booked",
-      "notes": "מושבים נבחרו."
+      "to": "YYC",
+      "toTz": "America/Edmonton",
+      "dep": "10:15",
+      "arr": "21:05",
+      "arrDate": "2027-09-01",
+      "status": "toclose",
+      "notes": "כ־20 שעות כולל העצירה בטורונטו. קונים עם שוברי הזיכוי מהכרטיסים שבוטלו."
     },
     {
-      "id": "ly4556",
-      "date": "2027-08-19",
-      "flight": "LY4556",
-      "carrier": "אל על (מופעל ע״י Delta)",
-      "from": "LAX",
-      "fromTerminal": "3",
-      "fromTz": "America/Los_Angeles",
-      "to": "SFO",
-      "toTerminal": "1",
-      "toTz": "America/Los_Angeles",
-      "dep": "12:00",
-      "arr": "13:29",
-      "arrDate": "2027-08-19",
-      "status": "booked",
-      "notes": "מעבר מטרמינל B לטרמינל 3 ב־LAX."
-    },
-    {
-      "id": "sfo-sea",
-      "date": "2027-08-23",
+      "id": "yyc-sea",
+      "date": "2027-09-09",
       "flight": "טרם נקבע",
       "carrier": "טרם נקבע",
-      "from": "SFO",
-      "fromTz": "America/Los_Angeles",
+      "from": "YYC",
+      "fromTz": "America/Edmonton",
       "to": "SEA",
       "toTz": "America/Los_Angeles",
       "dep": null,
       "arr": null,
       "status": "toclose",
-      "notes": "אחרי הנחיתה: איסוף רכב שכור בשדה."
+      "notes": "טיסת בוקר. ביקורת הגבולות של ארה״ב בשדה בקלגרי: להגיע 2.5–3 שעות לפני."
     },
     {
-      "id": "sea-yyc",
-      "date": "2027-09-03",
+      "id": "sea-lax",
+      "date": "2027-09-17",
       "flight": "טרם נקבע",
       "carrier": "טרם נקבע",
       "from": "SEA",
       "fromTz": "America/Los_Angeles",
-      "to": "YYC",
-      "toTz": "America/Edmonton",
-      "dep": null,
-      "arr": null,
-      "status": "toclose",
-      "notes": "לבחור טיסה מהצהריים והלאה, בגלל שעת הירידה מהאונייה."
-    },
-    {
-      "id": "yyc-lax",
-      "date": "2027-09-10",
-      "flight": "טרם נקבע",
-      "carrier": "טרם נקבע",
-      "from": "YYC",
-      "fromTz": "America/Edmonton",
       "to": "LAX",
       "toTz": "America/Los_Angeles",
       "dep": null,
       "arr": null,
       "status": "toclose",
-      "notes": "אחרי החזרת הרכב בקלגרי."
+      "notes": "מהצהריים והלאה, בגלל שעת הירידה מהאונייה."
     },
     {
       "id": "ly6",
-      "date": "2027-09-14",
+      "date": "2027-09-21",
       "flight": "LY6",
       "carrier": "אל על",
       "from": "LAX",
@@ -5106,8 +3903,9 @@
       "toTz": "Asia/Jerusalem",
       "dep": "13:30",
       "arr": "13:20",
-      "arrDate": "2027-09-15",
-      "status": "booked"
+      "arrDate": "2027-09-22",
+      "status": "toclose",
+      "notes": "השעות לפי הלוח של הכרטיס הקודם. לאמת בכרטיס החדש."
     }
   ],
   "flightsInfo": {
@@ -5136,7 +3934,8 @@
     "totalCouple": {
       "amount": 4181.54,
       "currency": "USD"
-    }
+    },
+    "vouchers": "הכרטיסים הקודמים בוטלו לשני שוברי זיכוי של 2,030.76$ כל אחד. El Al Protect (60$ לנוסע) לא הוחזר."
   },
   "cruise": {
     "ship": "Celebrity Edge",
@@ -5144,14 +3943,14 @@
     "status": "booked",
     "nights": 7,
     "embark": {
-      "date": "2027-08-27",
+      "date": "2027-09-10",
       "time": "16:00",
       "place": "סיאטל",
       "tz": "America/Los_Angeles",
       "note": "16:00 היא שעת ההפלגה, לא שעת העלייה. מגיעים לנמל לפי חלון העלייה שבוחרים בצ׳ק־אין המקוון (Xpress Pass), ולא יאוחר משעת ה־all aboard שכתובה במסמכי ההפלגה. מי שמגיע ב־16:00 מפספס את האונייה."
     },
     "arrival": {
-      "date": "2027-09-03",
+      "date": "2027-09-17",
       "time": "06:00",
       "place": "סיאטל",
       "tz": "America/Los_Angeles",
@@ -5159,35 +3958,35 @@
     },
     "itinerary": [
       {
-        "date": "2027-08-27",
+        "date": "2027-09-10",
         "place": "עלייה בסיאטל"
       },
       {
-        "date": "2027-08-28",
+        "date": "2027-09-11",
         "place": "יום בים"
       },
       {
-        "date": "2027-08-29",
+        "date": "2027-09-12",
         "place": "קטצ׳יקן"
       },
       {
-        "date": "2027-08-30",
+        "date": "2027-09-13",
         "place": "Endicott Arm מול קרחון Dawes, ואז ג׳ונו"
       },
       {
-        "date": "2027-08-31",
+        "date": "2027-09-14",
         "place": "סקאגוויי"
       },
       {
-        "date": "2027-09-01",
+        "date": "2027-09-15",
         "place": "Inside Passage"
       },
       {
-        "date": "2027-09-02",
+        "date": "2027-09-16",
         "place": "ויקטוריה"
       },
       {
-        "date": "2027-09-03",
+        "date": "2027-09-17",
         "place": "ירידה בסיאטל"
       }
     ],
@@ -5203,8 +4002,8 @@
     "balance": {
       "amount": 11816,
       "currency": "ILS",
-      "due": "2027-06-18",
-      "note": "הסכום הסופי ייקבע לפי שער הדולר ביום התשלום. אי־תשלום יגרום לביטול."
+      "due": "2027-07-02",
+      "note": "70 יום לפני ההפלגה, לפי התנאים. התאריך המדויק ייקבע אחרי ההעברה ל־10.9. הסכום הסופי לפי שער הדולר ביום התשלום."
     },
     "gratuities": {
       "perPersonPerNight": 18.5,
@@ -5216,150 +4015,127 @@
       "Mendenhall ו־Nugget Falls בג׳ונו (לא הוזמן)",
       "White Pass בסקאגוויי (לא הוזמן)"
     ],
-    "verify": "לאמת מול המפעיל את שעות העגינה ואת שעת החזרה לאונייה."
+    "verify": "לאמת מול המפעיל את שעות העגינה ואת שעת החזרה לאונייה.",
+    "change": "נשלחה בקשה לסנורמה להעביר את ההזמנה מ־27.8 ל־10.9 עם המקדמה. ממתין לאישור."
   },
   "hotels": [
     {
-      "id": "sf",
-      "city": "סן פרנסיסקו",
-      "name": "Club Quarters Hotel Embarcadero",
-      "checkIn": "2027-08-19",
-      "checkOut": "2027-08-23",
-      "price": {
-        "amount": 653.55,
-        "currency": "USD"
-      },
-      "deposit": {
-        "amount": 100,
-        "currency": "USD",
-        "note": "פיקדון נזקים בצ׳ק־אין, מוחזר תוך כ־7 ימים"
-      },
-      "cancelBy": "ביטול חינם עד 17.8.2027 23:59 (שעון מקומי). אחר כך: 182.01$",
-      "url": null,
-      "status": "booked",
-      "notes": "424 Clay St, הרובע הפיננסי. מהשדה ב־BART לתחנת Embarcadero. ארוחות לא כלולות. חניה בחניון מקורה סמוך.",
-      "point": "club-quarters",
-      "room": "חדר קווין קטן",
-      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
-      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
-    },
-    {
-      "id": "rainier",
-      "city": "הר ריינייר",
-      "name": "Packwood Lodge & Cabins",
-      "checkIn": "2027-08-23",
-      "checkOut": "2027-08-26",
-      "price": {
-        "amount": 833.44,
-        "currency": "USD"
-      },
-      "status": "booked",
-      "notes": "13807 US Hwy 12, Packwood. בקתה עם מטבח: כריכים לשבילים וארוחת ערב בבקתה. אין תשלום במזומן.",
-      "cancelBy": "ביטול חינם עד 19.8.2027 23:59 (שעון מקומי). אחר כך: 759.05$",
-      "point": "packwood-lodge",
-      "room": "Deluxe Cabin with Jetted Tub: חדר שינה, סלון ומטבח",
-      "checkTimes": "צ׳ק־אין 16:00–21:00 · צ׳ק־אאוט עד 11:00",
-      "payment": "שולם במלואו."
-    },
-    {
-      "id": "seattle",
-      "city": "סיאטל",
-      "name": "Hyatt at Olive 8",
-      "checkIn": "2027-08-26",
-      "checkOut": "2027-08-27",
-      "price": {
-        "amount": 315.81,
-        "currency": "USD"
-      },
-      "status": "booked",
-      "notes": "1635 8th Ave, מרכז סיאטל. ארוחות לא כלולות.",
-      "cancelBy": "ביטול חינם עד 25.8.2027 23:59 (שעון מקומי). אחר כך: 281.31$",
-      "point": "hyatt-olive8",
-      "room": "חדר קינג",
-      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 12:00",
-      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
-    },
-    {
-      "id": "cruise",
-      "city": "על האונייה",
-      "name": "Celebrity Edge",
-      "checkIn": "2027-08-27",
-      "checkOut": "2027-09-03",
-      "price": null,
-      "status": "booked",
-      "notes": "כלול בעלות הקרוז."
-    },
-    {
       "id": "yyc-hotel",
-      "city": "קלגרי (ליד השדה)",
+      "city": "קלגרי",
       "name": "Hampton Inn by Hilton Calgary Airport North",
-      "checkIn": "2027-09-03",
-      "checkOut": "2027-09-04",
+      "point": "hampton-yyc",
+      "room": "חדר קינג, ארוחת בוקר כלולה",
+      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
       "price": {
-        "amount": 200.95,
+        "amount": 205.05,
         "currency": "CAD"
       },
+      "cancelBy": "ביטול חינם עד 27.8.2027 23:59. אחר כך: 194.60 CA$",
+      "payment": "Booking מחייבים את הכרטיס אוטומטית.",
+      "notes": "נוחתים ב־21:05: לכתוב בהזמנה שמגיעים מאוחר.",
       "status": "booked",
-      "point": "hampton-yyc",
-      "room": "חדר קינג, קומה גבוהה",
-      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
-      "cancelBy": "ביטול חינם עד 29.8.2027 23:59 (שעון מקומי). אחר כך: 190.70 CA$",
-      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0",
-      "notes": "2021 100 Ave NE, קלגרי. ארוחת בוקר כלולה. חניה חינם בזמן השהייה."
+      "checkIn": "2027-09-01",
+      "checkOut": "2027-09-02"
     },
     {
       "id": "jasper",
       "city": "ג׳ספר",
       "name": "Forest Park Hotel",
-      "checkIn": "2027-09-04",
-      "checkOut": "2027-09-06",
+      "point": "forest-park",
+      "room": "סוויטת מטבח אלפיני, מיטת קינג",
+      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 11:00",
       "price": {
-        "amount": 1428.99,
+        "amount": 1531.89,
         "currency": "CAD"
       },
-      "status": "booked",
-      "point": "forest-park",
-      "room": "מרפסת וודלנד, מיטת קינג",
-      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 11:00",
       "deposit": {
         "amount": 250,
         "currency": "CAD",
-        "note": "פיקדון נזקים בצ׳ק־אין, מוחזר תוך כ־14 ימים"
+        "note": "פיקדון נזקים בהגעה, מוחזר תוך 14 יום"
       },
-      "cancelBy": "ביטול חינם עד 31.8.2027 23:59 (שעון מקומי). אחר כך: 710.51 CA$",
-      "payment": "התשלום הסופי מתבצע מול המלון.",
-      "notes": "76 Connaught Dr, ג׳ספר. המחיר כולל מסים. ארוחות לא כלולות. חניה ו־Wi-Fi חינם. בהזמנה כתוב שהמלון בשיפוצים עד סוף 2026 (בריכה סגורה, לאגף Woodland עולים במדרגות). לבדוק לפני ההגעה."
+      "cancelBy": "ביטול חינם עד 29.8.2027 23:59. אחר כך: 743.90 CA$",
+      "payment": "משלמים במלון.",
+      "notes": "76 Connaught Drive. יש מטבח בסוויטה.",
+      "status": "booked",
+      "checkIn": "2027-09-02",
+      "checkOut": "2027-09-04"
     },
     {
-      "id": "dmf",
-      "city": "Dead Man's Flats (ליד קנמור)",
-      "name": "Canmore 2BR Condo, Near Banff",
-      "checkIn": "2027-09-06",
-      "checkOut": "2027-09-10",
+      "id": "banff",
+      "city": "באנף",
+      "name": "Douglas Fir Resort & Chalets",
+      "point": "douglas-fir",
+      "room": "סטודיו",
+      "checkTimes": "טרם נקבע",
       "price": {
-        "amount": 1729.92,
+        "amount": 1236.74,
+        "currency": "USD"
+      },
+      "cancelBy": "ביטול חינם עד 2.9.2027 23:59. אחר כך: ללא החזר",
+      "payment": "דרך Agoda. חיוב אוטומטי ב־1.9.2027 (כולל תוספת המרה של 5%).",
+      "notes": "525 Tunnel Mountain Road. לבדוק אם יש מטבח בסטודיו.",
+      "status": "booked",
+      "checkIn": "2027-09-04",
+      "checkOut": "2027-09-08"
+    },
+    {
+      "id": "yyc-hotel2",
+      "city": "קלגרי",
+      "name": "Hampton Inn by Hilton Calgary Airport North",
+      "point": "hampton-yyc",
+      "room": "חדר קינג, ארוחת בוקר כלולה",
+      "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 12:00",
+      "price": {
+        "amount": 204.82,
         "currency": "CAD"
       },
+      "cancelBy": "ביטול חינם עד 3.9.2027 23:59. אחר כך: 194.38 CA$",
+      "payment": "Booking מחייבים את הכרטיס אוטומטית.",
+      "notes": "לילה לפני הטיסה לסיאטל.",
       "status": "booked",
-      "point": "dmf-condo",
-      "room": "דירת שני חדרי שינה עם מטבח",
-      "checkTimes": "צ׳ק־אין מ־16:00 · צ׳ק־אאוט עד 11:00",
-      "cancelBy": "ביטול חינם עד 31.8.2027 23:59 (שעון מקומי). אחר כך: 1,613.92 CA$",
-      "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0",
-      "notes": "דירה עם מטבח. כדאי לעשות קנייה גדולה בסופר בקנמור כשמגיעים ב־6.9. 250 2nd Ave, Dead Man's Flats. כולל דמי ניקיון. קודי הכניסה נמצאים באישור ההזמנה במייל ולא באתר. על נזק אפשר להיות מחויבים עד 481 CA$."
+      "checkIn": "2027-09-08",
+      "checkOut": "2027-09-09"
+    },
+    {
+      "id": "seattle",
+      "city": "סיאטל",
+      "name": "MarQueen Hotel",
+      "point": "marqueen",
+      "room": "חדר דלוקס קינג",
+      "checkTimes": "צ׳ק־אין 15:00–22:00 · צ׳ק־אאוט 06:00–11:00",
+      "price": {
+        "amount": 305.21,
+        "currency": "USD"
+      },
+      "cancelBy": "ביטול חינם עד 6.9.2027 23:59. אחר כך: 280.21$",
+      "payment": "Booking מחייבים את הכרטיס אוטומטית.",
+      "notes": "600 Queen Anne Avenue North. חניה רק לרכבים קטנים ובינוניים (לא צריך רכב בסיאטל).",
+      "status": "booked",
+      "checkIn": "2027-09-09",
+      "checkOut": "2027-09-10"
+    },
+    {
+      "id": "cruise",
+      "city": "על האונייה",
+      "name": "Celebrity Edge",
+      "checkIn": "2027-09-10",
+      "checkOut": "2027-09-17",
+      "price": null,
+      "status": "booked",
+      "notes": "כלול בעלות הקרוז."
     },
     {
       "id": "la",
       "city": "לוס אנג׳לס",
       "name": "Park Plaza Lodge",
-      "checkIn": "2027-09-10",
-      "checkOut": "2027-09-14",
+      "checkIn": "2027-09-17",
+      "checkOut": "2027-09-21",
       "price": {
         "amount": 869.92,
         "currency": "USD"
       },
       "status": "booked",
-      "notes": "6001 W 3rd St, לוס אנג׳לס. ארוחות לא כלולות. ב־14.9 צ׳ק־אאוט עד 11:00, אבל כדאי לצאת מוקדם יותר כדי להחזיר את הרכב ב־LAX לפני LY6 ב־13:30.",
+      "notes": "6001 W 3rd St, לוס אנג׳לס. ארוחות לא כלולות. ב־21.9 צ׳ק־אאוט עד 11:00, אבל כדאי לצאת מוקדם יותר כדי להחזיר את הרכב ב־LAX לפני LY6 ב־13:30.",
       "point": "park-plaza",
       "room": "חדר דלוקס, מיטת קווין",
       "checkTimes": "צ׳ק־אין מ־15:00 · צ׳ק־אאוט עד 11:00",
@@ -5368,15 +4144,15 @@
         "currency": "USD",
         "note": "פיקדון נזקים בצ׳ק־אין, מוחזר תוך כ־7 ימים"
       },
-      "cancelBy": "ביטול חינם עד 7.9.2027 23:59 (שעון מקומי). אחר כך: 217.06$",
+      "cancelBy": "ביטול חינם עד 14.9.2027 23:59. אחר כך: 217.06$",
       "payment": "Booking.com יחייבו לפי המועד בהזמנה. שולם עד עכשיו: 0$"
     },
     {
       "id": "plane",
       "city": "בטיסה",
       "name": "LY6",
-      "checkIn": "2027-09-14",
-      "checkOut": "2027-09-15",
+      "checkIn": "2027-09-21",
+      "checkOut": "2027-09-22",
       "price": null,
       "status": "booked",
       "notes": "לילה בטיסה."
@@ -5384,12 +4160,30 @@
   ],
   "tasks": [
     {
-      "id": "t-cancel-crest",
-      "title": "לבטל את Crest Trail Lodge (הוחלף בבקתה ב־Packwood Lodge)",
-      "category": "מלונות",
-      "due": "2026-11-30",
+      "id": "t-cruise-change",
+      "title": "לקבל מסנורמה אישור על המעבר להפלגה ב־10.9, עם המקדמה",
+      "category": "קרוז",
+      "due": "2026-12-01",
       "status": "toclose",
-      "notes": "ביטול חינם עד 20.8.2027, אבל עדיף עכשיו כדי שלא ייווצר חיוב כפול. כרגע שתי ההזמנות פעילות."
+      "priority": true,
+      "notes": "כל המלונות החדשים מתאימים להפלגה ב־10.9. בלי האישור, ההזמנה נשארת על 27.8. לפי התנאים, בביטול המקדמה (1,703 ₪) לא מוחזרת. טלפון: 073-2248999."
+    },
+    {
+      "id": "t-elal-new",
+      "title": "לקנות עם השוברים: LY7 + WS1681 ב־1.9 ו־LY6 ב־21.9",
+      "category": "טיסות",
+      "due": "2026-12-10",
+      "status": "toclose",
+      "priority": true,
+      "notes": "השוברים (2 × 2,030.76$) יגיעו למייל עד 7 ימי עסקים מ־25.11. עד שקונים, המחיר יכול להשתנות."
+    },
+    {
+      "id": "t-hyatt-check",
+      "title": "לוודא שההזמנה הישנה ב־Hyatt סיאטל (26.8) בוטלה",
+      "category": "מלונות",
+      "due": "2026-12-01",
+      "status": "toclose",
+      "notes": "לא מצאתי במייל ביטול שלה. לבדוק באפליקציה של Booking."
     },
     {
       "id": "t-shuttle",
@@ -5402,13 +4196,52 @@
       "cost": null,
       "status": "toclose",
       "priority": true,
-      "notes": "נכון ל־2026: 40% מהמקומות נפתחים באביב, והשאר ב־08:00 שעון אלברטה יומיים לפני כל יציאה. כרטיס השאטל לא כולל את כרטיס הכניסה לפארק. התאריך בתוכנית: 7.9 (9.9 הוא יום הגיבוי)."
+      "notes": "נכון ל־2026: 40% מהמקומות נפתחים באביב, והשאר ב־08:00 שעון אלברטה יומיים לפני כל יציאה. כרטיס השאטל לא כולל את כרטיס הכניסה לפארק. התאריך בתוכנית: 7.9, ו־8.9 יום גיבוי."
+    },
+    {
+      "id": "t-pay-1",
+      "title": "תשלום מלון: Hampton קלגרי (שני הלילות)",
+      "category": "תשלומים",
+      "due": "2026-12-15",
+      "status": "planning",
+      "cost": {
+        "amount": 943,
+        "currency": "ILS",
+        "note": "בערך"
+      },
+      "notes": "אם Booking מאפשרים לשלם מוקדם. אחרת הם מחייבים לבד לפני ההגעה."
+    },
+    {
+      "id": "t-pay-2",
+      "title": "תשלום מלון: MarQueen, סיאטל",
+      "category": "תשלומים",
+      "due": "2027-01-15",
+      "status": "planning",
+      "cost": {
+        "amount": 1010,
+        "currency": "ILS",
+        "note": "בערך"
+      },
+      "notes": "אם Booking מאפשרים לשלם מוקדם."
+    },
+    {
+      "id": "t-pay-3",
+      "title": "תשלום מלון: Park Plaza Lodge, לוס אנג׳לס",
+      "category": "תשלומים",
+      "due": "2027-02-15",
+      "status": "planning",
+      "cost": {
+        "amount": 2879,
+        "currency": "ILS",
+        "note": "בערך"
+      },
+      "notes": "אם Booking מאפשרים לשלם מוקדם."
     },
     {
       "id": "t-cruise-balance",
       "title": "תשלום יתרת הקרוז",
       "category": "תשלומים",
-      "due": "2027-06-18",
+      "due": "2027-07-02",
       "cost": {
         "amount": 11816,
         "currency": "ILS",
@@ -5416,131 +4249,44 @@
       },
       "status": "toclose",
       "priority": true,
-      "notes": "אי־תשלום יגרום לביטול."
+      "notes": "70 יום לפני ההפלגה ב־10.9, לפי התנאים. לאמת את התאריך מול סנורמה אחרי ההעברה. אי־תשלום יגרום לביטול."
     },
     {
       "id": "t-cruise-checkin",
       "title": "צ׳ק־אין מקוון לקרוז ובחירת חלון עלייה (Xpress Pass)",
       "category": "קרוז",
-      "due": "2027-07-27",
+      "due": "2027-08-10",
       "status": "planning",
       "notes": "באפליקציה של Celebrity. לבחור חלון עלייה מוקדם, ולרשום את שעת ה־all aboard מהמסמכים. לבדוק באפליקציה מתי הצ׳ק־אין נפתח."
     },
     {
-      "id": "t-pay-1",
-      "title": "תשלום מלונות: Hampton קלגרי + Hyatt סיאטל",
-      "category": "תשלומים",
-      "due": "2026-12-15",
-      "status": "planning",
-      "cost": {
-        "amount": 1505,
-        "currency": "ILS",
-        "note": "בערך, לפי שער היום"
-      },
-      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
-    },
-    {
-      "id": "t-pay-2",
-      "title": "תשלום מלון: Club Quarters, סן פרנסיסקו",
-      "category": "תשלומים",
-      "due": "2027-01-15",
-      "status": "planning",
-      "cost": {
-        "amount": 2156,
-        "currency": "ILS",
-        "note": "בערך, לפי שער היום"
-      },
-      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
-    },
-    {
-      "id": "t-pay-3",
-      "title": "תשלום מלון: Packwood Lodge, ריינייר",
-      "category": "תשלומים",
-      "due": "2027-02-15",
-      "status": "done",
-      "cost": {
-        "amount": 2785,
-        "currency": "ILS",
-        "note": "בערך, לפי שער היום"
-      },
-      "notes": "שולם במלואו. המקום חייב את הכרטיס ישירות, לא דרך Booking."
-    },
-    {
-      "id": "t-pay-4",
-      "title": "תשלום מלון: Park Plaza Lodge, לוס אנג׳לס",
-      "category": "תשלומים",
-      "due": "2027-03-15",
-      "status": "planning",
-      "cost": {
-        "amount": 2870,
-        "currency": "ILS",
-        "note": "בערך, לפי שער היום"
-      },
-      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
-    },
-    {
-      "id": "t-pay-5",
-      "title": "תשלום מלון: הדירה ב־Dead Man's Flats",
-      "category": "תשלומים",
-      "due": "2027-04-15",
-      "status": "planning",
-      "cost": {
-        "amount": 3987,
-        "currency": "ILS",
-        "note": "בערך, לפי שער היום"
-      },
-      "notes": "באפליקציה של Booking: ההזמנה ← פרטי תשלום ← ״שלמו כעת״. אם אין אפשרות כזאת, Booking יחייבו במועד שמופיע שם."
-    },
-    {
-      "id": "t-flight-sfo-sea",
-      "title": "טיסה SFO→SEA ב־23/8",
+      "id": "t-flight-yyc-sea",
+      "title": "טיסה YYC→SEA ב־9.9, בבוקר",
       "category": "טיסות",
       "status": "toclose",
-      "notes": "לנחות בערך עד 17:00: הצ׳ק־אין ב־Packwood Lodge עד 21:00, ומהשדה יש כ־2.5 שעות נסיעה."
+      "notes": "ביקורת הגבולות של ארה״ב בשדה בקלגרי."
     },
     {
-      "id": "t-car-sea",
-      "title": "רכב שכור בסיאטל: איסוף בשדה 23/8, החזרה בעיר 26/8",
-      "category": "רכב",
-      "status": "toclose"
-    },
-    {
-      "id": "t-car-lax",
-      "title": "רכב שכור בלוס אנג׳לס: איסוף ב־LAX ב־10/9, החזרה ב־LAX ב־14/9",
-      "category": "רכב",
-      "status": "toclose",
-      "notes": "להחזיר מוקדם: LY6 ממריאה ב־13:30."
-    },
-    {
-      "id": "t-rainier-entry",
-      "title": "לבדוק אם נדרשת הזמנת כניסה בשעה קבועה לריינייר ב־2027",
-      "category": "הזמנות",
-      "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
-      "status": "planning",
-      "notes": "ב־2026 לא נדרשה הזמנה. לבדוק מה הוחלט ל־2027."
-    },
-    {
-      "id": "t-flight-sea-yyc",
-      "title": "טיסה SEA→YYC ב־3/9, מהצהריים והלאה",
+      "id": "t-flight-sea-lax",
+      "title": "טיסה SEA→LAX ב־17.9, מהצהריים",
       "category": "טיסות",
-      "due": null,
-      "status": "toclose"
-    },
-    {
-      "id": "t-flight-yyc-lax",
-      "title": "טיסה YYC→LAX ב־10/9",
-      "category": "טיסות",
-      "due": null,
       "status": "toclose",
-      "notes": "אופציה שנבדקה: טיסה ב־14:45. טרם הוזמנה."
+      "notes": "האונייה מגיעה ב־06:00, ושעת הירידה לא ידועה מראש."
     },
     {
       "id": "t-car",
-      "title": "רכב SIXT בקלגרי: איסוף 3.9 (או 4.9 בבוקר), החזרה 10.9",
+      "title": "רכב שכור בקלגרי: איסוף בשדה 2.9 בבוקר, החזרה בשדה 9.9",
       "category": "רכב",
       "due": null,
       "status": "toclose",
       "notes": "ביום הטיסה ללוס אנג׳לס להגיע ל־SIXT סביב 09:00 אם הטיסה ב־14:45."
+    },
+    {
+      "id": "t-car-lax",
+      "title": "רכב שכור בלוס אנג׳לס: איסוף ב־LAX ב־17.9, החזרה ב־LAX ב־21.9",
+      "category": "רכב",
+      "status": "toclose",
+      "notes": "להחזיר מוקדם: LY6 ממריאה ב־13:30."
     },
     {
       "id": "t-park-pass",
@@ -5557,21 +4303,21 @@
     },
     {
       "id": "t-juneau-heli",
-      "title": "להזמין מסוק והליכה על הקרחון בג׳ונו (30.8)",
+      "title": "להזמין מסוק והליכה על הקרחון בג׳ונו (13.9)",
       "category": "קרוז",
       "status": "toclose",
       "notes": "דרך Celebrity, או ספק עצמאי עם מרווח זמן לחזרה לאונייה."
     },
     {
       "id": "t-whitepass",
-      "title": "להזמין את רכבת White Pass בסקאגוויי (31.8)",
+      "title": "להזמין את רכבת White Pass בסקאגוויי (14.9)",
       "category": "קרוז",
       "status": "toclose",
       "url": "https://wpyr.com"
     },
     {
       "id": "t-ketchikan",
-      "title": "להחליט מה עושים בקטצ׳יקן (29.8)",
+      "title": "להחליט מה עושים בקטצ׳יקן (12.9)",
       "category": "קרוז",
       "status": "planning"
     },
@@ -5587,7 +4333,7 @@
       "title": "הורדת מפות אופליין ב־Google Maps / Maps.me לכל אזור",
       "category": "לפני הטיסה",
       "status": "toclose",
-      "notes": "סן פרנסיסקו, ריינייר, סיאטל, נמלי אלסקה, ויקטוריה, הרוקיז, לוס אנג׳לס."
+      "notes": "הרוקיז, סיאטל, נמלי אלסקה, ויקטוריה, לוס אנג׳לס."
     }
   ],
   "entry": {
@@ -5618,7 +4364,7 @@
         "title": "ESTA לארה״ב – לכל נוסע",
         "status": "toclose",
         "order": 2,
-        "what": "ישראל בתוכנית הפטור מוויזה (VWP), ולכן בעלי דרכון ישראלי ביומטרי מגישים ESTA במקום ויזה. נכנסים לארה״ב שלוש פעמים: ב־19/8, בחזרה מהקרוז דרך ויקטוריה, וב־10/9 מקנדה.",
+        "what": "ישראל בתוכנית הפטור מוויזה (VWP), ולכן בעלי דרכון ישראלי ביומטרי מגישים ESTA במקום ויזה. נכנסים לארה״ב פעמיים: ב־9.9 מקנדה (ביקורת הגבולות נעשית בשדה בקלגרי), וב־17.9 בחזרה מהקרוז דרך ויקטוריה.",
         "facts": [
           {
             "text": "מגישים רק באתר הרשמי של CBP. אתרים אחרים גובים עמלת תיווך.",
@@ -5636,7 +4382,7 @@
         "title": "eTA לקנדה – לכל נוסע",
         "status": "toclose",
         "order": 3,
-        "what": "נדרש כשטסים לקנדה עם דרכון ישראלי רגיל, כלומר בטיסה SEA→YYC ב־3/9. העצירה בוויקטוריה היא כניסה מהים, ולבדוק מול Celebrity אם נדרש משהו מנוסעי הקרוז.",
+        "what": "נדרש כשטסים לקנדה עם דרכון ישראלי רגיל, כלומר בטיסה לקלגרי דרך טורונטו ב־1.9. העצירה בוויקטוריה היא כניסה מהים, ולבדוק מול Celebrity אם נדרש משהו מנוסעי הקרוז.",
         "facts": [
           {
             "text": "מגישים באתר ממשלת קנדה בלבד. העלות לפי האתר: 7 CAD.",
@@ -5694,7 +4440,7 @@
         "what": "להשוות בין הביטוח דרך הקופה לחברת ביטוח. לוודא כיסוי לארה״ב ולקנדה, שבהן הטיפול הרפואי יקר מאוד, ובנוסף: שייט (קרוז), מצב רפואי קודם, ביטול או קיצור נסיעה, כבודה, ופעילות בהרים.",
         "facts": [],
         "tip": "לבדוק אם ביטוח השתתפות עצמית לרכב נכלל, או שכדאי לקנות אותו מחברת ההשכרה.",
-        "deadline": "בזמן התשלום הגדול הבא (מומלץ לפני 18/6/2027)"
+        "deadline": "לפני תשלום יתרת הקרוז (בערך 2.7.2027)"
       },
       {
         "id": "e-meds",
@@ -5735,58 +4481,48 @@
       "taskId": "t-shuttle"
     },
     {
-      "date": "2027-06-18",
-      "label": "יתרת תשלום הקרוז – 11,816 ₪",
+      "date": "2027-07-02",
+      "label": "יתרת תשלום הקרוז (לאמת תאריך)",
       "taskId": "t-cruise-balance"
     },
     {
-      "date": "2027-08-19T01:05",
-      "label": "המראה LY5"
+      "date": "2027-09-01T10:15",
+      "label": "המראה LY7 לקלגרי דרך טורונטו"
     },
     {
-      "date": "2027-08-23",
-      "label": "טיסה לסיאטל ונסיעה להר ריינייר"
+      "date": "2027-09-09",
+      "label": "טיסה לסיאטל"
     },
     {
-      "date": "2027-08-27T16:00",
-      "label": "עלייה לאונייה בסיאטל"
+      "date": "2027-09-10T16:00",
+      "label": "ההפלגה יוצאת מסיאטל"
     },
     {
-      "date": "2027-09-03",
-      "label": "ירידה מהאונייה וטיסה לקלגרי"
+      "date": "2027-09-17",
+      "label": "ירידה מהאונייה וטיסה ללוס אנג׳לס"
     },
     {
-      "date": "2027-09-14T13:30",
+      "date": "2027-09-21T13:30",
       "label": "המראה LY6 הביתה"
     }
   ],
   "cars": [
     {
-      "id": "car-sea",
-      "where": "סיאטל (SEA)",
-      "pickup": "2027-08-23",
-      "pickupPlace": "שדה התעופה SEA",
-      "dropoff": "2027-08-26",
-      "dropoffPlace": "סיאטל",
-      "status": "toclose",
-      "price": null
-    },
-    {
       "id": "car-yyc",
-      "where": "קלגרי (YYC) · SIXT",
-      "pickup": "2027-09-03",
-      "pickupPlace": "שדה התעופה YYC (אם שעת הנחיתה מאפשרת, אחרת 4.9 בבוקר)",
-      "dropoff": "2027-09-10",
-      "dropoffPlace": "SIXT בקלגרי, ומשם שאטל לטרמינל",
+      "where": "קלגרי (YYC)",
+      "pickup": "2027-09-02",
+      "pickupPlace": "שדה התעופה YYC, בבוקר (המלון ליד השדה)",
+      "dropoff": "2027-09-09",
+      "dropoffPlace": "שדה התעופה YYC, לפני הטיסה לסיאטל",
       "status": "toclose",
       "price": null
     },
     {
       "id": "car-lax",
       "where": "לוס אנג׳לס (LAX)",
-      "pickup": "2027-09-10",
+      "pickup": "2027-09-17",
       "pickupPlace": "שדה התעופה LAX",
-      "dropoff": "2027-09-14",
+      "dropoff": "2027-09-21",
       "dropoffPlace": "שדה התעופה LAX. יוצאים מהמלון בסביבות 07:45–08:00 לטיסה של 13:30",
       "status": "toclose",
       "price": null
@@ -5798,7 +4534,7 @@
       "name": "מסוק והליכה על הקרחון, ג׳ונו",
       "region": "cruise",
       "point": "juneau-heli",
-      "date": "2027-08-30",
+      "date": "2027-09-13",
       "booking": "recommended",
       "url": null,
       "cost": null,
@@ -5817,7 +4553,7 @@
       "url": "https://www.parks.canada.ca/voyage-travel/reserve",
       "cost": null,
       "status": "toclose",
-      "notes": "זו הדרך היחידה להגיע ל־Moraine בלי טיול מאורגן."
+      "notes": "זו הדרך היחידה להגיע ל־Moraine בלי טיול מאורגן. בתוכנית: 7.9, ו־8.9 יום גיבוי."
     },
     {
       "id": "a-parks-pass",
@@ -5830,33 +4566,11 @@
       "notes": "נדרש בבאנף, יוהו וג׳ספר וגם לנסיעה ב־Icefields Parkway. לקנות מראש, כי אין קליטה בדרך. המחיר לפי 2027."
     },
     {
-      "id": "a-rainier-entry",
-      "name": "כניסה לפארק הר ריינייר",
-      "region": "rainier",
-      "point": "rainier-paradise",
-      "booking": "check",
-      "url": "https://www.nps.gov/mora/planyourvisit/fees.htm",
-      "cost": null,
-      "status": "planning",
-      "notes": "יש דמי כניסה. ב־2024 נדרשה הזמנת כניסה בשעה קבועה ל־Paradise ול־Sunrise, ב־2025 רק ל־Sunrise, ולפי הפארק ב־2026 לא נדרשה. ל־2027 עוד לא פורסם. לבדוק באביב 2027."
-    },
-    {
-      "id": "a-alcatraz",
-      "name": "אלקטרז",
-      "region": "sf",
-      "point": "alcatraz",
-      "booking": "required",
-      "url": "https://www.nps.gov/alca/planyourvisit/index.htm",
-      "cost": null,
-      "status": "option",
-      "notes": "הצעה. הכרטיסים נמכרים רק מראש, דרך Alcatraz City Cruises, ובקיץ נגמרים לעיתים חודש ויותר לפני (נכון ל־2026)."
-    },
-    {
       "id": "a-gondola",
       "name": "רכבל באנף",
       "region": "rockies",
       "point": "banff-gondola",
-      "date": "2027-09-09",
+      "date": "2027-09-05",
       "booking": "recommended",
       "url": "https://www.pursuit.com/experiences/banff-gondola/",
       "cost": null,
@@ -5868,7 +4582,7 @@
       "name": "Ice Explorer ו־Skywalk",
       "region": "rockies",
       "point": "columbia-icefield",
-      "date": "2027-09-06",
+      "date": "2027-09-04",
       "booking": "required",
       "url": "https://www.pursuit.com/experiences/columbia-icefield/",
       "cost": null,
@@ -5880,7 +4594,7 @@
       "name": "שיט ל־Spirit Island (אגם Maligne)",
       "region": "rockies",
       "point": "spirit-island",
-      "date": "2027-09-05",
+      "date": "2027-09-03",
       "booking": "required",
       "url": null,
       "cost": null,
@@ -5892,7 +4606,7 @@
       "name": "Mendenhall ו־Nugget Falls",
       "region": "cruise",
       "point": "mendenhall",
-      "date": "2027-08-30",
+      "date": "2027-09-13",
       "booking": "recommended",
       "url": null,
       "cost": null,
@@ -5904,7 +4618,7 @@
       "name": "רכבת White Pass",
       "region": "cruise",
       "point": "white-pass",
-      "date": "2027-08-31",
+      "date": "2027-09-14",
       "booking": "recommended",
       "url": "https://wpyr.com",
       "cost": null,
@@ -5916,7 +4630,7 @@
       "name": "Space Needle",
       "region": "seattle",
       "point": "space-needle",
-      "date": "2027-08-26",
+      "date": "2027-09-09",
       "booking": "optional",
       "url": "https://www.spaceneedle.com",
       "cost": null,
@@ -5932,7 +4646,8 @@
       "url": "https://griffithobservatory.org",
       "cost": null,
       "status": "option",
-      "notes": "הצעה. הכניסה חינם. הבניין סגור בימי שני. החניה בתשלום ומוגבלת (נכון ל־2026)."
+      "notes": "הצעה. הכניסה חינם. הבניין סגור בימי שני. החניה בתשלום ומוגבלת (נכון ל־2026).",
+      "date": "2027-09-18"
     },
     {
       "id": "a-getty",
@@ -5968,12 +4683,20 @@
         "budget": null,
         "items": [
           {
-            "label": "LY5 · LY4556 · LY6 לזוג",
-            "amount": 4181.54,
+            "label": "אל על: שוברי זיכוי לכרטיסים החדשים (LY7 + WS1681 ב־1.9, LY6 ב־21.9)",
+            "short": "טיסות אל על (שוברים)",
+            "amount": 4061.52,
             "currency": "USD",
             "status": "booked",
-            "paid": 4181.54,
-            "short": "טיסות אל על"
+            "paid": 4061.52
+          },
+          {
+            "label": "El Al Protect מהכרטיסים הקודמים, לא הוחזר",
+            "short": "El Al Protect (לא הוחזר)",
+            "amount": 120,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 120
           }
         ]
       },
@@ -5984,17 +4707,12 @@
         "budget": null,
         "items": [
           {
-            "label": "SFO→SEA",
+            "label": "YYC→SEA (9.9)",
             "amount": null,
             "status": "toclose"
           },
           {
-            "label": "SEA→YYC",
-            "amount": null,
-            "status": "toclose"
-          },
-          {
-            "label": "YYC→LAX",
+            "label": "SEA→LAX (17.9)",
             "amount": null,
             "status": "toclose"
           }
@@ -6012,7 +4730,7 @@
             "currency": "ILS",
             "status": "booked",
             "paid": 1703,
-            "due": "2027-06-18",
+            "due": "2027-07-02",
             "short": "הקרוז",
             "task": "t-cruise-balance"
           },
@@ -6023,7 +4741,7 @@
             "status": "booked",
             "approx": true,
             "paid": 0,
-            "due": "2027-09-03",
+            "due": "2027-09-16",
             "payNote": "נגבה בחשבון האונייה בסוף ההפלגה",
             "short": "דמי שירות באונייה",
             "task": "pay-grat"
@@ -6037,75 +4755,66 @@
         "budget": null,
         "items": [
           {
-            "label": "Club Quarters Embarcadero, סן פרנסיסקו (4 לילות)",
-            "amount": 653.55,
+            "label": "Hampton Inn, קלגרי (1–2.9)",
+            "short": "Hampton, קלגרי",
+            "amount": 205.05,
+            "currency": "CAD",
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-1",
+            "ils": 472
+          },
+          {
+            "label": "Forest Park Hotel, ג׳ספר (2 לילות)",
+            "short": "Forest Park, ג׳ספר",
+            "amount": 1531.89,
+            "currency": "CAD",
+            "status": "booked",
+            "paid": 0,
+            "task": "pay-forest",
+            "due": "2027-09-02",
+            "payNote": "משלמים במלון"
+          },
+          {
+            "label": "Douglas Fir Resort, באנף (4 לילות)",
+            "short": "Douglas Fir, באנף",
+            "amount": 1236.74,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 0,
+            "task": "pay-douglas",
+            "due": "2027-09-01",
+            "payNote": "חיוב אוטומטי דרך Agoda"
+          },
+          {
+            "label": "Hampton Inn, קלגרי (8–9.9)",
+            "short": "Hampton, קלגרי",
+            "amount": 204.82,
+            "currency": "CAD",
+            "status": "booked",
+            "paid": 0,
+            "task": "t-pay-1",
+            "ils": 471
+          },
+          {
+            "label": "MarQueen Hotel, סיאטל (לילה)",
+            "short": "MarQueen, סיאטל",
+            "amount": 305.21,
             "currency": "USD",
             "status": "booked",
             "paid": 0,
             "task": "t-pay-2",
-            "ils": 2156,
-            "short": "Club Quarters, סן פרנסיסקו"
-          },
-          {
-            "label": "Packwood Lodge & Cabins, בקתה עם מטבח (3 לילות)",
-            "amount": 833.44,
-            "currency": "USD",
-            "status": "booked",
-            "paid": 833.44,
-            "task": "t-pay-3",
-            "ils": 2785,
-            "short": "Packwood Lodge, ריינייר"
-          },
-          {
-            "label": "Hyatt at Olive 8, סיאטל (לילה)",
-            "amount": 315.81,
-            "currency": "USD",
-            "status": "booked",
-            "paid": 0,
-            "task": "t-pay-1",
-            "ils": 1042,
-            "short": "Hyatt, סיאטל"
-          },
-          {
-            "label": "Hampton Inn, קלגרי (לילה)",
-            "amount": 200.95,
-            "currency": "CAD",
-            "status": "booked",
-            "paid": 0,
-            "task": "t-pay-1",
-            "ils": 463,
-            "short": "Hampton, קלגרי"
-          },
-          {
-            "label": "Forest Park Hotel, ג׳ספר (2 לילות)",
-            "amount": 1428.99,
-            "currency": "CAD",
-            "status": "booked",
-            "paid": 0,
-            "due": "2027-09-04",
-            "payNote": "משלמים במלון",
-            "short": "Forest Park, ג׳ספר",
-            "task": "pay-forest"
-          },
-          {
-            "label": "דירה ב־Dead Man's Flats (4 לילות)",
-            "amount": 1729.92,
-            "currency": "CAD",
-            "status": "booked",
-            "paid": 0,
-            "task": "t-pay-5",
-            "ils": 3987,
-            "short": "הדירה בקנמור"
+            "ils": 1010
           },
           {
             "label": "Park Plaza Lodge, לוס אנג׳לס (4 לילות)",
+            "short": "Park Plaza, לוס אנג׳לס",
             "amount": 869.92,
             "currency": "USD",
             "status": "booked",
             "paid": 0,
-            "task": "t-pay-4",
-            "ils": 2870,
-            "short": "Park Plaza, לוס אנג׳לס"
+            "task": "t-pay-3",
+            "ils": 2879
           }
         ]
       },
@@ -6116,17 +4825,12 @@
         "budget": null,
         "items": [
           {
-            "label": "סיאטל 23–26/8",
+            "label": "קלגרי 2–9.9",
             "amount": null,
             "status": "toclose"
           },
           {
-            "label": "SIXT קלגרי 3–10/9",
-            "amount": null,
-            "status": "toclose"
-          },
-          {
-            "label": "לוס אנג׳לס 10–14/9",
+            "label": "לוס אנג׳לס 17–21.9",
             "amount": null,
             "status": "toclose"
           }
@@ -6256,7 +4960,7 @@
     {
       "id": "layers",
       "label": "ביגוד בשכבות",
-      "hint": "ערפל בסן פרנסיסקו, קור בוקר ברוקיז",
+      "hint": "קור בוקר ברוקיז, גשם באלסקה",
       "items": [
         {
           "t": "חולצות תרמיות או שכבת בסיס",
@@ -6582,7 +5286,7 @@
     {
       "id": "carry",
       "label": "תיק יד לטיסה הארוכה",
-      "hint": "כ־15 שעות מתל אביב ללוס אנג׳לס",
+      "hint": "כ־20 שעות מתל אביב לקלגרי, דרך טורונטו",
       "items": [
         {
           "t": "כרית צוואר, מסכת עיניים ואטמי אוזניים",
@@ -6625,7 +5329,7 @@
         },
         {
           "t": "החלפת בגדים אחת",
-          "n": "למקרה שהמזוודה לא מגיעה. ביום הראשון גם טסים לסן פרנסיסקו",
+          "n": "למקרה שהמזוודה לא מגיעה. ביום הראשון יש גם טיסת המשך מטורונטו לקלגרי",
           "q": 1,
           "who": "each",
           "tag": "carry"
@@ -6686,7 +5390,7 @@
     {
       "id": "cruise",
       "label": "לקרוז",
-      "hint": "Celebrity Edge, 27.8–3.9",
+      "hint": "Celebrity Edge, 10–17.9",
       "items": [
         {
           "t": "תיק קטן ליום העלייה",
@@ -6722,8 +5426,8 @@
     },
     {
       "id": "kitchen",
-      "label": "לבקתה ולדירה עם מטבח",
-      "hint": "Packwood ו־Dead Man's Flats",
+      "label": "לחדרים עם מטבח",
+      "hint": "Forest Park בג׳ספר (ואולי הסטודיו בבאנף)",
       "items": [
         {
           "t": "שקיות זיפ ומגבונים",
@@ -6738,7 +5442,7 @@
         },
         {
           "t": "לקנות שם: מים, אוכל לשבילים ומצרכים לארוחות",
-          "n": "סופר בדרך: Packwood קטן מאוד, עדיף לקנות לפני. בקנמור יש סופרים",
+          "n": "בג׳ספר ובבאנף יש סופרים.",
           "who": "shared",
           "tag": "buy"
         }
@@ -6798,44 +5502,45 @@
     }
   ],
   "paymentPlan": {
-    "note": "Packwood Lodge כבר שולם. שאר המלונות: תשלום אחד בחודש, ב־15 לכל חודש, כדי שביוני יישאר רק התשלום של הקרוז. הסכומים בשקלים לפי Booking, והסכום בפועל ישתנה לפי שער היום.",
+    "note": "תשלום אחד בחודש, ב־15 לחודש, אם Booking מאפשרים לשלם מוקדם. Douglas Fir מחויב אוטומטית ב־1.9.2027, ו־Forest Park משלמים במלון. הסכומים בשקלים משוערים.",
     "items": [
       {
         "task": "t-pay-1",
         "month": "2026-12-15",
-        "label": "Hampton קלגרי + Hyatt סיאטל",
-        "amount": 1505
+        "label": "Hampton קלגרי (שני לילות)",
+        "amount": 943
       },
       {
         "task": "t-pay-2",
         "month": "2027-01-15",
-        "label": "Club Quarters, סן פרנסיסקו",
-        "amount": 2156
+        "label": "MarQueen, סיאטל",
+        "amount": 1010
       },
       {
-        "task": "t-pay-4",
-        "month": "2027-03-15",
+        "task": "t-pay-3",
+        "month": "2027-02-15",
         "label": "Park Plaza Lodge, לוס אנג׳לס",
-        "amount": 2870
-      },
-      {
-        "task": "t-pay-5",
-        "month": "2027-04-15",
-        "label": "הדירה ב־Dead Man's Flats",
-        "amount": 3987
+        "amount": 2879
       },
       {
         "task": "t-cruise-balance",
-        "month": "2027-06-18",
-        "label": "יתרת הקרוז",
+        "month": "2027-07-02",
+        "label": "יתרת הקרוז (לאמת תאריך)",
         "amount": 11816
       },
       {
         "task": null,
-        "month": "2027-09-04",
+        "month": "2027-09-01",
+        "label": "Douglas Fir, באנף (חיוב אוטומטי)",
+        "amount": null,
+        "usd": 1236.74
+      },
+      {
+        "task": null,
+        "month": "2027-09-02",
         "label": "Forest Park, ג׳ספר (משלמים במלון)",
         "amount": null,
-        "cad": 1428.99
+        "cad": 1531.89
       }
     ]
   },
