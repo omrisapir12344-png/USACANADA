@@ -3689,7 +3689,7 @@
       ],
       "lodging": "cruise",
       "summary": "הצעה: יום רגוע אחרי הימים העמוסים שיבואו. הליכה ברחוב Creek Street ההיסטורי ומרכז הטוטמים ברגל מהרציף, בלי להזמין כלום. אם יש תקציב לחוויה אווירית: טיסה ימית ל־Misty Fjords, בהזמנה מראש.",
-      "notes": "שעות העגינה טרם אומתו. לבדוק לאיזה רציף האונייה מגיעה (מרכז העיר או Ward Cove)."
+      "notes": "הוזמן: Misty Fjords and Wilderness Explorer ב־07:00. שעות העגינה טרם אומתו. לבדוק לאיזה רציף האונייה מגיעה (מרכז העיר או Ward Cove)."
     },
     {
       "date": "2027-09-13",
@@ -3703,7 +3703,8 @@
         "mendenhall"
       ],
       "lodging": "cruise",
-      "summary": "בבוקר שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. הפעילות המתוכננת: מסוק והליכה על הקרחון. Mendenhall כאופציה או כחלופה אם המסוק מתבטל."
+      "summary": "בבוקר שיט נופי מול קרחון Dawes, ואחר כך עגינה בג׳ונו. הפעילות המתוכננת: מסוק והליכה על הקרחון. Mendenhall כאופציה או כחלופה אם המסוק מתבטל.",
+      "notes": "הוזמן: מסוק והליכה על קרחון ב־15:30. בבוקר אפשר Mendenhall ו־Nugget Falls."
     },
     {
       "date": "2027-09-14",
@@ -3715,7 +3716,8 @@
         "white-pass"
       ],
       "lodging": "cruise",
-      "summary": "הפעילות המתוכננת: רכבת White Pass. אחר כך סיור ברגל בעיירה ההיסטורית."
+      "summary": "הפעילות המתוכננת: רכבת White Pass. אחר כך סיור ברגל בעיירה ההיסטורית.",
+      "notes": "הוזמן: רכבת White Pass ב־13:00."
     },
     {
       "date": "2027-09-15",
@@ -3991,19 +3993,19 @@
       }
     ],
     "total": {
-      "amount": 13519,
-      "currency": "ILS"
+      "amount": 4256.64,
+      "currency": "USD"
     },
     "paid": {
-      "amount": 1703,
-      "currency": "ILS",
-      "note": "המקדמה לא מוחזרת."
+      "amount": 662.67,
+      "currency": "USD",
+      "note": "המקדמה הקודמת (1,703 ₪) ודמי שינוי של 75$ לנוסע. לא מוחזר בביטול."
     },
     "balance": {
-      "amount": 11816,
-      "currency": "ILS",
+      "amount": 3593.97,
+      "currency": "USD",
       "due": "2027-07-02",
-      "note": "70 יום לפני ההפלגה, לפי התנאים. התאריך המדויק ייקבע אחרי ההעברה ל־10.9. הסכום הסופי לפי שער הדולר ביום התשלום."
+      "note": "70 יום לפני ההפלגה, לפי התנאים. הסכום בשקלים לפי שער הדולר ביום התשלום. לאמת את התאריך מול סנורמה."
     },
     "gratuities": {
       "perPersonPerNight": 18.5,
@@ -4012,11 +4014,18 @@
       "note": "משולמים באונייה."
     },
     "options": [
-      "Mendenhall ו־Nugget Falls בג׳ונו (לא הוזמן)",
-      "White Pass בסקאגוויי (לא הוזמן)"
+      "Mendenhall ו־Nugget Falls בג׳ונו, בבוקר לפני המסוק (לא הוזמן)"
     ],
     "verify": "לאמת מול המפעיל את שעות העגינה ואת שעת החזרה לאונייה.",
-    "change": "נשלחה בקשה לסנורמה להעביר את ההזמנה מ־27.8 ל־10.9 עם המקדמה. ממתין לאישור."
+    "cabin": "Deluxe עם מרפסת (E4)",
+    "changed": "הועבר מ־27.8 ל־10.9 באישור סנורמה, 26.11.2026.",
+    "extras": [
+      {
+        "label": "חבילת שתייה ללא אלכוהול + Wi-Fi פרימיום, לשניים",
+        "amount": 587.86,
+        "currency": "USD"
+      }
+    ]
   },
   "hotels": [
     {
@@ -4164,9 +4173,9 @@
       "title": "לקבל מסנורמה אישור על המעבר להפלגה ב־10.9, עם המקדמה",
       "category": "קרוז",
       "due": "2026-12-01",
-      "status": "toclose",
+      "status": "done",
       "priority": true,
-      "notes": "כל המלונות החדשים מתאימים להפלגה ב־10.9. בלי האישור, ההזמנה נשארת על 27.8. לפי התנאים, בביטול המקדמה (1,703 ₪) לא מוחזרת. טלפון: 073-2248999."
+      "notes": "אושר: ההפלגה הועברה ל־10.9, המקדמה עברה, ודמי השינוי (75$ לנוסע) שולמו."
     },
     {
       "id": "t-elal-new",
@@ -4243,13 +4252,12 @@
       "category": "תשלומים",
       "due": "2027-07-02",
       "cost": {
-        "amount": 11816,
-        "currency": "ILS",
-        "note": "לפי שער הדולר ביום התשלום"
+        "amount": 3593.97,
+        "currency": "USD"
       },
       "status": "toclose",
       "priority": true,
-      "notes": "70 יום לפני ההפלגה ב־10.9, לפי התנאים. לאמת את התאריך מול סנורמה אחרי ההעברה. אי־תשלום יגרום לביטול."
+      "notes": "3,593.97$, לפי שער הדולר ביום התשלום. 70 יום לפני ההפלגה ב־10.9, לפי התנאים. לאמת את התאריך מול סנורמה. אי־תשלום יגרום לביטול."
     },
     {
       "id": "t-cruise-checkin",
@@ -4305,21 +4313,21 @@
       "id": "t-juneau-heli",
       "title": "להזמין מסוק והליכה על הקרחון בג׳ונו (13.9)",
       "category": "קרוז",
-      "status": "toclose",
+      "status": "done",
       "notes": "דרך Celebrity, או ספק עצמאי עם מרווח זמן לחזרה לאונייה."
     },
     {
       "id": "t-whitepass",
       "title": "להזמין את רכבת White Pass בסקאגוויי (14.9)",
       "category": "קרוז",
-      "status": "toclose",
+      "status": "done",
       "url": "https://wpyr.com"
     },
     {
       "id": "t-ketchikan",
-      "title": "להחליט מה עושים בקטצ׳יקן (12.9)",
+      "title": "קטצ׳יקן: הוזמן Misty Fjords (12.9, 07:00)",
       "category": "קרוז",
-      "status": "planning"
+      "status": "done"
     },
     {
       "id": "t-road-1a",
@@ -4537,9 +4545,13 @@
       "date": "2027-09-13",
       "booking": "recommended",
       "url": null,
-      "cost": null,
-      "status": "planning",
-      "notes": "בחרתם. להזמין מוקדם, דרך Celebrity או ספק עצמאי. תלוי במזג האוויר. לבדוק מדיניות ביטול ומגבלות משקל."
+      "cost": {
+        "amount": 1191.98,
+        "currency": "USD"
+      },
+      "status": "booked",
+      "notes": "הוזמן דרך Celebrity לשניים: Small Group Helicopter Glacier Walkabout, 15:30. תלוי במזג האוויר. אפשר לשנות או לבטל באתר של Celebrity עד 8.9.2027.",
+      "time": "15:30"
     },
     {
       "id": "a-shuttle",
@@ -4621,9 +4633,13 @@
       "date": "2027-09-14",
       "booking": "recommended",
       "url": "https://wpyr.com",
-      "cost": null,
-      "status": "planning",
-      "notes": "בחרתם. כדאי להזמין מראש, דרך Celebrity או באתר הרכבת, ולוודא שהסיור מסתיים בזמן לחזרה לאונייה. במסלולים שחוצים לקנדה צריך דרכון."
+      "cost": {
+        "amount": 337.98,
+        "currency": "USD"
+      },
+      "status": "booked",
+      "notes": "הוזמן דרך Celebrity לשניים: White Pass Scenic Railway, 13:00.",
+      "time": "13:00"
     },
     {
       "id": "a-space-needle",
@@ -4671,6 +4687,22 @@
       "cost": null,
       "status": "option",
       "notes": "לא בתוכנית: 12.9 הוקצה לאאוטלט. אם תרצו בכל זאת, אפשר במקום יום אחר. לקנות כרטיסים מראש באתר הרשמי."
+    },
+    {
+      "id": "a-misty",
+      "name": "Misty Fjords, קטצ׳יקן",
+      "region": "cruise",
+      "point": "ketchikan",
+      "date": "2027-09-12",
+      "time": "07:00",
+      "booking": "required",
+      "url": null,
+      "cost": {
+        "amount": 489.98,
+        "currency": "USD"
+      },
+      "status": "booked",
+      "notes": "הוזמן דרך Celebrity לשניים: Misty Fjords and Wilderness Explorer, 07:00."
     }
   ],
   "budget": {
@@ -4725,26 +4757,34 @@
         "budget": null,
         "items": [
           {
-            "label": "Celebrity Edge",
-            "amount": 13519,
-            "currency": "ILS",
-            "status": "booked",
-            "paid": 1703,
-            "due": "2027-07-02",
+            "label": "Celebrity Edge, 10–17.9, תא Deluxe עם מרפסת",
             "short": "הקרוז",
-            "task": "t-cruise-balance"
+            "amount": 4256.64,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 662.67,
+            "task": "t-cruise-balance",
+            "due": "2027-07-02"
+          },
+          {
+            "label": "חבילת שתייה ללא אלכוהול + Wi-Fi פרימיום, לשניים",
+            "short": "שתייה ו־Wi-Fi באונייה",
+            "amount": 587.86,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 587.86
           },
           {
             "label": "דמי שירות באונייה (משוער)",
+            "short": "דמי שירות באונייה",
             "amount": 259,
             "currency": "USD",
             "status": "booked",
             "approx": true,
             "paid": 0,
+            "task": "pay-grat",
             "due": "2027-09-16",
-            "payNote": "נגבה בחשבון האונייה בסוף ההפלגה",
-            "short": "דמי שירות באונייה",
-            "task": "pay-grat"
+            "payNote": "נגבה בחשבון האונייה בסוף ההפלגה"
           }
         ]
       },
@@ -4843,7 +4883,39 @@
         "budget": null,
         "items": [
           {
-            "label": "שאטל, פארקים ואטרקציות",
+            "label": "מסוק והליכה על קרחון, ג׳ונו (13.9, 15:30)",
+            "short": "מסוק בג׳ונו",
+            "amount": 1191.98,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 1191.98
+          },
+          {
+            "label": "Misty Fjords, קטצ׳יקן (12.9, 07:00)",
+            "short": "Misty Fjords",
+            "amount": 489.98,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 489.98
+          },
+          {
+            "label": "רכבת White Pass, סקאגוויי (14.9, 13:00)",
+            "short": "רכבת White Pass",
+            "amount": 337.98,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 337.98
+          },
+          {
+            "label": "טיפים לסיורים",
+            "short": "טיפים לסיורים",
+            "amount": 99.82,
+            "currency": "USD",
+            "status": "booked",
+            "paid": 99.82
+          },
+          {
+            "label": "שאטל, פארקים ואטרקציות ביבשה",
             "amount": null,
             "status": "planning"
           }
@@ -5525,8 +5597,8 @@
       {
         "task": "t-cruise-balance",
         "month": "2027-07-02",
-        "label": "יתרת הקרוז (לאמת תאריך)",
-        "amount": 11816
+        "label": "יתרת הקרוז, 3,593.97$ (לאמת תאריך)",
+        "amount": 11896
       },
       {
         "task": null,
